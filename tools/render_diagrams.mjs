@@ -16,7 +16,9 @@ try {
   const page = await browser.newPage({ viewport: { width: 1500, height: 1100 }, deviceScaleFactor: 2 });
   await page.setContent('<html lang="zh-CN"><body style="margin:0;background:white"><main style="display:inline-block;padding:24px"></main></body></html>');
   await page.addScriptTag({ path: join(mermaid, 'dist/mermaid.min.js') });
-  for (const name of ['CH-TOOL-01', 'CH-TOOL-02']) {
+  const names = process.argv.slice(4);
+  for (const name of names.length ? names : ['CH-TOOL-01', 'CH-TOOL-02']) {
+    assert.match(name, /^CH-[A-Z]+-\d{2}$/, 'Expected a chapter diagram ID');
     const source = await readFile(join(root, 'diagrams', `${name}.mmd`), 'utf8');
     await page.evaluate(async ({ source, name }) => {
       mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'strict',

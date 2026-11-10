@@ -25,6 +25,19 @@
       "image_sha256": "2351468c150c953c1efa043f2f143273d703553735fcb037b14d8bfc6d0fdade",
       "width": 1748,
       "height": 1062
+    },
+    {
+      "id": "CH-OBS-01",
+      "captured_at": "2026-11-10T10:29:51.012604+00:00",
+      "source": "CH-OBS-01.mmd",
+      "source_sha256": "cdb921ffd6cb26c7fe66fced3c27cbd9f395468bd444c111218dd5aa2cb2f352",
+      "image": "CH-OBS-01.png",
+      "image_sha256": "02b4afdf5268da57c0169f7bd59db7db8522aaf5533adf114ecd9136ed4b54b5",
+      "width": 2048,
+      "height": 1270,
+      "local_visual_review": "PNG inspected after final render: Chinese, arrows and labels readable, no clipping observed.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }

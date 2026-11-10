@@ -66,7 +66,7 @@
       "creator": "goodtang and book contributors, to the extent of their lawful rights",
       "url": "https://github.com/goodtang/deepseek-harness-bookforbeginer",
       "license": "New protectable prose/diagrams after 0fd1cf16f4ed89b7f1b20f46c719aa6c58825769: CC-BY-NC-SA-4.0; previously published material retains earlier grants; independently written code Apache-2.0; third-party exceptions apply",
-      "use": "Current planning/editorial material, independent tooling and executable first-tool lab, CH-TOOL opening draft and original Mermaid diagrams; full chapter and reader acceptance pending",
+      "use": "Planning/editorial material; independently written tools and labs; formal chapter-one draft and original diagrams; partial CH-TOOL sample. Reader acceptance and full book pending.",
       "attribution": "COPYRIGHT.md and EDITORIAL.md"
     }
   ],
@@ -117,6 +117,30 @@
       "path": "diagrams/CH-TOOL-02.png",
       "source_id": "SRC-BOOK",
       "basis": "Original book diagram; local Mermaid export, no external images. New protectable diagram follows prospective text license policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/CH-OBS.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written formal chapter-one draft; SRC-DSH provides cited implementation facts, not copied implementation text.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/observe-task/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 evidence observer; drives existing source runtime without embedding upstream implementation.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-OBS-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original four-participant diagram for chapter one; new protectable expression follows prospective text policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-OBS-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Locally rendered image of original CH-OBS-01.mmd; no external images, new protectable diagram follows prospective text policy.",
       "status": "cleared"
     }
   ],

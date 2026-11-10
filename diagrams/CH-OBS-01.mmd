@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant U as 你
+    participant H as Harness
+    participant M as 模拟模型
+    participant T as 查询工具
+    U->>H: 运行准备好的工单查询任务
+    H->>M: 请求一：附上可用工具定义
+    M-->>H: 要求查询 TK-1042
+    H->>T: 执行查询
+    T-->>H: 返回工单，状态为 open
+    H->>M: 请求二：带上对应工具结果
+    M-->>H: 脚本预设的完成响应
+    H-->>U: 任务结束

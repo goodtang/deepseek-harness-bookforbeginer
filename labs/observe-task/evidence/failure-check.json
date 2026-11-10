@@ -1,0 +1,7 @@
+{
+  "scenario": "invalid-source-does-not-reuse-old-success",
+  "exitCode": 1,
+  "oldObservationUnchanged": true,
+  "successSummaryPrinted": false,
+  "passed": true
+}

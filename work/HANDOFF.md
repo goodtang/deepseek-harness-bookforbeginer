@@ -2,20 +2,18 @@
 
 日期：2026-11-10。
 
-章节状态要求：正式编写前建章记录，每轮收尾更新 CHAPTERS 的写作状态、已完成/待完成小节、四类检查、版本、证据、日期和下一步。正式连续编写尚未开始，CH-TOOL 仍为试写，不是第一章或已定稿章节。用户本轮只要求补齐状态管理，未据此开始新正文。
+正式第 1 章 CH-OBS《一句请求发出去以后》三个小节的初稿完成，读者未验收，尚未定稿。当前入口为 [第一章全文](../chapters/CH-OBS.md)、[工作包](CH-OBS-task.md)、[观察工程](../labs/observe-task/README.md)、[章节索引](CHAPTERS.md)。下次先读这些原件，不仅凭本摘要续写。
 
-书稿已迁入独立仓库 goodtang/deepseek-harness-bookforbeginer。后续从 work/START-HERE.md 读取，当前依据为 planning/book-plan-v6.md 和 planning/execution-plan.md；archive 仅为历史。
+本轮观察层复用未修改的 first-tool 工程，通过真实 headless profile 和工具管线执行。两次请求均完成，工具结果进入后续请求，退出及临时 home/工作目录/服务清理通过。摘要在结束后从证据生成，不是实时日志或模型自述；观察脚本与底层证据哈希关联。错误源码目录探针不会复用旧成功输出。证据目录刻意保留，没有本轮仍在运行的实验进程。
 
-本轮完成 E1 正常工具循环工程，以及 CH-TOOL 三个相邻小节试写。先读[工作包](CH-TOOL-task.md)、[正文](../chapters/CH-TOOL.md)、[实验说明](../labs/first-tool/README.md)和[最终证据](../labs/first-tool/evidence/normal-20261110.json)，不要再从旧 artifacts 副本起步。首读者候选为 goodtang，尚无试读结果。
+第一章图 CH-OBS-01 已实际导出 PNG 并目视检查；正文引用静态图片，保留 .mmd 源文件。GitHub 页面和 PDF 视觉验收仍待完成，不重做或声称解决此前在线 Mermaid 平台故障根因。
 
-下一任务：补真实非法参数拒绝实验并展开 CH-TOOL 第二节的对应解释；先保持现有正常场景通过，再单独选择断流或主动取消。CH-FUNC、CH-LOOP 正文仍不存在，须按已记录交接目标推进，不宣称读过三章原文。
+下一正式任务：CH-RUN《第一次自己运行》，预排第 2 章，正文尚不存在。按 V6 第一篇承接第一章观察记录，解释文件、路径、工作目录、命令、进程、最小环境与错误定位，再逐步进入 CH-FUNC。原粗粒度索引遗漏了运行基础，本轮已补 CH-RUN，不直接从观察跳到函数。第一章不要求预先有开发环境，亲自运行是已有环境下的可选路径；阅读记录和独立复现分开记。
 
-图稿补修：用户反馈 GitHub 提示 Unable to render rich display。本机 Mermaid 11.17.2 对原两段语法均渲染成功，未定位平台报错根因；访问 GitHub 页面超时。正文现引用 PNG，源文件移至 diagrams，两图已经实际导出并目视检查，后续按 diagrams/README.md 再生成。GitHub 页面与 PDF 仍独立待验收，不再把图源存在当显示通过。
+CH-FUNC、CH-LOOP 未写，CH-TOOL 仍只有三个小节试写，未获得正式章号；其非法参数、断流和取消任务继续保留，后续单独推进。第一章完成初稿不表示 M1、连续三章或任何读者验收通过。
 
-工程固定名称 lookupTicket / book_ticket_lookup / TK-1042，定义见 CANON 和源码。正常场景明确关闭自动标题生成，共两次请求，第二次带有精确匹配的工具结果。退出 0 与行为断言分开，隔离 home/工作目录已删除，模拟服务关闭，直接子进程退出，无本轮待运行进程。E1 通过不等于完整 M1；断流、主动取消、断网复跑、图的渲染/PDF 和读者验收仍待完成。此前外部探针的额外请求归属未复现，不作确定判断。
+下一轮先读第一章全文、观察脚本、证据，再按其输出建立 CH-RUN 工作包；读 CH-FUNC 的交接目标，但不假称已读不存在的后章。固定案例为 lookupTicket / book_ticket_lookup / TK-1042 / open / Invoice export failed，精确配置见现有实验说明。
 
-推送前执行 python tools/verify_book.py、python tools/check_licenses.py、python -m unittest discover -s tools -p test_*.py 和 git diff --cached --check。变更已审核后才 refresh 指纹。提交和远端核对结果由 Git 记录与交付说明确认，未经证据不能更新为通过。后续复现默认输出在忽略目录，不覆盖 evidence 下的发布记录。
+每轮收尾更新 CHAPTERS 的小节进度、技术/图稿/连贯性/读者状态、版本、证据、日期和下一步。检查 python tools/verify_book.py、python tools/check_licenses.py、python -m unittest discover -s tools -p test_*.py 及 git diff --cached --check。审查差异后才刷新 FILES.json，提交和远端结果依据实际 Git 核查。
 
-版权规则已分为基线之后新增且有权授权的正文/自制图 CC BY-NC-SA 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache-2.0 与 CC BY 4.0 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。
-
-新旧许可分界以 rights/prior-publication.json 及其基线 Git 版本为准。新限制只适用于新增且有权授权的表达；既有宽松许可、第三方权利、法定例外和代码许可不受追溯限制。
+版权范围及历史授权以 LICENSE、COPYRIGHT.md 和 rights 为准；公开仓库不存私人会话、凭据或未脱敏业务数据。新图文及独立代码已登记，第三方源码保留 MIT 原许可，不改写历史授权。

@@ -9,11 +9,14 @@
 - 配图有来源、简化范围与图例，图、代码、正文及实验版本对应。
 - 连续三章验证在 M1 后、M2 批量扩写前，不阻塞第一篇闭环样章产出。
 - 用户希望达到渐进、自学、独立编程和阅读陌生实现的教学效果，不构成一周掌握的承诺。
+- 正式第一章为 CH-OBS《一句请求发出去以后》：先依据实测观察，不要求预先安装。后接 CH-RUN《第一次自己运行》解释运行基础，再进入 CH-FUNC；与 V6 第一篇顺序一致，不能直接从观察跳到函数而漏掉运行基础。CH-TOOL 保持独立的部分试写。
 - 源码研究基线为 `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`；实际任务启动时仍须核对工作树。
 
 E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/first-tool/tickets.mjs)，返回副本或 `null`。工单为虚构的 `TK-1042`，状态 `open`，标题 `Invoice export failed`；工具名为 `book_ticket_lookup`，必填字符串参数 `id`，规范输出为工单对象或 `null`，render 才转成 JSON 文字块。精确运行命令和配置以[实验说明](../labs/first-tool/README.md)为唯一维护位置。影响 CH-FUNC、CH-TOOL、CH-LOOP 及后续业务项目，不得换名另造一套数据。
 
 本轮模型序列 `tool_call_success,success`，不重复最后行为，显式关闭自动标题生成；源码启动隔离目录必须指定仓库 tsconfig。默认复现输出位于忽略目录，已发布证据单独保留。两次主任务请求的结论只适用于此配置，不推广到默认组合。
+
+第一章的观察摘要由 labs/observe-task 在运行结束后读取真实实验结果再生成，不是实时日志、模型自述或 Harness 的新事件类型。原始断言、摘要与各自代码哈希分开保留；阅读记录与独立运行是不同的学生状态。
 
 - 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。
 - 首读者候选为 goodtang，候选身份不等于已同意参与、独立完成或读者验收通过。
