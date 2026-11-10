@@ -31,7 +31,7 @@ python tools/verify_book.py
 
 经审查的文件变更需要更新指纹时运行 `python tools/verify_book.py --refresh`，再检查产生的差异。脚本检查本地 Markdown 链接、编码和文件指纹；不证明外部链接可访问、代码行为正确或读者已经学会。
 
-正文、实验与图稿状态分别见 [chapters](chapters/README.md)、[labs](labs/README.md) 和 [diagrams](diagrams/README.md)。当前两个 Mermaid 源图随 CH-TOOL 保存，尚未导出或验收显示效果。
+正文、实验与图稿状态分别见 [chapters](chapters/README.md)、[labs](labs/README.md) 和 [diagrams](diagrams/README.md)。CH-TOOL 两图已有 PNG 导出和可编辑 Mermaid 图源，本机显示已检查；GitHub 页面及 PDF 视觉验收单独记录。
 
 ## 版权与开放许可
 

@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant H as Harness
+    participant M as 模拟模型
+    participant T as 本书查询工具
+    H->>M: 第一次请求，包含工具定义
+    M-->>H: 调用 book_ticket_lookup，id 为 TK-1042
+    H->>T: 经工具管线执行
+    T-->>H: 返回工单对象
+    H->>M: 第二次请求，包含对应的 tool_result
+    M-->>H: 预设的完成回答

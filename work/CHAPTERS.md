@@ -13,4 +13,4 @@ CH-FUNC → CH-TOOL → CH-LOOP 是连续三章验证的候选片段。提前编
 
 实际开写时增加：正文路径、工作包、图组、代码版本、首次教学概念、回访位置、实验与受其影响的后续章节。变更依赖后重新核查，不只调整显示顺序。
 
-CH-TOOL 当前原件：[正文试写](../chapters/CH-TOOL.md)、[工作包](CH-TOOL-task.md)、[工程与实验](../labs/first-tool/README.md)。图 CH-TOOL-01/02 为正文内 Mermaid 源图，尚未验收渲染。首次试讲函数与工具的区别、inject/apply/register、结构化返回与 render；完整基础讲解仍由待写 CH-FUNC 承担。CH-LOOP 将沿用同一轮第二次请求，继续解释消息组装，当前未写。
+CH-TOOL 当前原件：[正文试写](../chapters/CH-TOOL.md)、[工作包](CH-TOOL-task.md)、[工程与实验](../labs/first-tool/README.md)。图 CH-TOOL-01/02 已改为正文引用本地 PNG，Mermaid 图源移至 diagrams；本机渲染已检查，GitHub 页面和 PDF 验收待完成。首次试讲函数与工具的区别、inject/apply/register、结构化返回与 render；完整基础讲解仍由待写 CH-FUNC 承担。CH-LOOP 将沿用同一轮第二次请求，继续解释消息组装，当前未写。

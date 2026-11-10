@@ -1,0 +1,5 @@
+flowchart LR
+    P[本书查询插件] -->|需要 tools 服务| R[工具注册表]
+    P -->|register 提交工具定义| R
+    R -->|调用 execute| F[lookupTicket 查询函数]
+    F --> V[工单对象或 null]

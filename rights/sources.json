@@ -94,6 +94,30 @@
       "source_id": "SRC-BOOK",
       "basis": "Independently written executable example under Apache-2.0; references SRC-DSH documented interfaces, without embedding upstream implementation.",
       "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-TOOL-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original book diagram; local Mermaid export, no external images. New protectable diagram follows prospective text license policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-TOOL-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Original book diagram; local Mermaid export, no external images. New protectable diagram follows prospective text license policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-TOOL-02.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original book diagram; local Mermaid export, no external images. New protectable diagram follows prospective text license policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-TOOL-02.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Original book diagram; local Mermaid export, no external images. New protectable diagram follows prospective text license policy.",
+      "status": "cleared"
     }
   ],
   "pending": [

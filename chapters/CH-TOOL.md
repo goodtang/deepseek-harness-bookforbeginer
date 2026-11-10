@@ -25,13 +25,9 @@ lookupTicket('TK-1042')
 
 这就是“一切皆插件”在第一个业务需求中的具体做法。我们添加一个插件，使用已有工具服务，把查询能力注册进去。后面的章节会继续追问：提供工具服务的插件怎样工作？加载顺序怎样决定？插件卸载时，注册怎样撤销？现在先记住本例实际使用的关系。
 
-```mermaid
-flowchart LR
-    P[本书查询插件] -->|需要 tools 服务| R[工具注册表]
-    P -->|register 提交工具定义| R
-    R -->|调用 execute| F[lookupTicket 查询函数]
-    F --> V[工单对象或 null]
-```
+![查询插件、工具注册表与业务查询函数的关系](../diagrams/CH-TOOL-01.png)
+
+[可编辑 Mermaid 图源](../diagrams/CH-TOOL-01.mmd)
 
 图 CH-TOOL-01：本书根据本例代码自行绘制。只画查询插件与工具服务的关系，省略启动、策略检查、事件和持久化；箭头标签说明关系，不表示完整的运行顺序。运行时注册与注销的源码入口见 [Tools.register，第 128 行](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/packages/core/tools/src/index.ts#L128)，本轮实验尚未单独验证插件卸载。
 
@@ -45,18 +41,9 @@ flowchart LR
 
 所以，我们检查下一次模型请求。它里面应当已经包含这张工单的工具结果，而且结果应对应刚才那次工具调用。
 
-```mermaid
-sequenceDiagram
-    participant H as Harness
-    participant M as 模拟模型
-    participant T as 本书查询工具
-    H->>M: 第一次请求，包含工具定义
-    M-->>H: 调用 book_ticket_lookup，id 为 TK-1042
-    H->>T: 经工具管线执行
-    T-->>H: 返回工单对象
-    H->>M: 第二次请求，包含对应的 tool_result
-    M-->>H: 预设的完成回答
-```
+![从首次请求到工具执行再到后续请求的时序](../diagrams/CH-TOOL-02.png)
+
+[可编辑 Mermaid 图源](../diagrams/CH-TOOL-02.mmd)
 
 图 CH-TOOL-02：本书根据本次正常路径自行绘制。省略事件存储、审批、重试与取消；“模型”在本实验中是脚本化模拟服务，不表示真实模型的推理表现。
 

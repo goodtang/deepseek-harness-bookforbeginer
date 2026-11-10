@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-11-10T08:58:13.319294+00:00",
+  "mermaid": "11.17.2",
+  "playwright": "1.61.1",
+  "browser": "Installed Microsoft Edge, headless",
+  "device_scale_factor": 2,
+  "local_visual_review": "Both PNGs inspected: Chinese glyphs, arrows, labels and margins readable; no clipping observed.",
+  "github_page_review": "Not completed: navigation timed out after 45000 ms. Original source rendered locally; platform failure cause not established.",
+  "pdf_review": "pending",
+  "figures": [
+    {
+      "id": "CH-TOOL-01",
+      "source": "CH-TOOL-01.mmd",
+      "source_sha256": "a5dcf242c55063402c75de71899ec168aabd10ee2c8425813762eb51c919a715",
+      "image": "CH-TOOL-01.png",
+      "image_sha256": "52470c092896df89ad0b0b9c8b36a2d4861685bb1816decdac89a663b2deb7ea",
+      "width": 2350,
+      "height": 268
+    },
+    {
+      "id": "CH-TOOL-02",
+      "source": "CH-TOOL-02.mmd",
+      "source_sha256": "1ad93f3879aca32b5db75a46a6f9b4192ff87be17f4df6a8308e80f7c1fe33f8",
+      "image": "CH-TOOL-02.png",
+      "image_sha256": "2351468c150c953c1efa043f2f143273d703553735fcb037b14d8bfc6d0fdade",
+      "width": 1748,
+      "height": 1062
+    }
+  ]
+}

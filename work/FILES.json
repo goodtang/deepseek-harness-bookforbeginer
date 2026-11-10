@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/CH-TOOL.md",
-      "sha256": "f8ab0862d6903c21257719fcaf867a1ee66365b796c275babff6849ee42bce85"
+      "sha256": "a76156d2a0cc72716dc93f6e44e4d22251ed8aa68e2faf20343bb595bac8c309"
     },
     {
       "path": "chapters/README.md",
@@ -23,15 +23,35 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "4c3022f902cd4536c009a07934396165f26dbbecc44f89fa40473b635da65550"
+      "sha256": "bfef766edb0090117bef079bfd73c891d059df419fca3c1204f19e7e3112268a"
     },
     {
       "path": "COPYRIGHT.md",
       "sha256": "5451b76870e80406b77b5e8172d6ec481a055924e2cbec803cb36d35647b9573"
     },
     {
+      "path": "diagrams/CH-TOOL-01.mmd",
+      "sha256": "a5dcf242c55063402c75de71899ec168aabd10ee2c8425813762eb51c919a715"
+    },
+    {
+      "path": "diagrams/CH-TOOL-01.png",
+      "sha256": "52470c092896df89ad0b0b9c8b36a2d4861685bb1816decdac89a663b2deb7ea"
+    },
+    {
+      "path": "diagrams/CH-TOOL-02.mmd",
+      "sha256": "1ad93f3879aca32b5db75a46a6f9b4192ff87be17f4df6a8308e80f7c1fe33f8"
+    },
+    {
+      "path": "diagrams/CH-TOOL-02.png",
+      "sha256": "2351468c150c953c1efa043f2f143273d703553735fcb037b14d8bfc6d0fdade"
+    },
+    {
       "path": "diagrams/README.md",
-      "sha256": "745c6cce7dec4b09807f63e945fbfbb6198d7a020d1f20bc596fadbe87ca64a0"
+      "sha256": "c24fee579d16bd7e5e3cad5da9c8bf1b750864ba6184426a0396c4e4eee3e666"
+    },
+    {
+      "path": "diagrams/render-record.json",
+      "sha256": "d4808c504e383c243135a49bd6679e70af5b8711bfddcb470c331e560d9a2cc2"
     },
     {
       "path": "EDITORIAL.md",
@@ -99,7 +119,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "654c16fd42cfa6ce3979026f67de4e3f2810204051b332c4fafe8339e08df4aa"
+      "sha256": "afcb08a8c89fc82071ecfc5f8ac37c84b7c0c5a2ebd6ce826182a2cc4cf857c2"
     },
     {
       "path": "rights/prior-publication.json",
@@ -111,7 +131,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "a804585d0ccd0aa9d461d73fa3e07cf631dcc139cf11a56cd613953377da6442"
+      "sha256": "2ed43120b7488c1cb8f9f3a4b4a367134e4e9727a839788bf69fc8ed7f2c3879"
     },
     {
       "path": "templates/chapter-task.md",
@@ -130,6 +150,10 @@
       "sha256": "620219f39d6d316469f4d5e9132fe72a2d50be633a17e197955a781b8e5e2882"
     },
     {
+      "path": "tools/render_diagrams.mjs",
+      "sha256": "08413060836f0c4ef20137c126304074c318721624a4ab0dd34108cba7d3cf64"
+    },
+    {
       "path": "tools/test_check_licenses.py",
       "sha256": "edfc4b2038e25193585c3f77ea13ff5039e2fb052d72fa69a7402c5a1b3efb14"
     },
@@ -139,7 +163,7 @@
     },
     {
       "path": "tools/verify_book.py",
-      "sha256": "430b1b872998ef21f433b6c236502d88192a34379b0bbdbc72a9bdc605ddbc67"
+      "sha256": "6513853e273e76b2cf1c22e11a91f0342a054dfa641ca84aee257c09955b84e9"
     },
     {
       "path": "work/CANON.md",
@@ -147,15 +171,15 @@
     },
     {
       "path": "work/CH-TOOL-task.md",
-      "sha256": "ee139b17f3f7099211d55bc374d98d4fc3b329119fa6da90ac43cb324e0cee3d"
+      "sha256": "dbbaf641704b3b189ed7289af0c5f2fca17618450caedd34f88997295d1e620c"
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "fb2a0d4ff1d3b03c1aed53fb8529b23e9128418ecf45d13ad3f76e898eabec6a"
+      "sha256": "0b6eca975334855fe6ac8729dda5028ce319076e5703e6440e78b2690818d9ea"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "3e53c63ba31b5cc0e08a8b9e61c7c3137f4f516f9d50f3454af3925cdc82b3bd"
+      "sha256": "88c8fb073198eee7429dbfdecfdb6007ef1015c9d62e748dc89491c98edda94c"
     },
     {
       "path": "work/START-HERE.md",
@@ -163,7 +187,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "99cea43f9a3590a86ce62da60bd307bbbdb7ef0020bf01077aa9226577e372c9"
+      "sha256": "5e713a3a14960f59260f0c3316dd6e062e85cfcd1aa6f42b28b9520ace540306"
     }
   ]
 }
