@@ -5,10 +5,23 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from verify_book import check_markdown, verify
+from verify_book import active_files, check_markdown, verify
 
 
 class BookChecks(unittest.TestCase):
+    def test_lab_code_is_fingerprinted_but_local_runs_are_excluded(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            lab = root / "labs" / "first-tool"
+            runtime = lab / ".lab-runtime"
+            runtime.mkdir(parents=True)
+            code = lab / "plugin.mjs"
+            code.write_text("export const name = 'example';\n", encoding="utf-8")
+            evidence = runtime / "evidence.json"
+            evidence.write_text("{}\n", encoding="utf-8")
+            self.assertIn(code, active_files(root))
+            self.assertNotIn(evidence, active_files(root))
+
     def test_local_heading_and_missing_target(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary).resolve()

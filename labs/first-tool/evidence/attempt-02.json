@@ -1,0 +1,47 @@
+{
+  "scenario": "E1-normal-tool-cycle",
+  "capturedAt": "2026-11-10T08:33:15.490Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "node": "v24.12.0",
+  "assertions": [
+    "headless exit code is zero",
+    "exactly two scripted requests; no script exhaustion",
+    "registered execution returned the known ticket to the next request",
+    "missing lookup returns null; returned copies cannot mutate fixture"
+  ],
+  "exitCode": 0,
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "signal": null,
+  "requests": [
+    {
+      "attempt": 1,
+      "behavior": "tool_call_success",
+      "outcome": "completed",
+      "chunksSent": 7,
+      "path": "/v1/messages"
+    },
+    {
+      "attempt": 2,
+      "behavior": "success",
+      "outcome": "completed",
+      "chunksSent": 8,
+      "path": "/v1/messages"
+    }
+  ],
+  "observedToolResult": {
+    "type": "tool_result",
+    "tool_use_id": "mock-call-1",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+      }
+    ],
+    "is_error": false
+  },
+  "passed": true
+}

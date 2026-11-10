@@ -66,14 +66,39 @@
       "creator": "goodtang and book contributors, to the extent of their lawful rights",
       "url": "https://github.com/goodtang/deepseek-harness-bookforbeginer",
       "license": "New protectable prose/diagrams after 0fd1cf16f4ed89b7f1b20f46c719aa6c58825769: CC-BY-NC-SA-4.0; previously published material retains earlier grants; independently written code Apache-2.0; third-party exceptions apply",
-      "use": "Current planning and editorial material plus tooling; no completed chapter diagrams or labs",
+      "use": "Current planning/editorial material, independent tooling and executable first-tool lab, CH-TOOL opening draft and original Mermaid diagrams; full chapter and reader acceptance pending",
       "attribution": "COPYRIGHT.md and EDITORIAL.md"
     }
   ],
-  "materials": [],
+  "materials": [
+    {
+      "path": "chapters/CH-TOOL.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written opening draft and two original Mermaid diagrams; implementation facts cite SRC-DSH. No third-party images or textbook excerpts. New protectable prose/diagrams follow prospective text policy.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/first-tool/tickets.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written executable example under Apache-2.0; references SRC-DSH documented interfaces, without embedding upstream implementation.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/first-tool/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written executable example under Apache-2.0; references SRC-DSH documented interfaces, without embedding upstream implementation.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/first-tool/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written executable example under Apache-2.0; references SRC-DSH documented interfaces, without embedding upstream implementation.",
+      "status": "cleared"
+    }
+  ],
   "pending": [
     "All future third-party excerpts, translations, images, screenshots, fonts and datasets require individual review before inclusion.",
-    "Runtime examples and all planned figure groups remain unimplemented; no rights clearance is implied for future materials."
+    "Only the specifically registered current first-tool examples and opening diagrams were reviewed; no rights clearance is implied for future chapters, figure groups or external materials."
   ],
   "text_policy": {
     "new_text_license": "CC-BY-NC-SA-4.0",

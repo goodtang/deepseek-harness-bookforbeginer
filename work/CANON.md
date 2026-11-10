@@ -11,7 +11,9 @@
 - 用户希望达到渐进、自学、独立编程和阅读陌生实现的教学效果，不构成一周掌握的承诺。
 - 源码研究基线为 `fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159`；实际任务启动时仍须核对工作树。
 
-尚未确定：工单固定数据、查询函数正式符号、工具正式名称与字段、实验路径及命令。E1 依据实际工程确定后记录定义位置与影响章节，不在后续正文中自行假设。
+E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/first-tool/tickets.mjs)，返回副本或 `null`。工单为虚构的 `TK-1042`，状态 `open`，标题 `Invoice export failed`；工具名为 `book_ticket_lookup`，必填字符串参数 `id`，规范输出为工单对象或 `null`，render 才转成 JSON 文字块。精确运行命令和配置以[实验说明](../labs/first-tool/README.md)为唯一维护位置。影响 CH-FUNC、CH-TOOL、CH-LOOP 及后续业务项目，不得换名另造一套数据。
+
+本轮模型序列 `tool_call_success,success`，不重复最后行为，显式关闭自动标题生成；源码启动隔离目录必须指定仓库 tsconfig。默认复现输出位于忽略目录，已发布证据单独保留。两次主任务请求的结论只适用于此配置，不推广到默认组合。
 
 - 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。
 - 首读者候选为 goodtang，候选身份不等于已同意参与、独立完成或读者验收通过。

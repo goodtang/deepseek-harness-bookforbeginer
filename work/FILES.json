@@ -10,8 +10,12 @@
       "sha256": "3eaada05622c55209a0b262eebd83a82cc0cb68c01ec1ddf03c5e9e28ed25655"
     },
     {
+      "path": "chapters/CH-TOOL.md",
+      "sha256": "f8ab0862d6903c21257719fcaf867a1ee66365b796c275babff6849ee42bce85"
+    },
+    {
       "path": "chapters/README.md",
-      "sha256": "b278997d36c9bab1715c098b487f0ee8f8ee9d6155c34773f91d4b5d54a5307c"
+      "sha256": "f12cdf5eb175d14b0dece7a43f6b17c28731b60ac611f1e854bbdb2518b18d8e"
     },
     {
       "path": "COMMERCIAL.md",
@@ -27,15 +31,43 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "220fc35f6d0b4e8f0990e1d1ad1993db568fb87a4c02ca4c8a98d3e76065c0b9"
+      "sha256": "745c6cce7dec4b09807f63e945fbfbb6198d7a020d1f20bc596fadbe87ca64a0"
     },
     {
       "path": "EDITORIAL.md",
       "sha256": "49e1ea6f8395b4b2cb01fef4b3628b4a0d83f973661149c7ddc7d0f1ea491d91"
     },
     {
+      "path": "labs/first-tool/evidence/attempt-01.json",
+      "sha256": "6e80199c7f01b59cf49b9234a9c415db4eb2edc0710099c21cbf475a22b11248"
+    },
+    {
+      "path": "labs/first-tool/evidence/attempt-02.json",
+      "sha256": "1d042b7f20defc883e6387472981573c5174f20270d1a3a6b8eb225dbb43db8d"
+    },
+    {
+      "path": "labs/first-tool/evidence/normal-20261110.json",
+      "sha256": "44978cf3c2186f6727490291b59f497a97986e66100aace8250251427a91561a"
+    },
+    {
+      "path": "labs/first-tool/plugin.mjs",
+      "sha256": "4a99f3756b1880741b0c32e499eecee69ef7457358e38856ac89e423adc3e395"
+    },
+    {
+      "path": "labs/first-tool/README.md",
+      "sha256": "ad928ae4c3d8cc34a0629a2f324ded4fe6299051d0ae2eaeda47977409b6fd81"
+    },
+    {
+      "path": "labs/first-tool/run.mjs",
+      "sha256": "646ce6d8e9ce695fbbfb0dd1de9120f1b128ad82e267b1a4d7fdd897af0d5764"
+    },
+    {
+      "path": "labs/first-tool/tickets.mjs",
+      "sha256": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+    },
+    {
       "path": "labs/README.md",
-      "sha256": "339e188cd3f3b929a5375def7c4f064bf37dfccafd82426d16f69b33a3cf2b9f"
+      "sha256": "705050f4afa921b7b89f63234ba8c2ee09fede09bfa96bc82cf354d9cf6495a7"
     },
     {
       "path": "LICENSE",
@@ -63,11 +95,11 @@
     },
     {
       "path": "planning/execution-plan.md",
-      "sha256": "b649c7ec6e7d38e9e8dda33fcd55778ab2d73ddab84f2d326a47067f90d3a741"
+      "sha256": "a10e269d854488d2f159a1f6b8e0964900bc70d5f6a847ea46d2b5ee6ce3258b"
     },
     {
       "path": "README.md",
-      "sha256": "00ac44ee14a5861534fc061b5870455a1262a2af25429f52031a5796dbcecc2d"
+      "sha256": "654c16fd42cfa6ce3979026f67de4e3f2810204051b332c4fafe8339e08df4aa"
     },
     {
       "path": "rights/prior-publication.json",
@@ -79,7 +111,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "b758362309dd61c1fa7ca9a612ab1cd2c0aaed114a5ea4351d271f27508be8d2"
+      "sha256": "a804585d0ccd0aa9d461d73fa3e07cf631dcc139cf11a56cd613953377da6442"
     },
     {
       "path": "templates/chapter-task.md",
@@ -103,23 +135,27 @@
     },
     {
       "path": "tools/test_verify_book.py",
-      "sha256": "57cf3699b63724bd8e44fec21863df3e4cbfe4a51bfed1453dcd9e96b953dab6"
+      "sha256": "98e76e8aa7bc4f20c32a1981f64326393037aa95f03ec3b1cd654eadbe458c05"
     },
     {
       "path": "tools/verify_book.py",
-      "sha256": "117dcb501e9866e595055e023ef6c0a7ab94087dc531fc33a6f9c25bfc37e25c"
+      "sha256": "430b1b872998ef21f433b6c236502d88192a34379b0bbdbc72a9bdc605ddbc67"
     },
     {
       "path": "work/CANON.md",
-      "sha256": "9d0529bc342e925cdadb540a21cd5e41df356d063fae9b82cc01b079d3315646"
+      "sha256": "d69071fe280fcce30581eeb1294c909df9c45440422088c3c9c48e8c5f23d390"
+    },
+    {
+      "path": "work/CH-TOOL-task.md",
+      "sha256": "ee139b17f3f7099211d55bc374d98d4fc3b329119fa6da90ac43cb324e0cee3d"
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "e9d74a3bbb25238ffd3ad88837efa8ff8bc9c2649bed4b70b2fd0a75fc401827"
+      "sha256": "fb2a0d4ff1d3b03c1aed53fb8529b23e9128418ecf45d13ad3f76e898eabec6a"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "04ed583a30e710f7a30f2614be9a90172a012a7e4ab8d145f2d2985512e52df2"
+      "sha256": "3e53c63ba31b5cc0e08a8b9e61c7c3137f4f516f9d50f3454af3925cdc82b3bd"
     },
     {
       "path": "work/START-HERE.md",
@@ -127,7 +163,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "990f7b7e99006d05533dd931c5146d5f73cc641d71ca57c97e1dc0006531370b"
+      "sha256": "99cea43f9a3590a86ce62da60bd307bbbdb7ef0020bf01077aa9226577e372c9"
     }
   ]
 }

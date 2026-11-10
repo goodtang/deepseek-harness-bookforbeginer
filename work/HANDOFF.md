@@ -4,13 +4,13 @@
 
 书稿已迁入独立仓库 goodtang/deepseek-harness-bookforbeginer。后续从 work/START-HERE.md 读取，当前依据为 planning/book-plan-v6.md 和 planning/execution-plan.md；archive 仅为历史。
 
-本次工作完成资料迁移、实施规则修订与文档工具，未开始 E1。首读者候选为 goodtang，尚未确认时间或试读结果。每轮围绕连贯目标可推进 1–3 相邻小节，收尾做章内与相邻段落复核。
+本轮完成 E1 正常工具循环工程，以及 CH-TOOL 三个相邻小节试写。先读[工作包](CH-TOOL-task.md)、[正文](../chapters/CH-TOOL.md)、[实验说明](../labs/first-tool/README.md)和[最终证据](../labs/first-tool/evidence/normal-20261110.json)，不要再从旧 artifacts 副本起步。首读者候选为 goodtang，尚无试读结果。
 
-下一任务：为 CH-TOOL 建立实际工作包，读取 CH-FUNC 的交接目标和 CH-LOOP 大纲，核实真实工具注册、profile、模型模拟和查询数据。前后章正文尚不存在，不声称已完整读取。
+下一任务：补真实非法参数拒绝实验并展开 CH-TOOL 第二节的对应解释；先保持现有正常场景通过，再单独选择断流或主动取消。CH-FUNC、CH-LOOP 正文仍不存在，须按已记录交接目标推进，不宣称读过三章原文。
 
-E1 完成需要正常工具循环经真实管线、独立断言、隔离 home、清理及可解释请求。断流与主动取消留在 E2。额外请求的归属仍待原始请求和会话材料确认。
+工程固定名称 lookupTicket / book_ticket_lookup / TK-1042，定义见 CANON 和源码。正常场景明确关闭自动标题生成，共两次请求，第二次带有精确匹配的工具结果。退出 0 与行为断言分开，隔离 home/工作目录已删除，模拟服务关闭，直接子进程退出，无本轮待运行进程。E1 通过不等于完整 M1；断流、主动取消、断网复跑、图的渲染/PDF 和读者验收仍待完成。此前外部探针的额外请求归属未复现，不作确定判断。
 
-推送前执行 python tools/verify_book.py、python -m unittest discover -s tools -p test_verify_book.py 和 git diff --cached --check。提交和远端核对结果由 Git 记录与本次交付说明确认；未经证据不能将待验证更新为通过。
+推送前执行 python tools/verify_book.py、python tools/check_licenses.py、python -m unittest discover -s tools -p test_*.py 和 git diff --cached --check。变更已审核后才 refresh 指纹。提交和远端核对结果由 Git 记录与交付说明确认，未经证据不能更新为通过。后续复现默认输出在忽略目录，不覆盖 evidence 下的发布记录。
 
 版权规则已分为基线之后新增且有权授权的正文/自制图 CC BY-NC-SA 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache-2.0 与 CC BY 4.0 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。
 

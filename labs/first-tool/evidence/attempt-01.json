@@ -1,0 +1,17 @@
+{
+  "scenario": "E1-normal-tool-cycle",
+  "capturedAt": "2026-11-10T08:32:56.791Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "node": "v24.12.0",
+  "assertions": [],
+  "exitCode": 1,
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "signal": null,
+  "failure": "AssertionError [ERR_ASSERTION]: headless must exit successfully\n\n1 !== 0\n",
+  "requests": [],
+  "passed": false
+}
