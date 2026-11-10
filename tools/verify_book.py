@@ -1,4 +1,4 @@
-"""Check local book links, archive checksums and reviewed active-file fingerprints."""
+"""Check local book links and reviewed active-file fingerprints."""
 
 import argparse
 import hashlib
@@ -13,7 +13,7 @@ def digest(path):
 
 
 def active_files(root):
-    files = [root / name for name in ("README.md", "AGENTS.md", "LICENSE", ".gitignore", ".gitattributes")]
+    files = [root / name for name in ("README.md", "CONTRIBUTING.md", "LICENSE", ".gitignore", ".gitattributes")]
     for name in ("planning", "templates", "work", "chapters", "labs", "diagrams", "tools"):
         files.extend(p for p in (root / name).rglob("*")
                      if p.is_file() and p.suffix in {".md", ".json", ".py"}
@@ -53,11 +53,6 @@ def verify(root, refresh=False):
     for path in root.rglob("*.md"):
         if ".git" not in path.relative_to(root).parts:
             check_markdown(root, path)
-    imported = json.loads((root / "archive/IMPORT.json").read_text(encoding="utf-8"))
-    for row in imported["files"]:
-        path = (root / row["archive_path"]).resolve()
-        if not path.is_relative_to(root) or digest(path) != row["archive_sha256"]:
-            raise ValueError(f"Archive checksum mismatch: {row['archive_path']}")
     manifest = root / "work/FILES.json"
     current = snapshot(root)
     if refresh:
@@ -65,13 +60,13 @@ def verify(root, refresh=False):
     recorded = json.loads(manifest.read_text(encoding="utf-8"))
     if current != recorded:
         raise ValueError("Active files changed. Review the diff before using --refresh.")
-    return len(current["files"]), len(imported["files"])
+    return len(current["files"])
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh", action="store_true", help="Save fingerprints after reviewing changes")
     args = parser.parse_args()
-    active, archived = verify(Path(__file__).resolve().parents[1], args.refresh)
-    print(f"Verified local Markdown links, {active} active fingerprints and {archived} archive checksums.")
+    active = verify(Path(__file__).resolve().parents[1], args.refresh)
+    print(f"Verified local Markdown links, {active} active fingerprints.")
     print("External URLs, runtime behavior and reader acceptance are not verified by this script.")

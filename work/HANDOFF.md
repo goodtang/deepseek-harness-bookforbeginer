@@ -4,7 +4,7 @@
 
 书稿已迁入独立仓库 goodtang/deepseek-harness-bookforbeginer。后续从 work/START-HERE.md 读取，当前依据为 planning/book-plan-v6.md 和 planning/execution-plan.md；archive 仅为历史。
 
-本轮完成资料迁移、实施规则修订与文档工具，未开始 E1。首读者候选为 goodtang，尚未确认时间或试读结果。每轮围绕连贯目标可推进 1–3 相邻小节，收尾做章内与相邻段落复核。
+本次工作完成资料迁移、实施规则修订与文档工具，未开始 E1。首读者候选为 goodtang，尚未确认时间或试读结果。每轮围绕连贯目标可推进 1–3 相邻小节，收尾做章内与相邻段落复核。
 
 下一任务：为 CH-TOOL 建立实际工作包，读取 CH-FUNC 的交接目标和 CH-LOOP 大纲，核实真实工具注册、profile、模型模拟和查询数据。前后章正文尚不存在，不声称已完整读取。
 

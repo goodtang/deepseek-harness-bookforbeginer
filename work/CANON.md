@@ -13,5 +13,5 @@
 
 尚未确定：工单固定数据、查询函数正式符号、工具正式名称与字段、实验路径及命令。E1 依据实际工程确定后记录定义位置与影响章节，不在后续正文中自行假设。
 
-- 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。MyMem 继续保存增量归档。
+- 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。
 - 首读者候选为 goodtang，候选身份不等于已同意参与、独立完成或读者验收通过。

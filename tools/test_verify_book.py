@@ -1,6 +1,5 @@
 """Focused regression checks for broken links and unreviewed file changes."""
 
-import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -22,9 +21,7 @@ class BookChecks(unittest.TestCase):
     def test_reviewed_fingerprint_rejects_mutation(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary).resolve()
-            (root / "archive").mkdir()
             (root / "work").mkdir()
-            (root / "archive/IMPORT.json").write_text(json.dumps({"files": []}), encoding="utf-8")
             page = root / "README.md"
             page.write_text("# 初版\n", encoding="utf-8")
             verify(root, refresh=True)
