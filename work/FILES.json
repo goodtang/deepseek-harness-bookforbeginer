@@ -1,0 +1,81 @@
+{
+  "kind": "Reviewed active files; excludes frozen archive and this manifest",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "3eaada05622c55209a0b262eebd83a82cc0cb68c01ec1ddf03c5e9e28ed25655"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "4174f59bb006dc87fb932ce13b85eab5a8ecb5e8a9d474b352b16e6298d1f852"
+    },
+    {
+      "path": "chapters/README.md",
+      "sha256": "b278997d36c9bab1715c098b487f0ee8f8ee9d6155c34773f91d4b5d54a5307c"
+    },
+    {
+      "path": "diagrams/README.md",
+      "sha256": "220fc35f6d0b4e8f0990e1d1ad1993db568fb87a4c02ca4c8a98d3e76065c0b9"
+    },
+    {
+      "path": "labs/README.md",
+      "sha256": "339e188cd3f3b929a5375def7c4f064bf37dfccafd82426d16f69b33a3cf2b9f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "planning/book-plan-v6.md",
+      "sha256": "c6426b92f2abd7ee8cc9226e7cd34b0c3fcca7568c79f72f41083e1e5e14b82b"
+    },
+    {
+      "path": "planning/execution-plan.md",
+      "sha256": "0ac881d178e03defe48f0a0d2f1f2203a7132614ca4ba3330d0c8f97c68ae119"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5ae5cf0fa2e162db212847d0bdb2eeffb19846c181017ce8c8c3516f523a2ab8"
+    },
+    {
+      "path": "templates/chapter-task.md",
+      "sha256": "a7900987cd7dbb67ac5d78c72c1883204544813b21a9d3020ca5352ba714c101"
+    },
+    {
+      "path": "templates/chapter.md",
+      "sha256": "e030cbe59b60f21b37096819095d2538612c547421e52417a4729fe312a01d90"
+    },
+    {
+      "path": "tools/test_verify_book.py",
+      "sha256": "d10be569dbfc786b9f3daa763b2d9fa9aca62887d62e9695326e8b466236ed0d"
+    },
+    {
+      "path": "tools/verify_book.py",
+      "sha256": "ec5489ee4169a504fc5fd27d3724c9123321e53386aa82e77dbdbc4a04564b5a"
+    },
+    {
+      "path": "work/CANON.md",
+      "sha256": "482bb77a74b2eb8fcebc5b3ad0d9b515d7e03a7bcd3eb34aef3f1ac5ffd46b45"
+    },
+    {
+      "path": "work/CHAPTERS.md",
+      "sha256": "e9d74a3bbb25238ffd3ad88837efa8ff8bc9c2649bed4b70b2fd0a75fc401827"
+    },
+    {
+      "path": "work/HANDOFF.md",
+      "sha256": "7f108d6d7e5a33b2ab3cec6dc07b0b4ddd2d3b4e7a839a0a934e9e3f05751375"
+    },
+    {
+      "path": "work/START-HERE.md",
+      "sha256": "01c960ee190831257da3f1146c35752250ab8eb813d68519e5fbae0111593e76"
+    },
+    {
+      "path": "work/STATE.md",
+      "sha256": "2272efc6b44bc03b7070d235b32a8e2b3c5aa1870e8f7e067e9986753359914f"
+    }
+  ]
+}
