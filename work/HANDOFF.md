@@ -2,6 +2,8 @@
 
 日期：2026-11-10。
 
+章节状态要求：正式编写前建章记录，每轮收尾更新 CHAPTERS 的写作状态、已完成/待完成小节、四类检查、版本、证据、日期和下一步。正式连续编写尚未开始，CH-TOOL 仍为试写，不是第一章或已定稿章节。用户本轮只要求补齐状态管理，未据此开始新正文。
+
 书稿已迁入独立仓库 goodtang/deepseek-harness-bookforbeginer。后续从 work/START-HERE.md 读取，当前依据为 planning/book-plan-v6.md 和 planning/execution-plan.md；archive 仅为历史。
 
 本轮完成 E1 正常工具循环工程，以及 CH-TOOL 三个相邻小节试写。先读[工作包](CH-TOOL-task.md)、[正文](../chapters/CH-TOOL.md)、[实验说明](../labs/first-tool/README.md)和[最终证据](../labs/first-tool/evidence/normal-20261110.json)，不要再从旧 artifacts 副本起步。首读者候选为 goodtang，尚无试读结果。

@@ -2,6 +2,8 @@
 
 更新日期：2026-11-10。
 
+正式连续编写尚未开始。用户要求正式编写也记录章节状态，已落实到 CHAPTERS 统一索引、实施安排与工作包模板；试写、正式初稿、各项验收及定稿分别记录，不能将 CH-TOOL 试写当作第一章完成。
+
 - 正式维护仓库：goodtang/deepseek-harness-bookforbeginer。本地目录为 D:/projects/deepseek-harness-bookforbeginer。
 - 已完成：E0；E1 真实接入工程与正常工具循环。以[工作包](CH-TOOL-task.md)和[最终实验原件](../labs/first-tool/evidence/normal-20261110.json)为准，不把早期过渡版本当最终证据。
 - 阶段：E1 工程门槛通过；E2 已有 CH-TOOL 首段三个相邻小节及两幅 Mermaid 源图，完整样章尚未完成。提交和远端状态以 Git 核查。
