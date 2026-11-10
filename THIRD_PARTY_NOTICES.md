@@ -21,6 +21,6 @@ Copyright (c) 2026 DeepSeek
 
 ## 标准许可文本
 
-CC BY 4.0 文本使用 SPDX 公开镜像，规范地址为 [Creative Commons 官方法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.en)。Apache-2.0 文本保留自本仓库既有许可。许可正文不归为本书新增内容，不修改标准条款。
+CC BY 4.0 与 CC BY-NC-SA 4.0 文本使用 SPDX 公开镜像，规范地址为 [Creative Commons 官方法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.en)。新许可的规范地址为 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en)。旧 CC BY 文本继续保留，以说明既有授权。Apache-2.0 文本保留自本仓库既有许可。许可正文不归为本书新增内容，不修改标准条款。
 
 本文件不改变任何第三方许可证。来源位置、文本指纹与当前使用范围见 [rights/sources.json](rights/sources.json)。

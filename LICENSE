@@ -1,18 +1,19 @@
 Licensing scope for DeepSeek Harness Book for Beginners
 
-Independently written prose, editorial arrangement and explanatory diagrams:
-CC BY 4.0, only to the extent the maintainers or contributors hold rights.
-Full text: LICENSES/CC-BY-4.0.txt
+New protectable prose, editorial arrangement and self-created diagrams
+introduced after commit 0fd1cf16f4ed89b7f1b20f46c719aa6c58825769 are offered under
+CC BY-NC-SA 4.0, only to the extent the contributors hold applicable rights.
+Full text: LICENSES/CC-BY-NC-SA-4.0.txt
 
-Independently written executable code, scripts and executable code examples:
-Apache-2.0, unless a specific file or example states otherwise.
-Full text: LICENSES/Apache-2.0.txt
+Material already offered under Apache-2.0 or CC BY 4.0 keeps those permissions.
+No retroactive noncommercial or share-alike restriction is imposed on it.
+Existing baseline and scope: rights/prior-publication.json
+Prior text license: LICENSES/CC-BY-4.0.txt
 
-Third-party material is excluded from these grants except where separately
-authorized. Original licenses, copyright notices and conditions still apply.
-DeepSeek source material: LICENSES/MIT-DeepSeek.txt
+Independently written executable code, scripts and executable examples remain
+Apache-2.0 unless stated otherwise. Full text: LICENSES/Apache-2.0.txt
+Third-party material remains under its own permissions and is excluded from
+new restrictions. DeepSeek notice: LICENSES/MIT-DeepSeek.txt
 
-Rights already obtained under Apache-2.0 for earlier published versions are
-not revoked or restricted. No third-party rights are transferred by this notice.
-
-See COPYRIGHT.md, THIRD_PARTY_NOTICES.md and rights/sources.json.
+Separate commercial permission is needed only for uses not already authorized
+by an applicable license or legal exception. See COPYRIGHT.md and COMMERCIAL.md.

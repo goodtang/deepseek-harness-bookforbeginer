@@ -2,13 +2,19 @@
 
 ## 本书许可
 
-本书自行撰写的讲解、编排与自制说明图采用 [CC BY 4.0](LICENSES/CC-BY-4.0.txt)；自行编写的脚本、可执行示例和代码块采用 [Apache-2.0](LICENSES/Apache-2.0.txt)。许可只及于维护者或贡献者依法享有或有权授予的权利，不保证任何生成内容天然具有著作权。
+基线 `0fd1cf16f4ed89b7f1b20f46c719aa6c58825769` 之后新增、且贡献者依法有权授权的讲解、编排与自制说明图，采用 [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt)；自行编写的脚本、可执行示例和代码块采用 [Apache-2.0](LICENSES/Apache-2.0.txt)。许可只及于维护者或贡献者依法享有或有权授予的权利，不保证任何生成内容天然具有著作权。
 
 “自行撰写”用于区分本项目内容与第三方材料，不表示全部内容由人工独立生成。编写方式见 [EDITORIAL.md](EDITORIAL.md)。新增第三方资料不得自动落入本书许可。
 
 使用本书许可范围内的文字或图，应提供适当署名、书名与来源链接、许可链接及修改说明。建议署名：“goodtang 及本书贡献者，《从零理解与开发 DeepSeek Harness》”，并链接具体版本。不得暗示原作者、DeepSeek 或其他权利人为改编作品背书。
 
 第三方代码在代码块旁标出来源、版本、许可与修改，其原始声明优先。具体段落、图片或代码的例外说明优先于本仓库默认范围。
+
+## 非商业与相同方式共享
+
+新许可适用部分允许非商业传播和改编，要求保留署名、许可链接与修改说明，改编作品对相应贡献按同一许可或许可允许的兼容方式分发。不得添加与许可冲突的限制，法定例外不受影响。商业性按许可定义及具体情境判断，不单以是否收费、机构是否营利判断。
+
+未经已有适用许可或法定例外授权的商业出版、售卖或其他商业使用，需要另行取得对应权利人的许可。具体说明见 [商业使用](COMMERCIAL.md)。代码的 Apache-2.0 与上游 MIT 权利不因此受限。
 
 ## 保护参考资料原作者权益
 
@@ -22,7 +28,7 @@ DeepSeek 源仓库基线的根许可证为 MIT，版权声明为 `Copyright (c) 
 
 ## 既有版本与使用依据
 
-本仓库此前曾以 Apache-2.0 发布资料，已经依法取得的旧版授权不会因本次范围说明自动失效。保留原 Apache-2.0 全文，Git 历史不改写。新的书稿许可不能撤销上游 MIT 权利或覆盖其他贡献者未授出的权利。
+本仓库此前曾以 Apache-2.0 和 CC BY 4.0 发布资料。基线及各文件指纹见 [既有发布记录](rights/prior-publication.json)，对应 [Git 版本](https://github.com/goodtang/deepseek-harness-bookforbeginer/tree/0fd1cf16f4ed89b7f1b20f46c719aa6c58825769)。已经授出的旧版授权保留，不能给旧内容追溯追加非商业或相同方式共享限制。文件名相同或版本升级不使旧表达自动成为全新受限内容。保留原 Apache-2.0 全文，Git 历史不改写。新旧文字混合时，只对可区分的新贡献适用新许可；复用旧部分仍可依旧授权。新的书稿许可不能撤销上游 MIT 权利或覆盖其他贡献者未授出的权利。
 
 第三方内容若不能确认许可、许可不兼容或需要额外授权，先保持为外部参考，不复制到正式书稿、图稿或实验包。确需引用时采用最小必要范围，区分原文与本书讲解，登记依据并在发布前复核；没有统一的“复制多少字一定合法”阈值。
 
@@ -30,4 +36,4 @@ DeepSeek 源仓库基线的根许可证为 MIT，版权声明为 `Copyright (c) 
 
 新增材料按[来源登记规则](rights/README.md)审核。发现来源、署名或授权问题时，暂停发布相应材料，核实后补充声明、取得授权、替换或移除，并记录更正。更换许可不能追溯消除已经发生的问题。
 
-依据：[MIT](https://opensource.org/license/mit)、[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html)、[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)、[CC 官方常见问题](https://creativecommons.org/faq/)、[著作权法](https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html)。这套安排不构成“全书永无侵权风险”的保证。
+依据：[MIT](https://opensource.org/license/mit)、[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0.html)、[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)、[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)、[CC 官方常见问题](https://creativecommons.org/faq/)、[著作权法](https://www.ncac.gov.cn/xxfb/flfg/flfg_532/202103/t20210309_50530.html)。这套安排不构成“全书永无侵权风险”的保证。

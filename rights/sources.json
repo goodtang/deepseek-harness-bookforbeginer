@@ -20,6 +20,12 @@
       "path": "LICENSES/MIT-DeepSeek.txt",
       "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
       "source": "https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/LICENSE"
+    },
+    {
+      "id": "CC-BY-NC-SA-4.0",
+      "path": "LICENSES/CC-BY-NC-SA-4.0.txt",
+      "sha256": "600ca4e25fe11762b75a97e714707fab48bb778374e92d24c6ca068791661c11",
+      "source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-NC-SA-4.0.txt"
     }
   ],
   "sources": [
@@ -59,7 +65,7 @@
       "title": "本书新增讲解、编排与配套代码",
       "creator": "goodtang and book contributors, to the extent of their lawful rights",
       "url": "https://github.com/goodtang/deepseek-harness-bookforbeginer",
-      "license": "CC-BY-4.0 for independently written prose/diagrams; Apache-2.0 for independently written code; third-party exceptions apply",
+      "license": "New protectable prose/diagrams after 0fd1cf16f4ed89b7f1b20f46c719aa6c58825769: CC-BY-NC-SA-4.0; previously published material retains earlier grants; independently written code Apache-2.0; third-party exceptions apply",
       "use": "Current planning and editorial material plus tooling; no completed chapter diagrams or labs",
       "attribution": "COPYRIGHT.md and EDITORIAL.md"
     }
@@ -68,5 +74,13 @@
   "pending": [
     "All future third-party excerpts, translations, images, screenshots, fonts and datasets require individual review before inclusion.",
     "Runtime examples and all planned figure groups remain unimplemented; no rights clearance is implied for future materials."
-  ]
+  ],
+  "text_policy": {
+    "new_text_license": "CC-BY-NC-SA-4.0",
+    "effective_after_commit": "0fd1cf16f4ed89b7f1b20f46c719aa6c58825769",
+    "baseline_snapshot_file": "rights/prior-publication.json",
+    "previous_grants_preserved": true,
+    "scope": "Only newly added protectable prose, editorial arrangement and self-created diagrams within contributor rights. Existing Apache/CC BY permissions and third-party licenses remain available.",
+    "commercial_permission": "Separate permission required only when the proposed use is not already authorized by another applicable license or legal exception."
+  }
 }

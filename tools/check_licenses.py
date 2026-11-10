@@ -10,6 +10,17 @@ ASSET_SUFFIXES = {".svg", ".png", ".jpg", ".jpeg", ".webp", ".gif", ".pdf",
                   ".woff", ".woff2", ".ttf", ".otf", ".mp4", ".mp3", ".wav"}
 
 
+def check_text_policy(policy, baseline):
+    if policy.get("new_text_license") != "CC-BY-NC-SA-4.0":
+        raise ValueError("Missing prospective text license")
+    if policy.get("previous_grants_preserved") is not True:
+        raise ValueError("Previous license grants must be preserved")
+    if policy.get("effective_after_commit") != baseline.get("baseline_commit"):
+        raise ValueError("Text license baseline mismatch")
+    if not baseline.get("files") or not baseline.get("previous_license_scope_url"):
+        raise ValueError("Missing prior publication record")
+
+
 def check_assets(root, registry):
     sources = {row["id"] for row in registry["sources"]}
     materials = {}
@@ -32,7 +43,7 @@ def check_assets(root, registry):
 
 def check(root):
     root = root.resolve()
-    for name in ("LICENSE", "COPYRIGHT.md", "THIRD_PARTY_NOTICES.md", "EDITORIAL.md", "rights/README.md"):
+    for name in ("LICENSE", "COPYRIGHT.md", "THIRD_PARTY_NOTICES.md", "EDITORIAL.md", "COMMERCIAL.md", "rights/README.md"):
         if not (root / name).is_file():
             raise ValueError(f"Missing rights document: {name}")
     registry = json.loads((root / "rights/sources.json").read_text(encoding="utf-8"))
@@ -43,12 +54,14 @@ def check(root):
         if not all(row.get(key) for key in ("id", "title", "creator", "url", "license", "use")):
             raise ValueError(f"Incomplete source: {row.get('id')}")
     licenses = {row["id"] for row in registry["licenses"]}
-    if not {"Apache-2.0", "CC-BY-4.0", "MIT-DeepSeek"} <= licenses:
+    if not {"Apache-2.0", "CC-BY-4.0", "CC-BY-NC-SA-4.0", "MIT-DeepSeek"} <= licenses:
         raise ValueError("Required license text is missing")
     for row in registry["licenses"]:
         path = (root / row["path"]).resolve()
         if not path.is_relative_to(root) or hashlib.sha256(path.read_bytes()).hexdigest() != row["sha256"]:
             raise ValueError(f"License checksum mismatch: {row['id']}")
+    prior = json.loads((root / "rights/prior-publication.json").read_text(encoding="utf-8"))
+    check_text_policy(registry.get("text_policy", {}), prior)
     mit = (root / "LICENSES/MIT-DeepSeek.txt").read_text(encoding="utf-8")
     if "Copyright (c) 2026 DeepSeek" not in mit or "permission notice shall be included" not in mit:
         raise ValueError("DeepSeek copyright/permission notice is missing")

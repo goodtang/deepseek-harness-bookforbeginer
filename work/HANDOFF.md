@@ -12,4 +12,6 @@ E1 完成需要正常工具循环经真实管线、独立断言、隔离 home、
 
 推送前执行 python tools/verify_book.py、python -m unittest discover -s tools -p test_verify_book.py 和 git diff --cached --check。提交和远端核对结果由 Git 记录与本次交付说明确认；未经证据不能将待验证更新为通过。
 
-版权规则已分为正文/自制图 CC BY 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。
+版权规则已分为基线之后新增且有权授权的正文/自制图 CC BY-NC-SA 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache-2.0 与 CC BY 4.0 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。
+
+新旧许可分界以 rights/prior-publication.json 及其基线 Git 版本为准。新限制只适用于新增且有权授权的表达；既有宽松许可、第三方权利、法定例外和代码许可不受追溯限制。

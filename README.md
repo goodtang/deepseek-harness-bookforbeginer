@@ -34,6 +34,6 @@ python tools/verify_book.py
 
 ## 版权与开放许可
 
-自行撰写的书稿与自制图表采用 **CC BY 4.0**，自行编写的代码和脚本采用 **Apache-2.0**；第三方资料保留原权利与许可，不纳入上述默认授权。旧版 Apache-2.0 授权不因本次说明自动撤回。详见 [许可范围](LICENSE)、[版权说明](COPYRIGHT.md)、[第三方声明](THIRD_PARTY_NOTICES.md)和[来源登记](rights/README.md)。
+后续新增且有权授权的书稿与自制图表采用 **CC BY-NC-SA 4.0**，要求署名、非商业使用和相同方式共享；自行编写代码与脚本仍为 **Apache-2.0**。第三方资料按原许可。已按 Apache-2.0 或 CC BY 4.0 发布的内容保留原授权，不受追溯限制。新旧内容的分界见 [既有发布记录](rights/prior-publication.json)，涉及额外商业授权见 [商业使用说明](COMMERCIAL.md)。详见 [许可范围](LICENSE)、[版权说明](COPYRIGHT.md)、[第三方声明](THIRD_PARTY_NOTICES.md)和[来源登记](rights/README.md)。
 
 发布前同时运行 `python tools/check_licenses.py`。版权审查不能仅靠自动检查；来源或权限不明的材料不进入可发布正文。公开资料不包含私人会话、凭据或未脱敏业务数据，历史版本通过 Git 保留。
