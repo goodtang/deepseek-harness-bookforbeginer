@@ -15,3 +15,5 @@
 
 - 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。
 - 首读者候选为 goodtang，候选身份不等于已同意参与、独立完成或读者验收通过。
+
+版权规则已分为正文/自制图 CC BY 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。

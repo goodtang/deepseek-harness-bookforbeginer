@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 """Focused regression checks for broken links and unreviewed file changes."""
 
 import tempfile

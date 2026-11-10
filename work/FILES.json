@@ -15,11 +15,19 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "21c55199f835cd90114222bf77ba1611cc17250ee09964346955372e2f505a3c"
+      "sha256": "543437b4439c010555f1efccac69667b230547d654363d10cfbc7719874e4280"
+    },
+    {
+      "path": "COPYRIGHT.md",
+      "sha256": "bf50c95cbe2f7de16673b1d1c3e40876a1a00e49e24bb550db4fdaf0829e9152"
     },
     {
       "path": "diagrams/README.md",
       "sha256": "220fc35f6d0b4e8f0990e1d1ad1993db568fb87a4c02ca4c8a98d3e76065c0b9"
+    },
+    {
+      "path": "EDITORIAL.md",
+      "sha256": "49e1ea6f8395b4b2cb01fef4b3628b4a0d83f973661149c7ddc7d0f1ea491d91"
     },
     {
       "path": "labs/README.md",
@@ -27,39 +35,71 @@
     },
     {
       "path": "LICENSE",
+      "sha256": "e50b96d5e72f9cb827cfd75d44c982eff9b930cda3686ba505a13948a5ef2a3a"
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    {
+      "path": "LICENSES/MIT-DeepSeek.txt",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    {
       "path": "planning/book-plan-v6.md",
-      "sha256": "d6d277175db457843f6b118e0c57a1dd682314c1f559291374ecfdd7e3032589"
+      "sha256": "2d8bc3806afb2bcf2b87cfc07c08d253c35b391c69d8738ea6766ce4ba21c129"
     },
     {
       "path": "planning/execution-plan.md",
-      "sha256": "207b468182fb4999f1b88a5d9b6eb603fe91e371fa3c12c7a1f949d66c59f959"
+      "sha256": "b649c7ec6e7d38e9e8dda33fcd55778ab2d73ddab84f2d326a47067f90d3a741"
     },
     {
       "path": "README.md",
-      "sha256": "577ff8c07659795884847bc672155ab6c23c2a5abcff50d2bb82568507ab8a28"
+      "sha256": "ec8ee984b5fa5f52b9f61fb059169fd2673f6af68d60d3c30408fc41cf6d501b"
+    },
+    {
+      "path": "rights/README.md",
+      "sha256": "c7b13bd88dedae6ef0a46d221d4cd8546688d4274374dc6e3698aaea5e6e153b"
+    },
+    {
+      "path": "rights/sources.json",
+      "sha256": "0d85e5032bd990792ba1dc9a18cb363d9c9aebfe311af153adc57e0324158c28"
     },
     {
       "path": "templates/chapter-task.md",
-      "sha256": "aaa97f8fe26d60d9605087a23408716e4f2e838422e78e3a43ab0b0c9d284fb3"
+      "sha256": "6eb4e655b711bd0a2ec05422064fbed80612a71f2efbb9815f071a194c59c6fc"
     },
     {
       "path": "templates/chapter.md",
-      "sha256": "9e1972886afb8964798dd6df8039a34aa6378626c1a1cd3f358766fe8572f753"
+      "sha256": "0e1475cb39b500559bca1bcab077a396f7557f01ae16e031242e0d25a8630a28"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "347f11571e5cf6f996c4b8493d15fedeaeec2dbe9cba37f3ddb476f85fd5eb2d"
+    },
+    {
+      "path": "tools/check_licenses.py",
+      "sha256": "392f53c1b63e57d03bd43b5d581de143ba0ef6ee1423f6365cfb3f4e0a5fbe0e"
+    },
+    {
+      "path": "tools/test_check_licenses.py",
+      "sha256": "7a91bc487058d4e96b698a1e3a63d008ee2e44ff45de77f72fee8eaa7a31a738"
     },
     {
       "path": "tools/test_verify_book.py",
-      "sha256": "67861325efe5a53c3b53fea15e819e8d728842c789208969a6514f6b82fb9e73"
+      "sha256": "57cf3699b63724bd8e44fec21863df3e4cbfe4a51bfed1453dcd9e96b953dab6"
     },
     {
       "path": "tools/verify_book.py",
-      "sha256": "ef42c7fa3700b9517ea52c422675ff746686dd84d89546d137c43ac9c72c873e"
+      "sha256": "29da3d8e7a0482ecf62a2d37f4b53e919374607f3b3ae924f26dc5b77b522e3d"
     },
     {
       "path": "work/CANON.md",
-      "sha256": "eed5f64ba87755395b9dca59ad06413ede15e6aac121aa6311685d017c3fafee"
+      "sha256": "206cbd8ee7c7d98c5b431b76643a290f58a647431c10fe9125cddbb1762b173b"
     },
     {
       "path": "work/CHAPTERS.md",
@@ -67,7 +107,7 @@
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "0a29018526a982d5eb2945e53a34e0ac03be8444a33561d05dcdcd022bf1bb42"
+      "sha256": "dd8e67069b6a5ce5228833f2fa8788a9a398663cc97f20d856179dd50afabab3"
     },
     {
       "path": "work/START-HERE.md",
@@ -75,7 +115,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "6485698006308ff368337a04baaf82b4c774b8bdf6b8c4b3a78b5b4a034ea6d1"
+      "sha256": "623a9a4d4030ca3f4dacf4b574dfaef8f438ceccfd17664c81ba6e3e7fb824cb"
     }
   ]
 }

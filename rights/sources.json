@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-10",
+  "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
+  "licenses": [
+    {
+      "id": "Apache-2.0",
+      "path": "LICENSES/Apache-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "Existing repository LICENSE, preserved from commit b27c47be96745a3c3bac026021c4f1cfa0da38a3"
+    },
+    {
+      "id": "CC-BY-4.0",
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+      "source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-4.0.txt"
+    },
+    {
+      "id": "MIT-DeepSeek",
+      "path": "LICENSES/MIT-DeepSeek.txt",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+      "source": "https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/LICENSE"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-DSH",
+      "title": "DeepSeek Harness source and documentation",
+      "creator": "DeepSeek and contributors as recorded by the applicable files",
+      "url": "https://github.com/goodtang/deepseek-harness-local/tree/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "version": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "license": "MIT at repository root; separate vendor and asset licenses require individual review",
+      "license_file": "LICENSES/MIT-DeepSeek.txt",
+      "use": "Architecture explanations, terminology and pinned source references in planning and templates; no full runtime source copied",
+      "modification": "Independently organized explanations; not an official translation or endorsement",
+      "attribution": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "SRC-WANG",
+      "title": "汇编语言（第4版）",
+      "creator": "王爽；清华大学出版社",
+      "url": "https://www.tup.tsinghua.edu.cn/bookscenter/book_07970801.html",
+      "version": "ISBN 9787302539414",
+      "license": "No reproduction permission claimed",
+      "use": "Pedagogical reference only; no text, examples, answers, figures or distinctive chapter arrangement reproduced",
+      "attribution": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "SRC-POLICIES",
+      "title": "Official licensing and publication policies",
+      "creator": "Creative Commons, Apache Software Foundation, OpenAI, relevant public authorities",
+      "url": "See COPYRIGHT.md, EDITORIAL.md and THIRD_PARTY_NOTICES.md",
+      "license": "Linked policy references are not relicensed by this repository",
+      "use": "Links and independent summaries; license texts listed separately above",
+      "attribution": "COPYRIGHT.md and EDITORIAL.md"
+    },
+    {
+      "id": "SRC-BOOK",
+      "title": "本书新增讲解、编排与配套代码",
+      "creator": "goodtang and book contributors, to the extent of their lawful rights",
+      "url": "https://github.com/goodtang/deepseek-harness-bookforbeginer",
+      "license": "CC-BY-4.0 for independently written prose/diagrams; Apache-2.0 for independently written code; third-party exceptions apply",
+      "use": "Current planning and editorial material plus tooling; no completed chapter diagrams or labs",
+      "attribution": "COPYRIGHT.md and EDITORIAL.md"
+    }
+  ],
+  "materials": [],
+  "pending": [
+    "All future third-party excerpts, translations, images, screenshots, fonts and datasets require individual review before inclusion.",
+    "Runtime examples and all planned figure groups remain unimplemented; no rights clearance is implied for future materials."
+  ]
+}

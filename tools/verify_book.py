@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 """Check local book links and reviewed active-file fingerprints."""
 
 import argparse
@@ -13,10 +14,11 @@ def digest(path):
 
 
 def active_files(root):
-    files = [root / name for name in ("README.md", "CONTRIBUTING.md", "LICENSE", ".gitignore", ".gitattributes")]
-    for name in ("planning", "templates", "work", "chapters", "labs", "diagrams", "tools"):
+    files = [root / name for name in ("README.md", "CONTRIBUTING.md", "LICENSE", "COPYRIGHT.md",
+                                    "THIRD_PARTY_NOTICES.md", "EDITORIAL.md", ".gitignore", ".gitattributes")]
+    for name in ("planning", "templates", "work", "chapters", "labs", "diagrams", "tools", "rights", "LICENSES"):
         files.extend(p for p in (root / name).rglob("*")
-                     if p.is_file() and p.suffix in {".md", ".json", ".py"}
+                     if p.is_file() and p.suffix in {".md", ".json", ".py", ".txt"}
                      and "__pycache__" not in p.parts and p != root / "work/FILES.json")
     return sorted(p for p in files if p.is_file())
 
