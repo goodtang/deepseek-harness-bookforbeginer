@@ -1,0 +1,64 @@
+{
+  "chapter": "CH-RUN",
+  "capturedAt": "2026-11-11T02:03:46.939Z",
+  "node": "v24.12.0",
+  "platform": "win32",
+  "arch": "x64",
+  "files": {
+    "check.mjs": "1a67f26f9e4b004d97f33b27dca2f7740a6aaf8ab76c20db11f4d2ecacad9420",
+    "verify.mjs": "4c0ab63d5c2eeeeb994299c475a5d9b7836f101ad9e7e71ab1901ab9fb564d05"
+  },
+  "cases": [
+    {
+      "name": "source-preflight",
+      "expectedExitCode": 0,
+      "observedExitCode": 0
+    },
+    {
+      "name": "relative-script-from-wrong-directory",
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "diagnostic": "MODULE_NOT_FOUND"
+    },
+    {
+      "name": "missing-source-directory",
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "diagnostic": "预检失败：找不到源码目录下的 package.json；请检查路径，勿把书稿目录当作源码目录。"
+    },
+    {
+      "name": "absolute-script-from-source-directory",
+      "expectedExitCode": 0,
+      "observedExitCode": 0
+    },
+    {
+      "name": "relative-observation-from-book",
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "evidence": "relative-observation-from-book.json",
+      "sha256": "9175f2e6ee6d925c3d6ca415bffcd2cf169dab00691a9803f0cee475d5c005c0",
+      "applicationCleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "name": "absolute-observation-from-source",
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "evidence": "absolute-observation-from-source.json",
+      "sha256": "9c0ec92917a59710e2f040a0f65ed332334fc01477f11e220fb0e7d05191b99d",
+      "applicationCleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "sourceDeclaredNode": ">=24.9.0",
+  "sourceDeclaredPackageManager": "pnpm@11.28.5",
+  "scope": "Existing prepared source environment; no fresh installation, dependency rebuild, network isolation or cross-platform acceptance",
+  "retainedEvidence": "Application temporary roots cleaned by inner runner; this verifier retains its own local evidence directories",
+  "passed": true
+}

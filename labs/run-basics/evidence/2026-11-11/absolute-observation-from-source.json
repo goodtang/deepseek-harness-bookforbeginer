@@ -1,0 +1,80 @@
+{
+  "scenario": "E1-normal-tool-cycle",
+  "capturedAt": "2026-11-11T02:03:41.096Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "sourceTrackedChanges": "",
+  "node": "v24.12.0",
+  "assertions": [
+    "headless exit code is zero",
+    "actual headless stdout matches the scripted final answer",
+    "exactly two scripted requests; no script exhaustion",
+    "registered execution returned the known ticket to the next request",
+    "missing lookup returns null; returned copies cannot mutate fixture"
+  ],
+  "exitCode": 0,
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "submittedTask": "Look up ticket TK-1042 with book_ticket_lookup.",
+  "labFiles": {
+    "run.mjs": "32011f6008732ad6f9599e234083ae7229f1ee930f328769e38c61304cc785c1",
+    "plugin.mjs": "4a99f3756b1880741b0c32e499eecee69ef7457358e38856ac89e423adc3e395",
+    "tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "signal": null,
+  "terminalStdout": "Ticket lookup completed.\n",
+  "toolSchema": {
+    "name": "book_ticket_lookup",
+    "description": "Look up a fictional ticket by its exact ID; does not modify records.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Ticket ID, for example TK-1042"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  "observedToolCall": {
+    "type": "tool_use",
+    "id": "mock-call-1",
+    "name": "book_ticket_lookup",
+    "input": {
+      "id": "TK-1042"
+    }
+  },
+  "requests": [
+    {
+      "attempt": 1,
+      "behavior": "tool_call_success",
+      "outcome": "completed",
+      "chunksSent": 7,
+      "path": "/v1/messages"
+    },
+    {
+      "attempt": 2,
+      "behavior": "success",
+      "outcome": "completed",
+      "chunksSent": 8,
+      "path": "/v1/messages"
+    }
+  ],
+  "observedToolResult": {
+    "type": "tool_result",
+    "tool_use_id": "mock-call-1",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+      }
+    ],
+    "is_error": false
+  },
+  "passed": true
+}

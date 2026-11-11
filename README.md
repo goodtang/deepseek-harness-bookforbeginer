@@ -4,13 +4,14 @@
 
 **编写说明：现有规划、部分文档与脚本使用生成式工具辅助起草和整理，维护者进行了阶段性评阅；技术核验与读者验收仍按实际记录推进。详见 [编写与核验说明](EDITORIAL.md)。**
 
-**当前阶段：第一章《一句请求发出去以后》初稿完成并作定点修订，已补录真实终端答复，正常观察实验通过；尚未经过学生试读或定稿。** E1 工程与《第一个业务工具》的部分试写另行保留，完整书稿和故障实验尚未完成。
+**当前阶段：第一、二章正式初稿完成，尚未经过学生试读或定稿。** 第二章在已有 Windows 环境中通过六个路径/预检/运行场景；全新机器安装和构建仍待验收。E1 工程与《第一个业务工具》的部分试写另行保留，完整书稿和故障实验尚未完成。
 
 ## 从哪里开始
 
 | 目的 | 入口 |
 | --- | --- |
 | 从第一章开始阅读 | [一句请求发出去以后](chapters/CH-OBS.md)、[配套观察记录](labs/observe-task/README.md) |
+| 运行同一任务并学习路径、环境与排错 | [第二章：第一次自己运行](chapters/CH-RUN.md)、[环境准备](labs/run-basics/SETUP.md) |
 | 阅读首次正文试写与复现正常工具循环（试写，建议按主线顺序阅读） | [第一个业务工具](chapters/CH-TOOL.md)、[实验工程](labs/first-tool/README.md) |
 | 理解学习目标、语言、图解与教学路线 | [V6 编写方案](planning/book-plan-v6.md) |
 | 理解执行顺序、资料衔接与验收 | [实施安排](planning/execution-plan.md) |
@@ -32,7 +33,7 @@ python tools/verify_book.py
 
 经审查的文件变更需要更新指纹时运行 `python tools/verify_book.py --refresh`，再检查产生的差异。脚本检查本地 Markdown 链接、编码和文件指纹；不证明外部链接可访问、代码行为正确或读者已经学会。
 
-正文、实验与图稿状态分别见 [chapters](chapters/README.md)、[labs](labs/README.md) 和 [diagrams](diagrams/README.md)。第一章一图及 CH-TOOL 两图均有 PNG 和可编辑 Mermaid 源图，本机显示已检查；GitHub 页面及 PDF 视觉验收单独记录。
+正文、实验与图稿状态分别见 [chapters](chapters/README.md)、[labs](labs/README.md) 和 [diagrams](diagrams/README.md)。第一、二章各一图及 CH-TOOL 两图均有 PNG 和可编辑 Mermaid 源图，本机显示已检查；GitHub 页面及 PDF 视觉验收单独记录。
 
 ## 版权与开放许可
 

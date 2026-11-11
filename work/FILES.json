@@ -11,7 +11,11 @@
     },
     {
       "path": "chapters/CH-OBS.md",
-      "sha256": "c2f6a16baf5e80fda08e349a60359cd556292d4cfbfc93c30576f595afb5b631"
+      "sha256": "eb7b48a59d14d6f44d13fc00b4ebca7831417725ca6131242076da9940e0bec4"
+    },
+    {
+      "path": "chapters/CH-RUN.md",
+      "sha256": "3793450210ce7b7bf22ab4cc0c5ff87187b9acfe615c0800723fb914b7403fd0"
     },
     {
       "path": "chapters/CH-TOOL.md",
@@ -19,7 +23,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "ec916ed76c9ceb23dc430bb8e8d55fbee3f07bb3e6212ea09a18e2f451aff19e"
+      "sha256": "d3cd5a096f317745f78dbc9711c785022784ad83f23bc2d454da4adda65de0ac"
     },
     {
       "path": "COMMERCIAL.md",
@@ -42,6 +46,14 @@
       "sha256": "02b4afdf5268da57c0169f7bd59db7db8522aaf5533adf114ecd9136ed4b54b5"
     },
     {
+      "path": "diagrams/CH-RUN-01.mmd",
+      "sha256": "2bdc3e3451221fd4faca8865e2b558c9302c4bd41f614f0d0df02a5eaa48ee86"
+    },
+    {
+      "path": "diagrams/CH-RUN-01.png",
+      "sha256": "74e830492c9d690d0e6c1a284b1527216b99b24eec5ab93b2cef313c6fa04b23"
+    },
+    {
       "path": "diagrams/CH-TOOL-01.mmd",
       "sha256": "a5dcf242c55063402c75de71899ec168aabd10ee2c8425813762eb51c919a715"
     },
@@ -59,11 +71,11 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "161de4957f3f96b90a3239be5627b5eba59818f9f4b018d52d56cb700fe55ca1"
+      "sha256": "4fee3ce7447e73523b45ec94c7dcf448848a4b415dd3cfc22150b023c8f9e9ad"
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "c4978b1edb4404fb541aeb80780411c3c5da514e2525411ae03b91686e0276fa"
+      "sha256": "0422424596c5ec7409f20b49231ec4c7805efb424c3c6b4b80e468175b1f6cfa"
     },
     {
       "path": "EDITORIAL.md",
@@ -147,7 +159,43 @@
     },
     {
       "path": "labs/README.md",
-      "sha256": "f1143ed9a95762a565dea624e123ccf414174f0944dd34d9230df425eaee35a9"
+      "sha256": "25bde6d78043bf35d4ed481b009bdd80ae21fc9ea24cf42a38d3fe3c124c1bfa"
+    },
+    {
+      "path": "labs/run-basics/check.mjs",
+      "sha256": "1a67f26f9e4b004d97f33b27dca2f7740a6aaf8ab76c20db11f4d2ecacad9420"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11/absolute-observation-from-source.json",
+      "sha256": "9c0ec92917a59710e2f040a0f65ed332334fc01477f11e220fb0e7d05191b99d"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11/checks.json",
+      "sha256": "8c3a763cfb7673c5abb35a0c45b6c180e554c8e602ceac8875650c1d7060823a"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11/preflight-stdout.txt",
+      "sha256": "95065485c3ca3fdc6c2a85997263c2a5e0812874f968b95523e907010702e9d2"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11/relative-observation-from-book.json",
+      "sha256": "9175f2e6ee6d925c3d6ca415bffcd2cf169dab00691a9803f0cee475d5c005c0"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11/toolchain.txt",
+      "sha256": "4006fe2de7731303e3ebd803058778e5d2bfadf81e275cd360e38aebaac9227c"
+    },
+    {
+      "path": "labs/run-basics/README.md",
+      "sha256": "2d7227a9a7654595c8a9e59d63a401483618aa87a10c7882ff616ad40f1cc86b"
+    },
+    {
+      "path": "labs/run-basics/SETUP.md",
+      "sha256": "a55f16c03ca91466f46aad81c9767689f522b70ed6e1252bc4ed122fd97d1083"
+    },
+    {
+      "path": "labs/run-basics/verify.mjs",
+      "sha256": "4c0ab63d5c2eeeeb994299c475a5d9b7836f101ad9e7e71ab1901ab9fb564d05"
     },
     {
       "path": "LICENSE",
@@ -179,7 +227,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "f1ae521924ae357c8f1cfb005e64ee7f835a0850f2299b2baa1fbd844f8b0627"
+      "sha256": "87edf706b6126762138c1429ac97fe3619d28cd91acdf77e5c5a809ce25dd169"
     },
     {
       "path": "rights/prior-publication.json",
@@ -191,7 +239,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "ea727456143f47770f79357edd0b58f02964d5b9202619625b72942dd0761cb4"
+      "sha256": "8fd84af1ec8a786b67ddcf0cd7feee63110cfdb90c3296972aa84fc98457b5d0"
     },
     {
       "path": "templates/chapter-task.md",
@@ -222,6 +270,10 @@
       "sha256": "a05a21e41293de637a88f43546f8a165226321e3bc97f4bae181a8187cfcbb55"
     },
     {
+      "path": "tools/test_run_basics.py",
+      "sha256": "4ec3635a93e4c3f990b1f0b99132f070960ee03f861218ba6cd0d478fb820a98"
+    },
+    {
       "path": "tools/test_verify_book.py",
       "sha256": "98e76e8aa7bc4f20c32a1981f64326393037aa95f03ec3b1cd654eadbe458c05"
     },
@@ -231,11 +283,15 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "a42326a14f4af239991551212ef3e9af916f8ea38fed57b206774c4f89388eab"
+      "sha256": "d5242e86b9c313be965a13ca93a782ccacf944085a60ae6dccd8530be7e5a8bf"
     },
     {
       "path": "work/CH-OBS-task.md",
-      "sha256": "0744f145a8a50daa7b62da44da07171066023cbdc472b7407609f4f8708d13d6"
+      "sha256": "4a924f826eb7576f3e4301bbd3ca4e6212821a94704ce8835d31ae9a697daef2"
+    },
+    {
+      "path": "work/CH-RUN-task.md",
+      "sha256": "9e06420426146249669299d99c8dab1f7634323a3e71c82bf6f4a70a7768b202"
     },
     {
       "path": "work/CH-TOOL-task.md",
@@ -243,11 +299,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "43db5d14b15e9ddf6236cb38d9056f21977b9f06eaa5936938db465c4a3f63d7"
+      "sha256": "b6a8cd39dde52a2d7fcb99366e9440f779a03bba6584a24931352488ea2155a5"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "3f89e7d3b63558417e8ab5e11a7264c8526dd78ed668c8517030edca473c4493"
+      "sha256": "956e7ff2a9d59ec1db7a19ae733700a330085399eb0e3cf606ea0d3b1bee4d3a"
     },
     {
       "path": "work/START-HERE.md",
@@ -255,7 +311,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "25fd9721650680769e2d36b272268c26158b6e9e906824b0d211a2df3927619f"
+      "sha256": "9b26763bd357b206780ea1d15c5f24b8eaeb3b659ae8cc775ea9b58bc224b9f9"
     }
   ]
 }

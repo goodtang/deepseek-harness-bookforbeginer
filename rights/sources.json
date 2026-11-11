@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-10",
+  "review_date": "2026-11-11",
   "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
   "licenses": [
     {
@@ -68,6 +68,33 @@
       "license": "New protectable prose/diagrams after 0fd1cf16f4ed89b7f1b20f46c719aa6c58825769: CC-BY-NC-SA-4.0; previously published material retains earlier grants; independently written code Apache-2.0; third-party exceptions apply",
       "use": "Planning/editorial material; independently written tools and labs; formal chapter-one draft and original diagrams; partial CH-TOOL sample. Reader acceptance and full book pending.",
       "attribution": "COPYRIGHT.md and EDITORIAL.md"
+    },
+    {
+      "id": "SRC-NODE",
+      "title": "Node.js download and Corepack documentation",
+      "creator": "Node.js and OpenJS Foundation contributors",
+      "url": "https://nodejs.org/en/download",
+      "version": "Official documentation consulted 2026-11-11",
+      "license": "Third-party documentation rights retained; linked and paraphrased, no license grant or reproduction permission claimed by this book",
+      "use": "Linked and independently paraphrased Windows setup guidance; Node Corepack removal information links the official v25.8.0 API document. No installers redistributed."
+    },
+    {
+      "id": "SRC-COREPACK",
+      "title": "Corepack manual installation documentation",
+      "creator": "Node.js Corepack contributors",
+      "url": "https://github.com/nodejs/corepack#manual-installs",
+      "version": "Official documentation consulted 2026-11-11",
+      "license": "Third-party documentation rights retained; linked and paraphrased, no license grant or reproduction permission claimed by this book",
+      "use": "Linked manual setup approach; example pins the author-verified existing version 0.34.5, without claiming fresh installation has passed."
+    },
+    {
+      "id": "SRC-GIT",
+      "title": "Git for Windows installation page",
+      "creator": "Git project and Git for Windows contributors",
+      "url": "https://git-scm.com/install/windows",
+      "version": "Official documentation consulted 2026-11-11",
+      "license": "Third-party documentation rights retained; linked and paraphrased, no license grant or reproduction permission claimed by this book",
+      "use": "Linked official download location; independently phrased beginner setup. No vendor screenshots or installer redistribution."
     }
   ],
   "materials": [
@@ -147,6 +174,42 @@
       "path": "labs/observe-task/evidence/2026-11-11/terminal-stdout.txt",
       "source_id": "SRC-BOOK",
       "basis": "Actual local headless stdout from the book fictional fixture, independently captured and checked; no real business data or external imagery. Rights scope remains governed by COPYRIGHT.md.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/CH-RUN.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent chapter-two prose, tied to SRC-DSH code/version facts and actual captured path/runtime checks.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/check.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent read-only Apache-2.0 teaching preflight for target source metadata, not a copied upstream implementation.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/verify.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 author verification driver; real supported observation path and expected failures, no upstream source copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/SETUP.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently phrased project setup guidance; SRC-DSH, SRC-NODE, SRC-COREPACK and SRC-GIT linked for facts. No documentation chapters, screenshots or binaries reproduced.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-RUN-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original file-location relationship diagram, prospective book diagram policy applies.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-RUN-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Local rendering of original CH-RUN-01 source, no external image reused.",
       "status": "cleared"
     }
   ],

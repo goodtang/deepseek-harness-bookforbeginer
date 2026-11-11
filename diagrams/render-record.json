@@ -38,6 +38,19 @@
       "local_visual_review": "PNG inspected after final render: Chinese, arrows and labels readable, no clipping observed.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-RUN-01",
+      "captured_at": "2026-11-11T02:16:23.304590+00:00",
+      "source": "CH-RUN-01.mmd",
+      "source_sha256": "2bdc3e3451221fd4faca8865e2b558c9302c4bd41f614f0d0df02a5eaa48ee86",
+      "image": "CH-RUN-01.png",
+      "image_sha256": "74e830492c9d690d0e6c1a284b1527216b99b24eec5ab93b2cef313c6fa04b23",
+      "width": 964,
+      "height": 1168,
+      "local_visual_review": "Final PNG inspected: short labels fit without broken words, Chinese and arrows readable, no clipping.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }
