@@ -33,3 +33,5 @@ E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/firs
 版权规则已分为基线之后新增且有权授权的正文/自制图 CC BY-NC-SA 4.0、代码 Apache-2.0、第三方按原许可；历史 Apache-2.0 与 CC BY 4.0 授权保留。新增许可文本、来源登记、第三方署名与编写方式说明，后续按 rights/README.md 审查素材。正文与实验验收仍未完成，不将版权文档更新视为教材实测通过。
 
 新旧许可分界以 rights/prior-publication.json 及其基线 Git 版本为准。新限制只适用于新增且有权授权的表达；既有宽松许可、第三方权利、法定例外和代码许可不受追溯限制。
+
+第三章快照约定（2026-11-11）：labs/func/completed.mjs 是正文简化实现；first-tool/tickets.mjs 是后续工具示例完整版本，仍为教学代码，不称上游内置查询或生产系统。正文两个完整代码块分别与 completed.mjs、check-one.mjs 对应，verify.mjs 核对并在临时副本中复跑；旧证据不改变适用范围。
