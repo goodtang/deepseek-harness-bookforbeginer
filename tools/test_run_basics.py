@@ -8,6 +8,21 @@ from pathlib import Path
 
 
 class RunBasicsEvidence(unittest.TestCase):
+    def test_reader_paths_do_not_require_author_directory_layout(self):
+        root = Path(__file__).resolve().parents[1]
+        for name in ["chapters/CH-RUN.md", "labs/run-basics/SETUP.md"]:
+            text = (root / name).read_text(encoding="utf-8")
+            self.assertNotIn("D:/projects", text)
+            self.assertIn("$BookRoot", text)
+            self.assertIn("$HarnessRoot", text)
+        lab = root / "labs/run-basics"
+        run = json.loads((lab / "evidence/2026-11-11-revision/reader-paths.json").read_text(encoding="utf-8"))
+        self.assertTrue(run["passed"])
+        self.assertEqual(run["exitCode"], 0)
+        self.assertTrue(run["junctionsRemoved"])
+        self.assertTrue(run["distinctPathRoots"])
+        self.assertEqual(run["scriptSha256"], hashlib.sha256((lab / "reader-paths.mjs").read_bytes()).hexdigest())
+
     def test_revised_reader_examples_have_actual_captures(self):
         root = Path(__file__).resolve().parents[1]
         folder = root / "labs/run-basics/evidence/2026-11-11-revision"

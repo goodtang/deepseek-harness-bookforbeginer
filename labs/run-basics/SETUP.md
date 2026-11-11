@@ -1,6 +1,6 @@
 # 第二章配套：准备 Windows 学习环境
 
-这是本书针对 goodtang/deepseek-harness-local 的准备步骤，不是另一套通用框架教程。本轮实测在已有依赖的 Windows x64 环境完成；以下“安装工具→下载→安装依赖→构建”的新机全链路尚未在空白机器重新执行，必须保持待验收。已有两份仓库的读者从版本核对开始，不重复创建同名目录。
+这是本书针对 goodtang/deepseek-harness-local 的准备步骤，不是另一套通用框架教程。本轮实测在已有依赖的 Windows x64 环境完成；以下“安装工具→下载→安装依赖→构建”的新机全链路尚未在空白机器重新执行，必须保持待验收。已有两份仓库的读者先按[正文](../../chapters/CH-RUN.md#21-先知道自己站在哪个目录)填写实际路径变量，再从版本核对开始，不重复创建同名目录。
 
 ## 1. 准备命令所需的工具
 
@@ -20,13 +20,20 @@ corepack --version
 
 ## 2. 下载书稿和目标源码
 
-下面假设你选择 `D:/projects`，且两个目标目录都不存在；没有 D 盘时换成自己的父目录，并修改后续所有对应路径。
+先选一个自己有权限写入的学习父目录。下面的默认例子使用当前用户目录下的 `harness-study`，不要求存在 D 盘；如果这两个仓库已在其他位置，跳过 clone，按正文填写实际路径即可，两份仓库不必放在一起。
 
 ```powershell
-New-Item -ItemType Directory -Force D:/projects
-Set-Location D:/projects
-git clone https://github.com/goodtang/deepseek-harness-bookforbeginer.git deepseek-harness-bookforbeginer
-git clone https://github.com/goodtang/deepseek-harness-local.git deepseek-harness-local
+$StudyRoot = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'harness-study'
+New-Item -ItemType Directory -Force -Path $StudyRoot
+$BookRoot = Join-Path $StudyRoot 'book'
+$HarnessRoot = Join-Path $StudyRoot 'harness'
+```
+
+`book` 与 `harness` 是本例的新目录名，不影响仓库内容。先用 `Test-Path -LiteralPath $BookRoot` 与 `Test-Path -LiteralPath $HarnessRoot` 检查；只有两个目标都不存在时才执行：
+
+```powershell
+git clone https://github.com/goodtang/deepseek-harness-bookforbeginer.git "$BookRoot"
+git clone https://github.com/goodtang/deepseek-harness-local.git "$HarnessRoot"
 ```
 
 下载可能需要网络访问和相应仓库权限。两条 clone 分别得到书稿和工程，不把目录合在一起。若目录已经存在，就进入并核对它，不删除或覆盖原有工作来获得同名新目录。
@@ -34,7 +41,7 @@ git clone https://github.com/goodtang/deepseek-harness-local.git deepseek-harnes
 在刚下载的源码学习副本中选择本书基线：
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $HarnessRoot
 git switch --detach fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159
 git rev-parse HEAD
 ```
@@ -60,12 +67,18 @@ corepack pnpm run build
 ## 4. 回到书稿目录做实际检查
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-bookforbeginer
-node labs/run-basics/check.mjs D:/projects/deepseek-harness-local
-node labs/observe-task/run.mjs D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $BookRoot
+node labs/run-basics/check.mjs $HarnessRoot
+node labs/observe-task/run.mjs $HarnessRoot
 $LASTEXITCODE
 ```
 
 前一条预检失败时，先处理它指出的定位或依赖问题，再执行观察任务。逐条输入，不要因为把整个代码块粘贴完，就忽略前面某条命令已经失败。
 
 本场景通过模拟服务运行，无需真实模型密钥；安装和下载仍可能需要网络。这两个条件分别记录。若暂时没完成准备，可以回第一章读实测记录，但保持自己的“独立运行”待完成。
+
+## 终端与操作系统差异
+
+本文命令使用 PowerShell：`$BookRoot` 是变量，`Set-Location` 切换目录，`$LASTEXITCODE` 读取上一个程序退出码。Bash/zsh 的变量赋值、`cd` 和 `$?` 写法不同，不能只替换盘符就执行这些代码块。macOS/Linux 或 WSL 读者需要对应的工具安装和命令说明；当前没有完成这些平台的端到端验收，不将 Windows 的测试记为其通过。
+
+已有仓库可以分处不同目录甚至磁盘；正文先收集两处实际根目录，再使用变量，不要求目录同名或相邻。作者证据中的真实磁盘路径是实验出处，不能拿它替换读者的位置。重新打开终端后需要重新填写这两个变量；本章不把它们保存为机器全局设置。

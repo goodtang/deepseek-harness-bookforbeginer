@@ -4,10 +4,11 @@
 
 ## 运行准备好的实验
 
-已经准备好源码与依赖时，在书稿仓库目录打开 PowerShell：
+已经准备好源码与依赖时，先按[第二章](../../chapters/CH-RUN.md#21-先知道自己站在哪个目录)填写本机的 `$BookRoot` 和 `$HarnessRoot`，再在同一 PowerShell 终端运行：
 
 ```powershell
-node labs/observe-task/run.mjs D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $BookRoot
+node labs/observe-task/run.mjs $HarnessRoot
 ```
 
 `node` 是运行 JavaScript 程序的命令；`labs/observe-task/run.mjs` 是相对于书稿仓库目录的脚本路径；最后一项是源码仓库的绝对路径。源码位置不同就替换最后一项；路径含空格时使用双引号。示例不需要真实模型密钥。

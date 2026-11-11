@@ -1,5 +1,7 @@
 # 第二章配套：路径、预检与实际运行
 
+读者路径以正文填写的 `$BookRoot` 和 `$HarnessRoot` 为准，不要求作者的磁盘、目录名或相邻布局。新增 [reader-paths.json](evidence/2026-11-11-revision/reader-paths.json) 记录 Windows pwsh 中跨 C/D 路径根、中文、空格和不同层级别名的实际预检/查询；[验证脚本](reader-paths.mjs) 只解除自建 junction，不删除目标。它使用既有准备好的仓库，不代表物理迁移、新机安装或其他平台验证。
+
 对应[第二章](../../chapters/CH-RUN.md)。源码基线为 fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159，本轮为 Windows x64、Node v24.12.0、Git 2.50.1.windows.1，源码目录中 Corepack 0.34.5 / pnpm 11.28.5 已可用。新机准备见 [SETUP](SETUP.md)，其完整安装与构建链路未重新验收。
 
 实际工具版本命令输出见 [toolchain.txt](evidence/2026-11-11/toolchain.txt)，版本声明与实际工具输出分开留存。

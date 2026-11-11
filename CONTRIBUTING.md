@@ -1,5 +1,7 @@
 # 编写与贡献指南
 
+读者命令不得把作者磁盘布局当成前置条件；先收集和校验实际书稿/源码根目录，正确处理空格、不同目录名及不相邻位置。明确所用终端语法与实测平台，作者原始路径保留在证据中，不能要求读者逐处替换。
+
 本仓库是 DeepSeek Harness 初学者教材的正式版本维护位置。开始时读 `work/START-HERE.md`，再读 STATE、HANDOFF、CANON、CHAPTERS 和当前工作包；首次或需求变更时读 `planning/book-plan-v6.md` 与 `planning/execution-plan.md`。
 
 ## 内容与连续性

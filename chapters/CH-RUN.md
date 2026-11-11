@@ -8,44 +8,51 @@
 
 ## 2.1 先知道自己站在哪个目录
 
-先把两份仓库分清。文件保存正文或程序，目录用来组织文件；下面两份仓库分别放在各自的目录中。
+先把两份仓库分清。文件保存正文或程序，目录用来组织文件。你需要知道的是两份仓库各自的根目录，不需要把电脑整理成作者的目录结构。
 
-```text
-D:/projects/
-  deepseek-harness-bookforbeginer/    书稿仓库
-    chapters/                       章节正文
-    labs/                           教学脚本与实验
-  deepseek-harness-local/            目标工程源码仓库
-    package.json                    工程及依赖的声明
-    packages/                       工程各项能力的实现
-    apps/cli/                       命令行入口
-```
+| 你要找的位置 | 用哪些文件确认 | 本章给它起的名字 |
+| --- | --- | --- |
+| 书稿仓库根目录 | 能看到 chapters、labs；其中有 labs/observe-task/run.mjs | `$BookRoot` |
+| 目标源码仓库根目录 | 能看到 package.json、packages、apps/cli；预检还会核对工程名称和提交 | `$HarnessRoot` |
 
-书稿仓库提供阅读材料和教学实验；源码仓库提供我们正在研究的真实 Harness。以后要读插件、任务循环和数据实现，主要进入后者。现在的教学脚本也会使用后者的代码与依赖。
+两份仓库可以在不同磁盘、不同父目录中，也可以使用自己选择的目录名。书稿提供教材和教学脚本，目标源码提供真实 Harness 的实现；目录名字相同或不同都不能代替上面的内容检查。
 
-`D:/projects` 是作者的示例位置，不是程序要求的盘符。你可以放在别处，但命令中的路径要随之改变。如果还没有下载这两份仓库，先完成本书的[环境准备说明](../labs/run-basics/SETUP.md)，再回来。
+如果已经下载，在文件管理器里分别找到这两个根目录，复制各自地址栏中的完整路径。还没有下载的读者先看[环境准备说明](../labs/run-basics/SETUP.md)，它会让你自己选择存放位置。
 
-在 PowerShell 中输入：
+后面会反复用到这两处地址，我们先用变量保存它们。在 PowerShell 中逐行输入下面两行。每行出现提示后，粘贴对应的实际路径，再按回车：
 
 ```powershell
+$BookRoot = (Read-Host '书稿仓库根目录的完整路径').Trim().Trim('"')
+$HarnessRoot = (Read-Host '目标源码仓库根目录的完整路径').Trim().Trim('"')
+```
+
+`$BookRoot` 和 `$HarnessRoot` 是两个变量：它们保存刚才输入的文字，让后面的命令复用。`Read-Host` 负责询问，后面的 `Trim` 去掉复制时带入的首尾空白和双引号。路径里的空格应当保留；后续命令会把每个变量作为一项参数传递。这两个变量只在当前终端中保留，重新打开终端后需要重新填写。
+
+先确认两处都是实际目录，再把它们解析为完整位置：
+
+```powershell
+Test-Path -LiteralPath $BookRoot -PathType Container
+Test-Path -LiteralPath $HarnessRoot -PathType Container
+```
+
+两行都应返回 `True`。若出现 `False`，先重新填写那一个变量，不继续运行。随后输入：
+
+```powershell
+$BookRoot = (Resolve-Path -LiteralPath $BookRoot).Path
+$HarnessRoot = (Resolve-Path -LiteralPath $HarnessRoot).Path
+Set-Location -LiteralPath $BookRoot
 Get-Location
+Test-Path ./labs/observe-task/run.mjs
 ```
 
-终端会告诉你当前目录。这个目录也叫工作目录：程序遇到没有写全的文件位置时，通常就从这里开始查找。接下来，我们把它切换到书稿仓库：
+`Set-Location` 改变当前位置，`Get-Location` 显示它。这个位置也叫工作目录：程序遇到相对路径时，通常从这里开始查找。最后一行应返回 `True`，只表示观察脚本存在，还没有执行查询。
 
-```powershell
-Set-Location D:/projects/deepseek-harness-bookforbeginer
-Test-Path .\labs\observe-task\run.mjs
-```
-
-第一行改变当前位置。第二行检查这个位置下面是否有观察脚本，预期返回 `True`；如果返回 `False`，先核对目录和文件位置。`Test-Path` 只检查路径是否存在，不会运行查询。
-
-`.\labs\observe-task\run.mjs` 是相对路径，开头的点表示当前目录。同一个相对路径，换个工作目录就可能指向别处。`D:/projects/deepseek-harness-local` 则是绝对路径，从盘符开始交代位置。Windows 的这些示例中，斜杠两种写法均可用于这里的路径；有空格的整段路径需要放进双引号。
+`./labs/observe-task/run.mjs` 是相对路径，点表示当前目录。变量中保存的完整位置是绝对路径；Windows 中通常从盘符或网络共享开始，macOS/Linux 通常从 `/` 开始。本章代码块使用 PowerShell 语法，不能直接粘贴到 Bash 或 zsh；路径规则与已经验证的操作系统范围需要分开理解，见[终端差异说明](../labs/run-basics/SETUP.md#终端与操作系统差异)。
 
 先作一个小预测：换到源码目录以后，刚才那条 `Test-Path` 还会返回 `True` 吗？运行前先写下答案，再试：
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $HarnessRoot
 Test-Path .\labs\observe-task\run.mjs
 ```
 
@@ -73,8 +80,8 @@ Test-Path .\labs\observe-task\run.mjs
 回到书稿目录，运行本章提供的只读预检：
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-bookforbeginer
-node labs/run-basics/check.mjs D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $BookRoot
+node labs/run-basics/check.mjs $HarnessRoot
 ```
 
 它检查目标目录的工程名称、源码提交、Node 版本、命令行入口和一项启动依赖。作者实测输出节选为：
@@ -90,11 +97,11 @@ tsx 启动依赖：可解析
 `tsx` 是这里从源码启动时使用的依赖名称，本章先用它判断一项启动条件是否具备，不进入其内部实现。完整[预检输出](../labs/run-basics/evidence/2026-11-11-revision/preflight-stdout.txt)还特意提醒：预检通过并不证明全部依赖、构建和任务都能运行。接下来才执行第一章的查询。
 
 ```powershell
-node labs/observe-task/run.mjs D:/projects/deepseek-harness-local
+node labs/observe-task/run.mjs $HarnessRoot
 $LASTEXITCODE
 ```
 
-最后一项是传给脚本的信息，也叫参数。第一行分成三部分读：`node` 运行程序；`labs/observe-task/run.mjs` 指定书稿中的观察脚本；最后的源码目录作为参数，告诉脚本到哪里使用目标工程。第二行读取刚才那个程序的退出码，也就是它结束时返回的数字；要在命令结束后紧接着查看。
+最后一项是传给脚本的信息，也叫参数。第一行分成三部分读：`node` 运行程序；`labs/observe-task/run.mjs` 指定书稿中的观察脚本；`$HarnessRoot` 中保存的源码位置作为参数，告诉脚本到哪里使用目标工程；修改工作目录不会改掉这个变量。第二行读取刚才那个程序的退出码，也就是它结束时返回的数字；要在命令结束后紧接着查看。
 
 ![书稿工作目录定位观察脚本，源码参数定位目标工程，再由 profile 执行查询并保存证据](../diagrams/CH-RUN-01.png)
 
@@ -120,8 +127,8 @@ Ticket lookup completed.
 **第一次：脚本没有找到。** 进入源码目录，使用属于书稿目录的相对脚本路径：
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-local
-node labs/run-basics/check.mjs D:/projects/deepseek-harness-local
+Set-Location -LiteralPath $HarnessRoot
+node labs/run-basics/check.mjs $HarnessRoot
 $LASTEXITCODE
 ```
 
@@ -138,12 +145,14 @@ MODULE_NOT_FOUND
 **第二次：脚本找到了，源码参数写错了。** 回到书稿目录，给脚本一个不存在的源码位置：
 
 ```powershell
-Set-Location D:/projects/deepseek-harness-bookforbeginer
-node labs/run-basics/check.mjs D:/not-a-harness-source
+Set-Location -LiteralPath $BookRoot
+$MissingSource = Join-Path $BookRoot ('missing-source-' + [guid]::NewGuid().ToString('N'))
+Test-Path -LiteralPath $MissingSource
+node labs/run-basics/check.mjs $MissingSource
 $LASTEXITCODE
 ```
 
-前提是这个示例位置确实不存在。作者使用自己测试目录下一个不存在的位置重现，得到退出码 `1` 和[下面的实际错误](../labs/run-basics/evidence/2026-11-11-revision/wrong-source-stderr.txt)：
+这里先生成一个独立的测试位置；`Test-Path` 应返回 `False`，若为 `True` 就重新生成。该命令只读取路径，不会创建或删除这个目录。作者使用自己测试目录下一个不存在的位置重现，得到退出码 `1` 和[下面的实际错误](../labs/run-basics/evidence/2026-11-11-revision/wrong-source-stderr.txt)：
 
 ```text
 预检失败：找不到源码目录下的 package.json；请检查路径，勿把书稿目录当作源码目录。
@@ -169,7 +178,7 @@ $LASTEXITCODE
 <details>
 <summary>先独立写出命令与判断，再展开核对</summary>
 
-任务一：作者示例为 `node D:/projects/deepseek-harness-bookforbeginer/labs/observe-task/run.mjs D:/projects/deepseek-harness-local`，实际验证退出 0，查询结果与书稿目录启动时一致。你的路径应按本机位置填写。随后查看 `$LASTEXITCODE` 和程序打印的证据目录，不能只抄作者的数字。对应[绝对路径入口记录](../labs/run-basics/evidence/2026-11-11-revision/absolute-observation-from-source.json)与前面的正常记录可相互对照。
+任务一：作者示例为 `node (Join-Path $BookRoot 'labs/observe-task/run.mjs') $HarnessRoot`，实际验证退出 0，查询结果与书稿目录启动时一致。你的路径应按本机位置填写。随后查看 `$LASTEXITCODE` 和程序打印的证据目录，不能只抄作者的数字。对应[绝对路径入口记录](../labs/run-basics/evidence/2026-11-11-revision/absolute-observation-from-source.json)与前面的正常记录可相互对照。
 
 任务二：应检查最后的源码参数。如果那里已经是一个错误的绝对路径，换工作目录不会改变它指向的位置。
 
@@ -177,6 +186,6 @@ $LASTEXITCODE
 
 </details>
 
-配套的[本轮实验记录](../labs/run-basics/README.md)保存六个场景的输入方式、退出状态与结果。作者在已有依赖的 Windows x64 环境完成了这些验证，没有从空白机器重新安装和构建，也未验证其他操作系统、断网或取消。应用临时资源的清理检查通过，证据文件有意保留；读者没有完成的准备和复现仍应保持待完成。
+配套的[本轮实验记录](../labs/run-basics/README.md)保存六个场景的输入方式、退出状态与结果。作者在已有依赖的 Windows x64 环境完成了这些验证，没有从空白机器重新安装和构建，也未验证其他操作系统、断网或取消。[新增路径测试](../labs/run-basics/evidence/2026-11-11-revision/reader-paths.json)已在 Windows PowerShell 中用中文、空格和不相邻的仓库目录别名完成预检和真实查询；别名指向既有环境，不代表物理迁移或重新安装已经验收。应用临时资源的清理检查通过，证据文件有意保留；读者没有完成的准备和复现仍应保持待完成。
 
 这一章的成果，是你能说明命令中的两个路径各指向哪里，自己启动一次任务，并依据错误找到该修正的位置。下一章继续用 TK-1042，先认识编号、状态和标题这些数据，再逐步写出查询函数；本章的定位、运行和核查方法会继续使用。

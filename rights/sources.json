@@ -223,6 +223,12 @@
       "source_id": "SRC-BOOK",
       "basis": "Actual stderr from independent teaching preflight with a synthetic missing path, raw bytes preserved.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/reader-paths.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently written Apache-2.0 Windows author check, using temporary repository aliases and synthetic query evidence.",
+      "status": "cleared"
     }
   ],
   "pending": [

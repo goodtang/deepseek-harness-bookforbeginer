@@ -1,0 +1,15 @@
+{
+  "platform": "win32",
+  "capturedAt": "2026-11-11T03:00:26.817Z",
+  "scenario": "PowerShell variables, spaces, Unicode and non-sibling directory aliases",
+  "setup": "Junction aliases to existing prepared repositories, not fresh copies or installation",
+  "exitCode": 0,
+  "actualObservationPassed": true,
+  "junctionsRemoved": true,
+  "bookPathRoot": "C:\\",
+  "sourcePathRoot": "D:\\",
+  "distinctPathRoots": true,
+  "scriptSha256": "5d95f2ed814e0a94aff71bd48ab3b59aea1e1dd84cff1b0d41f7e3acf43b136f",
+  "limits": "Windows pwsh only; no Linux/macOS, empty machine setup or physical repository relocation tested",
+  "passed": true
+}
