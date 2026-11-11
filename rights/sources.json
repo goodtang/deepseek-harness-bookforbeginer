@@ -99,7 +99,7 @@
   ],
   "materials": [
     {
-      "path": "chapters/CH-TOOL.md",
+      "path": "chapters/试写-第一个业务工具（章号待定）.md",
       "source_id": "SRC-BOOK",
       "basis": "Independently written opening draft and two original Mermaid diagrams; implementation facts cite SRC-DSH. No third-party images or textbook excerpts. New protectable prose/diagrams follow prospective text policy.",
       "status": "cleared"
@@ -147,7 +147,7 @@
       "status": "cleared"
     },
     {
-      "path": "chapters/CH-OBS.md",
+      "path": "chapters/第01章-一句请求发出去以后.md",
       "source_id": "SRC-BOOK",
       "basis": "Independently written formal chapter-one draft; SRC-DSH provides cited implementation facts, not copied implementation text.",
       "status": "cleared"
@@ -177,7 +177,7 @@
       "status": "cleared"
     },
     {
-      "path": "chapters/CH-RUN.md",
+      "path": "chapters/第02章-第一次自己运行.md",
       "source_id": "SRC-BOOK",
       "basis": "Independent chapter-two prose, tied to SRC-DSH code/version facts and actual captured path/runtime checks.",
       "status": "cleared"

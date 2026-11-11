@@ -11,7 +11,7 @@ from pathlib import Path
 class ObservationEvidence(unittest.TestCase):
     def test_reader_examples_match_captured_results(self):
         root = Path(__file__).resolve().parents[1]
-        chapter = (root / "chapters/CH-OBS.md").read_text(encoding="utf-8")
+        chapter = (root / "chapters/第01章-一句请求发出去以后.md").read_text(encoding="utf-8")
         run = json.loads((root / "labs/observe-task/evidence/2026-11-11/run-evidence.json").read_text(encoding="utf-8"))
         shown_json = [json.loads(block) for block in re.findall(r"```json\n(.*?)```", chapter, re.S)]
         self.assertIn(json.loads(run["observedToolResult"]["content"][0]["text"]), shown_json)

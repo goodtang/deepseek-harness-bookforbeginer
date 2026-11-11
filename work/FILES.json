@@ -10,20 +10,20 @@
       "sha256": "3eaada05622c55209a0b262eebd83a82cc0cb68c01ec1ddf03c5e9e28ed25655"
     },
     {
-      "path": "chapters/CH-OBS.md",
-      "sha256": "eb7b48a59d14d6f44d13fc00b4ebca7831417725ca6131242076da9940e0bec4"
+      "path": "chapters/README.md",
+      "sha256": "3d7d27ef97414bb127a59ca9d8ff258dfed9d1215545494f9cc9cc071cf3d678"
     },
     {
-      "path": "chapters/CH-RUN.md",
+      "path": "chapters/第01章-一句请求发出去以后.md",
+      "sha256": "dd1d1c794c90798f92a92f8440424e3d3a708149cceef82dadf8333bd2d1cd20"
+    },
+    {
+      "path": "chapters/第02章-第一次自己运行.md",
       "sha256": "cce89d8ea2fe2bb85a372f43493451fc89f4418f86893a7381afd70e4fd81d1f"
     },
     {
-      "path": "chapters/CH-TOOL.md",
+      "path": "chapters/试写-第一个业务工具（章号待定）.md",
       "sha256": "8148446597a2d7d7a4254fd968dc49ee18ee1f64a6d7abaf22bdb5fc5a36a8df"
-    },
-    {
-      "path": "chapters/README.md",
-      "sha256": "d3cd5a096f317745f78dbc9711c785022784ad83f23bc2d454da4adda65de0ac"
     },
     {
       "path": "COMMERCIAL.md",
@@ -31,7 +31,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "166f3fb00012fecc386bce853b0eb207c49a65196a30e7906958cc9231e3ce9c"
+      "sha256": "90ce89b389161a05da7a12dddbe97a147629b5bc4f4e9648c5a5184ad7a90f4c"
     },
     {
       "path": "COPYRIGHT.md",
@@ -71,7 +71,7 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "4fee3ce7447e73523b45ec94c7dcf448848a4b415dd3cfc22150b023c8f9e9ad"
+      "sha256": "6c26ee6997668694a9ed3d78aac239bb325875636f68f89f2c7103705e0b358b"
     },
     {
       "path": "diagrams/render-record.json",
@@ -151,7 +151,7 @@
     },
     {
       "path": "labs/observe-task/README.md",
-      "sha256": "fe14fa9cf0774b72d22d4c7c144d8ff82046fa8da3180ee9f7b9874f76e2f8dd"
+      "sha256": "49d45eff3687d5271f45b59d8bd2a222b86e85fa42b0b828737ef5f24e6c2676"
     },
     {
       "path": "labs/observe-task/run.mjs",
@@ -223,11 +223,11 @@
     },
     {
       "path": "labs/run-basics/README.md",
-      "sha256": "ac3db499a4ea0683f0e4c92fa7015526951de9c05f7df391c4c95ee7572e448b"
+      "sha256": "784a5359cc077e689264ee72d66c1e832142ddece072fee515867ab4f2c38334"
     },
     {
       "path": "labs/run-basics/SETUP.md",
-      "sha256": "2fd92295981563af2bd444f5b00f8754c9d8757b9291800df94db3bd1f2d8df6"
+      "sha256": "0d5bffed7456de732057bf77538a31117331fd3e9b5f6b0a9a9f30896509ca61"
     },
     {
       "path": "labs/run-basics/verify.mjs",
@@ -263,7 +263,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "87edf706b6126762138c1429ac97fe3619d28cd91acdf77e5c5a809ce25dd169"
+      "sha256": "1023b8c974a5d8cba838113ea89874a4d659b3598b9b5ea93364f086d56ffd44"
     },
     {
       "path": "rights/prior-publication.json",
@@ -275,7 +275,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "6d1a7d573392aabe17e15f6b154d7ec92b621e8ef32e822fca2d263548e92890"
+      "sha256": "38b04858e58afadc3931410f0991b37d0bd4e6b36335f4c0be0aa5deaaa26ff4"
     },
     {
       "path": "templates/chapter-task.md",
@@ -303,11 +303,11 @@
     },
     {
       "path": "tools/test_observation.py",
-      "sha256": "a05a21e41293de637a88f43546f8a165226321e3bc97f4bae181a8187cfcbb55"
+      "sha256": "f5c74a59933759f05bfd14f6f30f578e69939157e190d500153f361603de11bf"
     },
     {
       "path": "tools/test_run_basics.py",
-      "sha256": "01af73fbe1c2d982481f2ffb905de174a4c067d8ebccff3f9db73889d9ab4073"
+      "sha256": "42d195ad1bd10607d31a44d045e1091a2b9f2c60a65a1b0fe5702c55156293d2"
     },
     {
       "path": "tools/test_verify_book.py",
@@ -335,11 +335,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "37cc80b8c83fbf78e2008fce57b916a4e23acbca147ecdc527232de2b7fed82d"
+      "sha256": "4f3269a0af3cf42c976ce776e71a0caabc22737db035cb7c4e312944ae9daf44"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "3b1c0b129134e743d9d4b17639e3b5475ca762dd2c341f145ab749da7c933f72"
+      "sha256": "d15df1f32db885583f91d339ce8c0c36a00b05b448fb199533746f60db04eae9"
     },
     {
       "path": "work/START-HERE.md",

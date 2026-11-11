@@ -10,9 +10,9 @@
 
 | 目的 | 入口 |
 | --- | --- |
-| 从第一章开始阅读 | [一句请求发出去以后](chapters/CH-OBS.md)、[配套观察记录](labs/observe-task/README.md) |
-| 运行同一任务并学习路径、环境与排错 | [第二章：第一次自己运行](chapters/CH-RUN.md)、[环境准备](labs/run-basics/SETUP.md) |
-| 阅读首次正文试写与复现正常工具循环（试写，建议按主线顺序阅读） | [第一个业务工具](chapters/CH-TOOL.md)、[实验工程](labs/first-tool/README.md) |
+| 从第一章开始阅读 | [一句请求发出去以后](chapters/第01章-一句请求发出去以后.md)、[配套观察记录](labs/observe-task/README.md) |
+| 运行同一任务并学习路径、环境与排错 | [第二章：第一次自己运行](chapters/第02章-第一次自己运行.md)、[环境准备](labs/run-basics/SETUP.md) |
+| 阅读首次正文试写与复现正常工具循环（试写，建议按主线顺序阅读） | [第一个业务工具](chapters/试写-第一个业务工具（章号待定）.md)、[实验工程](labs/first-tool/README.md) |
 | 理解学习目标、语言、图解与教学路线 | [V6 编写方案](planning/book-plan-v6.md) |
 | 理解执行顺序、资料衔接与验收 | [实施安排](planning/execution-plan.md) |
 | 接续实际工作 | [START-HERE](work/START-HERE.md)、[当前进度](work/STATE.md) |

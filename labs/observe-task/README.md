@@ -1,10 +1,10 @@
 # 第一章配套：观察一次任务
 
-本实验给[第一章](../../chapters/CH-OBS.md)提供真实运行后的观察记录。没有开发环境的读者可以先使用[本轮输出](evidence/observation.txt)完成观察练习；这不等于已经独立复现。下一章将专门讲文件、路径、命令与环境准备，本页是已有环境时的运行参考。
+本实验给[第一章](../../chapters/第01章-一句请求发出去以后.md)提供真实运行后的观察记录。没有开发环境的读者可以先使用[本轮输出](evidence/observation.txt)完成观察练习；这不等于已经独立复现。下一章将专门讲文件、路径、命令与环境准备，本页是已有环境时的运行参考。
 
 ## 运行准备好的实验
 
-已经准备好源码与依赖时，先按[第二章](../../chapters/CH-RUN.md#21-先知道自己站在哪个目录)填写本机的 `$BookRoot` 和 `$HarnessRoot`，再在同一 PowerShell 终端运行：
+已经准备好源码与依赖时，先按[第二章](../../chapters/第02章-第一次自己运行.md#21-先知道自己站在哪个目录)填写本机的 `$BookRoot` 和 `$HarnessRoot`，再在同一 PowerShell 终端运行：
 
 ```powershell
 Set-Location -LiteralPath $BookRoot

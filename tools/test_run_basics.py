@@ -10,7 +10,7 @@ from pathlib import Path
 class RunBasicsEvidence(unittest.TestCase):
     def test_reader_paths_do_not_require_author_directory_layout(self):
         root = Path(__file__).resolve().parents[1]
-        for name in ["chapters/CH-RUN.md", "labs/run-basics/SETUP.md"]:
+        for name in ["chapters/第02章-第一次自己运行.md", "labs/run-basics/SETUP.md"]:
             text = (root / name).read_text(encoding="utf-8")
             self.assertNotIn("D:/projects", text)
             self.assertIn("$BookRoot", text)
@@ -26,7 +26,7 @@ class RunBasicsEvidence(unittest.TestCase):
     def test_revised_reader_examples_have_actual_captures(self):
         root = Path(__file__).resolve().parents[1]
         folder = root / "labs/run-basics/evidence/2026-11-11-revision"
-        chapter = (root / "chapters/CH-RUN.md").read_text(encoding="utf-8")
+        chapter = (root / "chapters/第02章-第一次自己运行.md").read_text(encoding="utf-8")
         blocks = re.findall(r"```text\n(.*?)```", chapter, re.S)
         preflight = (folder / "preflight-stdout.txt").read_text(encoding="utf-8")
         self.assertTrue(any(block.startswith("Node：") and block in preflight for block in blocks))

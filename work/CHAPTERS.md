@@ -1,5 +1,7 @@
 # 初始章序与依赖索引
 
+读者文件命名已统一为“第01章-中文标题.md”；第二章同理。未定章号的业务工具样章明确标注试写，不虚拟分配正式章号。表内 CH-OBS/CH-RUN 等仍是稳定追踪 ID，正文文件按章号与中文标题查找。
+
 稳定 ID 用于跨版本引用，正式章号另记。CH-OBS 为第 1 章，CH-RUN 为第 2 章，两章初稿均已写出，后续章号待内容展开确认。其余章节在实际进入对应篇时登记，不预造正文路径。
 
 ## 状态记录规则
@@ -24,9 +26,9 @@
 | CH-TOOL / 待定 | 试写；已写第 1–3 节，整章未完成 | 部分通过：正常工具循环；故障与非法参数待验 | 部分通过：两图本机 PNG 目视通过；GitHub 页面/PDF 待验 | 部分通过：三个小节已复核；直接前后章正文未写 | 未检查 | 后续单独补非法参数拒绝实验和对应讲解 |
 | CH-LOOP / 待定 | 待写 | 未检查 | 未检查 | 未检查 | 未检查 | 承接同一工具结果，解释后续请求组装 |
 
-CH-OBS 原件：[第一章正文](../chapters/CH-OBS.md)、[工作包](CH-OBS-task.md)、[观察实验](../labs/observe-task/README.md)。正文版本以书稿 Git 提交与 FILES.json 为准，源码固定 fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159。待完成读者反馈返修及适用的页面/PDF 检查。
+CH-OBS 原件：[第一章正文](../chapters/第01章-一句请求发出去以后.md)、[工作包](CH-OBS-task.md)、[观察实验](../labs/observe-task/README.md)。正文版本以书稿 Git 提交与 FILES.json 为准，源码固定 fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159。待完成读者反馈返修及适用的页面/PDF 检查。
 
-CH-RUN 原件：[第二章正文](../chapters/CH-RUN.md)、[工作包](CH-RUN-task.md)、[实验](../labs/run-basics/README.md)、[新机准备步骤](../labs/run-basics/SETUP.md)。已完成路径定位、最小预检、实际运行与排错三节，以及六场景记录、图和练习；新机准备仅写出步骤，未完成整链实测。CH-FUNC、CH-LOOP 尚无正文版本。
+CH-RUN 原件：[第二章正文](../chapters/第02章-第一次自己运行.md)、[工作包](CH-RUN-task.md)、[实验](../labs/run-basics/README.md)、[新机准备步骤](../labs/run-basics/SETUP.md)。已完成路径定位、最小预检、实际运行与排错三节，以及六场景记录、图和练习；新机准备仅写出步骤，未完成整链实测。CH-FUNC、CH-LOOP 尚无正文版本。
 
 ## 学习顺序与依赖
 
@@ -42,4 +44,4 @@ CH-FUNC → CH-TOOL → CH-LOOP 是连续三章验证的候选片段。提前编
 
 实际开写时增加：正文路径、工作包、图组、代码版本、首次教学概念、回访位置、实验与受其影响的后续章节。变更依赖后重新核查，不只调整显示顺序。
 
-CH-TOOL 当前原件：[正文试写](../chapters/CH-TOOL.md)、[工作包](CH-TOOL-task.md)、[工程与实验](../labs/first-tool/README.md)。图 CH-TOOL-01/02 已改为正文引用本地 PNG，Mermaid 图源移至 diagrams；本机渲染已检查，GitHub 页面和 PDF 验收待完成。首次试讲函数与工具的区别、inject/apply/register、结构化返回与 render；完整基础讲解仍由待写 CH-FUNC 承担。CH-LOOP 将沿用同一轮第二次请求，继续解释消息组装，当前未写。
+CH-TOOL 当前原件：[正文试写](../chapters/试写-第一个业务工具（章号待定）.md)、[工作包](CH-TOOL-task.md)、[工程与实验](../labs/first-tool/README.md)。图 CH-TOOL-01/02 已改为正文引用本地 PNG，Mermaid 图源移至 diagrams；本机渲染已检查，GitHub 页面和 PDF 验收待完成。首次试讲函数与工具的区别、inject/apply/register、结构化返回与 render；完整基础讲解仍由待写 CH-FUNC 承担。CH-LOOP 将沿用同一轮第二次请求，继续解释消息组装，当前未写。
