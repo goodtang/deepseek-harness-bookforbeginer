@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "3d7d27ef97414bb127a59ca9d8ff258dfed9d1215545494f9cc9cc071cf3d678"
+      "sha256": "091cee130442d2a5e77f47cf19a21965a7efead82c927cb40946e3abd5e42375"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -26,8 +26,12 @@
       "sha256": "3c2774a718a7969236bd2570c6e5ca5ae4148d5e018abbdadad47fae540aeb18"
     },
     {
+      "path": "chapters/第04章-第一个业务工具.md",
+      "sha256": "e9d27922c1d45bd609e26d5d0355c6e1666a8723a3fd70ed110c9d6a7fa753f3"
+    },
+    {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
-      "sha256": "154ab4aa09cf992a41b4a882f625ecc80601395e8f3a96510bd13e40bed9a36e"
+      "sha256": "b001ac193a5c5b724f0a7e69815369f66de75869a91697c741e86aebe2dc9950"
     },
     {
       "path": "COMMERCIAL.md",
@@ -110,12 +114,16 @@
       "sha256": "d68b946a4ffbe2ff70584c465cce2c0a3f3051b85682581bdb8b3c0448ad1890"
     },
     {
+      "path": "labs/first-tool/evidence/normal-ch04-start.json",
+      "sha256": "fbeb5ae92b05e83749781746a02a95aaac7f5fe51de9efff63fbccb27492de9c"
+    },
+    {
       "path": "labs/first-tool/plugin.mjs",
       "sha256": "4a99f3756b1880741b0c32e499eecee69ef7457358e38856ac89e423adc3e395"
     },
     {
       "path": "labs/first-tool/README.md",
-      "sha256": "6384a55d2fabcbcf81bcc2e49a50c0574a7bb2a6a294036c860e3201e2a336a5"
+      "sha256": "1eda0ab20edb7a875b7b923e207b1311501a1db9c7b9ec6be4fbf4b8682b8886"
     },
     {
       "path": "labs/first-tool/run.mjs",
@@ -327,7 +335,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "807b22576e6423dffbf8d70fd1844b984c8afb075b868ba0a624ddd634585da3"
+      "sha256": "d41f6051c45a8639ebc182681d520257796002769ad2048c9c071bfcdb7764a5"
     },
     {
       "path": "templates/chapter-task.md",
@@ -387,15 +395,15 @@
     },
     {
       "path": "work/CH-TOOL-task.md",
-      "sha256": "79c5784e4d63802ff0bb5e225ea8b2cd279d6000c55a79eb330e6d798eaf41e5"
+      "sha256": "548fbd51b7d2f15d50877ebdeb0ee2fa8a332a23dc49f43c872904d960002c26"
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "b784130d5ed13833e6287b846dea50e0660a3518547cdbde5b7def15f6d2783b"
+      "sha256": "5d6f43365763c453cc5137d570be20780893ed4a4d33be19d105a77e2ba2e45f"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "9940d8b80f51b20ba34906421a0c7ea7987ba43bb19b4106bbb2fb5102bef097"
+      "sha256": "be20d17ae21cfe193963c2c6a718cf64e8f3020b12e05677c2fd0823c93e008d"
     },
     {
       "path": "work/START-HERE.md",
@@ -403,7 +411,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "0abc6cc077eb4ae8b5daff9052f0910090c032061e374e91d20e7b1f250178ad"
+      "sha256": "061bd397ef31798d276e99bb01894fed0c18c21c87ddb3c4dcdbf477d5bebfa2"
     }
   ]
 }

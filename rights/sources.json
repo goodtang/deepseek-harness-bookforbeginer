@@ -295,6 +295,18 @@
       "source_id": "SRC-BOOK",
       "basis": "Fresh local replay of unchanged synthetic examples against the clarified chapter; original stdout/stderr, source fingerprints and cleanup recorded. No real business data or copied upstream implementation; runtime diagnostic rights retained.",
       "status": "cleared"
+    },
+    {
+      "path": "chapters/第04章-第一个业务工具.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent chapter-four draft sections 4.1–4.3, fictional ticket example and original explanations; upstream facts cite pinned SRC-DSH. Reuses registered original diagrams. No full upstream code copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/first-tool/evidence/normal-ch04-start.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Fresh locally captured synthetic headless task evidence through the real Harness tool pipeline; source hashes, actual fixture stdout and cleanup recorded; no real business data.",
+      "status": "cleared"
     }
   ],
   "pending": [
