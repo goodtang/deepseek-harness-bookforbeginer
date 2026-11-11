@@ -27,7 +27,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "bfef766edb0090117bef079bfd73c891d059df419fca3c1204f19e7e3112268a"
+      "sha256": "faf14b4114d2e2fb595b6e714f9ce6dacfcfae93cf75af3a15dd718c521b84c7"
     },
     {
       "path": "COPYRIGHT.md",
@@ -179,7 +179,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "e97758924c48b305c6948102ea5b983d0048b52483ed75b2d66770b781ae55ad"
+      "sha256": "f1ae521924ae357c8f1cfb005e64ee7f835a0850f2299b2baa1fbd844f8b0627"
     },
     {
       "path": "rights/prior-publication.json",
@@ -231,7 +231,7 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "df25d5d9ced816742403b8d9655dbf986aaf4be970f3a1b5d15b23598b32470e"
+      "sha256": "a42326a14f4af239991551212ef3e9af916f8ea38fed57b206774c4f89388eab"
     },
     {
       "path": "work/CH-OBS-task.md",
@@ -247,7 +247,7 @@
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "abe06af4989d4cc566ccc11b040f62be9a49cd59e5be97f68ae197449163968e"
+      "sha256": "3f89e7d3b63558417e8ab5e11a7264c8526dd78ed668c8517030edca473c4493"
     },
     {
       "path": "work/START-HERE.md",
