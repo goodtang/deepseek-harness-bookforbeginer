@@ -445,6 +445,210 @@
       "source_id": "SRC-BOOK",
       "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/check-inventory.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/inventory-plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/inventory.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/start/inventory-plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/start/inventory.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-local.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/legacy-regression.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/summary.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/audit-loss/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/audit-loss/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/invalid-argument/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/invalid-argument/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-missing/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-missing/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-positive/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-positive/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-zero/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/inventory-zero/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/missing/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/missing/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/normal/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/normal/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/normal-regression/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/normal-regression/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-missing/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-missing/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-positive/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-positive/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-zero/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/reader-inventory-zero/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/start/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/start/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/unregistered/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/completion/unregistered/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 inventory teaching code or synthetic local runtime/configuration/verification evidence for chapter four; no real business data or copied upstream implementation. Original runtime diagnostic rights retained.",
+      "status": "cleared"
     }
   ],
   "pending": [

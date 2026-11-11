@@ -1,0 +1,88 @@
+{
+  "scenario": "inventory-missing",
+  "capturedAt": "2026-11-11T10:42:47.286Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "sourceTrackedChanges": "",
+  "node": "v24.12.0",
+  "platform": "win32",
+  "arch": "x64",
+  "plugin": "D:\\projects\\deepseek-harness-bookforbeginer\\labs\\tool-cases\\inventory-plugin.mjs",
+  "files": {
+    "plugin": "e62306835de54bf3522f8a39fc325db5fab3214ffc5c8f7799f7b3175e4755f9",
+    "run.mjs": "364002939095dab6ac80eed71fe2b71184292ba19a707ecde93d056f421b92f5",
+    "support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+    "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390",
+    "inventory.mjs": "a61368155c4111271f0e33443261d4fdd9a052bfafd64fc5c476d11730b53445"
+  },
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "overlay": "- id: session-title-llm\n  disabled: true\n- insert:\n    - id: book-ticket-tool\n      name: \"D:/projects/deepseek-harness-bookforbeginer/labs/tool-cases/inventory-plugin.mjs\"\n",
+  "submittedTask": "Use book_inventory_lookup with {\"sku\":\"SKU-missing\"}.",
+  "applicationExitCode": 0,
+  "signal": null,
+  "terminalStdout": "Chapter four completed.\n",
+  "toolSchema": {
+    "name": "book_inventory_lookup",
+    "description": "Look up fictional inventory; stock zero is an existing product.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "sku": {
+          "type": "string",
+          "description": "Product SKU"
+        }
+      },
+      "required": [
+        "sku"
+      ]
+    }
+  },
+  "observedToolCall": {
+    "type": "tool_use",
+    "id": "mock-call-1",
+    "name": "book_inventory_lookup",
+    "input": {
+      "sku": "SKU-missing"
+    }
+  },
+  "observedToolResult": {
+    "type": "tool_result",
+    "tool_use_id": "mock-call-1",
+    "content": [
+      {
+        "type": "text",
+        "text": "null"
+      }
+    ],
+    "is_error": false
+  },
+  "executionAudit": [
+    {
+      "type": "ready"
+    },
+    {
+      "type": "execute",
+      "tool": "book_inventory_lookup",
+      "input": {
+        "sku": "SKU-missing"
+      }
+    }
+  ],
+  "executeCount": 1,
+  "requests": [
+    {
+      "attempt": 1,
+      "behavior": "tool_call_success",
+      "outcome": "completed"
+    },
+    {
+      "attempt": 2,
+      "behavior": "success",
+      "outcome": "completed"
+    }
+  ],
+  "passed": true
+}

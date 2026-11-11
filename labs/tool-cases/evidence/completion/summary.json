@@ -1,0 +1,206 @@
+{
+  "chapter": "CH-TOOL",
+  "files": {
+    "chapters/第04章-第一个业务工具.md": "bd9e1861b22aab9a90e86ee2785b1dc1182a4e5e01f657344290a9ba3046a5d1",
+    "labs/tool-cases/check-inventory.mjs": "883b9279e2d85be0fadaed837c3afde2b2974ea58b411a5f7a91eb996deec880",
+    "labs/tool-cases/inventory-plugin.mjs": "e62306835de54bf3522f8a39fc325db5fab3214ffc5c8f7799f7b3175e4755f9",
+    "labs/tool-cases/inventory.mjs": "a61368155c4111271f0e33443261d4fdd9a052bfafd64fc5c476d11730b53445",
+    "labs/tool-cases/run.mjs": "364002939095dab6ac80eed71fe2b71184292ba19a707ecde93d056f421b92f5",
+    "labs/tool-cases/support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7"
+  },
+  "integrationCases": [
+    {
+      "report": "evidence/completion/audit-loss/report.json",
+      "sha256": "470ddb2d9dfeec71d9afd5fa09aa8098c41ecbfd9c48cec1f6300cd0be859eaa",
+      "scenario": "audit-loss",
+      "expectedPassed": false,
+      "observedPassed": false,
+      "executeCount": null,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/invalid-argument/report.json",
+      "sha256": "c7b18056c4e1eb3db199fd3ab21a92b08a3bf87717d2e8cc5fbce649e500909a",
+      "scenario": "invalid-argument",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 0,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/inventory-missing/report.json",
+      "sha256": "f15b1835bb999234ef61295b39161abfb9ac7acdd3ec0b17bb77c3383cb0338e",
+      "scenario": "inventory-missing",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/inventory-positive/report.json",
+      "sha256": "f2767ed83959da6fad5c1c801e4b7dfa482072e831f7420b0fe09a761070349b",
+      "scenario": "inventory-positive",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/inventory-zero/report.json",
+      "sha256": "16c4e9bff80300f1d139836fa5b1016cac124080173395ee889d1e11254eb611",
+      "scenario": "inventory-zero",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/missing/report.json",
+      "sha256": "f1fd713ecfb6c9add699499b77408605d467af748637f8fd116bccccd1db8d70",
+      "scenario": "missing",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/normal/report.json",
+      "sha256": "b2afbfd81ef46d90834718345c4f6d5daad3fc4866dbe9d1318c2f236ed3e6bb",
+      "scenario": "normal",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/normal-regression/report.json",
+      "sha256": "77f9f332992a2e35fed3729b9e1b13d9ab922a8a6f4f4edea3e66676467da3d8",
+      "scenario": "normal",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/reader-inventory-missing/report.json",
+      "sha256": "125f38cd0b4f9fa81a0c5e97c464b474c6629e9871bb3ff65b3539d48092c643",
+      "scenario": "inventory-missing",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/reader-inventory-positive/report.json",
+      "sha256": "c6794c0746785860cd5743c7e35997bfe55130a68a7a1db4993caefb30d4aee7",
+      "scenario": "inventory-positive",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/reader-inventory-zero/report.json",
+      "sha256": "778c7eb702371d680eb34b834a52ff0796429d33298d4a418f677b0c75ea175e",
+      "scenario": "inventory-zero",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/start/report.json",
+      "sha256": "93e14b040247936700f2e0db148de4157e6c2b7fb6c28420e4894babd03980eb",
+      "scenario": "start",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 0,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "report": "evidence/completion/unregistered/report.json",
+      "sha256": "7892b638f46f11a87d2ee1aff55685436236c8ca5dcceac5ddec01b342bd9211",
+      "scenario": "unregistered",
+      "expectedPassed": true,
+      "observedPassed": true,
+      "executeCount": 0,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "localInventoryExpectedExitCodes": [
+    0,
+    1,
+    1,
+    0
+  ],
+  "legacyFirstToolPassed": true,
+  "chapterCompleteCodeMatches": true,
+  "chapterEvidenceExcerptMatches": true,
+  "readerAcceptance": "not performed",
+  "passed": true
+}

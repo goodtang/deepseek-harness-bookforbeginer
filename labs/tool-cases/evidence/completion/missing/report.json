@@ -1,0 +1,87 @@
+{
+  "scenario": "missing",
+  "capturedAt": "2026-11-11T10:42:18.168Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "sourceTrackedChanges": "",
+  "node": "v24.12.0",
+  "platform": "win32",
+  "arch": "x64",
+  "plugin": "D:\\projects\\deepseek-harness-bookforbeginer\\labs\\tool-cases\\stages\\plugin.mjs",
+  "files": {
+    "plugin": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+    "run.mjs": "364002939095dab6ac80eed71fe2b71184292ba19a707ecde93d056f421b92f5",
+    "support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+    "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "overlay": "- id: session-title-llm\n  disabled: true\n- insert:\n    - id: book-ticket-tool\n      name: \"D:/projects/deepseek-harness-bookforbeginer/labs/tool-cases/stages/plugin.mjs\"\n",
+  "submittedTask": "Use book_ticket_lookup with {\"id\":\"missing\"}.",
+  "applicationExitCode": 0,
+  "signal": null,
+  "terminalStdout": "Chapter four completed.\n",
+  "toolSchema": {
+    "name": "book_ticket_lookup",
+    "description": "Look up a fictional ticket by its exact ID; does not modify records.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Ticket ID, for example TK-1042"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  "observedToolCall": {
+    "type": "tool_use",
+    "id": "mock-call-1",
+    "name": "book_ticket_lookup",
+    "input": {
+      "id": "missing"
+    }
+  },
+  "observedToolResult": {
+    "type": "tool_result",
+    "tool_use_id": "mock-call-1",
+    "content": [
+      {
+        "type": "text",
+        "text": "null"
+      }
+    ],
+    "is_error": false
+  },
+  "executionAudit": [
+    {
+      "type": "ready"
+    },
+    {
+      "type": "execute",
+      "tool": "book_ticket_lookup",
+      "input": {
+        "id": "missing"
+      }
+    }
+  ],
+  "executeCount": 1,
+  "requests": [
+    {
+      "attempt": 1,
+      "behavior": "tool_call_success",
+      "outcome": "completed"
+    },
+    {
+      "attempt": 2,
+      "behavior": "success",
+      "outcome": "completed"
+    }
+  ],
+  "passed": true
+}
