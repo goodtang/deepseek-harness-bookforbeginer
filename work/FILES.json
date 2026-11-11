@@ -15,7 +15,7 @@
     },
     {
       "path": "chapters/CH-RUN.md",
-      "sha256": "3793450210ce7b7bf22ab4cc0c5ff87187b9acfe615c0800723fb914b7403fd0"
+      "sha256": "3cb72fbba37a5e6d2ea03a6dc0cd7da46b33a6c811cd358bdbf1c4d9d1259512"
     },
     {
       "path": "chapters/CH-TOOL.md",
@@ -186,8 +186,36 @@
       "sha256": "4006fe2de7731303e3ebd803058778e5d2bfadf81e275cd360e38aebaac9227c"
     },
     {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/absolute-observation-from-source.json",
+      "sha256": "8210a1820b478e38139bc0576fc06f064d38a94d7374d590f719a5735e730d1b"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/checks.json",
+      "sha256": "8e76a7d81cb793605d47ce1e2d510bfcaef36af7aeac6c5eeb452846e8e5fa19"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/path-checks.json",
+      "sha256": "71e3d814ac8319a2204c3eb9b41224da51894cc82b1efbbd8537b58cd59da2f6"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/preflight-stdout.txt",
+      "sha256": "95065485c3ca3fdc6c2a85997263c2a5e0812874f968b95523e907010702e9d2"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/relative-observation-from-book.json",
+      "sha256": "e75bc1eb23dc6722c21c026f13bc942cc36d75bf71e7464a6e50ac53512b3b8c"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/wrong-source-stderr.txt",
+      "sha256": "7b33474aa2b2063c6cffc2726c9e7702bc6b6c1e3640d4506703cf0d0c03a07f"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/wrong-workdir-stderr.txt",
+      "sha256": "a5fd8a1de7084a677ebc8670ba49af507e0a042bd2ce1299a1da6cb110c0bed3"
+    },
+    {
       "path": "labs/run-basics/README.md",
-      "sha256": "2d7227a9a7654595c8a9e59d63a401483618aa87a10c7882ff616ad40f1cc86b"
+      "sha256": "5ce601c7c5d997bc0fe5e9f3489187a42e1c01da292754cc0d0f95a67336ca1c"
     },
     {
       "path": "labs/run-basics/SETUP.md",
@@ -271,7 +299,7 @@
     },
     {
       "path": "tools/test_run_basics.py",
-      "sha256": "4ec3635a93e4c3f990b1f0b99132f070960ee03f861218ba6cd0d478fb820a98"
+      "sha256": "58b4f1e15aeedb667973d9acc5f1a6db595c2ccc803e76be4778bff9e9030051"
     },
     {
       "path": "tools/test_verify_book.py",
@@ -291,7 +319,7 @@
     },
     {
       "path": "work/CH-RUN-task.md",
-      "sha256": "9e06420426146249669299d99c8dab1f7634323a3e71c82bf6f4a70a7768b202"
+      "sha256": "5acb931ad1387b2107bd83f659e36f62f7d6599cd471fcf6c5574d58d6adee2b"
     },
     {
       "path": "work/CH-TOOL-task.md",
@@ -299,11 +327,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "b6a8cd39dde52a2d7fcb99366e9440f779a03bba6584a24931352488ea2155a5"
+      "sha256": "37cc80b8c83fbf78e2008fce57b916a4e23acbca147ecdc527232de2b7fed82d"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "956e7ff2a9d59ec1db7a19ae733700a330085399eb0e3cf606ea0d3b1bee4d3a"
+      "sha256": "910fc1485e292644bd7eb949160fcbb8075af6cb899f128b47e313795bc2907d"
     },
     {
       "path": "work/START-HERE.md",
@@ -311,7 +339,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "9b26763bd357b206780ea1d15c5f24b8eaeb3b659ae8cc775ea9b58bc224b9f9"
+      "sha256": "726d283823d49251f30036ed11d1a3888cc310e0ff86f5307b758a33ce9ccc76"
     }
   ]
 }

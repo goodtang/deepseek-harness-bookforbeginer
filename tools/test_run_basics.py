@@ -2,11 +2,39 @@
 """Keep chapter-two path and runtime claims tied to versioned evidence."""
 import hashlib
 import json
+import re
 import unittest
 from pathlib import Path
 
 
 class RunBasicsEvidence(unittest.TestCase):
+    def test_revised_reader_examples_have_actual_captures(self):
+        root = Path(__file__).resolve().parents[1]
+        folder = root / "labs/run-basics/evidence/2026-11-11-revision"
+        chapter = (root / "chapters/CH-RUN.md").read_text(encoding="utf-8")
+        blocks = re.findall(r"```text\n(.*?)```", chapter, re.S)
+        preflight = (folder / "preflight-stdout.txt").read_text(encoding="utf-8")
+        self.assertTrue(any(block.startswith("Node：") and block in preflight for block in blocks))
+        self.assertIn("MODULE_NOT_FOUND", (folder / "wrong-workdir-stderr.txt").read_text(encoding="utf-8"))
+        failure = (folder / "wrong-source-stderr.txt").read_text(encoding="utf-8")
+        self.assertIn(failure.strip(), [block.strip() for block in blocks])
+        paths = json.loads((folder / "path-checks.json").read_text(encoding="utf-8-sig"))
+        self.assertTrue(paths["bookRelativePathExists"])
+        self.assertFalse(paths["sourceRelativePathExists"])
+        record = json.loads((folder / "checks.json").read_text(encoding="utf-8"))
+        self.assertTrue(record["passed"])
+        for name, expected in record["files"].items():
+            self.assertEqual(hashlib.sha256((root / "labs/run-basics" / name).read_bytes()).hexdigest(), expected)
+        for case in record["cases"]:
+            self.assertEqual(case["observedExitCode"], case["expectedExitCode"])
+            if "evidence" in case:
+                raw = (folder / case["evidence"]).read_bytes()
+                self.assertEqual(hashlib.sha256(raw).hexdigest(), case["sha256"])
+                run = json.loads(raw)
+                self.assertTrue(run["passed"])
+                self.assertTrue(all(run["cleanup"].values()))
+                self.assertTrue(any(run["terminalStdout"].strip() in block for block in blocks))
+
     def test_recorded_cases_match_scripts_and_real_query_reports(self):
         lab = Path(__file__).resolve().parents[1] / "labs/run-basics"
         folder = lab / "evidence/2026-11-11"

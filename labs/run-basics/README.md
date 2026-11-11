@@ -10,15 +10,17 @@
 
 | 场景 | 本轮结果 | 证据 |
 | --- | --- | --- |
-| 书稿目录相对脚本预检 | 退出 0 | [预检原文](evidence/2026-11-11/preflight-stdout.txt) |
-| 源码目录使用同一相对脚本路径 | 退出 1，包含 MODULE_NOT_FOUND | [checks.json](evidence/2026-11-11/checks.json) |
+| 书稿目录相对脚本预检 | 退出 0 | [预检原文](evidence/2026-11-11-revision/preflight-stdout.txt) |
+| 源码目录使用同一相对脚本路径 | 退出 1，包含 MODULE_NOT_FOUND | [checks.json](evidence/2026-11-11-revision/checks.json) |
 | 不存在的源码参数 | 退出 1，提示 package.json 定位错误 | 同上 |
 | 源码目录使用绝对预检脚本 | 退出 0，输出与正常预检一致 | 同上 |
-| 书稿目录使用相对观察脚本 | 退出 0，真实工具结果与 stdout 检查通过 | [原始运行报告](evidence/2026-11-11/relative-observation-from-book.json) |
-| 源码目录使用绝对观察脚本 | 退出 0，同一查询结果 | [原始运行报告](evidence/2026-11-11/absolute-observation-from-source.json) |
+| 书稿目录使用相对观察脚本 | 退出 0，真实工具结果与 stdout 检查通过 | [原始运行报告](evidence/2026-11-11-revision/relative-observation-from-book.json) |
+| 源码目录使用绝对观察脚本 | 退出 0，同一查询结果 | [原始运行报告](evidence/2026-11-11-revision/absolute-observation-from-source.json) |
 
 两次观察分别启动自己的模拟服务与实际 headless profile，各自两次模型请求。内部复用既有 first-tool 与 observe-task 代码，未创建另一套查询实现。报告记录工具结果、终端 stdout、退出、资源清理和源码哈希。验证器保留自己的忽略目录作为本地取证材料；应用运行器创建的临时 home、工作目录与 mock 已清理，不能把二者混为一项删除结果。
 
 checks.json 的失败项保存退出码和经过断言核对的诊断摘要，不是完整错误堆栈。实验只改变调用者工作目录与传入路径，不测试业务参数非法、模型故障、取消或新机器安装。错误码中的路径会随本机变化，不能用作者完整磁盘路径判断成败。
 
 图 CH-RUN-01 使用原始 .mmd 导出 PNG 并本机检查；GitHub 页面及 PDF 视觉验收尚未完成。代码为本书独立编写的 Apache-2.0 教学设施，真实工程源码保留原许可。环境步骤链接官方工具资料，不打包第三方安装程序或复制其整篇说明。
+
+本轮教学优化补采了[错误工作目录的完整 stderr](evidence/2026-11-11-revision/wrong-workdir-stderr.txt)、[错误源码参数的完整 stderr](evidence/2026-11-11-revision/wrong-source-stderr.txt)及[两份目录下的实际 Test-Path 结果](evidence/2026-11-11-revision/path-checks.json)。前两项是子进程输出原文，后一项是执行后记录的布尔结果，不冒充实时日志。六场景重新运行，新材料放入独立 revision 目录；原 2026-11-11 目录及实际工具版本记录保留原件。
