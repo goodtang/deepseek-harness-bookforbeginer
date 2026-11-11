@@ -3,7 +3,7 @@
   "files": [
     {
       "path": ".gitattributes",
-      "sha256": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
+      "sha256": "310996aa9a609b650dcb8f86adebc8a492dca5632778172add0fd042f55fbcac"
     },
     {
       "path": ".gitignore",
@@ -215,7 +215,7 @@
     },
     {
       "path": "labs/run-basics/README.md",
-      "sha256": "5ce601c7c5d997bc0fe5e9f3489187a42e1c01da292754cc0d0f95a67336ca1c"
+      "sha256": "64e0489664459b9543df59d016cc27a8a48d5b80b30b14ccab41a2493b0fd419"
     },
     {
       "path": "labs/run-basics/SETUP.md",
@@ -267,7 +267,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "8fd84af1ec8a786b67ddcf0cd7feee63110cfdb90c3296972aa84fc98457b5d0"
+      "sha256": "9f6e523713b54e651837add588a87152b5e45f5448a50386bc0d74beeae3b450"
     },
     {
       "path": "templates/chapter-task.md",

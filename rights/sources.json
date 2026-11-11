@@ -211,6 +211,18 @@
       "source_id": "SRC-BOOK",
       "basis": "Local rendering of original CH-RUN-01 source, no external image reused.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/wrong-workdir-stderr.txt",
+      "source_id": "SRC-NODE",
+      "basis": "Captured Node missing-script diagnostic; original runtime rights retained, raw line endings preserved.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/run-basics/evidence/2026-11-11-revision/wrong-source-stderr.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Actual stderr from independent teaching preflight with a synthetic missing path, raw bytes preserved.",
+      "status": "cleared"
     }
   ],
   "pending": [
