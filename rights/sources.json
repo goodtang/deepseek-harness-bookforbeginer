@@ -307,6 +307,12 @@
       "source_id": "SRC-BOOK",
       "basis": "Fresh locally captured synthetic headless task evidence through the real Harness tool pipeline; source hashes, actual fixture stdout and cleanup recorded; no real business data.",
       "status": "cleared"
+    },
+    {
+      "path": "planning/chapter-04-implementation-plan.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent chapter-four teaching and implementation plan based on current book artifacts and scope review; no third-party text or code reproduced. Prospective text policy applies.",
+      "status": "cleared"
     }
   ],
   "pending": [

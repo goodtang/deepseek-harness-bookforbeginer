@@ -318,6 +318,10 @@
       "sha256": "2d8bc3806afb2bcf2b87cfc07c08d253c35b391c69d8738ea6766ce4ba21c129"
     },
     {
+      "path": "planning/chapter-04-implementation-plan.md",
+      "sha256": "21104dcc445c2fddc2565eceb4a5d9d984781326cd5afbd0bcb754f1cde66795"
+    },
+    {
       "path": "planning/execution-plan.md",
       "sha256": "f4e156005530fc7359d8644a3865846ad377134c62bbe6d57d14ec4eef7c1808"
     },
@@ -335,7 +339,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "d41f6051c45a8639ebc182681d520257796002769ad2048c9c071bfcdb7764a5"
+      "sha256": "baf8af38c8bca3cec63105c203f915e841a943ad5293f0e04e2c22484c89f11e"
     },
     {
       "path": "templates/chapter-task.md",
@@ -395,7 +399,7 @@
     },
     {
       "path": "work/CH-TOOL-task.md",
-      "sha256": "548fbd51b7d2f15d50877ebdeb0ee2fa8a332a23dc49f43c872904d960002c26"
+      "sha256": "98aabff9d617b29b28ff503c1d54d80dff13be2aa2c884218b8513aaab29692c"
     },
     {
       "path": "work/CHAPTERS.md",
@@ -403,7 +407,7 @@
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "be20d17ae21cfe193963c2c6a718cf64e8f3020b12e05677c2fd0823c93e008d"
+      "sha256": "2cdb61779c6eb8b6ed0522b1a08430c94883f6961139e7ba740991f28d5acf8b"
     },
     {
       "path": "work/START-HERE.md",
@@ -411,7 +415,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "061bd397ef31798d276e99bb01894fed0c18c21c87ddb3c4dcdbf477d5bebfa2"
+      "sha256": "56437a24ba4d36dad979d4f95d49fa19abf32499cafe55938a99d26a6889da6e"
     }
   ]
 }

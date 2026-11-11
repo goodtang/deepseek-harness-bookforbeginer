@@ -1,5 +1,7 @@
 # 当前执行状态
 
+已新增第四章实施计划 planning/chapter-04-implementation-plan.md，下一步先补亲手接入步骤，再完成证据示范、对照及库存迁移。此轮仅写计划，正文和实验状态未推进。
+
 第四章 CH-TOOL 已进入正式初稿，4.1–4.3 已写，真实正常工具循环重跑通过；新证据为 labs/first-tool/evidence/normal-ch04-start.json。4.4 的查不到/错误参数/未注册对照和 4.5 库存迁移仍待写与实测，整章未完成。见 CH-TOOL-task。
 
 第三章已补两处小解释：const 限制重新赋值而不自动冻结对象，以及 TK-1042/missing 的参数、查表中间值和返回值对照。结构与教学代码未改；新正文下 11 场景重跑通过，见 labs/func/evidence/2026-11-11-clarifications/checks.json。章节仍为初稿完成并修订，学生试读和页面/PDF 未验。
