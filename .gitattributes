@@ -1,2 +1,2 @@
 * text=auto eol=lf
-labs/run-basics/evidence/*/wrong-*-stderr.txt -text
+labs/run-basics/evidence/*/wrong-*-stderr.txt -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
