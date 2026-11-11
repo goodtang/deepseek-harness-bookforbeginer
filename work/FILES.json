@@ -22,6 +22,10 @@
       "sha256": "cce89d8ea2fe2bb85a372f43493451fc89f4418f86893a7381afd70e4fd81d1f"
     },
     {
+      "path": "chapters/第03章-写出并验证工单查询函数.md",
+      "sha256": "7eb43200483d67c006cee0699cf12e3a18dad73345bc3326144128fc2ed815ce"
+    },
+    {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
       "sha256": "8148446597a2d7d7a4254fd968dc49ee18ee1f64a6d7abaf22bdb5fc5a36a8df"
     },
@@ -36,6 +40,14 @@
     {
       "path": "COPYRIGHT.md",
       "sha256": "5451b76870e80406b77b5e8172d6ec481a055924e2cbec803cb36d35647b9573"
+    },
+    {
+      "path": "diagrams/CH-FUNC-01.mmd",
+      "sha256": "9df3ece4ab3a98fc249350901300dabb8e8ec2555df81dc6caf99cabc2165fea"
+    },
+    {
+      "path": "diagrams/CH-FUNC-01.png",
+      "sha256": "f1b7253e932576b3a0378a9c5c5a3c93fdfa925d48699cc4d4c470c41fc31060"
     },
     {
       "path": "diagrams/CH-OBS-01.mmd",
@@ -112,6 +124,26 @@
     {
       "path": "labs/first-tool/tickets.mjs",
       "sha256": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+    },
+    {
+      "path": "labs/func/check.mjs",
+      "sha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8"
+    },
+    {
+      "path": "labs/func/evidence/2026-11-11/answer-report.json",
+      "sha256": "511b67ea1e631d4e39f0042de0ea1c97a85164a0b246a3a92916974105dd7ef9"
+    },
+    {
+      "path": "labs/func/evidence/2026-11-11/stub-report.json",
+      "sha256": "3755c6cf24eb8fe81b44dde19f432f732349cf8c91a2640027d52e5826d78df4"
+    },
+    {
+      "path": "labs/func/README.md",
+      "sha256": "b4a4c502ac569c2622b300a991b61e42b808acf72302617b9fd3a6573e93e913"
+    },
+    {
+      "path": "labs/func/starter.mjs",
+      "sha256": "242a3f14acf25fe2b6518b0a95615aeadfe6a69da8c9760cccb324543d3da5db"
     },
     {
       "path": "labs/observe-task/evidence/2026-11-11/failure-check.json",
@@ -322,6 +354,10 @@
       "sha256": "e3db13b15ca46628993e17d3b1f2cc6d98216e32e4a2a689f071de3d24441db3"
     },
     {
+      "path": "work/CH-FUNC-task.md",
+      "sha256": "9b7ad220cdcc9a1242b9418dbbcd911d6da924f4956ed125645dadb14f0c3980"
+    },
+    {
       "path": "work/CH-OBS-task.md",
       "sha256": "4a924f826eb7576f3e4301bbd3ca4e6212821a94704ce8835d31ae9a697daef2"
     },
@@ -335,11 +371,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "4f3269a0af3cf42c976ce776e71a0caabc22737db035cb7c4e312944ae9daf44"
+      "sha256": "7061224539d7a3300cef33d7c332df999d348a32c2617e4c4fb839f3e248c2b3"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "d15df1f32db885583f91d339ce8c0c36a00b05b448fb199533746f60db04eae9"
+      "sha256": "e27fce79b14b72e4a36e413b1819f5e067e379115a9f3e281bc332a7c9beca6e"
     },
     {
       "path": "work/START-HERE.md",
@@ -347,7 +383,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "c08cd45d960043984a779bc416cd57ba9333024cce968809d74df4c75320be46"
+      "sha256": "43bff8bccdf935db1a90b6be79c7d5e36e8aac7f671bf331122e806025d03847"
     }
   ]
 }

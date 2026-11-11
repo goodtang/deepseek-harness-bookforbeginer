@@ -18,7 +18,9 @@
 
 CH-RUN-01 已实际导出并目视检查，PNG 与 .mmd 同存，图注说明省略应用内部工作目录。四图的本地检查记录保留，GitHub 页面/PDF 未验。第一章仅更新章末导航链接，主体与第一章证据未改；首章、第二章交接已核对，CH-FUNC 无正文，只能读交接目标，不声称连续三章已验收。
 
-下一步优先补第二章新手环境准备与独立复现反馈；正式写作后续进入 CH-FUNC，从同一 TK-1042 的编号、状态与标题解释数据，再逐步写查询函数。本轮没有开始第三章。固定名称 lookupTicket / book_ticket_lookup / TK-1042 / open / Invoice export failed 不变；下一轮先读前两章全文、运行说明和真实函数原件。
+本轮已写第三章 CH-FUNC《写出并验证工单查询函数》3.1–3.3：数据（id/status/title）→ 函数（lookupTicket 分支）→ 最小断言（starter.mjs + check.mjs）。两次断言实测（未完成退出 1 / 生产版退出 0）与图 CH-FUNC-01 已交付。固定名称 lookupTicket / book_ticket_lookup / TK-1042 / open / Invoice export failed 不变。
+
+下一步进入 CH-TOOL：把 lookupTicket 接成真实工具，并补 __proto__ 边界与非法参数实验；同时补第二章新手环境准备与独立复现反馈。下一轮先读前三章全文、运行说明和 tickets.mjs 原件。
 
 CH-TOOL 仍是部分试写，非法参数、断流、取消等任务保留。第一章此前四项修订已保留，读者未验收，不把前两章初稿完成当 M1 或全书完成。每轮按工程问题、源码映射、验证方式和二次开发能力四项自检，并分别更新写作/技术/图稿/连贯/读者状态。
 

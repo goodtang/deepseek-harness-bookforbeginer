@@ -1,0 +1,4 @@
+flowchart LR
+    ID["编号 id，例如 TK-1042"] --> F["lookupTicket(id)"]
+    F -->|"找到"| R["返回记录：open / Invoice export failed"]
+    F -->|"找不到"| N["返回 null"]

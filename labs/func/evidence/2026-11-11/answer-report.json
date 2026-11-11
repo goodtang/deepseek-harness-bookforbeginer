@@ -1,0 +1,18 @@
+{
+  "target": "labs/first-tool/tickets.mjs",
+  "checks": [
+    {
+      "name": "查 TK-1042 得到 open 的发票导出失败工单",
+      "passed": true
+    },
+    {
+      "name": "查不存在的编号得到 null",
+      "passed": true
+    },
+    {
+      "name": "改了返回结果，原记录不变",
+      "passed": true
+    }
+  ],
+  "passed": true
+}
