@@ -18,6 +18,8 @@ E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/firs
 
 第一章的观察摘要由 labs/observe-task 在运行结束后读取真实实验结果再生成，不是实时日志、模型自述或 Harness 的新事件类型。原始断言、摘要与各自代码哈希分开保留；阅读记录与独立运行是不同的学生状态。
 
+2026-11-11 修订版另保存 headless 实际 stdout 为 terminal-stdout.txt，并与观察摘要分开。正文的任务文本、工具结果和终端答复需与同版证据核对；模拟服务的配置字符串不能代替实际采集输出。证据按日期新增，旧记录不套用到改变后的代码。
+
 - 正式教材维护仓库为 goodtang/deepseek-harness-bookforbeginer；原业务仓库中的 artifacts 为导入来源，后续不双向维护。
 - 首读者候选为 goodtang，候选身份不等于已同意参与、独立完成或读者验收通过。
 

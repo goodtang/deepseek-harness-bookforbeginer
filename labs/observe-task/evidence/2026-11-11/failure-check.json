@@ -1,0 +1,11 @@
+{
+  "scenario": "invalid-source-does-not-reuse-old-success",
+  "reviewDate": "2026-11-11",
+  "capturedAt": "2026-11-11T01:44:58.662058+00:00",
+  "observerSha256": "529736421ba428d0a74fc69bcfaca546652da3d3e2e02548a4058f43590238c2",
+  "exitCode": 1,
+  "oldObservationUnchanged": true,
+  "oldObservationSha256": "02a1fd56f1d2d9888199f2a16f63ac5887ffacb5f6aa6bca023359c9bf947068",
+  "successSummaryPrinted": false,
+  "passed": true
+}

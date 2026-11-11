@@ -39,11 +39,14 @@ node --import tsx/esm D:/projects/deepseek-harness-bookforbeginer/labs/first-too
 | 执行与结果核查 | 后续请求中，非错误的 tool_result 对应同一个 tool_use；参数和结果逐字段吻合 | 通过 |
 | 请求数 | 恰好两次，均完成，没有 script_exhausted | 通过 |
 | 退出码 | headless 为 0，与上述行为断言分别检查 | 通过 |
+| 终端答复 | 从子进程实际 stdout 采集到 Ticket lookup completed. 和末尾换行 | 通过；精确匹配后才纳入发布证据 |
 | 本地函数 | 不存在或原型属性名称返回 null；修改返回副本不改固定数据 | 通过 |
 | 清理 | 模拟服务关闭，直接子进程退出，本次临时目录删除 | 通过 |
 | 学生复现 | 读者独立运行并对照上述证据 | 待验收 |
 
-当前最终版本的证据见 [normal-20261110.json](evidence/normal-20261110.json)，其中记录代码 SHA-256、源码提交、工具 schema、观察到的工具结果、请求统计和清理状态。早期 [attempt-01.json](evidence/attempt-01.json) 记录隔离目录启动失败；[attempt-02.json](evidence/attempt-02.json) 是修正启动配置后、尚用字符串输出 schema 的过渡版本成功记录，不作为最终代码的验收依据。
+当前代码证据见 [normal-20261111.json](evidence/normal-20261111.json)，记录代码 SHA-256、源码提交、实际提交的任务、工具定义、捕获的调用与结果、真实终端 stdout、请求统计和清理状态。stdout 必须精确匹配本例虚构响应，才保存到公开报告，不发布其他控制台内容。2026-11-11 仅补充取证与输出检查，工具插件和工单数据未改。
+
+[normal-20261110.json](evidence/normal-20261110.json) 为增加终端取证前的历史版本，保留其适用代码哈希；不能将其视为当前代码已采集终端答复的证据。更早的 [attempt-01.json](evidence/attempt-01.json) 记录隔离目录启动失败，[attempt-02.json](evidence/attempt-02.json) 是使用字符串输出 schema 的过渡版本，均保留原件。
 
 本场景使用本机 mock 且无需真实 key；未进行断网重跑或外网连接监测，不标为“离线隔离通过”。未验证断流恢复、主动取消、真实服务、多租户、权限控制、卸载后的注册回收及跨平台表现；这些不由正常路径成功推出。E1 工程门槛通过，完整 M1 和读者验收尚未通过。
 

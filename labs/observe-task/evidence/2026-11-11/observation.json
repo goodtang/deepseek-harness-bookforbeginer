@@ -1,0 +1,13 @@
+{
+  "chapter": "CH-OBS",
+  "capturedAt": "2026-11-11T01:41:45.045Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "evidence": "run-evidence.json",
+  "runEvidenceSha256": "789c02a3659272f006be7cd82722394e12fc40cec2a22ee93ae49f7c77d3b610",
+  "observationSha256": "61b3912bd801e406f64021d82fb8199d1cd9005ed3ef881abb573eb89a14a9ff",
+  "terminalStdout": "terminal-stdout.txt",
+  "terminalStdoutSha256": "6acd6e5458fd10d6fd98f224180923fb2c8466b02ec5d70b496d2ece78129c75",
+  "observerSha256": "529736421ba428d0a74fc69bcfaca546652da3d3e2e02548a4058f43590238c2",
+  "presentation": "Post-run evidence summary, not live events or a new runtime event type",
+  "passed": true
+}

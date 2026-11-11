@@ -37,6 +37,9 @@ try {
   const evidence = JSON.parse(raw);
   assert.equal(evidence.passed, true);
   assert.equal(evidence.exitCode, 0);
+  assert.equal(evidence.terminalStdout, 'Ticket lookup completed.\n');
+  assert.deepEqual(evidence.observedToolCall.input, { id: 'TK-1042' });
+  assert.equal(evidence.observedToolCall.id, evidence.observedToolResult.tool_use_id);
   assert.deepEqual(evidence.requests.map(r => r.behavior), ['tool_call_success', 'success']);
   assert.ok(evidence.requests.every(r => r.outcome === 'completed'));
   assert.equal(evidence.toolSchema.name, 'book_ticket_lookup');
@@ -57,21 +60,25 @@ try {
     '2. 调用参数与调用编号已由运行器核对：id=TK-1042。',
     `3. 工具结果：id=${ticket.id}, status=${ticket.status}, title=${ticket.title}。`,
     '4. 后续模型请求已经携带与该调用对应的非错误工具结果。',
-    '5. 两次模型请求均完成；最终文字由模拟脚本预设。',
+    '5. 两次模型请求均完成；实际终端答复另存 terminal-stdout.txt。',
     '6. 退出码=0；模拟服务关闭、直接子进程退出、临时目录删除。',
     '结论：正常查询路径的独立断言通过；不代表真实模型业务能力通过。',
   ];
   const observation = `${lines.join('\n')}\n`;
   await writeFile(join(output, 'observation.txt'), observation);
+  await writeFile(join(output, 'terminal-stdout.txt'), evidence.terminalStdout);
   await writeFile(join(output, 'observation.json'), `${JSON.stringify({
     chapter: 'CH-OBS', capturedAt: new Date().toISOString(),
     sourceCommit: evidence.sourceCommit, evidence: 'run-evidence.json',
     runEvidenceSha256: sha(raw), observationSha256: sha(observation),
+    terminalStdout: 'terminal-stdout.txt', terminalStdoutSha256: sha(evidence.terminalStdout),
     observerSha256: sha(await readFile(fileURLToPath(import.meta.url))),
     presentation: 'Post-run evidence summary, not live events or a new runtime event type',
     passed: true,
   }, null, 2)}\n`);
   process.stdout.write(observation);
+  console.log('以下为 headless 标准输出原文：');
+  process.stdout.write(evidence.terminalStdout);
   console.log(`本次证据目录：${output}`);
 } catch (error) {
   console.error(String(error));

@@ -47,7 +47,7 @@ lookupTicket('TK-1042')
 
 图 CH-TOOL-02：本书根据本次正常路径自行绘制。省略事件存储、审批、重试与取消；“模型”在本实验中是脚本化模拟服务，不表示真实模型的推理表现。
 
-按[运行说明](../labs/first-tool/README.md#运行)启动后，将自己的证据与[作者实测原件](../labs/first-tool/evidence/normal-20261110.json)对照。我们期待的结果如下。
+按[运行说明](../labs/first-tool/README.md#运行)启动后，将自己的证据与[作者实测原件](../labs/first-tool/evidence/normal-20261111.json)对照。我们期待的结果如下。
 
 | 先作预测 | 作者实测 | 你来复现 |
 | --- | --- | --- |

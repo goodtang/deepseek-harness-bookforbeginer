@@ -142,6 +142,12 @@
       "source_id": "SRC-BOOK",
       "basis": "Locally rendered image of original CH-OBS-01.mmd; no external images, new protectable diagram follows prospective text policy.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/observe-task/evidence/2026-11-11/terminal-stdout.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Actual local headless stdout from the book fictional fixture, independently captured and checked; no real business data or external imagery. Rights scope remains governed by COPYRIGHT.md.",
+      "status": "cleared"
     }
   ],
   "pending": [

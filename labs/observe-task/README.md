@@ -18,18 +18,21 @@ node labs/observe-task/run.mjs D:/projects/deepseek-harness-local
 
 ## 执行和证据
 
-[run.mjs](run.mjs) 调用已有[真实工具实验](../first-tool/README.md)，保持其三个代码文件不变。内部仍通过支持的 dsh headless profile 加载查询插件，使用真实工具注册及执行管线。观察运行器仅在底层实验退出成功后，读取本次结果、检查字段和代码哈希，并输出适合第一章阅读的摘要。摘要在结束后生成，不是实时事件流，也没有新增 Harness 的事件类型。
+[run.mjs](run.mjs) 调用已有[真实工具实验](../first-tool/README.md)。2026-11-11 为底层运行器补充实际任务、捕获的调用与终端 stdout 记录，插件和工单数据未改。内部仍通过支持的 dsh headless profile 使用真实工具注册及执行管线。观察程序仅在底层实验退出成功后，核对本次字段和代码哈希，再输出摘要。摘要在结束后生成，不是实时事件流，也没有新增 Harness 事件类型。
 
 模拟模型严格按 `tool_call_success,success` 回应，不重复末条；工单是固定虚构数据。底层实验显式关闭自动标题生成，并用临时 home 与工作目录隔离。源码启动仍显式指定该检出的 tsconfig，避免工作目录改变导致源码包解析不同。既有实验参数、原理和限制以其说明为准，本页不再复制一套实现。
 
 | 文件 | 可核对的事 |
 | --- | --- |
-| [run-evidence.json](evidence/run-evidence.json) | 工具定义、实际工具结果、请求统计、行为断言、退出码和清理 |
-| [observation.txt](evidence/observation.txt) | 第一章引用的完整观察摘要 |
-| [observation.json](evidence/observation.json) | 摘要、底层证据和观察脚本的 SHA-256，以及适用源码版本 |
-| [failure-check.json](evidence/failure-check.json) | 错误源码目录探针：退出非零、旧摘要不变、不输出成功结论 |
+| [run-evidence.json](evidence/2026-11-11/run-evidence.json) | 任务、工具定义、实际调用和结果、真实终端 stdout、请求统计、退出与清理 |
+| [terminal-stdout.txt](evidence/2026-11-11/terminal-stdout.txt) | 实际 headless 子进程的标准输出，按原文保存，包括末尾换行 |
+| [observation.txt](evidence/2026-11-11/observation.txt) | 第一章引用的完整观察摘要 |
+| [observation.json](evidence/2026-11-11/observation.json) | 摘要、终端 stdout、底层证据与观察脚本的 SHA-256，以及适用源码版本 |
+| [failure-check.json](evidence/2026-11-11/failure-check.json) | 错误源码目录探针：退出非零、旧摘要不变、不输出成功结论 |
 
-本轮摘要精确核对工单三个字段，验证工具结果非错误、两次请求均完成，并核对底层实验文件哈希。调用参数和调用编号的精确核对由底层运行器在捕获请求时完成。没有把摘要中的叙述当作新的原始请求证据。
+本轮精确核对工单三个字段、工具调用的参数及其关联编号、请求顺序和底层文件哈希；同时验证实际 stdout 与本例完成响应一致，并另存原文，未用配置字符串代替捕获值。正文中的工具记录是从实际结果文字展开、仅调整缩进的可读表示，不是另一条响应。
+
+当前发布证据在 evidence/2026-11-11；原 evidence 根目录记录是 2026-11-10 版本，仍保留原始代码哈希和内容。默认复现始终写入忽略目录，不覆盖上述已发布原件。新脚本不应借旧记录跳过当前检查。
 
 ## 差异与失败
 

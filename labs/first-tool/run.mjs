@@ -22,12 +22,14 @@ const { startMockLlmServer } = await import(pathToFileURL(join(
 const root = await mkdtemp(join(tmpdir(), 'dsh-book-first-tool-'));
 const home = join(root, 'home');
 const workspace = join(root, 'workspace');
+const task = 'Look up ticket TK-1042 with book_ticket_lookup.';
 const report = {
   scenario: 'E1-normal-tool-cycle', capturedAt: new Date().toISOString(),
   sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: source, encoding: 'utf8' }).trim(),
   sourceTrackedChanges: execFileSync('git', ['status', '--porcelain', '--untracked-files=no'],
     { cwd: source, encoding: 'utf8' }).trim(),
   node: process.version, assertions: [], exitCode: null, cleanup: {},
+  submittedTask: task,
 };
 report.labFiles = Object.fromEntries(await Promise.all(['run.mjs', 'plugin.mjs', 'tickets.mjs'].map(async name =>
   [name, createHash('sha256').update(await readFile(join(here, name))).digest('hex')])));
@@ -51,7 +53,7 @@ try {
   });
   const result = await new Promise((accept, reject) => {
     child = spawn(process.execPath, ['--import', loader, join(source, 'apps/cli/src/bin.ts'),
-      '--profile', 'headless', '--patch', overlay, 'Look up ticket TK-1042 with book_ticket_lookup.'], {
+      '--profile', 'headless', '--patch', overlay, task], {
       cwd: workspace, windowsHide: true,
       env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source,
         TSX_TSCONFIG_PATH: join(source, 'tsconfig.json'),
@@ -69,10 +71,13 @@ try {
   });
   report.exitCode = result.code;
   report.signal = result.signal;
-  // Console text may contain local paths; wire evidence below publishes only synthetic facts.
+  // Publish stdout only after it exactly matches this synthetic fixture's answer.
   if (result.code !== 0) process.stderr.write(result.stderr.slice(-8000));
   assert.equal(result.code, 0, 'headless must exit successfully');
   report.assertions.push('headless exit code is zero');
+  assert.equal(result.stdout, 'Ticket lookup completed.\n', 'capture the actual terminal answer');
+  report.terminalStdout = result.stdout;
+  report.assertions.push('actual headless stdout matches the scripted final answer');
   assert.deepEqual(server.requests.map(r => r.behavior), ['tool_call_success', 'success']);
   report.assertions.push('exactly two scripted requests; no script exhaustion');
   const first = server.requests[0].body;
@@ -88,6 +93,7 @@ try {
   assert.ok(call);
   assert.equal(resultBlock.tool_use_id, call.id);
   assert.deepEqual(call.input, { id: 'TK-1042' });
+  report.observedToolCall = call;
   assert.deepEqual(JSON.parse(resultBlock.content[0].text), {
     id: 'TK-1042', status: 'open', title: 'Invoice export failed',
   });
