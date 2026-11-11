@@ -1,0 +1,173 @@
+{
+  "chapter": "CH-FUNC",
+  "capturedAt": "2026-11-11T08:41:44.770Z",
+  "node": "v24.12.0",
+  "platform": "win32",
+  "arch": "x64",
+  "files": {
+    "chapters/第03章-写出并验证工单查询函数.md": "3c2774a718a7969236bd2570c6e5ca5ae4148d5e018abbdadad47fae540aeb18",
+    "labs/func/starter.mjs": "242a3f14acf25fe2b6518b0a95615aeadfe6a69da8c9760cccb324543d3da5db",
+    "labs/func/completed.mjs": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d",
+    "labs/func/check.mjs": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+    "labs/func/check-one.mjs": "edebb2fa625a46265139fcbc0e7b32c88e8b5aeac100b6779986032115f8ff61",
+    "labs/func/verify.mjs": "d0a6343ba6fa7723489e6ec97224e855a1068778338933130e9382ff90d9a6be",
+    "labs/first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "cases": [
+    {
+      "name": "unfinished-starter",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "labs/func/starter.mjs"
+      ],
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "stdout": "{\n  \"target\": \"labs/func/starter.mjs\",\n  \"checks\": [\n    {\n      \"name\": \"查 TK-1042 得到 open 的发票导出失败工单\",\n      \"passed\": false,\n      \"error\": \"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n+ null\\n- {\\n-   id: 'TK-1042',\\n-   status: 'open',\\n-   title: 'Invoice export failed'\\n- }\\n\"\n    },\n    {\n      \"name\": \"查不存在的编号得到 null\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"改了返回结果，原记录不变\",\n      \"passed\": false,\n      \"error\": \"Cannot set properties of null (setting 'status')\"\n    }\n  ],\n  \"passed\": false\n}\n",
+      "stderr": "",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "242a3f14acf25fe2b6518b0a95615aeadfe6a69da8c9760cccb324543d3da5db"
+    },
+    {
+      "name": "chapter-completed",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "labs/func/completed.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "{\n  \"target\": \"labs/func/completed.mjs\",\n  \"checks\": [\n    {\n      \"name\": \"查 TK-1042 得到 open 的发票导出失败工单\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"查不存在的编号得到 null\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"改了返回结果，原记录不变\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": true\n}\n",
+      "stderr": "",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d"
+    },
+    {
+      "name": "missing-export",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\starter.mjs"
+      ],
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "stdout": "",
+      "stderr": "在 C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\starter.mjs 中没有找到导出的 lookupTicket 函数。\n",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "e5918130938464ba0749e9c6ef112d796f32ce2b2ae92dac275f3226b23ffde3"
+    },
+    {
+      "name": "first-assertion",
+      "command": [
+        "node",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\check-one.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "状态检查通过\n",
+      "stderr": "",
+      "scriptSha256": "edebb2fa625a46265139fcbc0e7b32c88e8b5aeac100b6779986032115f8ff61",
+      "targetSha256": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d"
+    },
+    {
+      "name": "deliberately-wrong-expectation",
+      "command": [
+        "node",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\check-one.mjs"
+      ],
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "stdout": "",
+      "stderr": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n'open' !== 'closed'\r\n\r\n    at file:///C:/Users/tangjie/AppData/Local/Temp/book-func-XgKcbE/check-one.mjs:7:8\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 'open',\r\n  expected: 'closed',\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.12.0\r\n",
+      "scriptSha256": "bcc6754afe0fceb2d22cf0f25a7784741f4620d63e97bad534ea7d2817699065",
+      "targetSha256": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d"
+    },
+    {
+      "name": "restored-expectation",
+      "command": [
+        "node",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\check-one.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "状态检查通过\n",
+      "stderr": "",
+      "scriptSha256": "edebb2fa625a46265139fcbc0e7b32c88e8b5aeac100b6779986032115f8ff61",
+      "targetSha256": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d"
+    },
+    {
+      "name": "expanded-chapter-assertions",
+      "command": [
+        "node",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\check-one.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "状态检查通过\n",
+      "stderr": "",
+      "scriptSha256": "9c1561aafb942a10ea6d51edfffaab89667aa6517df063748b5da0271500df84",
+      "targetSha256": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d"
+    },
+    {
+      "name": "returning-original-object",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\starter.mjs"
+      ],
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "stdout": "{\n  \"target\": \"C:\\\\Users\\\\tangjie\\\\AppData\\\\Local\\\\Temp\\\\book-func-XgKcbE\\\\starter.mjs\",\n  \"checks\": [\n    {\n      \"name\": \"查 TK-1042 得到 open 的发票导出失败工单\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"查不存在的编号得到 null\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"改了返回结果，原记录不变\",\n      \"passed\": false,\n      \"error\": \"Expected values to be strictly equal:\\n\\n'closed' !== 'open'\\n\"\n    }\n  ],\n  \"passed\": false\n}\n",
+      "stderr": "",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "c006cab9fa4add4087a10641b3990bc72f3cf3e54d90a2ab2d7f49ab428df489"
+    },
+    {
+      "name": "extension-example",
+      "command": [
+        "node",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\check-one.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "扩展检查通过\n",
+      "stderr": "",
+      "scriptSha256": "f3f18a56ba404534137f56967bbb3d5885226978d6ba3d1d72a4cae46125276b",
+      "targetSha256": "b3e7fc954a6db32ece7f1b74e79de41e25fabe52c2fce648ab6436c55e73143f"
+    },
+    {
+      "name": "extension-original-regression",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-func-XgKcbE\\starter.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "{\n  \"target\": \"C:\\\\Users\\\\tangjie\\\\AppData\\\\Local\\\\Temp\\\\book-func-XgKcbE\\\\starter.mjs\",\n  \"checks\": [\n    {\n      \"name\": \"查 TK-1042 得到 open 的发票导出失败工单\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"查不存在的编号得到 null\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"改了返回结果，原记录不变\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": true\n}\n",
+      "stderr": "",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "b3e7fc954a6db32ece7f1b74e79de41e25fabe52c2fce648ab6436c55e73143f"
+    },
+    {
+      "name": "later-tool-example-regression",
+      "command": [
+        "node",
+        "labs/func/check.mjs",
+        "labs/first-tool/tickets.mjs"
+      ],
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "stdout": "{\n  \"target\": \"labs/first-tool/tickets.mjs\",\n  \"checks\": [\n    {\n      \"name\": \"查 TK-1042 得到 open 的发票导出失败工单\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"查不存在的编号得到 null\",\n      \"passed\": true\n    },\n    {\n      \"name\": \"改了返回结果，原记录不变\",\n      \"passed\": true\n    }\n  ],\n  \"passed\": true\n}\n",
+      "stderr": "",
+      "scriptSha256": "ea65b6e98fbdb01bce5a44c2d0cbf805bbfa096fddbac6e249499adeafa7caf8",
+      "targetSha256": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+    }
+  ],
+  "correspondence": "Completion and first assertion match chapter code blocks; extra assertions replayed verbatim",
+  "scope": "Pure teaching functions in temporary copies; no Harness/model run, cross-platform or reader acceptance",
+  "cleanup": {
+    "temporaryCopiesRemoved": true
+  },
+  "passed": true
+}

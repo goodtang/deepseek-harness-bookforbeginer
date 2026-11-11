@@ -22,7 +22,7 @@ $LASTEXITCODE
 
 ## 当前实测与复核方式
 
-当前证据为 [checks.json](evidence/2026-11-11-revision/checks.json)。作者在 Windows x64、Node v24.12.0 下执行以下复核命令：
+当前证据为 [checks.json](evidence/2026-11-11-clarifications/checks.json)，对应补充 const 与查询执行对照后的正文；教学代码和 11 个场景均未改变。作者在 Windows x64、Node v24.12.0 下执行以下复核命令：
 
 ```powershell
 node labs/func/verify.mjs
@@ -51,6 +51,8 @@ node labs/func/verify.mjs
 这轮验证没有运行 Harness、调用模型或真实工单系统；没有进行其他操作系统和实际学生试读。参考扩展运行通过不能代替读者独立完成。
 
 ## 旧证据的适用范围
+
+[上一轮 11 场景记录](evidence/2026-11-11-revision/checks.json)保留原正文哈希与适用版本，不用新正文覆盖它；本轮重跑记录见上方当前证据。
 
 原始 [stub-report.json](evidence/2026-11-11/stub-report.json) 和 [answer-report.json](evidence/2026-11-11/answer-report.json) 原样保留。后者的实际目标是 first-tool/tickets.mjs，不能据它宣称已验证本章的简化完成快照；当前记录补足了这项对应关系。
 

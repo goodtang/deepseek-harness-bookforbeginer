@@ -233,7 +233,7 @@
     {
       "path": "chapters/第03章-写出并验证工单查询函数.md",
       "source_id": "SRC-BOOK",
-      "basis": "Independent chapter-three prose and fictional business examples; revised complete-file and assertion teaching. No upstream implementation or textbook text reproduced. Prospective text policy applies.",
+      "basis": "Independent chapter-three prose and fictional business examples; revised complete-file and assertion teaching. No upstream implementation or textbook text reproduced. Prospective text policy applies. Includes original const clarification and two-query execution comparison table.",
       "status": "cleared"
     },
     {
@@ -288,6 +288,12 @@
       "path": "labs/func/evidence/2026-11-11-revision/checks.json",
       "source_id": "SRC-BOOK",
       "basis": "Locally captured synthetic teaching experiments, hashes and small runtime assertion diagnostics. No real business data or upstream source implementation; runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/func/evidence/2026-11-11-clarifications/checks.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Fresh local replay of unchanged synthetic examples against the clarified chapter; original stdout/stderr, source fingerprints and cleanup recorded. No real business data or copied upstream implementation; runtime diagnostic rights retained.",
       "status": "cleared"
     }
   ],

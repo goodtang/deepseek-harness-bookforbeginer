@@ -23,7 +23,7 @@
     },
     {
       "path": "chapters/第03章-写出并验证工单查询函数.md",
-      "sha256": "8d7dd9fc6959261df334f6ad5e254e17011680c6e1381d0b9e8fb7389bb16136"
+      "sha256": "3c2774a718a7969236bd2570c6e5ca5ae4148d5e018abbdadad47fae540aeb18"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -146,12 +146,16 @@
       "sha256": "3755c6cf24eb8fe81b44dde19f432f732349cf8c91a2640027d52e5826d78df4"
     },
     {
+      "path": "labs/func/evidence/2026-11-11-clarifications/checks.json",
+      "sha256": "7591efbda5f6cdd2d4f4a3c30b42815034c1b0cafdfb08c6970bad83dbfafc5e"
+    },
+    {
       "path": "labs/func/evidence/2026-11-11-revision/checks.json",
       "sha256": "0776f286f4630aaad6d8a78b2b6607df41421cdd5438d7fce2877bf5e0f0f46d"
     },
     {
       "path": "labs/func/README.md",
-      "sha256": "a2e9af361e9cc76731aa4d11b17e7a06c4a557f4f82f87f2bb4de2cefa845d28"
+      "sha256": "3e4e75496b2a90bfed618cf9e3a430de23ccb76581b308d072b711111a569398"
     },
     {
       "path": "labs/func/starter.mjs",
@@ -323,7 +327,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "267ea36e5d67bd1fc47b32defd85b129ff434d23e762235d8908cb551764cca9"
+      "sha256": "807b22576e6423dffbf8d70fd1844b984c8afb075b868ba0a624ddd634585da3"
     },
     {
       "path": "templates/chapter-task.md",
@@ -371,7 +375,7 @@
     },
     {
       "path": "work/CH-FUNC-task.md",
-      "sha256": "98180e7bbd1f65fb4b9483793a9c89bd8980f9b4d0e6c1024b8c4c4245ca9bf4"
+      "sha256": "3401c7235a60eaf7e987ff3e33b76f5fd8bf925ce23f263329884ac252b5e67c"
     },
     {
       "path": "work/CH-OBS-task.md",
@@ -387,11 +391,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "ccee750e0fbc968bb3ac59e64236cb3b3fbc8653a1a57e9c98bd86b089786d89"
+      "sha256": "b784130d5ed13833e6287b846dea50e0660a3518547cdbde5b7def15f6d2783b"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "77d2329c05e8eaa09c019dc5ca1d73977b0709ad77e3021976098c3dc98cc006"
+      "sha256": "9940d8b80f51b20ba34906421a0c7ea7987ba43bb19b4106bbb2fb5102bef097"
     },
     {
       "path": "work/START-HERE.md",
@@ -399,7 +403,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "b836d360c235f53537ddaeb9628b862b212f065319bdce88305f828675621e1d"
+      "sha256": "0abc6cc077eb4ae8b5daff9052f0910090c032061e374e91d20e7b1f250178ad"
     }
   ]
 }
