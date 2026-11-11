@@ -1,0 +1,13 @@
+{
+  "files": {
+    "labs/func/completed.mjs": "b7a6bc88760ac5b462b711ab5047d65fff9c5a69b27c196060889d86200ccc5d",
+    "labs/first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "missing": null,
+  "simpleConstructor": {},
+  "completeConstructor": null,
+  "completePrototypeName": null,
+  "bothReturnIndependentCopies": true,
+  "frozenMutationRejected": true,
+  "passed": true
+}

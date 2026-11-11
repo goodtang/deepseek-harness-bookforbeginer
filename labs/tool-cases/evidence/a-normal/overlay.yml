@@ -1,0 +1,5 @@
+- id: session-title-llm
+  disabled: true
+- insert:
+    - id: book-ticket-tool
+      name: "D:/projects/deepseek-harness-bookforbeginer/labs/tool-cases/stages/plugin.mjs"

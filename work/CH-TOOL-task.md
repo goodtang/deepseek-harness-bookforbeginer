@@ -1,5 +1,7 @@
 # CH-TOOL 工作包：第四章正式初稿中
 
+本轮完成实施计划工作包 A 的作者交付：重写 4.2 为工作文件复制、起点运行、完整注册文件、实际 overlay、说明修改和恢复；新增 labs/tool-cases 起点/完成版/支持文件/运行入口。start、normal、修改说明、拒绝空插件和恢复正常五项预期结果均实跑；函数版本差异和 freeze 独立检查通过。另按正文 PowerShell 步骤复制起点并用正文完整代码补全，两次实际启动通过，见 [a-reader-checks.json](../labs/tool-cases/evidence/a-reader-checks.json)。核心证据见 [a-checks.json](../labs/tool-cases/evidence/a-checks.json) 与 [a-functions.json](../labs/tool-cases/evidence/a-functions.json)。旧插件、函数、运行器及旧证据未改。学生仍未验收；下一动作是工作包 B，4.4/4.5 和执行计数仍未实现。
+
 日期：2026-11-11。正式章号 4，标题《第一个业务工具：让查询函数进入一次任务》。本轮完成 4.1–4.3 三个相邻小节：函数与插件的职责、真实工具定义的阅读、正常接入实测。不是整章初稿完成，不代表完整 M1 通过。
 
 ## 阅读与交接
@@ -39,4 +41,4 @@
 
 ## 后续实施依据
 
-已建立[第四章实施计划](../planning/chapter-04-implementation-plan.md)，按亲手接入、原始证据读法、三个真实对照、库存迁移、整章验收推进。计划未执行，不改变当前初稿中及各项验收状态；下一动作是工作包 A。
+已建立[第四章实施计划](../planning/chapter-04-implementation-plan.md)，按亲手接入、原始证据读法、三个真实对照、库存迁移、整章验收推进。工作包 A 已交付并复核，其他工作包未执行；整章仍初稿中，下一动作是工作包 B。

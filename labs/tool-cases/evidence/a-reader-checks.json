@@ -1,0 +1,19 @@
+{
+  "scope": "Author replay of printed PowerShell workflow using chapter code, not independent student trial",
+  "chapterSha256": "8771231269bf0354a87798f67cc0d84835e7fc98ca87605e5f921ab36a978870",
+  "cases": [
+    {
+      "case": "a-reader-start",
+      "reportSha256": "7c19c454a7066b92299943993ff748011a6b41f1420f354735020c2d65a1bf1a",
+      "pluginSnapshot": "labs/tool-cases/start/plugin.mjs",
+      "passed": true
+    },
+    {
+      "case": "a-reader-normal",
+      "reportSha256": "bcef02b7acea1ea2a890f494be9213b22f899a7bf0e61cf9e0d5a0d961ce5dc5",
+      "pluginSnapshot": "labs/tool-cases/.lab-runtime/author-reader-plugin.mjs",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

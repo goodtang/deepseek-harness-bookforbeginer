@@ -313,6 +313,138 @@
       "source_id": "SRC-BOOK",
       "basis": "Independent chapter-four teaching and implementation plan based on current book artifacts and scope review; no third-party text or code reproduced. Prospective text policy applies.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 chapter-four teaching code using documented source interfaces; no upstream implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/support.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 chapter-four teaching code using documented source interfaces; no upstream implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-checks.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-functions.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/stages/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 chapter-four teaching code using documented source interfaces; no upstream implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/start/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent Apache-2.0 chapter-four teaching code using documented source interfaces; no upstream implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-description/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-description/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-negative/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-negative/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-normal/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-normal/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-restored/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-restored/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-start/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-start/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent lab instructions or captured synthetic runtime evidence; no real business records. Runtime diagnostic rights retained; prospective prose policy applies where relevant.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-reader-checks.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-reader-normal/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-reader-normal/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-reader-start/overlay.yml",
+      "source_id": "SRC-BOOK",
+      "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/tool-cases/evidence/a-reader-start/report.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Captured author replay of synthetic chapter workflow, local configuration or integrity checks; no real business data. Runtime diagnostic rights retained.",
+      "status": "cleared"
     }
   ],
   "pending": [

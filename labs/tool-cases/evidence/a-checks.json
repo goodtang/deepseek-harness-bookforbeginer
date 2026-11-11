@@ -1,0 +1,64 @@
+{
+  "chapter": "CH-TOOL",
+  "workPackage": "A",
+  "chapterSha256": "8771231269bf0354a87798f67cc0d84835e7fc98ca87605e5f921ab36a978870",
+  "completeSnippetMatches": true,
+  "cases": [
+    {
+      "case": "a-start",
+      "passed": true,
+      "applicationExitCode": 0,
+      "reportSha256": "b37f6a977cbe4981b830be7440e6067fbf3162fd324f7b6d2144ab68a5ddfe88",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "case": "a-normal",
+      "passed": true,
+      "applicationExitCode": 0,
+      "reportSha256": "3e75bf1947a7b01d1151864ebc601cdae5b0a28a08a34488f719a7412d7ec1ab",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "case": "a-description",
+      "passed": true,
+      "applicationExitCode": 0,
+      "reportSha256": "fa523a509b977f3f95117d155aedf073685c14b32aa7ef0f9ed3272573001480",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "case": "a-negative",
+      "passed": false,
+      "applicationExitCode": 0,
+      "reportSha256": "a4fa749aa99ed39ce1faf947e56bfe7ddc3adc2a0b9c81a168e4d02b6d2ed48c",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "case": "a-restored",
+      "passed": true,
+      "applicationExitCode": 0,
+      "reportSha256": "eba4c632040748a5f14768de45d7dad1efff61b93331d8998cc6687565e2acf3",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,74 @@
+{
+  "scenario": "normal",
+  "capturedAt": "2026-11-11T09:28:08.548Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "sourceTrackedChanges": "",
+  "node": "v24.12.0",
+  "platform": "win32",
+  "arch": "x64",
+  "plugin": "D:\\projects\\deepseek-harness-bookforbeginer\\labs\\tool-cases\\stages\\plugin.mjs",
+  "files": {
+    "plugin": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+    "run.mjs": "4dc28beb489ce290c7dfe9f170b93e2da72f75e0f27408028399744b3744c6cd",
+    "support.mjs": "37d7224e2f1ead71c732f7d5ce19c55769a441b37c11ca36c7b0145b73dd93c2",
+    "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "overlay": "- id: session-title-llm\n  disabled: true\n- insert:\n    - id: book-ticket-tool\n      name: \"D:/projects/deepseek-harness-bookforbeginer/labs/tool-cases/stages/plugin.mjs\"\n",
+  "submittedTask": "Look up ticket TK-1042 with book_ticket_lookup.",
+  "applicationExitCode": 0,
+  "signal": null,
+  "terminalStdout": "Chapter four completed.\n",
+  "toolSchema": {
+    "name": "book_ticket_lookup",
+    "description": "Look up a fictional ticket by its exact ID; does not modify records.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Ticket ID, for example TK-1042"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  "observedToolCall": {
+    "type": "tool_use",
+    "id": "mock-call-1",
+    "name": "book_ticket_lookup",
+    "input": {
+      "id": "TK-1042"
+    }
+  },
+  "observedToolResult": {
+    "type": "tool_result",
+    "tool_use_id": "mock-call-1",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+      }
+    ],
+    "is_error": false
+  },
+  "requests": [
+    {
+      "attempt": 1,
+      "behavior": "tool_call_success",
+      "outcome": "completed"
+    },
+    {
+      "attempt": 2,
+      "behavior": "success",
+      "outcome": "completed"
+    }
+  ],
+  "passed": true
+}
