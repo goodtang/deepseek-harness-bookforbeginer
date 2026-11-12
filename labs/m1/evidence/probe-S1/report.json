@@ -1,0 +1,37 @@
+{
+  "scenario": "S1",
+  "capturedAt": "2026-11-12T02:39:12.819Z",
+  "node": "v24.12.0",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "sourceTrackedChanges": "",
+  "networkIsolation": {
+    "verified": false,
+    "scope": "Loopback model configuration only; no OS external-network block established"
+  },
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "files": {
+    "run.mjs": "de9640c0f56773fa4bbc4cf7d4a1df43852d2767874cb1273341f84291fe3360",
+    "observer.mjs": "c489dcedd5e5f0fd41397e9951409da74097617b880e2c1a4e96127b33446ad6",
+    "../tool-cases/support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+    "../tool-cases/stages/plugin.mjs": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+    "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+  },
+  "applicationExitCode": null,
+  "signal": "SIGTERM",
+  "watchdogExpired": true,
+  "stdout": "",
+  "stderr": "",
+  "executionAudit": [
+    {
+      "type": "ready"
+    }
+  ],
+  "failure": "Error: ENOENT: no such file or directory, copyfile 'C:\\Users\\tangjie\\AppData\\Local\\Temp\\book-m1-RlUvH4\\events.jsonl' -> 'D:\\projects\\deepseek-harness-bookforbeginer\\labs\\m1\\evidence\\probe-S1\\observed-events.jsonl'",
+  "requests": [],
+  "functionalPassed": false,
+  "m1EngineeringAccepted": false
+}

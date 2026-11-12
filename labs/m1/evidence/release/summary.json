@@ -1,0 +1,76 @@
+{
+  "reviewedOn": "2026-11-12",
+  "files": {
+    "chapters/第04章-第一个业务工具.md": "da1689596243bfc75a4ad07303de4aa640c6ddad9bd84781afa4d2bdedbad09a",
+    "labs/m1/run.mjs": "17e6063a48d099254914a4b35276a291cc4a501551298af6509fd5e4428423b8",
+    "labs/m1/observer.mjs": "421f4c357d9de9e26c4908b23f8335db01903d8886ac683e685c2f56c349e41b",
+    "labs/m1/isolation-preflight.mjs": "48ebcaf54ac15041efa111b27e0dee55b17408216a7b5d22f20ea5fc5bd859ea"
+  },
+  "cases": [
+    {
+      "scenario": "S1",
+      "reportSha256": "564f8eea46e7cf5000f1baca0a5831f28da21ec73017053e4afb3fc16042e2b7",
+      "applicationExitCode": 0,
+      "requestCount": 2,
+      "executeCount": 1,
+      "terminal": {
+        "kind": "completed"
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S2",
+      "reportSha256": "73550853d25decc2049fae9648a9881e05ebf13affd1cc7aff7cdf15c8f8bedc",
+      "applicationExitCode": 0,
+      "requestCount": 3,
+      "executeCount": 1,
+      "terminal": {
+        "kind": "completed"
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S2-exhaust",
+      "reportSha256": "1a8b9c1591dc3530322e59f716850fe3fdc236d142fdd71174a98d99ccb523cd",
+      "applicationExitCode": 1,
+      "requestCount": 2,
+      "executeCount": 0,
+      "terminal": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S3",
+      "reportSha256": "3ba6e8d86ed34ff9cf2b8799769a8c838797e20626a8d0500abc8e8e0c078642",
+      "applicationExitCode": 1,
+      "requestCount": 2,
+      "executeCount": 1,
+      "terminal": {
+        "kind": "aborted",
+        "reason": {
+          "kind": "user"
+        }
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    }
+  ],
+  "durableFilesMatchCommittedObservations": true,
+  "functionalChecksPassed": true,
+  "networkIsolationVerified": false,
+  "networkIsolationDeferredByUser": true,
+  "m1EngineeringAccepted": false,
+  "readerAcceptance": "not performed"
+}

@@ -18,7 +18,7 @@ def active_files(root):
                                     "THIRD_PARTY_NOTICES.md", "EDITORIAL.md", "COMMERCIAL.md", ".gitignore", ".gitattributes")]
     for name in ("planning", "templates", "work", "chapters", "labs", "diagrams", "tools", "rights", "LICENSES"):
         files.extend(p for p in (root / name).rglob("*")
-                     if p.is_file() and p.suffix in {".md", ".json", ".py", ".txt", ".mjs", ".ts", ".yml", ".yaml", ".mmd", ".png"}
+                     if p.is_file() and p.suffix in {".md", ".json", ".jsonl", ".py", ".txt", ".mjs", ".ts", ".yml", ".yaml", ".mmd", ".png"}
                      and not {"__pycache__", ".lab-runtime"}.intersection(p.parts)
                      and p != root / "work/FILES.json")
     return sorted(p for p in files if p.is_file())

@@ -38,6 +38,8 @@ support 中的 defineTool 仍调用目标工程的 defineTool，只在传入实�
 
 ## 当前完整实测
 
+本目录 summary 的正文哈希对应 116a18a 的初稿版本；新增 M1 配套与两处文字修订后，工具实验代码和原始结果不变，不改写旧 summary。现行文稿及新增故障/取消证据的对应核对见 [M1 配套](../m1/README.md)。
+
 [汇总检查](evidence/completion/summary.json)保存当前代码/正文哈希和各原件的校验。正文 4.3 摘录自 [normal](evidence/completion/normal/report.json) 的实际字段，调用编号为 mock-call-1，未为示例重写。
 
 工单对照原件：[missing](evidence/completion/missing/report.json)、[invalid-argument](evidence/completion/invalid-argument/report.json)、[unregistered](evidence/completion/unregistered/report.json)。库存参考解：[零库存](evidence/completion/inventory-zero/report.json)、[缺失商品](evidence/completion/inventory-missing/report.json)、[非零库存](evidence/completion/inventory-positive/report.json)。作者工作文件复现：[零库存](evidence/completion/reader-inventory-zero/report.json)、[缺失商品](evidence/completion/reader-inventory-missing/report.json)、[非零库存](evidence/completion/reader-inventory-positive/report.json)。
@@ -48,4 +50,4 @@ support 中的 defineTool 仍调用目标工程的 defineTool，只在传入实�
 
 [a-checks.json](evidence/a-checks.json) 和 [a-reader-checks.json](evidence/a-reader-checks.json) 保留最初 A 版的正文及代码哈希；其余 a-* 原件同样不覆盖。之后 support 和 run 增加执行测量及新场景，旧报告不能用来声称这些新增能力当时已验证。当前完整验证看 completion 目录。
 
-当前仅 Windows x64、Node v24.12.0、本机 mock 与真实 Harness 的指定路径。没有验证真实模型工具选择、断网、断流/取消、跨平台、插件卸载或学生掌握程度。二图复用既有导出，GitHub/PDF 视觉验收仍待完成。代码 Apache-2.0，正文/自制图按现行新增图文许可；来源见 [rights/sources.json](../../rights/sources.json)。
+当前仅 Windows x64、Node v24.12.0、本机 mock 与真实 Harness 的指定路径。本目录不验证断流/取消；这些功能路径已在 M1 配套独立验证。真实模型工具选择、断网、跨平台、插件卸载与学生掌握程度仍未验。二图复用既有导出，GitHub/PDF 视觉验收仍待完成。代码 Apache-2.0，正文/自制图按现行新增图文许可；来源见 [rights/sources.json](../../rights/sources.json)。

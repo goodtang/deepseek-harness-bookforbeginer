@@ -1,0 +1,76 @@
+{
+  "reviewedOn": "2026-11-12",
+  "files": {
+    "chapters/第04章-第一个业务工具.md": "da1689596243bfc75a4ad07303de4aa640c6ddad9bd84781afa4d2bdedbad09a",
+    "labs/m1/run.mjs": "408e188b50e4d22bc8d22f4dfaefe43f86fc9096903c1ad4d486d51a11bef848",
+    "labs/m1/observer.mjs": "421f4c357d9de9e26c4908b23f8335db01903d8886ac683e685c2f56c349e41b",
+    "labs/m1/isolation-preflight.mjs": "48ebcaf54ac15041efa111b27e0dee55b17408216a7b5d22f20ea5fc5bd859ea"
+  },
+  "cases": [
+    {
+      "scenario": "S1",
+      "reportSha256": "09eccdd585fbe54b2467fb7619b49cfb54ef9e5ef5e004fc3504befbd9617f40",
+      "applicationExitCode": 0,
+      "requestCount": 2,
+      "executeCount": 1,
+      "persistedTerminal": {
+        "kind": "completed"
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S2",
+      "reportSha256": "6ee1b86438999b7727b32179a1f4a556bcbb781f9476f05c6cc8c13fea4d6df4",
+      "applicationExitCode": 0,
+      "requestCount": 3,
+      "executeCount": 1,
+      "persistedTerminal": {
+        "kind": "completed"
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S2-exhaust",
+      "reportSha256": "0c20a867618ae30982f2b7cc7e7bd49f4f9b117f867ce16d0b178c4a3a1263f7",
+      "applicationExitCode": 1,
+      "requestCount": 2,
+      "executeCount": 0,
+      "persistedTerminal": {
+        "kind": "error",
+        "error": {
+          "message": "DeepSeek Messages transport failed",
+          "code": "TRANSPORT"
+        }
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    },
+    {
+      "scenario": "S3",
+      "reportSha256": "36da90a0ee1d5b557747e02584e8e14bc37338a0f17b3fe765501590b6e410d4",
+      "applicationExitCode": 1,
+      "requestCount": 2,
+      "executeCount": 1,
+      "persistedTerminal": {
+        "kind": "aborted",
+        "reason": {
+          "kind": "user"
+        }
+      },
+      "functionalPassed": true,
+      "networkIsolationVerified": false,
+      "m1EngineeringAccepted": false
+    }
+  ],
+  "durableFilesAndLiveObservationsMatch": true,
+  "functionalChecksPassed": true,
+  "networkIsolationVerified": false,
+  "networkIsolationDeferredByUser": true,
+  "m1EngineeringAccepted": false,
+  "readerAcceptance": "not performed"
+}

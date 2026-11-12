@@ -35,3 +35,5 @@ E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/firs
 新旧许可分界以 rights/prior-publication.json 及其基线 Git 版本为准。新限制只适用于新增且有权授权的表达；既有宽松许可、第三方权利、法定例外和代码许可不受追溯限制。
 
 第三章快照约定（2026-11-11）：labs/func/completed.mjs 是正文简化实现；first-tool/tickets.mjs 是后续工具示例完整版本，仍为教学代码，不称上游内置查询或生产系统。正文两个完整代码块分别与 completed.mjs、check-one.mjs 对应，verify.mjs 核对并在临时副本中复跑；旧证据不改变适用范围。
+
+M1 隔离状态（2026-11-12 用户确认）：当前没有可用隔离环境，先保留外网隔离验收待完成。S2/S3 功能实测和 Session 核对通过也不等于完整 M1-E 通过；不自动安装环境或更改全局网络配置。

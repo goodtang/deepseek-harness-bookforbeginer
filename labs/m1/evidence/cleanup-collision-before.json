@@ -1,0 +1,7 @@
+{
+  "expectedRefusal": true,
+  "observedExitCode": 1,
+  "temporaryRootsCreatedBeforeRefusal": 1,
+  "ownedEmptyRootRemoved": true,
+  "diagnostic": "node:internal/fs/promises:861\n  return await PromisePrototypeThen(\n         ^\n\nError: EEXIST: file already exists, mkdir 'D:\\projects\\deepseek-harness-bookforbeginer\\labs\\m1\\evidence\\verified\\S1'\n    at async mkdir (node:internal/fs/promises:861:10)\n    at async <anonymous> (D:\\projects\\deepseek-harness-bookforbeginer\\labs\\m1\\run.mjs:24:52) {\n  errno: -4075,\n  code: 'EEXIST',\n  syscall: 'mkdir',\n  path: 'D:\\\\projects\\\\deepseek-harness-bookforbeginer\\\\labs\\\\m1\\\\evidence\\\\verified\\\\S1'\n}\n\nNode.js v24.12.0\n"
+}

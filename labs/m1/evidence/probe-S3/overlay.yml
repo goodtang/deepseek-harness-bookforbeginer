@@ -1,0 +1,20 @@
+- id: session-title-llm
+  disabled: true
+- id: llm-deepseek
+  config:
+    retryPolicy:
+      mode: normal
+      maxRetries: 1
+      backoff:
+        initialDelayMs: 10
+        maxDelayMs: 10
+        jitterRatio: 0
+- id: session-persistence-jsonl
+  config:
+    root: "C:/Users/tangjie/AppData/Local/Temp/book-m1-uWPkHB/sessions"
+    compression: none
+- insert:
+    - id: book-ticket-tool
+      name: "D:/projects/deepseek-harness-bookforbeginer/labs/tool-cases/stages/plugin.mjs"
+    - id: book-m1-observer
+      name: "D:/projects/deepseek-harness-bookforbeginer/labs/m1/observer.mjs"

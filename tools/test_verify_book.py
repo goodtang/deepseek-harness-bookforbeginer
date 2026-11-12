@@ -9,6 +9,19 @@ from verify_book import active_files, check_markdown, verify
 
 
 class BookChecks(unittest.TestCase):
+    def test_durable_jsonl_change_requires_review(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            (root / "work").mkdir()
+            log = root / "labs" / "m1" / "evidence" / "session.jsonl"
+            log.parent.mkdir(parents=True)
+            log.write_bytes(b'{"type":"turn/end","reason":"completed"}\n')
+            verify(root, refresh=True)
+            self.assertIn(log, active_files(root))
+            log.write_bytes(b'{"type":"turn/end","reason":"aborted"}\n')
+            with self.assertRaisesRegex(ValueError, "Active files changed"):
+                verify(root)
+
     def test_lab_code_is_fingerprinted_but_local_runs_are_excluded(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary).resolve()
