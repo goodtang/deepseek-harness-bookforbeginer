@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-11",
+  "review_date": "2026-11-12",
   "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
   "licenses": [
     {
@@ -1056,6 +1056,84 @@
       "path": "labs/m1/evidence/release/S3/report.json",
       "source_id": "SRC-DSH",
       "basis": "Captured fictional Session/request evidence includes upstream prompts and tool text with SRC-DSH MIT rights retained; no real credentials or business data. Book fixture rights remain separate.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/第05章-工具结果怎样进入下一次模型请求.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "work/CH-LOOP-task.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-LOOP-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-LOOP-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/check.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/inspect.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/checks-final.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/checks.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/excerpt.json",
+      "source_id": "SRC-DSH",
+      "basis": "Selected fictional request/Session fields captured from real profile execution; SRC-DSH MIT rights retained; book fixture and independent explanation rights remain separate.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/reader-exercise-source.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/reader-exercise.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, diagram, teaching code or synthetic comparison/check record; no external artwork or reference-book expression copied. Small attributed source excerpt in chapter 5 remains SRC-DSH MIT; prose/diagram and code retain their separately declared licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent explanation of current and historical synthetic evidence scope, code snapshots and reproduction.",
       "status": "cleared"
     }
   ],

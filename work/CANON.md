@@ -37,3 +37,5 @@ E1 已确定：普通函数 `lookupTicket(id)` 位于 [tickets.mjs](../labs/firs
 第三章快照约定（2026-11-11）：labs/func/completed.mjs 是正文简化实现；first-tool/tickets.mjs 是后续工具示例完整版本，仍为教学代码，不称上游内置查询或生产系统。正文两个完整代码块分别与 completed.mjs、check-one.mjs 对应，verify.mjs 核对并在临时副本中复跑；旧证据不改变适用范围。
 
 M1 隔离状态（2026-11-12 用户确认）：当前没有可用隔离环境，先保留外网隔离验收待完成。S2/S3 功能实测和 Session 核对通过也不等于完整 M1-E 通过；不自动安装环境或更改全局网络配置。
+
+第五章执行顺序（2026-11-12 用户明确要求）：读者验收可以最后进行，正式开始 CH-LOOP 第五章，不再将 M1-R 设为本章起稿门槛。读者状态仍为未检查；外网隔离及完整 M1 状态不随起稿推进。本章以同一正常查询追踪 value/content、Session/surface、buildRequest 与 DeepSeek Messages 序列化，固定业务字段不变。

@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "6740e44520b8369f3211aef8fa5e25ef6614c167c7a1e8f3ba43ba5a13360d4f"
+      "sha256": "304fcfff7ae811b1e2a82f89f33518fd51a3c8b4e4ee426d184de61cf5e10940"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -30,6 +30,10 @@
       "sha256": "da1689596243bfc75a4ad07303de4aa640c6ddad9bd84781afa4d2bdedbad09a"
     },
     {
+      "path": "chapters/第05章-工具结果怎样进入下一次模型请求.md",
+      "sha256": "f68990d8d447a9d6e63b0865e9afb4730768ca7234863e5e56b82e8f43bc80e6"
+    },
+    {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
       "sha256": "b001ac193a5c5b724f0a7e69815369f66de75869a91697c741e86aebe2dc9950"
     },
@@ -39,7 +43,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "90ce89b389161a05da7a12dddbe97a147629b5bc4f4e9648c5a5184ad7a90f4c"
+      "sha256": "fb5a23174b39f4332059a257a359b8026f275c29ce22e38f07d37aee636ae00d"
     },
     {
       "path": "COPYRIGHT.md",
@@ -52,6 +56,14 @@
     {
       "path": "diagrams/CH-FUNC-01.png",
       "sha256": "f1b7253e932576b3a0378a9c5c5a3c93fdfa925d48699cc4d4c470c41fc31060"
+    },
+    {
+      "path": "diagrams/CH-LOOP-01.mmd",
+      "sha256": "f94dd639c6131f9e2ca12481a1c071ec2068b6ad0c03432170216bb410fcc85d"
+    },
+    {
+      "path": "diagrams/CH-LOOP-01.png",
+      "sha256": "26ee518df43840b97ee919214f5ed76aff2d530187d5af83f6563942a5ab33fd"
     },
     {
       "path": "diagrams/CH-OBS-01.mmd",
@@ -87,11 +99,11 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "6c26ee6997668694a9ed3d78aac239bb325875636f68f89f2c7103705e0b358b"
+      "sha256": "f33d5a381db6dff22844e2e199f9655c14f9c63bb89bc196c4dcbbdfde5ef555"
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "0422424596c5ec7409f20b49231ec4c7805efb424c3c6b4b80e468175b1f6cfa"
+      "sha256": "e872a806a45e814fa92aed712c65a2ff54208214a37626faeeda5ccebbb49981"
     },
     {
       "path": "EDITORIAL.md",
@@ -444,6 +456,42 @@
     {
       "path": "labs/m1/run.mjs",
       "sha256": "17e6063a48d099254914a4b35276a291cc4a501551298af6509fd5e4428423b8"
+    },
+    {
+      "path": "labs/next-request/check.mjs",
+      "sha256": "5d0871c2ce8e4512039240ab96677c180f5739c0d5b0d56536c29e0a868d28d8"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/checks-final.json",
+      "sha256": "05fe245ec6d9a3e6cae303562d2279ba4e3d17722d5ffdaf5ca3b00c024fa267"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/checks.json",
+      "sha256": "1a5148ef84a4eac5df10ec9aacb0fb3a1ab69064b15712b54b68d6b47477de69"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/excerpt.json",
+      "sha256": "7e3b106431634b15abcc9e3c3ab874a54ef77ceca6df183dcaecd3cfb47e5ff0"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/reader-exercise-source.txt",
+      "sha256": "194a610bf225646685d2a771811f0f2672fe3e2ee1d17b39723246735114627e"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/reader-exercise.json",
+      "sha256": "d7b933721ec5041b9fdb3df4d6a8ae86530ec033dc8e02d45037dc8cd83494c3"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-12/README.md",
+      "sha256": "90abf8d1f091fcf2692b6394d2fcbce14d7ee4b6156734bdcff5dd5cb801c323"
+    },
+    {
+      "path": "labs/next-request/inspect.mjs",
+      "sha256": "07c422efbe796a2ec444d99b2b7cb2507d8c9cf4ba5c5a7929f02c8e53224910"
+    },
+    {
+      "path": "labs/next-request/README.md",
+      "sha256": "b6b15614585215675f2d8cc3122196e03e2fd6cac52602fd102d7e3e8cc4de23"
     },
     {
       "path": "labs/observe-task/evidence/2026-11-11/failure-check.json",
@@ -823,7 +871,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "1023b8c974a5d8cba838113ea89874a4d659b3598b9b5ea93364f086d56ffd44"
+      "sha256": "5cfea57b45ba9b4ed9d9afa3a91b2518e298d916190d99021d8857b4e8695ab1"
     },
     {
       "path": "rights/prior-publication.json",
@@ -835,7 +883,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "410a69232fc33cbb3c1f1397cece0c23c92c9341c27f6f83a21e59cecb1ef1ad"
+      "sha256": "d820ac0b0cfa48a297ac1e46df7d25414c3ca8a7b1d6e35017180e1288023022"
     },
     {
       "path": "templates/chapter-task.md",
@@ -879,11 +927,15 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "4fc65888fe55320bbbfa9bd06cb847a64328f191725d6dfd8cfa5d47b3e2ecf7"
+      "sha256": "d79b9a8b8040707fad93f63d7aca15e04a8602c6106b1d4ba8bac55bb32c8fc9"
     },
     {
       "path": "work/CH-FUNC-task.md",
       "sha256": "3401c7235a60eaf7e987ff3e33b76f5fd8bf925ce23f263329884ac252b5e67c"
+    },
+    {
+      "path": "work/CH-LOOP-task.md",
+      "sha256": "b5b6f7de2816c9bda543eb31dca548092f5b37a64e887bffb78d4088bebf2984"
     },
     {
       "path": "work/CH-OBS-task.md",
@@ -899,11 +951,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "123aad419fd80acd8ed466b144d2f73761f27219dc44d398ab2f39abcb321189"
+      "sha256": "9dbe6fbf060212c4305ce752d2af9c960a6964b8481d678ef4d41adb0053909f"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "6dda4a82dc496e02c8ceaa3a9133074a8f2f7d58e57f5020033b6ffff83433cf"
+      "sha256": "ed392004abf65e3d59aba25b1c064acaa7151ae1c4aa267b4b23e88056c26f55"
     },
     {
       "path": "work/START-HERE.md",
@@ -911,7 +963,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "99c7567a10a8aa1d328660ef64f50c2283ebc4752654ec650c7e883ae2ddeb3d"
+      "sha256": "21737e81e78ec0189ef31f82b1f7292eea70eccc093e011bf91998c163cd7443"
     }
   ]
 }

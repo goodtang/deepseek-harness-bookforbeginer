@@ -1,0 +1,7 @@
+flowchart TD
+  A["业务函数返回工单对象"] --> B["工具管线校验输出，再调用 render"]
+  B --> C["记录 tool/result\n内部消息的 role 为 tool"]
+  C --> D["Session 导出当前消息\nderiveMessages"]
+  D --> E["循环构造下一次请求\nbuildRequest"]
+  E --> F["适配器转换协议\nuser 消息包含 tool_result"]
+  F --> G["第二次请求送到模拟服务"]

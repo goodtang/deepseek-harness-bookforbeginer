@@ -17,3 +17,5 @@ node tools/render_diagrams.mjs D:/projects/deepseek-harness-local/node_modules/.
 生成后须逐图检查正文显示、图注与图源一致，再更新来源登记、渲染记录和活动指纹。图片本身按本仓库新增图文许可，渲染脚本为 Apache-2.0；不将渲染依赖库打包进书稿。本机导出不等于 V6 全部图组通过。
 
 生成第一章图时，在上述命令后追加 `CH-OBS-01`，第二章图则追加 `CH-RUN-01`；不传图 ID 时仍只生成既有 CH-TOOL 两图。四图的本机导出不等于 GitHub 页面、PDF 或 V6 全部图组验收通过。
+
+第五章新增 CH-LOOP-01，沿同一工单展开业务值、工具消息、Session 导出与协议转换。用上述命令追加 CH-LOOP-01 可单独导出，最终 PNG 已目视检查；页面/PDF 未验，版本与哈希见 render-record.json。

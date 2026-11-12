@@ -1,5 +1,15 @@
 # 接续检查点
 
+当前任务（2026-11-12）：用户明确读者验收后置，已完成第五章 CH-LOOP《工具结果怎样进入下一次模型请求》5.1–5.3 正式初稿。正文、相邻交接、源码坐标、图和验证见 [工作包](CH-LOOP-task.md)。未改变 M1-E/M1-R、外网隔离的待验状态，不再将第五章记为尚未起稿或只允许试写。
+
+本轮同一 S1 经真实 m1/run.mjs 复跑，两请求、一次 execute、一个 turn、两个 step；inspect 对持久结果与请求内容/ID/三个字段逐项核对。check 五项错误副本拒绝，读者新增错误持久 callId 的练习已由作者在副本复核为六项；不是读者签收或运行时故障注入。当前检查代码哈希见 labs/next-request/evidence/2026-11-12/checks-final.json。
+
+新增 CH-LOOP-01 的 PNG 已导出并目视检查，页面/PDF 未验。记录与下一步：本章初稿完成，读者未检查；可反馈修订或沿等待/取消目标继续，不假称第六章已有正文。仍保持 TK-1042 和工具名不变，分清 value/content、日志/surface、内部 tool 消息/线上 user+tool_result。正常结束与取消的状态不能互相替换。
+
+新增公开证据仅保留教学字段，完整新运行原件在 labs/next-request/.lab-runtime/S1-20261112，避免重复发布完整提示与上下文；摘录存输入字节哈希。既有 m1/tool-cases 代码和旧证据未改，不把旧报告套到新代码。自有实验进程已清理。收尾检查和发布结果以实际 Git 核对。
+
+## 前轮记录（保留当时范围，以当前工作包与状态索引为准）
+
 日期：2026-11-12。本轮补齐 M1-S1 持久 Session 核对，以及 S2/S3 功能实测；完整 M1 仍未通过。代码与精确命令见 labs/m1/README.md，当前原件 evidence/release；每组采用同一工单工具、支持的 headless profile、独立 home/目录/脚本。
 
 S2：partial_disconnect 后只允许重试一次，实际三请求恢复；连续断流对照在两请求后 error/TRANSPORT、工具 0 次。S3：工具已执行一次、第二请求 stalled 后由外部 HTTP 控制端调用公开 Agent.cancel({kind:user})，收到 accepted，持久 turn/end 为 aborted/user；无第三请求、无重试、未触发超时看门狗。四组的应用退出、功能断言及清理分开记录。

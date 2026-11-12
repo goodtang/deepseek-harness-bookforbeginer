@@ -1,0 +1,226 @@
+{
+  "fixture": "S1",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "scope": "Selected fields only; not a full request dump or a general Session verifier",
+  "firstRequest": {
+    "hasTicketToolDefinition": true,
+    "toolUseCount": 0,
+    "toolResultCount": 0
+  },
+  "secondRequest": {
+    "toolUse": {
+      "index": 1,
+      "role": "assistant",
+      "block": {
+        "type": "tool_use",
+        "id": "mock-call-1",
+        "name": "book_ticket_lookup",
+        "input": {
+          "id": "TK-1042"
+        }
+      }
+    },
+    "toolResult": {
+      "index": 2,
+      "role": "user",
+      "block": {
+        "type": "tool_result",
+        "tool_use_id": "mock-call-1",
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+          }
+        ],
+        "is_error": false
+      }
+    }
+  },
+  "persisted": {
+    "call": {
+      "type": "tool/call",
+      "seq": 17,
+      "time": 1794465016527,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "callId": "mock-call-1",
+        "name": "book_ticket_lookup",
+        "arguments": "{\"id\":\"TK-1042\"}"
+      }
+    },
+    "result": {
+      "type": "tool/result",
+      "seq": 18,
+      "time": 1794465016536,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "tool",
+          "source": {
+            "kind": "tool",
+            "callId": "mock-call-1"
+          },
+          "toolCallId": "mock-call-1",
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+            }
+          ],
+          "isError": false,
+          "id": "8b532c84-d832-4b31-97f8-54fd74c2d374"
+        }
+      },
+      "sourceEventSeqs": [
+        17
+      ],
+      "surfaceOp": "append"
+    }
+  },
+  "timeline": [
+    {
+      "seq": 0,
+      "type": "permission/preset"
+    },
+    {
+      "seq": 1,
+      "type": "sandbox/mode"
+    },
+    {
+      "seq": 2,
+      "type": "approval/policy"
+    },
+    {
+      "seq": 3,
+      "type": "agent/inbox/spliced"
+    },
+    {
+      "seq": 4,
+      "type": "turn/start",
+      "turn": 1
+    },
+    {
+      "seq": 5,
+      "type": "agent/inbox/spliced"
+    },
+    {
+      "seq": 6,
+      "type": "step/start",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 7,
+      "type": "system/message",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 8,
+      "type": "user/message"
+    },
+    {
+      "seq": 9,
+      "type": "user/message"
+    },
+    {
+      "seq": 10,
+      "type": "user/message"
+    },
+    {
+      "seq": 11,
+      "type": "user/message"
+    },
+    {
+      "seq": 12,
+      "type": "request/header"
+    },
+    {
+      "seq": 13,
+      "type": "request/context"
+    },
+    {
+      "seq": 14,
+      "type": "session/title"
+    },
+    {
+      "seq": 15,
+      "type": "session-log-deepseek/delivery-accepted"
+    },
+    {
+      "seq": 16,
+      "type": "assistant/message",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 17,
+      "type": "tool/call",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 18,
+      "type": "tool/result",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 19,
+      "type": "step/end",
+      "turn": 1,
+      "step": 1
+    },
+    {
+      "seq": 20,
+      "type": "step/start",
+      "turn": 1,
+      "step": 2
+    },
+    {
+      "seq": 21,
+      "type": "session-log-deepseek/delivery-accepted"
+    },
+    {
+      "seq": 22,
+      "type": "assistant/message",
+      "turn": 1,
+      "step": 2
+    },
+    {
+      "seq": 23,
+      "type": "step/end",
+      "turn": 1,
+      "step": 2
+    },
+    {
+      "seq": 24,
+      "type": "turn/end",
+      "turn": 1
+    }
+  ],
+  "ticket": {
+    "id": "TK-1042",
+    "status": "open",
+    "title": "Invoice export failed"
+  },
+  "requestCount": 2,
+  "executeCount": 1,
+  "turnCount": 1,
+  "stepCount": 2,
+  "applicationExitCode": 0,
+  "stdout": "M1 query completed.\n",
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "externalNetworkIsolationVerified": false,
+  "readerAccepted": false,
+  "inputSha256": {
+    "report.json": "66933c5aa00dc20667b3fe137eb39b173915beb667c07a3a71315e9ca6a66ba3",
+    "durable-0.jsonl": "c171c44bb180edbdfbed5b1b0a03f4b80e933af5d5974d6a12b0e34edcffe067"
+  }
+}
