@@ -1,0 +1,11 @@
+flowchart TD
+  A["工具进入可控制的等待\nPromise 尚未完成"] --> B["控制端确认 waiting = true"]
+  B --> C["调用 Agent.cancel\n信号标记为已取消"]
+  C --> D{"等待设施监听取消吗？"}
+  D -- "是" --> E["拒绝 Promise\n唤醒工具的错误处理"]
+  D -- "否" --> F["仍在等待\naborted = true"]
+  F --> G["实验控制端明确放行\nPromise 才完成"]
+  G --> H["await 后检查信号\n阻止后续查询"]
+  E --> I["执行 finally\n工具管线结算错误结果"]
+  H --> I
+  I --> J["会话记录 aborted / user\n后续核查服务和进程清理"]

@@ -1207,6 +1207,108 @@
       "source_id": "SRC-BOOK",
       "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
       "status": "cleared"
+    },
+    {
+      "path": "chapters/第06章-查询还在等待，怎样正确取消.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "work/CH-WAIT-task.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WAIT-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WAIT-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/gate.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/inspect.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/verify.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/start/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/after-result.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/cancel.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/regression.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/release.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/uncooperative-plugin-source.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/uncooperative.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-13/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
     }
   ],
   "pending": [

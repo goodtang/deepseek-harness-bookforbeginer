@@ -1,0 +1,68 @@
+{
+  "scenario": "gate-release",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "requestCount": 2,
+  "executeCount": 1,
+  "businessLookupCount": 1,
+  "cancelAtSeq": null,
+  "resultAtSeq": 18,
+  "resultIsError": false,
+  "turnEnd": {
+    "seq": 24,
+    "reason": {
+      "kind": "completed"
+    }
+  },
+  "waitingWhenTriggered": {
+    "waiting": true,
+    "aborted": false,
+    "cooperate": true
+  },
+  "pendingAfterCancel": null,
+  "pendingAuditTypes": null,
+  "audit": [
+    {
+      "type": "ready"
+    },
+    {
+      "type": "execute",
+      "tool": "book_ticket_lookup",
+      "input": {
+        "id": "TK-1042"
+      }
+    },
+    {
+      "type": "gate-waiting",
+      "cooperate": true
+    },
+    {
+      "type": "gate-settled",
+      "outcome": "released"
+    },
+    {
+      "type": "business-lookup",
+      "id": "TK-1042"
+    },
+    {
+      "type": "execute-finally"
+    },
+    {
+      "type": "gate-server-closed"
+    }
+  ],
+  "applicationExitCode": 0,
+  "watchdogExpired": false,
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "pluginSha256": "3e958bf47936045b8ddac6f5699174e06dc2eac67a380c6b840bae31080f1d0e",
+  "inputSha256": {
+    "report.json": "e9361a0dc19343b878555f57d035aa1333e1c9f4b8859554699b112900f459bb",
+    "durable-0.jsonl": "ac0ff313b8d61fbc372dc82e8b0cf6a231ab882a4a2209d9bf699b55e692b272",
+    "observed-events.jsonl": "2391787f8842add301cb78cd9ee4d40d4d2d7100b1ec051d51a1155663279f89"
+  },
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

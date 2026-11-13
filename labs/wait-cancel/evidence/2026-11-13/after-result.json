@@ -1,0 +1,53 @@
+{
+  "scenario": "S3",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "requestCount": 2,
+  "executeCount": 1,
+  "businessLookupCount": null,
+  "cancelAtSeq": 22,
+  "resultAtSeq": 18,
+  "resultIsError": false,
+  "turnEnd": {
+    "seq": 24,
+    "reason": {
+      "kind": "aborted",
+      "reason": {
+        "kind": "user"
+      }
+    }
+  },
+  "waitingWhenTriggered": {
+    "attempt": 2,
+    "behavior": "stall",
+    "outcome": "stalled"
+  },
+  "pendingAfterCancel": null,
+  "pendingAuditTypes": null,
+  "audit": [
+    {
+      "type": "ready"
+    },
+    {
+      "type": "execute",
+      "tool": "book_ticket_lookup",
+      "input": {
+        "id": "TK-1042"
+      }
+    }
+  ],
+  "applicationExitCode": 1,
+  "watchdogExpired": false,
+  "cleanup": {
+    "mockServerClosed": true,
+    "childExited": true,
+    "temporaryRootRemoved": true
+  },
+  "pluginSha256": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+  "inputSha256": {
+    "report.json": "e7f409b6987fedfc3bef4979faca43d6780dcfa37b195a92c327f0ae45a8f743",
+    "durable-0.jsonl": "957df6e16dd828a073e04a030d752e8e3f253e25ba1501ab88ef2ea908385847",
+    "observed-events.jsonl": "ddbd65150be388f480771bc3b5292d418c902fdc16322c9098b62cd98da4ed4d"
+  },
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

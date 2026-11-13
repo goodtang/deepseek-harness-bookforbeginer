@@ -14,14 +14,18 @@ import { performance } from 'node:perf_hooks';
 
 const source = resolve(process.argv[2]);
 const scenario = process.argv[3];
-assert.ok(['S1', 'S2', 'S2-exhaust', 'S3'].includes(scenario));
+assert.ok(['S1', 'S2', 'S2-exhaust', 'S3', 'gate-release', 'gate-cancel', 'gate-uncooperative'].includes(scenario));
 assert.ok(process.argv[4], 'Usage: run.mjs <source-root> <S1|S2|S3> <new-evidence-directory>');
 const output = resolve(process.argv[4]);
 const here = dirname(fileURLToPath(import.meta.url));
-const plugin = process.argv[5] ? resolve(process.argv[5]) : join(here, '../tool-cases/stages/plugin.mjs');
+const gateScenario = scenario.startsWith('gate-');
+const toolCancelled = gateScenario && scenario !== 'gate-release';
+const cancelled = scenario === 'S3' || toolCancelled;
+const plugin = process.argv[5] ? resolve(process.argv[5]) : join(here,
+  gateScenario ? '../wait-cancel/start/plugin.mjs' : '../tool-cases/stages/plugin.mjs');
 const presentation = process.argv[6] ?? 'full';
 assert.ok(['full', 'summary'].includes(presentation));
-assert.ok(!process.argv[5] || scenario === 'S1', 'Custom teaching plugins are supported only for S1');
+assert.ok(!process.argv[5] || scenario === 'S1' || gateScenario, 'Custom teaching plugins require S1 or a gate scenario');
 const expectedTicket = { id: 'TK-1042', status: 'open', title: 'Invoice export failed' };
 const expectedRendered = presentation === 'summary' ? { id: expectedTicket.id, title: expectedTicket.title } : expectedTicket;
 const sha = value => createHash('sha256').update(value).digest('hex');
@@ -37,6 +41,7 @@ for (const name of ['run.mjs', 'observer.mjs', '../tool-cases/support.mjs', '../
 report.plugin = { path: plugin, sha256: sha(await readFile(plugin)) };
 report.files['startup-probe.mjs'] = sha(await readFile(join(here, 'startup-probe.mjs')));
 report.presentation = presentation;
+if (gateScenario) report.files['../wait-cancel/gate.mjs'] = sha(await readFile(join(here, '../wait-cancel/gate.mjs')));
 const loader = pathToFileURL(createRequire(join(source, 'package.json')).resolve('tsx/esm')).href;
 const { startMockLlmServer } = await import(pathToFileURL(join(source, 'packages/test-support/llm-mock-server/src/index.ts')).href);
 await mkdir(dirname(output), { recursive: true }); await mkdir(output);
@@ -45,6 +50,7 @@ const home = join(root, 'home'); const workspace = join(root, 'workspace');
 const sessions = join(root, 'sessions'); const auditPath = join(root, 'execution.jsonl');
 const eventPath = join(root, 'events.jsonl'); const controlPath = join(root, 'control.json');
 const startupPath = join(root, 'startup.jsonl');
+const gatePath = join(root, 'gate.json');
 const startedAt = performance.now();
 report.progress = [];
 const milestones = new Set();
@@ -54,7 +60,7 @@ const mark = phase => {
 };
 const exhausted = scenario === 'S2-exhaust';
 const sequence = exhausted ? ['partial_disconnect', 'partial_disconnect'] : scenario === 'S2' ? ['partial_disconnect', 'tool_call_success', 'success'] :
-  scenario === 'S3' ? ['tool_call_success', 'stall'] : ['tool_call_success', 'success'];
+  scenario === 'S3' ? ['tool_call_success', 'stall'] : toolCancelled ? ['tool_call_success'] : ['tool_call_success', 'success'];
 const marker = 'BOOK_PARTIAL_MUST_NOT_BECOME_A_SUCCESS';
 let server; let child; let failure; let watchdogExpired = false;
 let progressTimer;
@@ -83,6 +89,7 @@ try {
     '--patch', patch, 'Look up TK-1042 with book_ticket_lookup.'], { cwd: workspace, windowsHide: true,
     env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source, BOOK_EXECUTION_LOG: auditPath,
       BOOK_SESSION_EVENTS: eventPath, BOOK_CONTROL_FILE: controlPath, BOOK_STARTUP_LOG: startupPath,
+      BOOK_GATE_CONTROL: gatePath,
       TSX_TSCONFIG_PATH: join(source, 'tsconfig.json'),
       DEEPSEEK_API_KEY: 'book-mock-key', DEEPSEEK_BASE_URL: `${server.baseURL}/v1` },
     stdio: ['ignore', 'pipe', 'pipe'] });
@@ -95,17 +102,43 @@ try {
   const timer = setTimeout(() => { sampleProgress(); mark('watchdog-expired'); watchdogExpired = true; child.kill(); }, 45000);
   let polling; let controlTask;
   try {
-    if (scenario === 'S3') {
+    if (scenario === 'S3' || gateScenario) {
       let sending = false;
       polling = setInterval(async () => {
-        if (sending || !server.requests.some(request => request.behavior === 'stall' && request.outcome === 'stalled')) return;
-        sending = true; clearInterval(polling);
+        if (sending) return;
+        if (scenario === 'S3' && !server.requests.some(request => request.behavior === 'stall' && request.outcome === 'stalled')) return;
+        if (gateScenario && (!existsSync(gatePath) || !existsSync(controlPath))) return;
+        sending = true;
         controlTask = (async () => {
         try {
+          let gateURL;
+          if (gateScenario) {
+            const gate = JSON.parse(await readFile(gatePath, 'utf8'));
+            gateURL = `http://127.0.0.1:${gate.port}`;
+            const state = await (await fetch(`${gateURL}/state`)).json();
+            if (!state.waiting) { sending = false; return; }
+            report.gateSynchronization = state;
+            clearInterval(polling);
+            if (scenario === 'gate-release') {
+              const response = await fetch(`${gateURL}/release`, { method: 'POST' });
+              report.releaseResponse = { status: response.status, body: await response.json() };
+              return;
+            }
+          } else clearInterval(polling);
           const control = JSON.parse(await readFile(controlPath, 'utf8'));
-          report.cancelSynchronization = { attempt: server.requests.at(-1).attempt, behavior: 'stall', outcome: 'stalled' };
+          if (scenario === 'S3') report.cancelSynchronization = { attempt: server.requests.at(-1).attempt, behavior: 'stall', outcome: 'stalled' };
           const result = await fetch(`http://127.0.0.1:${control.port}/cancel`, { method: 'POST' });
           report.controlResponse = { status: result.status, body: await result.json() };
+          if (scenario === 'gate-uncooperative') {
+            report.pendingAfterCancel = await (await fetch(`${gateURL}/state`)).json();
+            assert.deepEqual(report.pendingAfterCancel, { waiting: true, aborted: true, cooperate: false });
+            report.pendingAuditTypes = (await readFile(auditPath, 'utf8')).trim().split('\n')
+              .map(line => JSON.parse(line).type);
+            assert.ok(!report.pendingAuditTypes.includes('execute-finally'));
+            assert.ok(!report.pendingAuditTypes.includes('business-lookup'));
+            const response = await fetch(`${gateURL}/release`, { method: 'POST' });
+            report.releaseResponse = { status: response.status, body: await response.json() };
+          }
         } catch (error) { report.controlFailure = String(error); child.kill(); }
         })();
       }, 20);
@@ -135,7 +168,7 @@ try {
   };
   await collect(sessions); report.durableFiles = durable;
   report.requestBodies = server.requests.map(request => request.body);
-  assert.equal(watchdogExpired, false); assert.equal(report.applicationExitCode, scenario === 'S3' || exhausted ? 1 : 0, stderr);
+  assert.equal(watchdogExpired, false); assert.equal(report.applicationExitCode, cancelled || exhausted ? 1 : 0, stderr);
   assert.deepEqual(server.requests.map(request => request.behavior), sequence);
   assert.equal(report.executionAudit.filter(event => event.type === 'ready').length, 1);
   assert.equal(report.executionAudit.filter(event => event.type === 'execute').length, exhausted ? 0 : 1);
@@ -149,18 +182,18 @@ try {
   assert.equal(calls[0].data.name, 'book_ticket_lookup');
   assert.deepEqual(JSON.parse(calls[0].data.arguments), { id: 'TK-1042' });
   assert.equal(results[0].data.message.toolCallId, calls[0].data.callId);
-  assert.equal(results[0].data.message.isError, false);
-  assert.deepEqual(JSON.parse(results[0].data.message.content[0].text), expectedRendered);
+  assert.equal(results[0].data.message.isError, toolCancelled);
+  if (!toolCancelled) assert.deepEqual(JSON.parse(results[0].data.message.content[0].text), expectedRendered);
   }
   const terminal = durableEvents.filter(event => event.type === 'turn/end');
   assert.equal(terminal.length, 1);
   if (exhausted) {
     assert.equal(terminal[0].data.reason.kind, 'error'); assert.equal(terminal[0].data.reason.error.code, 'TRANSPORT');
-  } else assert.deepEqual(terminal[0].data.reason, scenario === 'S3' ? { kind: 'aborted', reason: { kind: 'user' } } : { kind: 'completed' });
+  } else assert.deepEqual(terminal[0].data.reason, cancelled ? { kind: 'aborted', reason: { kind: 'user' } } : { kind: 'completed' });
   assert.ok(!durableEvents.filter(event => event.type === 'assistant/message').some(event => JSON.stringify(event.data.message.content).includes(marker)));
   report.sessionChecks = { eventCount: durableEvents.length, observedMatchesPersisted: true,
     toolCallAndResultMatch: true, terminal: terminal[0], failedPartialNotCommittedAsAssistant: true };
-  if (scenario !== 'S3' && !exhausted) assert.equal(stdout, 'M1 query completed.\n');
+  if (!cancelled && !exhausted) assert.equal(stdout, 'M1 query completed.\n');
   if (scenario === 'S2' || exhausted) {
     assert.equal(server.requests[0].outcome, 'reset'); assert.ok(server.requests[0].chunksSent > 0);
     for (const request of server.requests.slice(1)) assert.ok(!JSON.stringify(request.body.messages).includes(marker));
@@ -171,13 +204,27 @@ try {
     assert.equal(durableEvents.filter(event => event.type === 'llm/retry-started').length, 1);
     report.sessionChecks.retry = retries[0];
   }
-  if (scenario === 'S3') {
+  if (cancelled) {
     assert.equal(report.controlResponse.status, 200); assert.equal(report.controlResponse.body.accepted, true);
     const controls = observed.filter(row => row.control === 'user-cancel');
     assert.equal(controls.length, 1); assert.equal(controls[0].sessionId, report.durableSession.id);
     assert.ok(terminal[0].seq > controls[0].atSeq);
     report.sessionChecks.controlTrigger = controls[0];
     assert.equal(durableEvents.filter(event => event.type === 'llm/retry').length, 0);
+  }
+  if (gateScenario) {
+    assert.equal(report.gateSynchronization.waiting, true);
+    assert.equal(report.gateSynchronization.aborted, false);
+    assert.equal(report.gateSynchronization.cooperate, scenario !== 'gate-uncooperative');
+    const audit = report.executionAudit;
+    assert.equal(audit.filter(row => row.type === 'gate-waiting').length, 1);
+    assert.equal(audit.filter(row => row.type === 'execute-finally').length, 1);
+    assert.equal(audit.filter(row => row.type === 'business-lookup').length, toolCancelled ? 0 : 1);
+    assert.deepEqual(audit.filter(row => row.type === 'gate-settled').map(row => row.outcome),
+      [scenario === 'gate-cancel' ? 'aborted' : 'released']);
+    if (scenario !== 'gate-cancel') {
+      assert.equal(report.releaseResponse.status, 200); assert.equal(report.releaseResponse.body.released, true);
+    }
   }
 } catch (error) { failure = error; report.failure = String(error); }
 finally {

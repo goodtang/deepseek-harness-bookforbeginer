@@ -21,3 +21,5 @@ node tools/render_diagrams.mjs D:/projects/deepseek-harness-local/node_modules/.
 第五章新增 CH-LOOP-01，沿同一工单展开业务值、工具消息、Session 导出与协议转换。用上述命令追加 CH-LOOP-01 可单独导出，最终 PNG 已目视检查；页面/PDF 未验，版本与哈希见 render-record.json。
 
 2026-11-13 新增第五章 CH-LOOP-02 正常循环分支图，区分有调用后继续与无调用结束，说明单回合中的两步。PNG已本机目视检查；与CH-LOOP-01数据转换图分别使用，不把配置树、依赖与执行流程混画。页面/PDF仍待验。
+
+第六章CH-WAIT-01展示合作/不合作等待收到取消后的分支与收尾，单独追加该图ID可导出。最终PNG已目视检查；图源、版本、尺寸与哈希见render-record.json，页面/PDF验收待完成。

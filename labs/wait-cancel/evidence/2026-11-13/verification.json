@@ -1,0 +1,374 @@
+{
+  "passed": true,
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "realRuns": [
+    {
+      "scenario": "gate-release",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "requestCount": 2,
+      "executeCount": 1,
+      "businessLookupCount": 1,
+      "cancelAtSeq": null,
+      "resultAtSeq": 18,
+      "resultIsError": false,
+      "turnEnd": {
+        "seq": 24,
+        "reason": {
+          "kind": "completed"
+        }
+      },
+      "waitingWhenTriggered": {
+        "waiting": true,
+        "aborted": false,
+        "cooperate": true
+      },
+      "pendingAfterCancel": null,
+      "pendingAuditTypes": null,
+      "audit": [
+        {
+          "type": "ready"
+        },
+        {
+          "type": "execute",
+          "tool": "book_ticket_lookup",
+          "input": {
+            "id": "TK-1042"
+          }
+        },
+        {
+          "type": "gate-waiting",
+          "cooperate": true
+        },
+        {
+          "type": "gate-settled",
+          "outcome": "released"
+        },
+        {
+          "type": "business-lookup",
+          "id": "TK-1042"
+        },
+        {
+          "type": "execute-finally"
+        },
+        {
+          "type": "gate-server-closed"
+        }
+      ],
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "3e958bf47936045b8ddac6f5699174e06dc2eac67a380c6b840bae31080f1d0e",
+      "inputSha256": {
+        "report.json": "e9361a0dc19343b878555f57d035aa1333e1c9f4b8859554699b112900f459bb",
+        "durable-0.jsonl": "ac0ff313b8d61fbc372dc82e8b0cf6a231ab882a4a2209d9bf699b55e692b272",
+        "observed-events.jsonl": "2391787f8842add301cb78cd9ee4d40d4d2d7100b1ec051d51a1155663279f89"
+      },
+      "readerAccepted": false,
+      "externalNetworkIsolationVerified": false
+    },
+    {
+      "scenario": "gate-cancel",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "requestCount": 1,
+      "executeCount": 1,
+      "businessLookupCount": 0,
+      "cancelAtSeq": 18,
+      "resultAtSeq": 18,
+      "resultIsError": true,
+      "turnEnd": {
+        "seq": 20,
+        "reason": {
+          "kind": "aborted",
+          "reason": {
+            "kind": "user"
+          }
+        }
+      },
+      "waitingWhenTriggered": {
+        "waiting": true,
+        "aborted": false,
+        "cooperate": true
+      },
+      "pendingAfterCancel": null,
+      "pendingAuditTypes": null,
+      "audit": [
+        {
+          "type": "ready"
+        },
+        {
+          "type": "execute",
+          "tool": "book_ticket_lookup",
+          "input": {
+            "id": "TK-1042"
+          }
+        },
+        {
+          "type": "gate-waiting",
+          "cooperate": true
+        },
+        {
+          "type": "gate-settled",
+          "outcome": "aborted"
+        },
+        {
+          "type": "execute-finally"
+        },
+        {
+          "type": "gate-server-closed"
+        }
+      ],
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "3e958bf47936045b8ddac6f5699174e06dc2eac67a380c6b840bae31080f1d0e",
+      "inputSha256": {
+        "report.json": "69e4d769a9c38aa0c699830638884c6219eabf5a5a4d9905c3f355a0380e0b4d",
+        "durable-0.jsonl": "d0fef3cf88f5be07be0e591deae738dd220e9e566d6af83e491bc13e41affe87",
+        "observed-events.jsonl": "21205cc99369c96dd4ef5419f221b7de96d1ba78ee9010cc58f22879f43bc87e"
+      },
+      "readerAccepted": false,
+      "externalNetworkIsolationVerified": false
+    },
+    {
+      "scenario": "gate-uncooperative",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "requestCount": 1,
+      "executeCount": 1,
+      "businessLookupCount": 0,
+      "cancelAtSeq": 18,
+      "resultAtSeq": 18,
+      "resultIsError": true,
+      "turnEnd": {
+        "seq": 20,
+        "reason": {
+          "kind": "aborted",
+          "reason": {
+            "kind": "user"
+          }
+        }
+      },
+      "waitingWhenTriggered": {
+        "waiting": true,
+        "aborted": false,
+        "cooperate": false
+      },
+      "pendingAfterCancel": {
+        "waiting": true,
+        "aborted": true,
+        "cooperate": false
+      },
+      "pendingAuditTypes": [
+        "ready",
+        "execute",
+        "gate-waiting"
+      ],
+      "audit": [
+        {
+          "type": "ready"
+        },
+        {
+          "type": "execute",
+          "tool": "book_ticket_lookup",
+          "input": {
+            "id": "TK-1042"
+          }
+        },
+        {
+          "type": "gate-waiting",
+          "cooperate": false
+        },
+        {
+          "type": "gate-settled",
+          "outcome": "released"
+        },
+        {
+          "type": "execute-finally"
+        },
+        {
+          "type": "gate-server-closed"
+        }
+      ],
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "694cebed12dcecdff5cae809027d8aa7ec638d41641418fd3547bc8a4879302c",
+      "inputSha256": {
+        "report.json": "a6d22a71e36fb179c18752fde474eaf07f6ea6195421c7a5a79af9f0c46033d5",
+        "durable-0.jsonl": "9156bebd1fcab353df85c42a85bcca60009b51b1965e831844440a70cab1840a",
+        "observed-events.jsonl": "f213193c4bb5a59f68a85d1dd0a9f00d7d1e8e9f7f2370d72f6ce8246dd638e0"
+      },
+      "readerAccepted": false,
+      "externalNetworkIsolationVerified": false
+    },
+    {
+      "scenario": "gate-cancel",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "requestCount": 1,
+      "executeCount": 1,
+      "businessLookupCount": 0,
+      "cancelAtSeq": 18,
+      "resultAtSeq": 18,
+      "resultIsError": true,
+      "turnEnd": {
+        "seq": 20,
+        "reason": {
+          "kind": "aborted",
+          "reason": {
+            "kind": "user"
+          }
+        }
+      },
+      "waitingWhenTriggered": {
+        "waiting": true,
+        "aborted": false,
+        "cooperate": true
+      },
+      "pendingAfterCancel": null,
+      "pendingAuditTypes": null,
+      "audit": [
+        {
+          "type": "ready"
+        },
+        {
+          "type": "execute",
+          "tool": "book_ticket_lookup",
+          "input": {
+            "id": "TK-1042"
+          }
+        },
+        {
+          "type": "gate-waiting",
+          "cooperate": true
+        },
+        {
+          "type": "gate-settled",
+          "outcome": "aborted"
+        },
+        {
+          "type": "execute-finally"
+        },
+        {
+          "type": "gate-server-closed"
+        }
+      ],
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "3e958bf47936045b8ddac6f5699174e06dc2eac67a380c6b840bae31080f1d0e",
+      "inputSha256": {
+        "report.json": "cefdef19aebc0de65d5acbcba8721a82a40bbc2f0de20b045393ec5303cd2022",
+        "durable-0.jsonl": "5658e03dd0b2f4b0737457a725ee8fe6a2d3115e74d1c2da90f5ac6cabe3a064",
+        "observed-events.jsonl": "d99294f53e229c209cbf74f0997925f2387a66f5232ca0df0538f346b43230ae"
+      },
+      "readerAccepted": false,
+      "externalNetworkIsolationVerified": false
+    },
+    {
+      "scenario": "S3",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "requestCount": 2,
+      "executeCount": 1,
+      "businessLookupCount": null,
+      "cancelAtSeq": 22,
+      "resultAtSeq": 18,
+      "resultIsError": false,
+      "turnEnd": {
+        "seq": 24,
+        "reason": {
+          "kind": "aborted",
+          "reason": {
+            "kind": "user"
+          }
+        }
+      },
+      "waitingWhenTriggered": {
+        "attempt": 2,
+        "behavior": "stall",
+        "outcome": "stalled"
+      },
+      "pendingAfterCancel": null,
+      "pendingAuditTypes": null,
+      "audit": [
+        {
+          "type": "ready"
+        },
+        {
+          "type": "execute",
+          "tool": "book_ticket_lookup",
+          "input": {
+            "id": "TK-1042"
+          }
+        }
+      ],
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+      "inputSha256": {
+        "report.json": "e7f409b6987fedfc3bef4979faca43d6780dcfa37b195a92c327f0ae45a8f743",
+        "durable-0.jsonl": "957df6e16dd828a073e04a030d752e8e3f253e25ba1501ab88ef2ea908385847",
+        "observed-events.jsonl": "ddbd65150be388f480771bc3b5292d418c902fdc16322c9098b62cd98da4ed4d"
+      },
+      "readerAccepted": false,
+      "externalNetworkIsolationVerified": false
+    }
+  ],
+  "restoredPluginVerified": true,
+  "negativeControls": [
+    {
+      "name": "completed-instead-of-aborted",
+      "rejected": true
+    },
+    {
+      "name": "cancel-not-accepted",
+      "rejected": true
+    },
+    {
+      "name": "watchdog-is-not-user-cancel",
+      "rejected": true
+    },
+    {
+      "name": "business-query-after-cancel",
+      "rejected": true
+    },
+    {
+      "name": "uncooperative-not-waiting",
+      "rejected": true
+    },
+    {
+      "name": "gate-cleanup-not-recorded",
+      "rejected": true
+    }
+  ],
+  "codeSha256": {
+    "gate.mjs": "0a58c214c95cac8b38fcfe868d5d5ad58eb70728596dd1ad302f9619a145eea1",
+    "inspect.mjs": "7d6d8cf8fd91c6b1e11b9b0bd51a58e0ea9618d1e80abd1100a03a0c30642a6b",
+    "verify.mjs": "faa6e8c6ced17b2b33bca61866a0b3ff945a104095976508e2731a04572e5a30",
+    "start/plugin.mjs": "3e958bf47936045b8ddac6f5699174e06dc2eac67a380c6b840bae31080f1d0e",
+    "../m1/run.mjs": "7b71fce0e0f15bff51bc1d914e408193704c748dae04ce062c42813ab55b6408",
+    "../m1/observer.mjs": "421f4c357d9de9e26c4908b23f8335db01903d8886ac683e685c2f56c349e41b"
+  },
+  "scope": "Actual supported-profile runs; negative controls alter in-memory evidence only",
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

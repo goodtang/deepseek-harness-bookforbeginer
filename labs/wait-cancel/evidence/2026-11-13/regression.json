@@ -1,0 +1,90 @@
+{
+  "scope": "Original scenarios under the current shared runner; S3 is checked in verification.json",
+  "runnerSha256": "7b71fce0e0f15bff51bc1d914e408193704c748dae04ce062c42813ab55b6408",
+  "runs": [
+    {
+      "scenario": "S1",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "watchdogExpired": false,
+      "reportSha256": "5f062231daf454bc8b4f733cb8feeb89dba4aef165498c7f76d279d712a5d970"
+    },
+    {
+      "scenario": "S2",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 3,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "watchdogExpired": false,
+      "reportSha256": "04921967649445b48150f74ae7459aae150a61ef3853ff66c5170c170bd42b73"
+    },
+    {
+      "scenario": "S2-exhaust",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "watchdogExpired": false,
+      "reportSha256": "a4b4ad02a3be57c816637edff11f0bdc371aa19184c2fd5b1f40462b0b6c7f0a"
+    }
+  ]
+}

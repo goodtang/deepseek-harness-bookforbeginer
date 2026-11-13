@@ -65,7 +65,7 @@ Set-Location -LiteralPath $BookRoot
 - observed-events.jsonl：独立观察的 session/event 和控制触发记录。
 - report.json：源码和脚本哈希、实际请求、应用退出、控制响应、独立执行记录、会话核对与清理。
 
-检查器比较持久事件和观察事件逐项相同，核对一次真实 tool/call、对应 tool/result、业务三个字段、唯一 turn/end；S2 另核对重试，S3 另核对用户取消原因、触发序号及会话身份。[原轮汇总](evidence/release/summary.json)保存当时原件与脚本哈希；2026-11-13 增加启动诊断和第五章可选插件后，当前脚本及四场景回归见[修订核对](../next-request/evidence/2026-11-13/revision-verification.json)。旧报告不改套为新脚本证据。
+检查器比较持久事件和观察事件逐项相同，核对一次真实 tool/call、对应 tool/result、业务三个字段、唯一 turn/end；S2 另核对重试，S3 另核对用户取消原因、触发序号及会话身份。[原轮汇总](evidence/release/summary.json)保存当时原件与脚本哈希；2026-11-13 增加启动诊断和第五章可选插件后，当时脚本及四场景回归见[修订核对](../next-request/evidence/2026-11-13/revision-verification.json)。旧报告不改套为新脚本证据。
 
 Session 原件包含目标工程产生的系统提示和工具说明，这些源自 SRC-DSH 的文字保留原 MIT 权利，并非全部改授权为本书图文许可。虚构工单与本书独立代码仍遵循各自登记；没有真实业务数据或真实凭据。
 
@@ -110,4 +110,10 @@ run.mjs 现在记录 progress：模拟服务监听、子进程创建、预加载
 
 ## 第五章的可选展示对照
 
-仅 S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载原第四章插件并检查完整工单，其他场景不接收自定义插件。summary 预期 render 的文字只有 id/title，业务 output.schema 保持不变。它不是产品 CLI 选项，完整操作与真实三次对照见[第五章实验](../next-request/README.md)。
+S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载原第四章插件并检查完整工单。summary 预期 render 的文字只有 id/title，业务 output.schema 保持不变。它不是产品 CLI 选项，完整操作与真实三次对照见[第五章实验](../next-request/README.md)。
+
+## 第六章的可控制等待
+
+新增 gate-release、gate-cancel、gate-uncooperative 三个教学场景，共用原启动、会话落盘、取消 API 和清理流程；它们不改变 M1 的验收定义。默认选择本书 wait-cancel/start/plugin.mjs，允许第五个参数选择读者副本，展示仍使用完整字段。S2/S2-exhaust/S3 不接收自定义插件，保留原行为。
+
+控制端在 gate 的真实 waiting 状态后放行或取消；不合作场景先核对 accepted 后仍 waiting=true、aborted=true 且尚无 finally/业务调用，再明确放行。工具的 await 后检查继续阻止业务查询。完整操作与范围见[第六章实验](../wait-cancel/README.md)，当前脚本与五组实测见[核验汇总](../wait-cancel/evidence/2026-11-13/verification.json)，原场景的新回归见[回归记录](../wait-cancel/evidence/2026-11-13/regression.json)。前章修订记录保留其当时脚本哈希，不更新为本次版本。

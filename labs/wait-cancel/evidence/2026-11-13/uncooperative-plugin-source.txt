@@ -1,0 +1,35 @@
+// SPDX-License-Identifier: Apache-2.0
+/** Copy into ../.lab-runtime/ and change only the cooperate argument for the exercise. */
+import { appendFileSync } from 'node:fs';
+import { defineTool } from '../../tool-cases/support.mjs';
+import { lookupTicket } from '../../first-tool/tickets.mjs';
+import { createGate } from '../gate.mjs';
+
+export const name = 'book-ticket-tool';
+export const inject = ['tools'];
+export function apply(ctx) {
+  const gate = createGate();
+  ctx.effect(() => { gate.listen(); return () => gate.close(); });
+  ctx.tools.register(defineTool({
+    name: 'book_ticket_lookup',
+    description: 'Look up a fictional ticket by its exact ID; does not modify records.',
+    parameters: { id: { type: 'string', required: true, description: 'Ticket ID, for example TK-1042' } },
+    output: { schema: { oneOf: [
+      { type: 'object', additionalProperties: false, properties: {
+        id: { type: 'string', required: true }, status: { type: 'string', required: true },
+        title: { type: 'string', required: true },
+      } }, { type: 'null' },
+    ] }, render: (_args, value) => [{ type: 'text', text: JSON.stringify(value) }] },
+    async execute(args, exec) {
+      exec.signal.throwIfAborted();
+      try {
+        await gate.wait(exec.signal, false);
+        exec.signal.throwIfAborted();
+        appendFileSync(process.env.BOOK_EXECUTION_LOG, `${JSON.stringify({ type: 'business-lookup', id: args.id })}\n`);
+        return lookupTicket(args.id);
+      } finally {
+        appendFileSync(process.env.BOOK_EXECUTION_LOG, `${JSON.stringify({ type: 'execute-finally' })}\n`);
+      }
+    },
+  }));
+}

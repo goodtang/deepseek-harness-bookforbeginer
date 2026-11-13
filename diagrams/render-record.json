@@ -77,6 +77,19 @@
       "local_visual_review": "Final PNG inspected: Chinese labels, yes/no branches, return loop, arrows and margins readable; no clipping. Normal path only.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-WAIT-01",
+      "captured_at": "2026-11-13T09:36:49.530047+00:00",
+      "source": "CH-WAIT-01.mmd",
+      "source_sha256": "7f80634d39cc8c446e9653342d4c20ed1576ec22a6a91522789675d0bf6fd8cf",
+      "image": "CH-WAIT-01.png",
+      "image_sha256": "5c4a5964bfea33dcca36d8fd1e1e9f17cb88d6374172ecbc5806efb4ef24a982",
+      "width": 1026,
+      "height": 2656,
+      "local_visual_review": "Final PNG inspected after shortening cancellation label; Chinese, branch labels, arrows and margins readable with no clipping.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }
