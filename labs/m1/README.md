@@ -65,7 +65,7 @@ Set-Location -LiteralPath $BookRoot
 - observed-events.jsonl：独立观察的 session/event 和控制触发记录。
 - report.json：源码和脚本哈希、实际请求、应用退出、控制响应、独立执行记录、会话核对与清理。
 
-检查器比较持久事件和观察事件逐项相同，核对一次真实 tool/call、对应 tool/result、业务三个字段、唯一 turn/end；S2 另核对重试，S3 另核对用户取消原因、触发序号及会话身份。[汇总核对](evidence/release/summary.json)保存这些原件及当前脚本的哈希。
+检查器比较持久事件和观察事件逐项相同，核对一次真实 tool/call、对应 tool/result、业务三个字段、唯一 turn/end；S2 另核对重试，S3 另核对用户取消原因、触发序号及会话身份。[原轮汇总](evidence/release/summary.json)保存当时原件与脚本哈希；2026-11-13 增加启动诊断和第五章可选插件后，当前脚本及四场景回归见[修订核对](../next-request/evidence/2026-11-13/revision-verification.json)。旧报告不改套为新脚本证据。
 
 Session 原件包含目标工程产生的系统提示和工具说明，这些源自 SRC-DSH 的文字保留原 MIT 权利，并非全部改授权为本书图文许可。虚构工单与本书独立代码仍遵循各自登记；没有真实业务数据或真实凭据。
 
@@ -90,3 +90,24 @@ probe-S1-02、probe-S2、probe-S3 和 current 下的探针保留各自代码哈�
 源码依据固定到基线：[Agent.cancel](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/packages/core/agent-loop/src/agent.ts#L191)、[重试策略](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/packages/llm/llm-retry/README.md)、[会话持久化](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/packages/session/session-persistence-jsonl/README.md)。许可与来源见 [rights/sources.json](../../rights/sources.json)。
 
 重复证据目录的拒绝路径也做了[修复前](evidence/cleanup-collision-before.json)/[修复后](evidence/cleanup-collision-after.json)对照：先验证输出目录可新建，再分配临时根目录；拒绝覆盖时不再遗留本轮临时目录。早期探针原件保留，不倒写为修复后结果。
+
+## 启动阶段诊断
+
+2026-11-13 曾有一次 S1 在 45 秒内没有发出请求，触发看门狗；同一命令重跑通过。原记录没有足够阶段信息，根因尚未定位。当前仍保持 45 秒限制，不把超时改记成成功，也不默认归因为冷启动或网络。
+
+run.mjs 现在记录 progress：模拟服务监听、子进程创建、预加载测量文件、执行测量文件、观察插件监听文件、会话事件文件、已观察到模型请求、首份 stdout/stderr 和子进程关闭。文件状态每 100 ms 采样，observedAtMs 是父进程首次观察时间，不是各阶段精确耗时；不能只因控制服务监听就认为整个应用已就绪。诊断不读取凭据，不向模型增加消息。
+
+即使检查失败，也在删除临时目录前保留已存在的 startup.jsonl、execution.jsonl、observed-events.jsonl，并记录不存在的文件。启动阶段尚未建立会话时，没有 durable-0.jsonl 是需要解释的事实，不能从旧运行复制一份补齐。完整原件仅供本机排查，公开发布前应筛选与脱敏。
+
+| 观察结果 | 下一步检查 |
+| --- | --- |
+| 已创建子进程，却没有预加载文件 | 检查进程启动/导入是否执行及 stderr，不先假定模型服务失败 |
+| 已执行预加载，尚无会话或模型请求 | 沿模块加载、插件组合及初始化继续查；审计文件存在还需看其中的标记 |
+| 已有模型请求 | 核对请求结果、重试与结束原因，再判断是否是启动问题 |
+| watchdogExpired=true | 本次失败；保留记录，确认清理后换新目录复跑 |
+
+新增 fixtures/startup-stall.mjs 有意让模块加载不完成，仅用于诊断反例。作者实测在零模型请求下触发看门狗，保存预加载与模块进入标记，缺少会话事件文件，并完成清理。这是一个已知人为原因的反例，不说明此前那次超时也是相同原因。普通 S1/S2/S2-exhaust/S3 均在修订后重跑通过，摘录见上述修订核对。
+
+## 第五章的可选展示对照
+
+仅 S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载原第四章插件并检查完整工单，其他场景不接收自定义插件。summary 预期 render 的文字只有 id/title，业务 output.schema 保持不变。它不是产品 CLI 选项，完整操作与真实三次对照见[第五章实验](../next-request/README.md)。

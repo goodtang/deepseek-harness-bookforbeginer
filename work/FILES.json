@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "304fcfff7ae811b1e2a82f89f33518fd51a3c8b4e4ee426d184de61cf5e10940"
+      "sha256": "fed7c5d3ea4f0ceb5ca176d45b75b7dc66f4dab428c13571bf0476956b96ab9e"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -31,7 +31,7 @@
     },
     {
       "path": "chapters/第05章-工具结果怎样进入下一次模型请求.md",
-      "sha256": "f68990d8d447a9d6e63b0865e9afb4730768ca7234863e5e56b82e8f43bc80e6"
+      "sha256": "41f035c67484bcd74522914a6276f80593e7b4b4917aaf7b2b25aaa1b1bb2370"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -64,6 +64,14 @@
     {
       "path": "diagrams/CH-LOOP-01.png",
       "sha256": "26ee518df43840b97ee919214f5ed76aff2d530187d5af83f6563942a5ab33fd"
+    },
+    {
+      "path": "diagrams/CH-LOOP-02.mmd",
+      "sha256": "d11e06fe309ceb0a7d07221f37c67602379a736c8b3460b53968606bb2da4f0e"
+    },
+    {
+      "path": "diagrams/CH-LOOP-02.png",
+      "sha256": "093746fab70b1a5ca9f3e23a0a65deca92e131ac70dd42a5da249bd191a5004f"
     },
     {
       "path": "diagrams/CH-OBS-01.mmd",
@@ -99,11 +107,11 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "f33d5a381db6dff22844e2e199f9655c14f9c63bb89bc196c4dcbbdfde5ef555"
+      "sha256": "39501782444cd264c1e93b8d1c871fa6285a559c364626fa35a490bea13d3125"
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "e872a806a45e814fa92aed712c65a2ff54208214a37626faeeda5ccebbb49981"
+      "sha256": "76ac7f3d026e7461612d28904615dc944eb4e8781f3586fbd793258d3b27a9a5"
     },
     {
       "path": "EDITORIAL.md",
@@ -442,6 +450,10 @@
       "sha256": "78668d2cbddc6d4697f297f9c85c1d096941eb2c9745da7f1b67e7f28a5cd49a"
     },
     {
+      "path": "labs/m1/fixtures/startup-stall.mjs",
+      "sha256": "ec8051c5fa83cea228d54020a347912d282c22bbdc96c010c5694c5c00ba1e1f"
+    },
+    {
       "path": "labs/m1/isolation-preflight.mjs",
       "sha256": "48ebcaf54ac15041efa111b27e0dee55b17408216a7b5d22f20ea5fc5bd859ea"
     },
@@ -451,15 +463,23 @@
     },
     {
       "path": "labs/m1/README.md",
-      "sha256": "33458cffe64499369aee2780dbe0b2159fd4b9de49d869d0c2758be0dd7457ba"
+      "sha256": "3726ee3a6e9a977013f81fcb210ae17a2a69107f38ba944807481e5c53064405"
     },
     {
       "path": "labs/m1/run.mjs",
-      "sha256": "17e6063a48d099254914a4b35276a291cc4a501551298af6509fd5e4428423b8"
+      "sha256": "d8792002a1304edbe22dedefa90cd1717be7744e8a834bfe9a00c9db39044679"
+    },
+    {
+      "path": "labs/m1/startup-probe.mjs",
+      "sha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1"
     },
     {
       "path": "labs/next-request/check.mjs",
       "sha256": "5d0871c2ce8e4512039240ab96677c180f5739c0d5b0d56536c29e0a868d28d8"
+    },
+    {
+      "path": "labs/next-request/compare-render.mjs",
+      "sha256": "9b8a522d3b569940a1dcce9e9d10963bcf83459ba521c04892b21eb6df18b603"
     },
     {
       "path": "labs/next-request/evidence/2026-11-12/checks-final.json",
@@ -486,12 +506,40 @@
       "sha256": "90abf8d1f091fcf2692b6394d2fcbce14d7ee4b6156734bdcff5dd5cb801c323"
     },
     {
+      "path": "labs/next-request/evidence/2026-11-13/checks.json",
+      "sha256": "ce222be6f98e64d2ba1bea557e14cd425bdc028349e7e01ba644a0dcafcd6cda"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/README.md",
+      "sha256": "08c17cacd570a3ba3cc1a9c45b617ff99afdbbd4c06b7d11aad15bb6bb1f5b6f"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/render-comparison.json",
+      "sha256": "8f364e2eadcc17e1b1c2ac9b1b8a74a977180496468bd828c22e7101034f7899"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/revision-verification.json",
+      "sha256": "d2dfb0dc8f3136c77505d86253542bb317ad21c3fd9072aa1133106b8a9b2715"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/summary-plugin-source.txt",
+      "sha256": "6bfa8b063b479e20abfa55d5ac00d17d7035cbba6b148aa2207fd8ec97ea11bd"
+    },
+    {
       "path": "labs/next-request/inspect.mjs",
-      "sha256": "07c422efbe796a2ec444d99b2b7cb2507d8c9cf4ba5c5a7929f02c8e53224910"
+      "sha256": "ff378c73f3b4a53e9ab0c7a82ba33ccb00e706979ca79355b5c2d3bb461f5f47"
     },
     {
       "path": "labs/next-request/README.md",
-      "sha256": "b6b15614585215675f2d8cc3122196e03e2fd6cac52602fd102d7e3e8cc4de23"
+      "sha256": "721b7bba2125bb6009e04d5a455e4ab842d75e9bbe26967402d28a32ee949b4a"
+    },
+    {
+      "path": "labs/next-request/render-support.mjs",
+      "sha256": "966f1aae37d1b8717e4f6a7675e6efef7d468c246afaa6cf263396d9321cfa6e"
+    },
+    {
+      "path": "labs/next-request/start/plugin.mjs",
+      "sha256": "b080f8bf2bc8061eb294843cc97d581f17af2340e47be833bb115a525d403c54"
     },
     {
       "path": "labs/observe-task/evidence/2026-11-11/failure-check.json",
@@ -883,7 +931,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "d820ac0b0cfa48a297ac1e46df7d25414c3ca8a7b1d6e35017180e1288023022"
+      "sha256": "3e5f5c61ddbeae59cfdb3e16fe7fc16964ff9bca60e28b949cd5e814fa23ca08"
     },
     {
       "path": "templates/chapter-task.md",
@@ -935,7 +983,7 @@
     },
     {
       "path": "work/CH-LOOP-task.md",
-      "sha256": "b5b6f7de2816c9bda543eb31dca548092f5b37a64e887bffb78d4088bebf2984"
+      "sha256": "02be6c368583c30ff1c4e4f8d3cda9ca464688ea41cb7a3bb1ec8f776d898633"
     },
     {
       "path": "work/CH-OBS-task.md",
@@ -951,11 +999,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "9dbe6fbf060212c4305ce752d2af9c960a6964b8481d678ef4d41adb0053909f"
+      "sha256": "ce0f6a1c6c563ed5d28c94042541bcc351d6e4c17923f552df0d3c8044e15bdf"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "ed392004abf65e3d59aba25b1c064acaa7151ae1c4aa267b4b23e88056c26f55"
+      "sha256": "d64ce4c0ecf7cf763e475824d5b469c800b435573f9e393b47889cde1174ca57"
     },
     {
       "path": "work/START-HERE.md",
@@ -963,7 +1011,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "21737e81e78ec0189ef31f82b1f7292eea70eccc093e011bf91998c163cd7443"
+      "sha256": "cbb7baa9b8f72eb31b4c5e72b5277614eabe5afd1e66f2ac32514c074fbb8349"
     }
   ]
 }

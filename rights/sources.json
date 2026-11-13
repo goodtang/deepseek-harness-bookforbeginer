@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-12",
+  "review_date": "2026-11-13",
   "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
   "licenses": [
     {
@@ -1134,6 +1134,78 @@
       "path": "labs/next-request/evidence/2026-11-12/README.md",
       "source_id": "SRC-BOOK",
       "basis": "Independent explanation of current and historical synthetic evidence scope, code snapshots and reproduction.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/m1/startup-probe.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/m1/fixtures/startup-stall.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-LOOP-02.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-LOOP-02.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/compare-render.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/render-support.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/start/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/checks.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/render-comparison.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/revision-verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/next-request/evidence/2026-11-13/summary-plugin-source.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book experiment code, diagram, synthetic field comparison, diagnostics or current evidence explanation; no external artwork or full prompts copied. Small source excerpts in chapter retain separately attributed SRC-DSH MIT rights.",
       "status": "cleared"
     }
   ],

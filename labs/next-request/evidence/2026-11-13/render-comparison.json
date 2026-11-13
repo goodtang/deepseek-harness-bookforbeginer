@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "scope": "Real profile runs with an edited and restored plugin; sampled render input is business value",
+  "runs": [
+    {
+      "presentation": "full",
+      "businessValue": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "renderedValue": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "persistedContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestCount": 2,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "b080f8bf2bc8061eb294843cc97d581f17af2340e47be833bb115a525d403c54",
+      "inputSha256": {
+        "report.json": "f629aede3df1904a2588d343a6c74641f088cb26d6d5d0f2832f692952570ca7",
+        "durable-0.jsonl": "77d8a561873570c7620ef302a4c2720121366e8950305974d2bc11f2a64dc3d0"
+      }
+    },
+    {
+      "presentation": "summary",
+      "businessValue": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "renderedValue": {
+        "id": "TK-1042",
+        "title": "Invoice export failed"
+      },
+      "persistedContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestCount": 2,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "6bfa8b063b479e20abfa55d5ac00d17d7035cbba6b148aa2207fd8ec97ea11bd",
+      "inputSha256": {
+        "report.json": "0f9b28a4e66d529412fef939aa7435c26c941792740b00579b1727f1308a77f4",
+        "durable-0.jsonl": "f2b83a0042cc9ce2c842e523032bcf005a75ff68aefacff3d1e2e890221c08a6"
+      }
+    },
+    {
+      "presentation": "full",
+      "businessValue": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "renderedValue": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "persistedContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestContent": [
+        {
+          "type": "text",
+          "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+        }
+      ],
+      "requestCount": 2,
+      "executeCount": 1,
+      "applicationExitCode": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "pluginSha256": "b080f8bf2bc8061eb294843cc97d581f17af2340e47be833bb115a525d403c54",
+      "inputSha256": {
+        "report.json": "09057989078ef69610717276c4887acfdc32cd571d47f1e0beea3334160d200b",
+        "durable-0.jsonl": "d66fe42cd8358aa042d6d5e6c08caea7c4cc973496d097128b7e29ce4f2ff7dc"
+      }
+    }
+  ],
+  "businessValueNegativeControlRejected": true,
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

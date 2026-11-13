@@ -64,6 +64,19 @@
       "local_visual_review": "Final PNG inspected after simplified labels: Chinese, arrows and margins readable; no clipping observed.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-LOOP-02",
+      "captured_at": "2026-11-13T09:02:23.019587+00:00",
+      "source": "CH-LOOP-02.mmd",
+      "source_sha256": "d11e06fe309ceb0a7d07221f37c67602379a736c8b3460b53968606bb2da4f0e",
+      "image": "CH-LOOP-02.png",
+      "image_sha256": "093746fab70b1a5ca9f3e23a0a65deca92e131ac70dd42a5da249bd191a5004f",
+      "width": 1174,
+      "height": 2578,
+      "local_visual_review": "Final PNG inspected: Chinese labels, yes/no branches, return loop, arrows and margins readable; no clipping. Normal path only.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }

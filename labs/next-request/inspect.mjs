@@ -15,7 +15,9 @@ const one = (items, label) => {
 };
 
 /** Check the fixed normal fixture and return only the fields taught in chapter 5. */
-export function inspect(report, rows) {
+export function inspect(report, rows, { presentation = 'full' } = {}) {
+  assert.ok(['full', 'summary'].includes(presentation));
+  const expectedContent = presentation === 'summary' ? { id: expected.id, title: expected.title } : expected;
   assert.equal(report.scenario, 'S1', 'This comparison only supports the normal S1 fixture');
   assert.equal(report.sourceCommit, 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159');
   assert.equal(report.sourceTrackedChanges, '');
@@ -47,7 +49,7 @@ export function inspect(report, rows) {
   assert.equal(result.block.is_error, false);
   const wireText = one(result.block.content, 'wire result text');
   assert.equal(wireText.type, 'text');
-  assert.deepEqual(JSON.parse(wireText.text), expected, 'Wire ticket differs');
+  assert.deepEqual(JSON.parse(wireText.text), expectedContent, 'Wire ticket differs');
   const call = one(events.filter(event => event.type === 'tool/call'), 'durable tool/call');
   const saved = one(events.filter(event => event.type === 'tool/result'), 'durable tool/result');
   assert.equal(call.data.name, use.block.name);
@@ -99,7 +101,7 @@ export async function load(directory) {
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   assert.ok(process.argv[2], 'Usage: node inspect.mjs <S1-evidence-directory> [new-excerpt.json]');
   const { report, rows, hashes } = await load(resolve(process.argv[2]));
-  const excerpt = { ...inspect(report, rows), inputSha256: hashes };
+  const excerpt = { ...inspect(report, rows, { presentation: process.argv[4] ?? 'full' }), inputSha256: hashes };
   if (process.argv[3]) await writeFile(resolve(process.argv[3]), `${JSON.stringify(excerpt, null, 2)}\n`, { flag: 'wx' });
   console.log(JSON.stringify({ requestCount: excerpt.requestCount, executeCount: excerpt.executeCount,
     turnCount: excerpt.turnCount, stepCount: excerpt.stepCount, ticket: excerpt.ticket, passed: true }));

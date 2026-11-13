@@ -19,3 +19,5 @@ node tools/render_diagrams.mjs D:/projects/deepseek-harness-local/node_modules/.
 生成第一章图时，在上述命令后追加 `CH-OBS-01`，第二章图则追加 `CH-RUN-01`；不传图 ID 时仍只生成既有 CH-TOOL 两图。四图的本机导出不等于 GitHub 页面、PDF 或 V6 全部图组验收通过。
 
 第五章新增 CH-LOOP-01，沿同一工单展开业务值、工具消息、Session 导出与协议转换。用上述命令追加 CH-LOOP-01 可单独导出，最终 PNG 已目视检查；页面/PDF 未验，版本与哈希见 render-record.json。
+
+2026-11-13 新增第五章 CH-LOOP-02 正常循环分支图，区分有调用后继续与无调用结束，说明单回合中的两步。PNG已本机目视检查；与CH-LOOP-01数据转换图分别使用，不把配置树、依赖与执行流程混画。页面/PDF仍待验。

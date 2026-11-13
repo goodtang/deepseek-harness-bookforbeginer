@@ -1,6 +1,6 @@
 # 当前执行状态
 
-更新日期：2026-11-12。正式书稿维护于 goodtang/deepseek-harness-bookforbeginer；本机 D:/projects/deepseek-harness-bookforbeginer。各章状态唯一索引见 [CHAPTERS](CHAPTERS.md)，版本以 Git 和 FILES.json 为准。
+更新日期：2026-11-13。正式书稿维护于 goodtang/deepseek-harness-bookforbeginer；本机 D:/projects/deepseek-harness-bookforbeginer。各章状态唯一索引见 [CHAPTERS](CHAPTERS.md)，版本以 Git 和 FILES.json 为准。
 
 用户明确“读者验收可以最后进行，开始第五章编写”。已正式编写 CH-LOOP 第五章，5.1–5.3 初稿完成，配真实正常复跑、字段转换图和证据核对。读者仍未检查，不代签、不阻塞本次起稿；外网隔离与完整 M1 未通过。
 
@@ -13,9 +13,11 @@
 | 第二章 CH-RUN | 2.1–2.3 初稿与反馈修订 | Windows 六场景及路径对照通过，新机/构建/其他平台未验 |
 | 第三章 CH-FUNC | 3.1–3.3 初稿与修订 | 纯函数 11 场景通过，不是 Harness 集成验收 |
 | 第四章 CH-TOOL | 4.1–4.5 初稿、库存迁移、M1 功能补验 | 13 个 profile 场景与四项本地库存检查；读者等未验 |
-| 第五章 CH-LOOP | 5.1–5.3 初稿、源码路径、图与核对器 | 真实 S1 两请求/一次执行/一个 turn/两个 step；五项错误副本拒绝与扩展练习作者核对通过 |
+| 第五章 CH-LOOP | 三节初稿并定点修订：真实展示修改/恢复、源码小步阅读、插件组合、循环图 | 三次展示对照与原四场景回归通过；模块停顿诊断反例按预期失败；原偶发启动超时根因待查 |
 
 第五章入口：[正文](../chapters/第05章-工具结果怎样进入下一次模型请求.md)、[工作包](CH-LOOP-task.md)、[实验及记录](../labs/next-request/README.md)。同一 TK-1042、open、Invoice export failed、lookupTicket、book_ticket_lookup；不改上游或既有业务插件。所有源码运行仍锁定 fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159。
+
+本轮修改仅书稿实验设施与正文，不改上游。当前证据为 labs/next-request/evidence/2026-11-13；原12日资料按历史版本保留。运行器保留45秒限制，新诊断没有使原偶发超时自动关闭；第五章技术状态记部分通过。
 
 ## 待完成检查
 

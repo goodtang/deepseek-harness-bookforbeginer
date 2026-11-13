@@ -9,6 +9,8 @@ import { access, copyFile, mkdir, mkdtemp, readFile, readdir, rm, writeFile } fr
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { existsSync } from 'node:fs';
+import { performance } from 'node:perf_hooks';
 
 const source = resolve(process.argv[2]);
 const scenario = process.argv[3];
@@ -16,6 +18,12 @@ assert.ok(['S1', 'S2', 'S2-exhaust', 'S3'].includes(scenario));
 assert.ok(process.argv[4], 'Usage: run.mjs <source-root> <S1|S2|S3> <new-evidence-directory>');
 const output = resolve(process.argv[4]);
 const here = dirname(fileURLToPath(import.meta.url));
+const plugin = process.argv[5] ? resolve(process.argv[5]) : join(here, '../tool-cases/stages/plugin.mjs');
+const presentation = process.argv[6] ?? 'full';
+assert.ok(['full', 'summary'].includes(presentation));
+assert.ok(!process.argv[5] || scenario === 'S1', 'Custom teaching plugins are supported only for S1');
+const expectedTicket = { id: 'TK-1042', status: 'open', title: 'Invoice export failed' };
+const expectedRendered = presentation === 'summary' ? { id: expectedTicket.id, title: expectedTicket.title } : expectedTicket;
 const sha = value => createHash('sha256').update(value).digest('hex');
 const report = { scenario, capturedAt: new Date().toISOString(), node: process.version,
   sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: source, encoding: 'utf8' }).trim(),
@@ -26,6 +34,9 @@ assert.equal(report.sourceCommit, 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159'); a
 for (const name of ['run.mjs', 'observer.mjs', '../tool-cases/support.mjs', '../tool-cases/stages/plugin.mjs', '../first-tool/tickets.mjs']) {
   report.files[name] = sha(await readFile(join(here, name)));
 }
+report.plugin = { path: plugin, sha256: sha(await readFile(plugin)) };
+report.files['startup-probe.mjs'] = sha(await readFile(join(here, 'startup-probe.mjs')));
+report.presentation = presentation;
 const loader = pathToFileURL(createRequire(join(source, 'package.json')).resolve('tsx/esm')).href;
 const { startMockLlmServer } = await import(pathToFileURL(join(source, 'packages/test-support/llm-mock-server/src/index.ts')).href);
 await mkdir(dirname(output), { recursive: true }); await mkdir(output);
@@ -33,11 +44,27 @@ const root = await mkdtemp(join(tmpdir(), 'book-m1-'));
 const home = join(root, 'home'); const workspace = join(root, 'workspace');
 const sessions = join(root, 'sessions'); const auditPath = join(root, 'execution.jsonl');
 const eventPath = join(root, 'events.jsonl'); const controlPath = join(root, 'control.json');
+const startupPath = join(root, 'startup.jsonl');
+const startedAt = performance.now();
+report.progress = [];
+const milestones = new Set();
+const mark = phase => {
+  if (milestones.has(phase)) return;
+  milestones.add(phase); report.progress.push({ phase, observedAtMs: Math.round(performance.now() - startedAt) });
+};
 const exhausted = scenario === 'S2-exhaust';
 const sequence = exhausted ? ['partial_disconnect', 'partial_disconnect'] : scenario === 'S2' ? ['partial_disconnect', 'tool_call_success', 'success'] :
   scenario === 'S3' ? ['tool_call_success', 'stall'] : ['tool_call_success', 'success'];
 const marker = 'BOOK_PARTIAL_MUST_NOT_BECOME_A_SUCCESS';
 let server; let child; let failure; let watchdogExpired = false;
+let progressTimer;
+const sampleProgress = () => {
+  for (const [phase, path] of [['node-preload-file', startupPath], ['execution-audit-file', auditPath],
+    ['observer-listening-file', controlPath], ['session-event-file', eventPath]]) {
+    if (existsSync(path)) mark(phase);
+  }
+  if (server?.requests.length > 0) mark('model-request-observed');
+};
 try {
   await mkdir(home); await mkdir(workspace);
   const overlay = ['- id: session-title-llm', '  disabled: true',
@@ -45,22 +72,27 @@ try {
     '      backoff:', '        initialDelayMs: 10', '        maxDelayMs: 10', '        jitterRatio: 0',
     '- id: session-persistence-jsonl', '  config:', `    root: ${JSON.stringify(sessions.replaceAll('\\', '/'))}`,
     '    compression: none', '- insert:', '    - id: book-ticket-tool',
-    `      name: ${JSON.stringify(join(here, '../tool-cases/stages/plugin.mjs').replaceAll('\\', '/'))}`,
+    `      name: ${JSON.stringify(plugin.replaceAll('\\', '/'))}`,
     '    - id: book-m1-observer', `      name: ${JSON.stringify(join(here, 'observer.mjs').replaceAll('\\', '/'))}`, ''].join('\n');
   const patch = join(root, 'patch.yml'); await writeFile(patch, overlay); await writeFile(join(output, 'overlay.yml'), overlay);
   server = await startMockLlmServer({ host: '127.0.0.1', port: 0, apiKey: 'book-mock-key', randomSeed: 1042,
     sequence, repeatLast: false, toolName: 'book_ticket_lookup', toolArguments: '{"id":"TK-1042"}',
     partialText: marker, successText: 'M1 query completed.' });
-  child = spawn(process.execPath, ['--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless',
+  mark('mock-listening');
+  child = spawn(process.execPath, ['--import', pathToFileURL(join(here, 'startup-probe.mjs')).href, '--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless',
     '--patch', patch, 'Look up TK-1042 with book_ticket_lookup.'], { cwd: workspace, windowsHide: true,
     env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source, BOOK_EXECUTION_LOG: auditPath,
-      BOOK_SESSION_EVENTS: eventPath, BOOK_CONTROL_FILE: controlPath, TSX_TSCONFIG_PATH: join(source, 'tsconfig.json'),
+      BOOK_SESSION_EVENTS: eventPath, BOOK_CONTROL_FILE: controlPath, BOOK_STARTUP_LOG: startupPath,
+      TSX_TSCONFIG_PATH: join(source, 'tsconfig.json'),
       DEEPSEEK_API_KEY: 'book-mock-key', DEEPSEEK_BASE_URL: `${server.baseURL}/v1` },
     stdio: ['ignore', 'pipe', 'pipe'] });
   let stdout = ''; let stderr = '';
-  child.stdout.on('data', chunk => { stdout += chunk; }); child.stderr.on('data', chunk => { stderr += chunk; });
+  child.on('spawn', () => mark('child-spawned'));
+  child.stdout.on('data', chunk => { mark('first-stdout'); stdout += chunk; });
+  child.stderr.on('data', chunk => { mark('first-stderr'); stderr += chunk; });
+  progressTimer = setInterval(sampleProgress, 100);
   const closed = once(child, 'close');
-  const timer = setTimeout(() => { watchdogExpired = true; child.kill(); }, 45000);
+  const timer = setTimeout(() => { sampleProgress(); mark('watchdog-expired'); watchdogExpired = true; child.kill(); }, 45000);
   let polling; let controlTask;
   try {
     if (scenario === 'S3') {
@@ -79,7 +111,7 @@ try {
       }, 20);
     }
     const [code, signal] = await closed; await controlTask; report.applicationExitCode = code; report.signal = signal;
-  } finally { clearTimeout(timer); clearInterval(polling); }
+  } finally { clearTimeout(timer); clearInterval(polling); clearInterval(progressTimer); sampleProgress(); mark('child-closed'); }
   report.watchdogExpired = watchdogExpired;
   report.stdout = stdout; report.stderr = stderr;
   assert.equal(watchdogExpired, false, 'Watchdog expired before natural completion; this is not user cancellation');
@@ -118,7 +150,7 @@ try {
   assert.deepEqual(JSON.parse(calls[0].data.arguments), { id: 'TK-1042' });
   assert.equal(results[0].data.message.toolCallId, calls[0].data.callId);
   assert.equal(results[0].data.message.isError, false);
-  assert.deepEqual(JSON.parse(results[0].data.message.content[0].text), { id: 'TK-1042', status: 'open', title: 'Invoice export failed' });
+  assert.deepEqual(JSON.parse(results[0].data.message.content[0].text), expectedRendered);
   }
   const terminal = durableEvents.filter(event => event.type === 'turn/end');
   assert.equal(terminal.length, 1);
@@ -149,8 +181,16 @@ try {
   }
 } catch (error) { failure = error; report.failure = String(error); }
 finally {
+  clearInterval(progressTimer);
   if (child && child.exitCode === null && child.signalCode === null) { const done = once(child, 'close'); child.kill(); await done; }
   if (server) { await server.close(); report.cleanup.mockServerClosed = true; }
+  sampleProgress();
+  report.diagnosticFiles = {};
+  for (const [name, path] of [['startup.jsonl', startupPath], ['execution.jsonl', auditPath], ['observed-events.jsonl', eventPath]]) {
+    if (!existsSync(path)) { report.diagnosticFiles[name] = { exists: false }; continue; }
+    const bytes = await readFile(path); await writeFile(join(output, name), bytes);
+    report.diagnosticFiles[name] = { exists: true, bytes: bytes.length, sha256: sha(bytes) };
+  }
   report.cleanup.childExited = !child || child.exitCode !== null || child.signalCode !== null;
   report.requests = server?.requests.map(request => ({ attempt: request.attempt, behavior: request.behavior,
     outcome: request.outcome, chunksSent: request.chunksSent }));

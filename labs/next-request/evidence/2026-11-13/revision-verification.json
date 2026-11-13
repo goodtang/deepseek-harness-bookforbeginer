@@ -1,0 +1,550 @@
+{
+  "capturedOn": "2026-11-13",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "codeSha256": {
+    "labs/m1/run.mjs": "d8792002a1304edbe22dedefa90cd1717be7744e8a834bfe9a00c9db39044679",
+    "labs/m1/startup-probe.mjs": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1",
+    "labs/m1/fixtures/startup-stall.mjs": "ec8051c5fa83cea228d54020a347912d282c22bbdc96c010c5694c5c00ba1e1f",
+    "labs/next-request/inspect.mjs": "ff378c73f3b4a53e9ab0c7a82ba33ccb00e706979ca79355b5c2d3bb461f5f47",
+    "labs/next-request/check.mjs": "5d0871c2ce8e4512039240ab96677c180f5739c0d5b0d56536c29e0a868d28d8",
+    "labs/next-request/compare-render.mjs": "9b8a522d3b569940a1dcce9e9d10963bcf83459ba521c04892b21eb6df18b603",
+    "labs/next-request/render-support.mjs": "966f1aae37d1b8717e4f6a7675e6efef7d468c246afaa6cf263396d9321cfa6e",
+    "labs/next-request/start/plugin.mjs": "b080f8bf2bc8061eb294843cc97d581f17af2340e47be833bb115a525d403c54"
+  },
+  "runs": [
+    {
+      "case": "final-full",
+      "scenario": "S1",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 129
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3380
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 3922
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4030
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4138
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4155
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4279
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "f629aede3df1904a2588d343a6c74641f088cb26d6d5d0f2832f692952570ca7"
+    },
+    {
+      "case": "final-summary",
+      "scenario": "S1",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 25
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 240
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3811
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4356
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4357
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4575
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4606
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4725
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "0f9b28a4e66d529412fef939aa7435c26c941792740b00579b1727f1308a77f4"
+    },
+    {
+      "case": "final-restored",
+      "scenario": "S1",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 133
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3262
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 3910
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 3910
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4019
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4073
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4177
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "09057989078ef69610717276c4887acfdc32cd571d47f1e0beea3334160d200b"
+    },
+    {
+      "case": "regression-S1",
+      "scenario": "S1",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 17
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 29
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 141
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3377
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 3917
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 3917
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4132
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4167
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4277
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "af351faf0bde9d564c2eceeeb31fdea92115452452aff8d663251d13d4d7a7bd"
+    },
+    {
+      "case": "regression-S2",
+      "scenario": "S2",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 3,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 3,
+          "behavior": "success",
+          "outcome": "completed",
+          "chunksSent": 8
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 25
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 130
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3478
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4125
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4125
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4342
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4610
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4719
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "b010f09c2a84a75390d0260147be0ea4c08eed6e9e24b5773d23501714db2310"
+    },
+    {
+      "case": "regression-S2-exhaust",
+      "scenario": "S2-exhaust",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "partial_disconnect",
+          "outcome": "reset",
+          "chunksSent": 7
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 14
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 21
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 136
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3924
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4470
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4470
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4689
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 5053
+        },
+        {
+          "phase": "first-stderr",
+          "observedAtMs": 5053
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 5153
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "9aec7a75b199e55e7a1b61523c37661b66966ef0c11aec7530c0a072ccd3ac0e"
+    },
+    {
+      "case": "regression-S3",
+      "scenario": "S3",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "requests": [
+        {
+          "attempt": 1,
+          "behavior": "tool_call_success",
+          "outcome": "completed",
+          "chunksSent": 7
+        },
+        {
+          "attempt": 2,
+          "behavior": "stall",
+          "outcome": "stalled",
+          "chunksSent": 0
+        }
+      ],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 133
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 4596
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 5584
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 5584
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 6130
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 6430
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 6581
+        }
+      ],
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "57aed8f5ce0d10e17bfedb32bd8258dbc6dafdcb6ce7ff901e7269b7d3f166fc"
+    },
+    {
+      "case": "diagnostic-module-stall-final",
+      "expectedFailureConfirmed": true,
+      "applicationExitCode": null,
+      "signal": "SIGTERM",
+      "watchdogExpired": true,
+      "requests": [],
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 21
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 30
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 148
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3394
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4265
+        },
+        {
+          "phase": "watchdog-expired",
+          "observedAtMs": 45036
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 45065
+        }
+      ],
+      "diagnosticFiles": {
+        "startup.jsonl": {
+          "exists": true,
+          "bytes": 58,
+          "sha256": "c2445de818946c60fe010f5b1ebe81914da1a8c0c3c17984918da2a730f0a1f0"
+        },
+        "execution.jsonl": {
+          "exists": true,
+          "bytes": 37,
+          "sha256": "a747bde5e75b6bbac53f80f7fdec3a1fd8080f247319cbf89b14bb5f601eee75"
+        },
+        "observed-events.jsonl": {
+          "exists": false
+        }
+      },
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "dfb32a2b7c6a8edafb230b497f88fa593d05f50842f2861f223266af5ecf388d"
+    }
+  ],
+  "originalIntermittentTimeoutRootCause": "unlocated; injected module stall is a separate known-cause diagnostic case",
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}
