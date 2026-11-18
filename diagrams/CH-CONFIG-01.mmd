@@ -1,0 +1,7 @@
+flowchart TD
+    A["dsh 命令：选择 headless"] --> B["profile 选择 bundle"]
+    B --> C["补丁组合成配置条目"]
+    C --> D["dump 查看条目与来源"]
+    C --> E["Loader 装入插件"]
+    E --> F["依赖就绪后验证配置"]
+    F --> G["apply 注册服务与工具"]

@@ -129,6 +129,32 @@
       "local_visual_review": "PNG inspected: Chinese glyphs, arrows, provider alternatives and stable lifecycle stages readable, no clipping; idle replacement only.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-CONFIG-01",
+      "captured_at": "2026-11-18T10:08:24.069884+00:00",
+      "source": "CH-CONFIG-01.mmd",
+      "source_sha256": "f19ffcb7e8dfa63bd2111d103156ff482f2dd08bda4aacfca88c1997e883ba86",
+      "image": "CH-CONFIG-01.png",
+      "image_sha256": "836e7ad2dcdc73fb455f5c858b3d6a4c4510bd04b63c88656f7217b480c8647f",
+      "width": 1072,
+      "height": 1276,
+      "local_visual_review": "Final PNG inspected: Chinese text, branches/layer order, arrows and margins readable; no clipping. Conceptual configuration flow, not full boot trace.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
+    },
+    {
+      "id": "CH-CONFIG-02",
+      "captured_at": "2026-11-18T10:08:24.070241+00:00",
+      "source": "CH-CONFIG-02.mmd",
+      "source_sha256": "bd8b08ee79e0621d8bd65c4d965c8b39a6c601ae971a639b6dbdde80bd7bcd69",
+      "image": "CH-CONFIG-02.png",
+      "image_sha256": "2c07589c1e7c6ccdfda43d0d951177e22028ab69d5379d588b7343d8a3e98ea2",
+      "width": 770,
+      "height": 1516,
+      "local_visual_review": "Final PNG inspected: Chinese text, branches/layer order, arrows and margins readable; no clipping. Conceptual configuration flow, not full boot trace.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }

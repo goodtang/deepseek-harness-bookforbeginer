@@ -1,0 +1,19 @@
+✔ preload allows a completed child to exit without waiting for its timer (96.2469ms)
+✔ an active child produces a heartbeat without exposing environment values (2143.5899ms)
+✔ import tracing is emitted only when explicitly requested (183.7543ms)
+▶ actual configured profile and misleading evidence
+  ✔ selected configuration ignored (4.4659ms)
+  ✔ provider differs from configuration (2.5947ms)
+  ✔ no completed service check (1.3677ms)
+  ✔ tool did not execute (1.0887ms)
+  ✔ no extra overlay captured (1.2648ms)
+  ✔ cleanup incomplete (1.5601ms)
+✔ actual configured profile and misleading evidence (19.8422ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2512.9226

@@ -25,6 +25,8 @@ const plugin = process.argv[5] ? resolve(process.argv[5]) : join(here,
   gateScenario ? '../wait-cancel/start/plugin.mjs' : '../tool-cases/stages/plugin.mjs');
 const presentation = process.argv[6] ?? 'full';
 assert.ok(['full', 'summary'].includes(presentation));
+const extraPatch = process.argv[7] ? resolve(process.argv[7]) : undefined;
+assert.ok(!extraPatch || scenario === 'S1', 'Additional teaching overlays require S1');
 assert.ok(!process.argv[5] || scenario === 'S1' || gateScenario, 'Custom teaching plugins require S1 or a gate scenario');
 const expectedTicket = { id: 'TK-1042', status: 'open', title: 'Invoice export failed' };
 const expectedRendered = presentation === 'summary' ? { id: expectedTicket.id, title: expectedTicket.title } : expectedTicket;
@@ -81,12 +83,17 @@ try {
     `      name: ${JSON.stringify(plugin.replaceAll('\\', '/'))}`,
     '    - id: book-m1-observer', `      name: ${JSON.stringify(join(here, 'observer.mjs').replaceAll('\\', '/'))}`, ''].join('\n');
   const patch = join(root, 'patch.yml'); await writeFile(patch, overlay); await writeFile(join(output, 'overlay.yml'), overlay);
+  if (extraPatch) {
+    const bytes = await readFile(extraPatch);
+    report.extraPatch = { path: extraPatch, sha256: sha(bytes) };
+    await writeFile(join(output, 'extra-overlay.yml'), bytes);
+  }
   server = await startMockLlmServer({ host: '127.0.0.1', port: 0, apiKey: 'book-mock-key', randomSeed: 1042,
     sequence, repeatLast: false, toolName: 'book_ticket_lookup', toolArguments: '{"id":"TK-1042"}',
     partialText: marker, successText: 'M1 query completed.' });
   mark('mock-listening');
   child = spawn(process.execPath, ['--import', pathToFileURL(join(here, 'startup-probe.mjs')).href, '--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless',
-    '--patch', patch, 'Look up TK-1042 with book_ticket_lookup.'], { cwd: workspace, windowsHide: true,
+    '--patch', patch, ...(extraPatch ? ['--patch', extraPatch] : []), 'Look up TK-1042 with book_ticket_lookup.'], { cwd: workspace, windowsHide: true,
     env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source, BOOK_EXECUTION_LOG: auditPath,
       BOOK_SESSION_EVENTS: eventPath, BOOK_CONTROL_FILE: controlPath, BOOK_STARTUP_LOG: startupPath,
       BOOK_GATE_CONTROL: gatePath,

@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "84f889a7375d22020446e01fb2d56d84e2c10de7668e68f4270f034ab207060b"
+      "sha256": "429e9921a5c96811be715082a3dc6c8c250e744e211fb33d9993daa7b40d8fe9"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -43,7 +43,11 @@
     },
     {
       "path": "chapters/第08章-换一个数据来源，为什么工具不用重写.md",
-      "sha256": "f5b8004a1be2a044b066b744f363d1cbfc5cee0f7f3a5adb27539b0324b81363"
+      "sha256": "e6ab51862e60629794a3314762ff00efad2e152ed990c629599ad45dc595d877"
+    },
+    {
+      "path": "chapters/第09章-插件怎样组成应用，读懂启动与配置.md",
+      "sha256": "ad59da1efcda84e462e05d30d97f4d0c0be9b1864d8f5f597935ed3f25de3eba"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -55,11 +59,27 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "b41057d8bce30e286ecd14726153c876334f29b464e7d3212eb6f9c07a7c4bbc"
+      "sha256": "456b73174dec585ae8061ba234d4f7d1e844d44409f3284643a23c16ff8bc9e8"
     },
     {
       "path": "COPYRIGHT.md",
       "sha256": "5451b76870e80406b77b5e8172d6ec481a055924e2cbec803cb36d35647b9573"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-01.mmd",
+      "sha256": "f19ffcb7e8dfa63bd2111d103156ff482f2dd08bda4aacfca88c1997e883ba86"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-01.png",
+      "sha256": "836e7ad2dcdc73fb455f5c858b3d6a4c4510bd04b63c88656f7217b480c8647f"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-02.mmd",
+      "sha256": "bd8b08ee79e0621d8bd65c4d965c8b39a6c601ae971a639b6dbdde80bd7bcd69"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-02.png",
+      "sha256": "2c07589c1e7c6ccdfda43d0d951177e22028ab69d5379d588b7343d8a3e98ea2"
     },
     {
       "path": "diagrams/CH-FUNC-01.mmd",
@@ -151,11 +171,11 @@
     },
     {
       "path": "diagrams/README.md",
-      "sha256": "74717407ce0c2090b59e4ef80dc01c20f825e5f76a0d89d68a2d0655fd3c0925"
+      "sha256": "ee3cca75ff414affd66f17201178155b0bc3a6914048812a6d446f4d00258648"
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "0289b8663c358084b83206d58f375ce51f16d7905ba0105963b3b12a12084be0"
+      "sha256": "6ea201d7e4b2a0892cfa84722cbf5cfe7639a7bd51877d54f1d508d17e412245"
     },
     {
       "path": "EDITORIAL.md",
@@ -507,11 +527,11 @@
     },
     {
       "path": "labs/m1/README.md",
-      "sha256": "1bc031227254ea1c6b515bdabb20481d30687b175258b6c03ebfaffd3b31be20"
+      "sha256": "0251c3ce52cd6549717752869c77eb4523da6ae48bcba9598f7e40107d2cdd2d"
     },
     {
       "path": "labs/m1/run.mjs",
-      "sha256": "7b71fce0e0f15bff51bc1d914e408193704c748dae04ce062c42813ab55b6408"
+      "sha256": "5357f505c4015878d5a7526ae1f9d7411ac7d696b235112f4fc89bac3eb6732a"
     },
     {
       "path": "labs/m1/startup-probe.mjs",
@@ -778,8 +798,64 @@
       "sha256": "9c2b21f742827607d90c80d02e8934e1eff7cbd139bc3f6ed42e47302a9a7571"
     },
     {
+      "path": "labs/profile-config/dump-layers.mjs",
+      "sha256": "fe391582e40da095a4b208af4c8a84c4b34f7a349c11d68f8b960af7c4349121"
+    },
+    {
+      "path": "labs/profile-config/entry.mjs",
+      "sha256": "dd8382a4133a44edb18715fcb6bf07ca10778b40463ea77f64c179471b662f09"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/inputs.json",
+      "sha256": "6d9811c390cd377f67804cc72e3d5b9abd0db08905017d0a5867839a15d1c5fb"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/layers.json",
+      "sha256": "d897ff13fb21f1b7e6a3e859ba871df7c84c188a0b1c13a4a73f3567faa09922"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/README.md",
+      "sha256": "c2c2c00d256413e334b5bf65b0f4b091e68acd766c6c6d52db3d054df7af1a53"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/regression.json",
+      "sha256": "b6989837a5d97337ecb188360397f56012be982f61a9a4f623375848dce7c35a"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/tests.txt",
+      "sha256": "e39be57ef2754865f7123169c529f06d8ca2880db76ea9f8ab367d4654d09b7c"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/verification.json",
+      "sha256": "65c594598009b9b2b55a1de6e2d83fa06e7c68996580c4416420a71620695086"
+    },
+    {
+      "path": "labs/profile-config/package.json",
+      "sha256": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8"
+    },
+    {
+      "path": "labs/profile-config/prepare.mjs",
+      "sha256": "f850d7b5fabcf7664343f776a998f45b7cb20e925810cd08dad379bc7ba14955"
+    },
+    {
+      "path": "labs/profile-config/README.md",
+      "sha256": "5cd11a5e2d80ca47d0d3cc8dfc17afaabe2ac0cc83d43be464f2e73fea526f5e"
+    },
+    {
+      "path": "labs/profile-config/run.mjs",
+      "sha256": "8780e0397c0db1dc189234799f217f009f28e6233d375f4618fe5b2ae274edf5"
+    },
+    {
+      "path": "labs/profile-config/verify.mjs",
+      "sha256": "712f6d97aad906f6157cf1e9ea7f4997bbd468c74ff8abd0f2fc42cb69d2188b"
+    },
+    {
+      "path": "labs/profile-config/verify.test.mjs",
+      "sha256": "7a24b993e0957d6ddb36bf5cd16685b83214dc83d7f594c20d20d501cd03f5b7"
+    },
+    {
       "path": "labs/README.md",
-      "sha256": "25bde6d78043bf35d4ed481b009bdd80ae21fc9ea24cf42a38d3fe3c124c1bfa"
+      "sha256": "ac78d8225161c6e361f8d1be73bf8ad6a1f3b99f14b4b9b77aa3f31c13ba3ee0"
     },
     {
       "path": "labs/run-basics/check.mjs",
@@ -1255,7 +1331,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "a668db4d9a83a83c1b567aa0437c9bad7d104eb9d308bfb49aa7ec07b7c4f767"
+      "sha256": "0733d3d927ed5e7b56528fb9391935112f08d1a88613c796ba17a72bbb41b9c9"
     },
     {
       "path": "rights/prior-publication.json",
@@ -1267,7 +1343,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "a0d22a2b36e33cf36676ca5076368ae3df47a94d2c36225aaab24226eb31e632"
+      "sha256": "7356ce6f275d30229473c47c4904ad0ebbe85de6f70245d7a0c3189e997c68c4"
     },
     {
       "path": "templates/chapter-task.md",
@@ -1279,7 +1355,7 @@
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "5f81949678309de509f7e8178391b1eda22367528ad7818abbe1135cc687b79d"
+      "sha256": "45e03610da12403e11fed9a0683e194926d292dacb59862de68093e28913d64a"
     },
     {
       "path": "tools/check_licenses.py",
@@ -1311,7 +1387,11 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "faf21ab56f7e8432b7efd53804ecee7beccf826ca154607975efb55ddf0e3b86"
+      "sha256": "2251db0fc9e60bc46613ef41496f22e4542d173dc168061db3a22592d7030949"
+    },
+    {
+      "path": "work/CH-CONFIG-task.md",
+      "sha256": "3be298c9df13823fd67a281ec44783a51babf794f4eb5bf206fafe013fd08ac4"
     },
     {
       "path": "work/CH-FUNC-task.md",
@@ -1347,11 +1427,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "384179f5bc6d0650004f785c0b017e335393c476ac531d10487ba54fa7a2d265"
+      "sha256": "b66d9342dad2ea26bb033b6efc3cba175e35b28aeba168d45a4634c09a9aa167"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "2b057bf9159b3480e9c674e9141364b0aa20de2b1d3e1a626ee4ffce74b969d9"
+      "sha256": "4bf6d2cbc08d5a06f139ae4409dd507aebc95212a696bffe1d6de489bdfd6328"
     },
     {
       "path": "work/START-HERE.md",
@@ -1359,7 +1439,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "9aabaf5bfab00310079f78ed0a48e95795c3950cc316ba415d988660fc13004a"
+      "sha256": "5e89bf2ff7b46b0892045c81e0fb2bbd349d161143d90df32e4cd0af50150a27"
     }
   ]
 }

@@ -1,0 +1,6 @@
+flowchart TD
+    A["空条目列表"] --> B["bundle 层：按 profile 清单顺序"]
+    B --> C["profile 层：profiles/headless/cordis.patch.yml"]
+    C --> D["home 层：DSH_HOME/cordis.patch.yml"]
+    D --> E["命令行层：按多个 --patch 的参数顺序"]
+    E --> F["运行时末尾：按条件加入 telemetry 策略"]

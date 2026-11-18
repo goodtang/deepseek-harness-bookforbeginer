@@ -19,6 +19,10 @@ Copyright (c) 2026 DeepSeek
 
 本书独立解释Service/Context/fiber、依赖与效果，链接实际源码，使用少量注明来源的代码名称与语句；未把vendor许可改成书稿许可。新工单示例和图由本书自行组织。此项不声称涵盖vendor目录的其他库、素材或所有后续引用。
 
+## Vendored Cordis Include
+
+第九章解释固定基线中 [vendor/include/src/patch.ts](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/vendor/include/src/patch.ts)，摘录并明确省略部分分支的逐字段赋值循环，用于说明config整体替换。该包独立MIT声明为 `Copyright (c) 2021-present Shigma`。本轮核对该包LICENSE与已保存的 [MIT-Cordis全文](LICENSES/MIT-Cordis.txt) 字节一致，复用相同许可文本但单独登记SRC-INCLUDE；这不扩大为其他vendor包的许可结论。
+
 ## 教学方法参考
 
 王爽：《汇编语言（第4版）》，清华大学出版社，ISBN 9787302539414。[出版社信息](https://www.tup.tsinghua.edu.cn/bookscenter/book_07970801.html)。

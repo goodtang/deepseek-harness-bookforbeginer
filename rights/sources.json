@@ -112,6 +112,17 @@
       "license_file": "LICENSES/MIT-Cordis.txt",
       "use": "Chapter eight source-linked explanation of Context/Service/effects/dependent teardown; original teaching examples/diagrams, no full vendor runtime copied",
       "attribution": "THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "SRC-INCLUDE",
+      "title": "Vendored Cordis Include patch implementation",
+      "creator": "Shigma and contributors under the retained vendored MIT license",
+      "url": "https://github.com/goodtang/deepseek-harness-local/tree/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/vendor/include",
+      "version": "Harness fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159; upstream pins in vendor/README.md",
+      "license": "MIT, Copyright (c) 2021-present Shigma",
+      "license_file": "LICENSES/MIT-Cordis.txt",
+      "use": "Chapter nine source-linked explanation of patch target matching and whole-field assignment; short explicitly abridged loop excerpt, no full implementation copied",
+      "attribution": "THIRD_PARTY_NOTICES.md"
     }
   ],
   "materials": [
@@ -1745,6 +1756,120 @@
       "path": "labs/plugin-services/evidence/2026-11-18-revision/verification.json",
       "source_id": "SRC-BOOK",
       "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/第09章-插件怎样组成应用，读懂启动与配置.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/dump-layers.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/entry.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/prepare.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/verify.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/verify.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/package.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/layers.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/regression.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-02.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-CONFIG-02.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
       "status": "cleared"
     }
   ],

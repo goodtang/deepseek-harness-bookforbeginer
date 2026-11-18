@@ -1,0 +1,106 @@
+{
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "capturedAt": "2026-11-18T09:59:47.510Z",
+  "stages": [
+    {
+      "name": "default",
+      "dumpSha256": "6fdb6d161d588ef59e18602ea24805323ab6686e6680d943389341c4c44ced85",
+      "businessRow": null,
+      "unknownIdWarning": false
+    },
+    {
+      "name": "profile",
+      "dumpSha256": "bf31e2e19bb25f374110b4182f0bddc734cf48667a218abb67db60a61b1a3d54",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "memory",
+          "path": "profile-only.json"
+        }
+      },
+      "unknownIdWarning": false
+    },
+    {
+      "name": "home",
+      "dumpSha256": "ebb6c264543c854b15704bbd9f56d45af5710be4f358a1a536b8a3da1705fae6",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "memory"
+        }
+      },
+      "unknownIdWarning": false
+    },
+    {
+      "name": "first-overlay",
+      "dumpSha256": "01c4f81b51f050691a43f247117ef35bf244794bcbabdd329a276145b82d933c",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "file",
+          "path": "cli-only.json"
+        }
+      },
+      "unknownIdWarning": false
+    },
+    {
+      "name": "second-overlay",
+      "dumpSha256": "4a8f7855d1446c2dd0b24232c4559f857455f1d4c1989cee851d55d68c5fd7c1",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "memory"
+        }
+      },
+      "unknownIdWarning": false
+    },
+    {
+      "name": "unknown-id",
+      "dumpSha256": "ebb6c264543c854b15704bbd9f56d45af5710be4f358a1a536b8a3da1705fae6",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "memory"
+        }
+      },
+      "unknownIdWarning": true
+    },
+    {
+      "name": "expression",
+      "dumpSha256": "cca61c298a6b140fbe36a94cf195d60a5558acacdfe31aa17b0e7f51b66d0256",
+      "businessRow": {
+        "id": "book-ticket-tool",
+        "name": "labs/profile-config/entry.mjs",
+        "config": {
+          "source": "memory",
+          "probe": {
+            "expression": "(() => { throw new Error(\"BOOK_JS_MUST_NOT_RUN\"); })()"
+          }
+        }
+      },
+      "unknownIdWarning": false
+    },
+    {
+      "name": "broken-user-default",
+      "dumpSha256": "6fdb6d161d588ef59e18602ea24805323ab6686e6680d943389341c4c44ced85",
+      "businessRow": null,
+      "unknownIdWarning": false
+    }
+  ],
+  "cleanup": {
+    "temporaryRootRemoved": true
+  },
+  "jsEvaluated": false,
+  "bundles": [
+    "@deepseek-ai/dsh-base",
+    "@deepseek-ai/dsh-headless"
+  ],
+  "defaultWithPatchExit": 1,
+  "brokenUserEffectiveExit": 1,
+  "scope": "Selected fictional business row only; module path displayed relative to the book. Original full dumps retained privately; dump hashes refer to original bytes."
+}

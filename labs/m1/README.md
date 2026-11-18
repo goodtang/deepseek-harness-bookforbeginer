@@ -145,3 +145,7 @@ S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载�
 新增 gate-release、gate-cancel、gate-uncooperative 三个教学场景，共用原启动、会话落盘、取消 API 和清理流程；它们不改变 M1 的验收定义。默认选择本书 wait-cancel/start/plugin.mjs，允许第五个参数选择读者副本，展示仍使用完整字段。S2/S2-exhaust/S3 不接收自定义插件，保留原行为。
 
 控制端在 gate 的真实 waiting 状态后放行或取消；不合作场景先核对 accepted 后仍 waiting=true、aborted=true 且尚无 finally/业务调用，再明确放行。工具的 await 后检查继续阻止业务查询。完整操作与范围见[第六章实验](../wait-cancel/README.md)，当前脚本与五组实测见[核验汇总](../wait-cancel/evidence/2026-11-13/verification.json)，原场景的新回归见[回归记录](../wait-cancel/evidence/2026-11-13/regression.json)。前章修订记录保留其当时脚本哈希，不更新为本次版本。
+
+## 第九章的可选额外补丁
+
+S1可在已有plugin和presentation参数之后传入额外补丁路径，运行器保存原始字节/hash，并在原设施补丁之后传给真正的第二个CLI --patch。此参数只属于书稿设施，非产品新增选项；原默认路径不传时不变，本轮四原场景实跑见[第九章记录](../profile-config/evidence/2026-11-18/regression.json)。旧章报告继续适用其原运行器hash，不改写历史。

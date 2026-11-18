@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "files": {
+    "labs/profile-config/dump-layers.mjs": "fe391582e40da095a4b208af4c8a84c4b34f7a349c11d68f8b960af7c4349121",
+    "labs/profile-config/entry.mjs": "dd8382a4133a44edb18715fcb6bf07ca10778b40463ea77f64c179471b662f09",
+    "labs/profile-config/package.json": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+    "labs/profile-config/prepare.mjs": "f850d7b5fabcf7664343f776a998f45b7cb20e925810cd08dad379bc7ba14955",
+    "labs/profile-config/run.mjs": "8780e0397c0db1dc189234799f217f009f28e6233d375f4618fe5b2ae274edf5",
+    "labs/profile-config/verify.mjs": "712f6d97aad906f6157cf1e9ea7f4997bbd468c74ff8abd0f2fc42cb69d2188b",
+    "labs/profile-config/verify.test.mjs": "7a24b993e0957d6ddb36bf5cd16685b83214dc83d7f594c20d20d501cd03f5b7",
+    "labs/m1/run.mjs": "5357f505c4015878d5a7526ae1f9d7411ac7d696b235112f4fc89bac3eb6732a"
+  },
+  "unchangedConsumerSha256": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+  "scope": "Current code; full runtime originals retained privately. Earlier chapter reports keep their original runner hash."
+}
