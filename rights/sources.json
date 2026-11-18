@@ -1871,6 +1871,66 @@
       "source_id": "SRC-BOOK",
       "basis": "Independent tutorial, original configuration adapters/checks, self-drawn diagrams or selected fictional-data experiment evidence. Attributed Harness/Include excerpts retain SRC-DSH/SRC-INCLUDE licenses; full configuration prompts omitted.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/failure.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/failure-regression.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/fixtures/unrelated-file.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/failures.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/launch-map.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/regression.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
     }
   ],
   "pending": [

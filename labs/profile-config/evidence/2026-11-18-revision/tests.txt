@@ -1,0 +1,30 @@
+✔ preload allows a completed child to exit without waiting for its timer (111.2905ms)
+✔ an active child produces a heartbeat without exposing environment values (2087.0719ms)
+✔ import tracing is emitted only when explicitly requested (178.1772ms)
+✔ unrelated real ENOENT is not the configured ticket-path failure (6.1444ms)
+▶ configured path failure must reach the expected stage and file
+  ✔ missing audit (3.9708ms)
+  ✔ configuration not received (2.2026ms)
+  ✔ other source selected (1.9716ms)
+  ✔ another path configured (2.0861ms)
+  ✔ another provider path started (1.373ms)
+  ✔ another failed file (1.4877ms)
+  ✔ wrong failure code (0.9647ms)
+  ✔ failure before provider start (7.1007ms)
+✔ configured path failure must reach the expected stage and file (29.5805ms)
+▶ actual configured profile and misleading evidence
+  ✔ selected configuration ignored (5.2947ms)
+  ✔ provider differs from configuration (2.4466ms)
+  ✔ no completed service check (2.3832ms)
+  ✔ tool did not execute (2.2392ms)
+  ✔ no extra overlay captured (2.2544ms)
+  ✔ cleanup incomplete (2.6947ms)
+✔ actual configured profile and misleading evidence (26.3658ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2490.0478

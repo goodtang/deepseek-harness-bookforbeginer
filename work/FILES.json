@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "429e9921a5c96811be715082a3dc6c8c250e744e211fb33d9993daa7b40d8fe9"
+      "sha256": "67e50d6e3f983a3053d36d68494f1cf981ef3796d3e7fbea89af97ccfa300901"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -47,7 +47,7 @@
     },
     {
       "path": "chapters/第09章-插件怎样组成应用，读懂启动与配置.md",
-      "sha256": "ad59da1efcda84e462e05d30d97f4d0c0be9b1864d8f5f597935ed3f25de3eba"
+      "sha256": "286839a5491000d635e7deaf9f9f64d5bbf3f8f71068b28e490deb6321d4b406"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -527,11 +527,11 @@
     },
     {
       "path": "labs/m1/README.md",
-      "sha256": "0251c3ce52cd6549717752869c77eb4523da6ae48bcba9598f7e40107d2cdd2d"
+      "sha256": "1a1e108cdfcbbabc4a8f271035147bd9ff546be2f496fcb759c5ef3fcdafc831"
     },
     {
       "path": "labs/m1/run.mjs",
-      "sha256": "5357f505c4015878d5a7526ae1f9d7411ac7d696b235112f4fc89bac3eb6732a"
+      "sha256": "73b03eef34bb992628fc96bd65347556ab8960da511a48b496c733e42162de2e"
     },
     {
       "path": "labs/m1/startup-probe.mjs",
@@ -803,7 +803,7 @@
     },
     {
       "path": "labs/profile-config/entry.mjs",
-      "sha256": "dd8382a4133a44edb18715fcb6bf07ca10778b40463ea77f64c179471b662f09"
+      "sha256": "1d05c28947dfe365b555b7ea61889ccd51cc3483d1c7fa5129ff6b3f952c4fc2"
     },
     {
       "path": "labs/profile-config/evidence/2026-11-18/inputs.json",
@@ -830,6 +830,46 @@
       "sha256": "65c594598009b9b2b55a1de6e2d83fa06e7c68996580c4416420a71620695086"
     },
     {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/failures.json",
+      "sha256": "7e224ace02f9c37c5f154494d867185372eb3d55ea70ab6320fde9554f67c89d"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/inputs.json",
+      "sha256": "11e154bf090608d491ee9aa3182359019a3ef8d3891edba722c3e6304ca0b2bc"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/launch-map.json",
+      "sha256": "d14dad79af83ec3721ddd25229159a46a810e4bc43191ed1c24b11004cdab2fd"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/README.md",
+      "sha256": "cfb36cb9bd31a9364059e82e2c6e46d30cac46d4cf76698a5e0c7a6c2c9797d0"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/regression.json",
+      "sha256": "7a105126f19f2684e60e8448dbecc719f67984479e3c073a4aad2673d23a92fd"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/tests.txt",
+      "sha256": "32db0461ad326db455af94b2ab7ae9abc45fb73aabd6fd625b5a3a5871dd0905"
+    },
+    {
+      "path": "labs/profile-config/evidence/2026-11-18-revision/verification.json",
+      "sha256": "57b2476053028af9dd420b0fe18185ecb3d2e3e48a104f676ed72386ba4324ed"
+    },
+    {
+      "path": "labs/profile-config/failure-regression.test.mjs",
+      "sha256": "c73b2c66f59cd876f2732eea7373528fd80b89ad9de71c7d418a196caf4440dd"
+    },
+    {
+      "path": "labs/profile-config/failure.test.mjs",
+      "sha256": "aba5d1925a5c32d1724e89ef14ae925f87bfbf4399705e6f02cdc8c258fae4c8"
+    },
+    {
+      "path": "labs/profile-config/fixtures/unrelated-file.mjs",
+      "sha256": "7ab7b91cd4f35ae42de34e74274b60a81c09692d8152c78c031532f9aad0b18a"
+    },
+    {
       "path": "labs/profile-config/package.json",
       "sha256": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8"
     },
@@ -839,15 +879,15 @@
     },
     {
       "path": "labs/profile-config/README.md",
-      "sha256": "5cd11a5e2d80ca47d0d3cc8dfc17afaabe2ac0cc83d43be464f2e73fea526f5e"
+      "sha256": "b2a60e53cc5d06622c3cab408e2f47d6762d6d6e9c033b25bd9697c1e4813b68"
     },
     {
       "path": "labs/profile-config/run.mjs",
-      "sha256": "8780e0397c0db1dc189234799f217f009f28e6233d375f4618fe5b2ae274edf5"
+      "sha256": "a0035afc6bd56989dd438710534943d56fe293123e735d29dbc4a2a1e736689b"
     },
     {
       "path": "labs/profile-config/verify.mjs",
-      "sha256": "712f6d97aad906f6157cf1e9ea7f4997bbd468c74ff8abd0f2fc42cb69d2188b"
+      "sha256": "0d5df71b632c3981e8f3419578440b19b3faf1299dc8b7d1568a1b733c819134"
     },
     {
       "path": "labs/profile-config/verify.test.mjs",
@@ -1343,7 +1383,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "7356ce6f275d30229473c47c4904ad0ebbe85de6f70245d7a0c3189e997c68c4"
+      "sha256": "ca0e6fec6abb4b36d60994a3f1a32f9bf9d250ad23f27c18aad616eb6238d137"
     },
     {
       "path": "templates/chapter-task.md",
@@ -1387,11 +1427,11 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "2251db0fc9e60bc46613ef41496f22e4542d173dc168061db3a22592d7030949"
+      "sha256": "49181b9d3d70c19290aeb9e07e4ba57cd786932d890df24f005e301afbbd1c10"
     },
     {
       "path": "work/CH-CONFIG-task.md",
-      "sha256": "3be298c9df13823fd67a281ec44783a51babf794f4eb5bf206fafe013fd08ac4"
+      "sha256": "b505b7f950c33ad6f15c52773206418caa8ff4c5c7e787cceb4b672f7e1f8509"
     },
     {
       "path": "work/CH-FUNC-task.md",
@@ -1427,11 +1467,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "b66d9342dad2ea26bb033b6efc3cba175e35b28aeba168d45a4634c09a9aa167"
+      "sha256": "2d6326c368b8205ff5387343eabcd4a00120f874b244711e0bea32d3480e9466"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "4bf6d2cbc08d5a06f139ae4409dd507aebc95212a696bffe1d6de489bdfd6328"
+      "sha256": "b0f4ef2fd1dd9db881937cff8b96b22a4c80fe169b343b12e35f81cf0aa7d7c5"
     },
     {
       "path": "work/START-HERE.md",
@@ -1439,7 +1479,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "5e89bf2ff7b46b0892045c81e0fb2bbd349d161143d90df32e4cd0af50150a27"
+      "sha256": "afb0cc808bc353f2a8cfb41a6bfe92315e1c83a81fcc9ff466fc5a56b16d2e13"
     }
   ]
 }

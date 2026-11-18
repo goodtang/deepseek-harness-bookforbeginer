@@ -1,0 +1,20 @@
+{
+  "launchOriginalSha256": "4d333e1b7e5d9037808878bf9bec152ae14ca3faac8af97dca69f2e655a2adbe",
+  "actualProfile": "headless",
+  "actualCliEntry": "apps/cli/src/bin.ts",
+  "patchOrder": [
+    {
+      "role": "support",
+      "savedSnapshot": "runtime/overlay.yml",
+      "sha256": "9b91466e309baa725f704bd18427edbdf94320af4251fc86baf42aaa21064d86"
+    },
+    {
+      "role": "business",
+      "savedSnapshot": "runtime/extra-overlay.yml",
+      "sha256": "41e1c0db3c5526273ea2a0221b2ae53ba975758bc35f25a63bf0b9cc9cbd0dec"
+    }
+  ],
+  "homeAndWorkspaceAreDifferent": true,
+  "modelUsesLoopback": true,
+  "scope": "Actual argv values inspected; local temp paths omitted here. Runtime launch.json retains full values, not a replayable live environment after cleanup."
+}

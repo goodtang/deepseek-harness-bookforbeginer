@@ -1,0 +1,28 @@
+{
+  "correctMissingFile": {
+    "selectedSource": "file",
+    "selectedFile": "missing.json",
+    "providerStartedFile": "missing.json",
+    "actualErrorCode": "ENOENT",
+    "actualFailedFile": "missing.json",
+    "sameConfiguredAndFailedPath": true,
+    "correctStageOrder": true
+  },
+  "historicalUnrelatedError": {
+    "originalReportSha256": "0bb2d4df1b6f91ab2ec6f0cb5e92e66fb2753ac3404e185fd3e42a71212b72c3",
+    "previousOuterAccepted": true,
+    "currentCheckerRejects": true,
+    "configSelectionObserved": false
+  },
+  "freshSameUnrelatedError": {
+    "originalReportSha256": "353281f8f33ce23cf16ba124cfbc6f41c41363dc01b9b277a1ab94c0411ebc46",
+    "revisedOuterExit": 1,
+    "successfulSummaryCreated": false
+  },
+  "publicFixture": {
+    "originalReportSha256": "3f70c534c806aadae7ee8a4cdc31d47968ed95185d1f98a558887695dba5ecaa",
+    "currentCheckerRejects": true,
+    "fixtureSha256": "7ab7b91cd4f35ae42de34e74274b60a81c09692d8152c78c031532f9aad0b18a",
+    "scope": "Actual unrelated settings read, not a report mutation; all subprocess/model/temp-root cleanup verified"
+  }
+}

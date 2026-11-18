@@ -1,0 +1,22 @@
+{
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "files": {
+    "labs/profile-config/dump-layers.mjs": "fe391582e40da095a4b208af4c8a84c4b34f7a349c11d68f8b960af7c4349121",
+    "labs/profile-config/entry.mjs": "1d05c28947dfe365b555b7ea61889ccd51cc3483d1c7fa5129ff6b3f952c4fc2",
+    "labs/profile-config/failure-regression.test.mjs": "c73b2c66f59cd876f2732eea7373528fd80b89ad9de71c7d418a196caf4440dd",
+    "labs/profile-config/failure.test.mjs": "aba5d1925a5c32d1724e89ef14ae925f87bfbf4399705e6f02cdc8c258fae4c8",
+    "labs/profile-config/package.json": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+    "labs/profile-config/prepare.mjs": "f850d7b5fabcf7664343f776a998f45b7cb20e925810cd08dad379bc7ba14955",
+    "labs/profile-config/run.mjs": "a0035afc6bd56989dd438710534943d56fe293123e735d29dbc4a2a1e736689b",
+    "labs/profile-config/verify.mjs": "0d5df71b632c3981e8f3419578440b19b3faf1299dc8b7d1568a1b733c819134",
+    "labs/profile-config/verify.test.mjs": "7a24b993e0957d6ddb36bf5cd16685b83214dc83d7f594c20d20d501cd03f5b7",
+    "labs/profile-config/fixtures/unrelated-file.mjs": "7ab7b91cd4f35ae42de34e74274b60a81c09692d8152c78c031532f9aad0b18a",
+    "labs/m1/run.mjs": "73b03eef34bb992628fc96bd65347556ab8960da511a48b496c733e42162de2e"
+  },
+  "unchangedConsumerSha256": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+  "sourceConfigurationFiles": {
+    "packages/bundle/base/cordis.patch.yml": "948d07f786b114d2277f54dc75f427440099e21f4007b0724c4a1b356cd8e6dd",
+    "packages/bundle/headless/cordis.patch.yml": "dfc81e1e44e1080263ac24c86ff2dec5831676e9c5b76096e6bc7ecf6aa817a3"
+  },
+  "scope": "Current checker/code fingerprints; raw failures and launch/config/request originals kept separately. Old evidence is not rewritten."
+}

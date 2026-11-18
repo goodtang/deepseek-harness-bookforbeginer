@@ -8,7 +8,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { inspect } from './verify.mjs';
+import { inspect, inspectFailure } from './verify.mjs';
 
 const [sourceArg, scenario, outputArg, exerciseArg] = process.argv.slice(2);
 assert.ok(sourceArg && outputArg && exerciseArg, 'Usage: run.mjs <Harness-root> <scenario> <new-evidence> <exercise-directory>');
@@ -36,13 +36,16 @@ if (['memory', 'file', 'restored', 'reader'].includes(scenario)) {
   behavior = { expectedFileSelectionRejected: true, actualSource: 'memory', functionalPassed: report.functionalPassed, stderrWasEmpty: report.stderr === '' };
 } else {
   assert.equal(code, 1); assert.equal(report.functionalPassed, false);
-  const audit = report.executionAudit ?? [];
-  assert.equal(audit.filter(row => row.type === 'execute').length, 0);
-  assert.equal(audit.filter(row => row.type === 'provider-loaded').length, 0);
-  if (scenario === 'missing-path') assert.ok(report.stderr.includes('File tickets require config.path.'));
-  if (scenario === 'bad-path') assert.ok(report.stderr.includes('ENOENT'));
-  if (scenario === 'disabled') assert.equal(audit.filter(row => row.type === 'config-selected').length, 0);
-  behavior = { invalidCombinationRejected: true, toolExecutions: 0, functionalPassed: false };
+  if (scenario === 'disabled') {
+    const yaml = createRequire(join(source, 'package.json'))('js-yaml');
+    const patches = yaml.load(bytes.toString('utf8'));
+    assert.deepEqual(patches, [{ id: 'book-ticket-tool', disabled: true }]);
+    assert.equal(report.diagnosticFiles['execution.jsonl'].exists, false);
+    assert.equal(report.requestBodies.length, 2);
+    assert.ok(report.requestBodies[0].tools.every(row => row.name !== 'book_ticket_lookup'));
+    behavior = { invalidCombinationRejected: true, disabledPatchVerified: true, bookToolAbsentFromRequest: true, executionAuditPresent: false };
+  } else behavior = inspectFailure(report, scenario, join(exercise, 'missing.json'));
+
 }
 const summary = { scenario, capturedAt: new Date().toISOString(), originalReportSha256: createHash('sha256').update(raw).digest('hex'),
   extraPatchSha256: report.extraPatch.sha256, runnerExitCode: code, applicationExitCode: report.applicationExitCode,

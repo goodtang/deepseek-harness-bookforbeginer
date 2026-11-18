@@ -92,8 +92,11 @@ try {
     sequence, repeatLast: false, toolName: 'book_ticket_lookup', toolArguments: '{"id":"TK-1042"}',
     partialText: marker, successText: 'M1 query completed.' });
   mark('mock-listening');
-  child = spawn(process.execPath, ['--import', pathToFileURL(join(here, 'startup-probe.mjs')).href, '--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless',
-    '--patch', patch, ...(extraPatch ? ['--patch', extraPatch] : []), 'Look up TK-1042 with book_ticket_lookup.'], { cwd: workspace, windowsHide: true,
+  report.launch = { file: process.execPath,
+    args: ['--import', pathToFileURL(join(here, 'startup-probe.mjs')).href, '--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless',
+      '--patch', patch, ...(extraPatch ? ['--patch', extraPatch] : []), 'Look up TK-1042 with book_ticket_lookup.'],
+    cwd: workspace, home, modelBaseURL: `${server.baseURL}/v1` };
+  child = spawn(report.launch.file, report.launch.args, { cwd: report.launch.cwd, windowsHide: true,
     env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source, BOOK_EXECUTION_LOG: auditPath,
       BOOK_SESSION_EVENTS: eventPath, BOOK_CONTROL_FILE: controlPath, BOOK_STARTUP_LOG: startupPath,
       BOOK_GATE_CONTROL: gatePath,
@@ -248,6 +251,8 @@ finally {
   report.cleanup.childExited = !child || child.exitCode !== null || child.signalCode !== null;
   report.requests = server?.requests.map(request => ({ attempt: request.attempt, behavior: request.behavior,
     outcome: request.outcome, chunksSent: request.chunksSent }));
+  report.requestBodies = server?.requests.map(request => request.body);
+  if (report.launch) await writeFile(join(output, 'launch.json'), JSON.stringify(report.launch, null, 2) + '\n');
   await rm(root, { recursive: true });
   try { await access(root); report.cleanup.temporaryRootRemoved = false; }
   catch (error) { if (error.code !== 'ENOENT') throw error; report.cleanup.temporaryRootRemoved = true; }

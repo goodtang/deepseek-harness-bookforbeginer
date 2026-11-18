@@ -149,3 +149,5 @@ S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载�
 ## 第九章的可选额外补丁
 
 S1可在已有plugin和presentation参数之后传入额外补丁路径，运行器保存原始字节/hash，并在原设施补丁之后传给真正的第二个CLI --patch。此参数只属于书稿设施，非产品新增选项；原默认路径不传时不变，本轮四原场景实跑见[第九章记录](../profile-config/evidence/2026-11-18/regression.json)。旧章报告继续适用其原运行器hash，不改写历史。
+
+第九章修订增加runtime/launch.json，直接记录真正传给子进程的argv、cwd、home和模拟模型地址，不保存API凭据；失败时也保留实际requestBodies，方便核查工具是否被提供给模型。它是清理后的运行记录，含临时路径，不能当存活环境直接重放；完整模型请求不直接公开。原四场景已按新运行器重新核验，旧报告保留旧hash。

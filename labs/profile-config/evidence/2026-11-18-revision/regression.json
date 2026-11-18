@@ -1,0 +1,52 @@
+{
+  "runs": [
+    {
+      "scenario": "S1",
+      "reportSha256": "74c4dfd54247b8c405dee326010989d5d9cdf0bc4d0cc47336f3230eae9014d6",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "requests": 2,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "S2",
+      "reportSha256": "5bc8010686ee38505edfe0865bd9cff9dea4d6faf66856f6f6831e378613401c",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "requests": 3,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "S2-exhaust",
+      "reportSha256": "f78f09cd9f70c46c0bf39c54f29f04d87df49e0bd1c9f6c5e1202980428c47ae",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "requests": 2,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "S3",
+      "reportSha256": "60380bb7d5ea2cf0b60909e86e5ef8c3e9a69089ee25bcd5839bd33601073fc7",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "requests": 2,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ]
+}

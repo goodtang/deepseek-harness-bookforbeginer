@@ -1,0 +1,225 @@
+{
+  "capturedAt": "2026-11-18T10:56:15.568932+00:00",
+  "runs": [
+    {
+      "scenario": "memory",
+      "capturedAt": "2026-11-18T10:48:44.713Z",
+      "originalReportSha256": "213a937abfc77112e23239f6f1a5813e0a9022db38fe5d1702d8c7677119b66e",
+      "extraPatchSha256": "d19f0a224db1b26911ed60cc1cbd88260cb685c825391c3b09a5ea468c463245",
+      "runnerExitCode": 0,
+      "applicationExitCode": 0,
+      "source": "memory",
+      "requests": 2,
+      "toolExecutions": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "serviceChecks": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "file",
+      "capturedAt": "2026-11-18T10:48:44.677Z",
+      "originalReportSha256": "fc4e61be6f07f566aa475e079761893c6a7fb626420024202b1091c41376a9ca",
+      "extraPatchSha256": "41e1c0db3c5526273ea2a0221b2ae53ba975758bc35f25a63bf0b9cc9cbd0dec",
+      "runnerExitCode": 0,
+      "applicationExitCode": 0,
+      "source": "file",
+      "requests": 2,
+      "toolExecutions": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "serviceChecks": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "restored",
+      "capturedAt": "2026-11-18T10:48:44.639Z",
+      "originalReportSha256": "f6811e957823c2b40ff9d8086cbf8bf81872d0c03868fbcfaa2bf2fe1c871446",
+      "extraPatchSha256": "d19f0a224db1b26911ed60cc1cbd88260cb685c825391c3b09a5ea468c463245",
+      "runnerExitCode": 0,
+      "applicationExitCode": 0,
+      "source": "memory",
+      "requests": 2,
+      "toolExecutions": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "serviceChecks": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "typo",
+      "capturedAt": "2026-11-18T10:48:44.763Z",
+      "originalReportSha256": "b40c1c97a3628aeca4505a5cd9f8798361d5712fc58afd98d161ecfeef5d3125",
+      "extraPatchSha256": "1fa8b6e31bf0614dba975a748e3ef9c1bce3ae57254e98aace23e0b5c0b31d34",
+      "runnerExitCode": 0,
+      "applicationExitCode": 0,
+      "expectedFileSelectionRejected": true,
+      "actualSource": "memory",
+      "functionalPassed": true,
+      "stderrWasEmpty": true,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "missing-path",
+      "capturedAt": "2026-11-18T10:48:44.668Z",
+      "originalReportSha256": "d2d6ec21e1765e92400238eaddc8c5c78c0fe8e8919df4e286a561918506e27b",
+      "extraPatchSha256": "96e1d9a495e9fd0b647b2d44a272caeb1c3c636d01014a602dbc5580d0730917",
+      "runnerExitCode": 1,
+      "applicationExitCode": 0,
+      "invalidCombinationRejected": true,
+      "failureStage": "configuration",
+      "reason": "missing-file-path",
+      "toolExecutions": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "bad-path",
+      "capturedAt": "2026-11-18T10:47:35.856Z",
+      "originalReportSha256": "b1b491aa6465c86648f83b114ede2b86806a4cf38cb3bdfc5459299941be6872",
+      "extraPatchSha256": "7fff43d15ae019e1e0fa64687caaf0588aa81f59a4c1a7c3d0dd7cab5253bd30",
+      "runnerExitCode": 1,
+      "applicationExitCode": 0,
+      "invalidCombinationRejected": true,
+      "failureStage": "file-provider-read",
+      "reason": "ENOENT",
+      "configuredPathVerified": true,
+      "toolExecutions": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "disabled",
+      "capturedAt": "2026-11-18T10:48:44.546Z",
+      "originalReportSha256": "e539ddfe89902232295c6b2f15b370e2b6984394ca56aa273e14b0ea2e3e1a03",
+      "extraPatchSha256": "3a40e2b4572378d0eea6f95935c8ed8cb5cf08041ba81a320e304f24d4e8b51e",
+      "runnerExitCode": 1,
+      "applicationExitCode": 0,
+      "invalidCombinationRejected": true,
+      "disabledPatchVerified": true,
+      "bookToolAbsentFromRequest": true,
+      "executionAuditPresent": false,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    },
+    {
+      "scenario": "reader",
+      "capturedAt": "2026-11-18T10:51:48.427Z",
+      "originalReportSha256": "238351ae034d107f1ab5a60a1227f2e5b589083c5f90835b65e4953892b9a624",
+      "extraPatchSha256": "b7df7ea89d229aa5c3cda3579f6048d69fb7da01a954043c122ece8d6d80d013",
+      "runnerExitCode": 0,
+      "applicationExitCode": 0,
+      "source": "file",
+      "requests": 2,
+      "toolExecutions": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "serviceChecks": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "networkIsolationVerified": false,
+      "readerAccepted": false
+    }
+  ],
+  "sameToolSchema": true,
+  "consumerSha256": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+  "readerLiteralCommands": [
+    {
+      "phase": "start",
+      "exerciseExit": 1,
+      "baseFunctionalPassed": true,
+      "actualSource": "memory",
+      "originalReportSha256": "d291176866f496412640d4cc79ee49ef1e08de83bf2aa8812c02ed48ab927837",
+      "patchSha256": "d19f0a224db1b26911ed60cc1cbd88260cb685c825391c3b09a5ea468c463245",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "phase": "completed",
+      "exerciseExit": 0,
+      "baseFunctionalPassed": true,
+      "actualSource": "file",
+      "originalReportSha256": "238351ae034d107f1ab5a60a1227f2e5b589083c5f90835b65e4953892b9a624",
+      "patchSha256": "b7df7ea89d229aa5c3cda3579f6048d69fb7da01a954043c122ece8d6d80d013",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "phase": "restored",
+      "exerciseExit": 1,
+      "baseFunctionalPassed": true,
+      "actualSource": "memory",
+      "originalReportSha256": "35b19b96b5cb273c21dc47480b521fde77aed14bb7d761edd7385c95193e022a",
+      "patchSha256": "d19f0a224db1b26911ed60cc1cbd88260cb685c825391c3b09a5ea468c463245",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "completedPatchBackedUp": true,
+  "readerInputBytesRestored": true,
+  "readerAccepted": false,
+  "networkIsolationVerified": false
+}
