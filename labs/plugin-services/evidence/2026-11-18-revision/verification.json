@@ -1,0 +1,264 @@
+{
+  "capturedAt": "2026-11-18T09:36:48.527Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "runs": [
+    {
+      "scenario": "memory",
+      "originalReportSha256": "8655590f7bca1ca5593a9082931f3316c24b8a6fb95e707307b3f9f105245a7b",
+      "verification": {
+        "source": "memory",
+        "lifecycle": false,
+        "toolExecutions": 1,
+        "requests": 2,
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "stateTransitions": [
+          {
+            "type": "composition-state",
+            "phase": "before-provider",
+            "state": "PENDING",
+            "service": false,
+            "tool": false
+          },
+          {
+            "type": "composition-state",
+            "phase": "provider-ready",
+            "state": "ACTIVE",
+            "service": true,
+            "tool": true
+          }
+        ],
+        "consumerMounts": 1,
+        "observedTurnEnds": 1,
+        "consumersStoppedBeforeProviders": true,
+        "serviceChecks": 1,
+        "toolProviderQueries": [
+          {
+            "source": "memory",
+            "id": "TK-1042"
+          }
+        ],
+        "cleanup": {
+          "mockServerClosed": true,
+          "childExited": true,
+          "temporaryRootRemoved": true
+        }
+      }
+    },
+    {
+      "scenario": "file",
+      "originalReportSha256": "3848a44de9fa853441bc91c87473fa4ef72927322dd25ce8861eb94a87e049e9",
+      "verification": {
+        "source": "file",
+        "lifecycle": false,
+        "toolExecutions": 1,
+        "requests": 2,
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "stateTransitions": [
+          {
+            "type": "composition-state",
+            "phase": "before-provider",
+            "state": "PENDING",
+            "service": false,
+            "tool": false
+          },
+          {
+            "type": "composition-state",
+            "phase": "provider-ready",
+            "state": "ACTIVE",
+            "service": true,
+            "tool": true
+          }
+        ],
+        "consumerMounts": 1,
+        "observedTurnEnds": 1,
+        "consumersStoppedBeforeProviders": true,
+        "serviceChecks": 1,
+        "toolProviderQueries": [
+          {
+            "source": "file",
+            "id": "TK-1042"
+          }
+        ],
+        "cleanup": {
+          "mockServerClosed": true,
+          "childExited": true,
+          "temporaryRootRemoved": true
+        }
+      }
+    },
+    {
+      "scenario": "lifecycle",
+      "originalReportSha256": "9e354dc6e8dc48fe3db88447737398b062561e5dee7db567726556b0864be776",
+      "verification": {
+        "source": "file",
+        "lifecycle": true,
+        "toolExecutions": 1,
+        "requests": 2,
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "stateTransitions": [
+          {
+            "type": "composition-state",
+            "phase": "before-provider",
+            "state": "PENDING",
+            "service": false,
+            "tool": false
+          },
+          {
+            "type": "composition-state",
+            "phase": "provider-ready",
+            "state": "ACTIVE",
+            "service": true,
+            "tool": true
+          },
+          {
+            "type": "composition-state",
+            "phase": "provider-removed",
+            "state": "PENDING",
+            "service": false,
+            "tool": false
+          },
+          {
+            "type": "composition-state",
+            "phase": "replacement-ready",
+            "state": "ACTIVE",
+            "service": true,
+            "tool": true
+          }
+        ],
+        "consumerMounts": 2,
+        "observedTurnEnds": 1,
+        "consumersStoppedBeforeProviders": true,
+        "serviceChecks": 2,
+        "toolProviderQueries": [
+          {
+            "source": "file",
+            "id": "TK-1042"
+          }
+        ],
+        "cleanup": {
+          "mockServerClosed": true,
+          "childExited": true,
+          "temporaryRootRemoved": true
+        }
+      }
+    },
+    {
+      "scenario": "reader",
+      "originalReportSha256": "3e5a87ef9346f6bf7c2bf242537f346b60efa4a4c6a16ae91d4e21f792938a48",
+      "verification": {
+        "source": "reader",
+        "lifecycle": false,
+        "toolExecutions": 1,
+        "requests": 2,
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "stateTransitions": [
+          {
+            "type": "composition-state",
+            "phase": "before-provider",
+            "state": "PENDING",
+            "service": false,
+            "tool": false
+          },
+          {
+            "type": "composition-state",
+            "phase": "provider-ready",
+            "state": "ACTIVE",
+            "service": true,
+            "tool": true
+          }
+        ],
+        "consumerMounts": 1,
+        "observedTurnEnds": 1,
+        "consumersStoppedBeforeProviders": true,
+        "serviceChecks": 1,
+        "toolProviderQueries": [
+          {
+            "source": "reader",
+            "id": "TK-1042"
+          }
+        ],
+        "cleanup": {
+          "mockServerClosed": true,
+          "childExited": true,
+          "temporaryRootRemoved": true
+        }
+      }
+    },
+    {
+      "scenario": "missing-inject",
+      "originalReportSha256": "f12f8f4f219b0f43f0a5a88bfddf5a20fd9716dd7adcd629547334b209ac2ec9",
+      "applicationExitCode": 0,
+      "functionalPassed": false,
+      "compositionStates": [
+        {
+          "type": "composition-state",
+          "phase": "before-provider",
+          "state": "ACTIVE",
+          "service": false,
+          "tool": true
+        }
+      ],
+      "providerQueries": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "bad-file",
+      "originalReportSha256": "5c09fcfd9a632ecc555620ef3d906d7eac107474198bf2f9dadd5496f4a6baf9",
+      "applicationExitCode": 0,
+      "functionalPassed": false,
+      "compositionStates": [
+        {
+          "type": "composition-state",
+          "phase": "before-provider",
+          "state": "PENDING",
+          "service": false,
+          "tool": false
+        }
+      ],
+      "providerQueries": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "commonToolSchema": {
+    "name": "book_ticket_lookup",
+    "description": "Look up a fictional ticket by its exact ID; does not modify records.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Ticket ID, for example TK-1042"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  "readerAccepted": false,
+  "networkIsolationVerified": false
+}

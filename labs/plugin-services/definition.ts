@@ -21,6 +21,10 @@ export abstract class TicketSource extends Service {
     super(ctx, 'bookTickets')
   }
 
-  /** @param id Exact ticket identity. @param signal Caller cancellation. @returns A copy, or null when absent. */
+  /**
+   * @param id Exact ticket identity.
+   * @param signal Caller cancellation; an already-aborted signal rejects with its reason.
+   * @returns A fresh mutable copy, or null when absent.
+   */
   abstract lookup(id: string, signal: AbortSignal): Promise<Ticket | null>
 }

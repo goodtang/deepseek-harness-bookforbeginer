@@ -1,0 +1,26 @@
+✔ reject the real previously accepted provider that ignores id, cancellation and copy semantics (7.0094ms)
+✔ JSON data admits the same fictional ticket fields (1.324ms)
+✔ file data rejects invalid JSON (0.3679ms)
+✔ file data rejects non-array root (0.1344ms)
+✔ file data rejects missing field (0.1962ms)
+✔ file data rejects wrong field type (0.1243ms)
+✔ file data rejects duplicate identity (0.1147ms)
+✔ file data rejects unrecognized field (0.1321ms)
+▶ lifecycle evidence accepts the real run and rejects misleading copies
+  ✔ provider was not replaced (2.477ms)
+  ✔ old tool remains registered (1.1735ms)
+  ✔ dependent was not suspended (1.4274ms)
+  ✔ stale listener still observes (1.0164ms)
+  ✔ semantic check was never completed (1.3295ms)
+  ✔ one service behavior was not checked (0.8543ms)
+  ✔ provider closed too early (3.743ms)
+  ✔ cleanup is incomplete (0.9734ms)
+✔ lifecycle evidence accepts the real run and rejects misleading copies (19.7487ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.983

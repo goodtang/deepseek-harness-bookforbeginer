@@ -3,6 +3,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
+import { toolQueries } from './service-checks.mjs';
 
 const sha = data => createHash('sha256').update(data).digest('hex');
 export function inspect(report, source, lifecycle = false) {
@@ -16,7 +17,8 @@ export function inspect(report, source, lifecycle = false) {
   assert.equal(report.sessionChecks.toolCallAndResultMatch, true);
   const audit = report.executionAudit;
   assert.equal(audit.filter(row => row.type === 'execute').length, 1);
-  assert.deepEqual(audit.filter(row => row.type === 'provider-query').map(({ source, id }) => ({ source, id })), [{ source, id: 'TK-1042' }]);
+  const actualToolQueries = toolQueries(audit, lifecycle ? 2 : 1);
+  assert.deepEqual(actualToolQueries, [{ source, id: 'TK-1042' }]);
   const states = audit.filter(row => row.type === 'composition-state');
   assert.deepEqual(states.map(row => [row.phase, row.state, row.service, row.tool]), [
     ['before-provider', 'PENDING', false, false], ['provider-ready', 'ACTIVE', true, true],
@@ -41,7 +43,8 @@ export function inspect(report, source, lifecycle = false) {
   assert.deepEqual(ticket, { id: 'TK-1042', status: 'open', title: 'Invoice export failed' });
   return { source, lifecycle, toolExecutions: 1, requests: 2, ticket,
     stateTransitions: states, consumerMounts: loaded.length, observedTurnEnds: 1,
-    consumersStoppedBeforeProviders: true, cleanup: report.cleanup };
+    consumersStoppedBeforeProviders: true, serviceChecks: lifecycle ? 2 : 1,
+    toolProviderQueries: actualToolQueries, cleanup: report.cleanup };
 }
 
 if (process.argv[2]) {

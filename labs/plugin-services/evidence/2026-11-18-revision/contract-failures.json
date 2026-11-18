@@ -1,0 +1,54 @@
+{
+  "capturedAt": "2026-11-18T09:34:10.430Z",
+  "runs": [
+    {
+      "scenario": "always-first",
+      "originalReportSha256": "503b488e2c57fe87bd2758a863f1e4cf768a26b1355324722318dac29e0d6acc",
+      "applicationExitCode": 0,
+      "functionalPassed": false,
+      "completedCases": [
+        "known-id"
+      ],
+      "toolExecutions": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "no-copy",
+      "originalReportSha256": "df5923cdfd5441876e41c7877bd96e14d410ad3e98a59a936eae12d351c2bffa",
+      "applicationExitCode": 0,
+      "functionalPassed": false,
+      "completedCases": [
+        "known-id",
+        "missing-id"
+      ],
+      "toolExecutions": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "no-cancel",
+      "originalReportSha256": "78b3675383cc0bc3ecf1a55e03df9d4bce1ff8fa5a346469b8243e6ab4eacfcc",
+      "applicationExitCode": 0,
+      "functionalPassed": false,
+      "completedCases": [
+        "known-id",
+        "missing-id",
+        "independent-copy"
+      ],
+      "toolExecutions": 0,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "scope": "Real profile/provider failures, not edited report copies"
+}

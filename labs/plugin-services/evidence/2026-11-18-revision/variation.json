@@ -1,0 +1,74 @@
+{
+  "capturedAt": "2026-11-18T09:44:01.731Z",
+  "runs": [
+    {
+      "phase": "baseline",
+      "originalReportSha256": "f3c52a5b05b875373b8787def45295da57fc77743799c0924bf7de35fa67a898",
+      "inputSha256": "d46291d9fdd3c2b5b7a40b701f0da4e8af117e666bbcfb64a8544512bd856ee3",
+      "entrySha256": "44d820f157dde5b79ff402e85c40fd9d9ec7d631d7e2484ffd80569a722e628c",
+      "durableSha256": "3ebf059d5b60bccf1a67d53284a572790a0877282d69ae094e2b421e5528b690",
+      "actualTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "fixedBaselineGatePassed": true,
+      "independentlyVerified": true,
+      "applicationExitCode": 0,
+      "requests": 2,
+      "toolExecutions": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "phase": "changed",
+      "originalReportSha256": "fdcbaf504dcb86d7b16d1cf545d32ad0a80683911eb4e7d90aa78d3d4645f17f",
+      "inputSha256": "4b7d15aa6c7b7f1b3f37ec3aca688c05e651b381c033b1f7b0695dbbb949127d",
+      "entrySha256": "28f5c3d6003b1b9e209e295ee9f17fbb30aa17cf210534aa9cb23051f5142ab3",
+      "durableSha256": "bb8b97c3eed5d4fd938c54b084ec8d996d12fde17a6982dfacca17546b5c394a",
+      "actualTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed [JSON source changed]"
+      },
+      "fixedBaselineGatePassed": false,
+      "independentlyVerified": true,
+      "applicationExitCode": 0,
+      "requests": 2,
+      "toolExecutions": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "phase": "restored",
+      "originalReportSha256": "1ede688850d523b5526965f57366ec904cd691f7e39154a22cfdafb41205608e",
+      "inputSha256": "d46291d9fdd3c2b5b7a40b701f0da4e8af117e666bbcfb64a8544512bd856ee3",
+      "entrySha256": "44d820f157dde5b79ff402e85c40fd9d9ec7d631d7e2484ffd80569a722e628c",
+      "durableSha256": "bf383639180f11abf48437f9e81c5e86382619d90c0961b750956f60e78dd33c",
+      "actualTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed"
+      },
+      "fixedBaselineGatePassed": true,
+      "independentlyVerified": true,
+      "applicationExitCode": 0,
+      "requests": 2,
+      "toolExecutions": 1,
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "originalInputRestored": true,
+  "sameToolSchema": true,
+  "scope": "Three fresh headless processes reload the same owned JSON path; no file watcher or live-update claim"
+}

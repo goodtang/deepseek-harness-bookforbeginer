@@ -1,0 +1,36 @@
+{
+  "files": {
+    "audit.mjs": "e6f340b6e7c0a6fd287d44cf178f0bd61a0facf568e855ba8c00d9e537771d38",
+    "composition.mjs": "d4e1ecceb606d660e5659978a8ff8dcf2bf0c660df18256afb49cca34fc8ef1a",
+    "consumer.mjs": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+    "contract-regression.test.mjs": "556ffcdfc62680b6fbf10cee9bfc61f614af5d942cb9130048cf2e1611c7bd74",
+    "data.test.mjs": "f56a2ed414aa8e442ca70ee044a0aba26f046b136f472a1f20214af32b9f0827",
+    "definition.ts": "852173aee6cdb1d3da95c50478efecb2e6325efa73dfb53b7f87414fc64ae001",
+    "file-data.mjs": "063fb83b0a6fc952b0d4a78cb7436255429343669b0f0fd499487f5a82c7f4ad",
+    "file-entry.mjs": "ba8e5a06fb2f8b4148985113c69e851fad032cb0be37c1a3f5e7e405f0ee34d9",
+    "file-provider.mjs": "8a75d45533267879da6d0c1c49f8e0576cdf3cac25f9db2b4f420b7848468ee7",
+    "lifecycle-entry.mjs": "a3c5d014860944aa0d772e9610e8804e71e85f65fa818a4ef127fa3e9a7a774f",
+    "memory-entry.mjs": "edf0caa72f35a2644e9af3e2c496cf5fb1d58823769fe873d35ca896f55672b6",
+    "memory-provider.mjs": "953e3c81c1a4a607f5c4ef52a201d601d271c2f4790b4267796c8ad1cff0b71c",
+    "package.json": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+    "prepare-reader.mjs": "4bc7a70095fcba968232988200f569e03f3bf92de5352f38a91e3dd38278bb8b",
+    "prepare-variation.mjs": "3d530d28201dc6c4f414067b744281fd4e4cfd50e30e074995d9befefcd7e174",
+    "reader-start.mjs": "088cb9aac334d8ea0ea6eb4a4296f23ac14289d238d751f3f6e252473a46e235",
+    "runtime.ts": "7cf1555ee99b30ad1eedc147dcee245a113704d6c19cf9314e8638bcd98e2a8d",
+    "service-checks.mjs": "707f8a575fe6ad6b5dc1dea9d1c62e8aa98d64178a1f03e99caa5567af2500fb",
+    "tickets.json": "d46291d9fdd3c2b5b7a40b701f0da4e8af117e666bbcfb64a8544512bd856ee3",
+    "verify-contract-failures.mjs": "6a84964a85740c254abe35ee909cb04738391afd5297771023dcf4e8c65a30e1",
+    "verify-variation.mjs": "e1efd640fca3253525d88637e2ca2aa58a2ee846faf95aa7b5897995e77d60ec",
+    "verify.mjs": "4013bd2d8df764b5e3202594ea90a8f1eaec57fe0284ce24414be5f7003cce5c",
+    "verify.test.mjs": "9c2b21f742827607d90c80d02e8934e1eff7cbd139bc3f6ed42e47302a9a7571"
+  },
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "scope": "Current book code; explicit startup service probes separate from model tools. Original m1 runner unchanged.",
+  "consumerSha256": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+  "strictConsumerTypecheck": {
+    "positiveExit": 0,
+    "incompatibleProviderExit": 2,
+    "rejects": "TS2416",
+    "scope": "Existing built vendor declaration consumer plane, no upstream rebuild"
+  }
+}

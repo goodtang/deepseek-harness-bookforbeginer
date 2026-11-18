@@ -9,10 +9,12 @@ test('lifecycle evidence accepts the real run and rejects misleading copies', { 
   const report = JSON.parse(await readFile(path, 'utf8'));
   inspect(report, 'file', true);
   const changes = [
-    ['provider was not replaced', row => { row.executionAudit.find(item => item.type === 'provider-query').source = 'memory'; }],
+    ['provider was not replaced', row => { row.executionAudit.filter(item => item.type === 'provider-query').at(-1).source = 'memory'; }],
     ['old tool remains registered', row => { row.executionAudit.find(item => item.phase === 'provider-removed').tool = true; }],
     ['dependent was not suspended', row => { row.executionAudit.find(item => item.phase === 'provider-removed').state = 'ACTIVE'; }],
     ['stale listener still observes', row => { row.executionAudit.push({ type: 'consumer-turn-end', owner: row.executionAudit.find(item => item.type === 'consumer-loaded').owner, turn: 1 }); }],
+    ['semantic check was never completed', row => { row.executionAudit = row.executionAudit.filter(item => item.type !== 'service-check-passed'); }],
+    ['one service behavior was not checked', row => { row.executionAudit.splice(row.executionAudit.findIndex(item => item.type === 'service-check-case' && item.name === 'already-cancelled'), 1); }],
     ['provider closed too early', row => {
       const index = row.executionAudit.findIndex(item => item.type === 'provider-unloaded');
       const [closed] = row.executionAudit.splice(index, 1); row.executionAudit.unshift(closed);

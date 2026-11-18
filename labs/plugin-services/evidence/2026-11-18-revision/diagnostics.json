@@ -1,0 +1,25 @@
+{
+  "earlyCompositionError": {
+    "originalReportSha256": "1244f53c2e1ff5a9af97ef2c8b63cbd8e259c636565d8e6bfa408ec21482d1a3",
+    "functionalPassed": false,
+    "missingInjectionRejected": true,
+    "cleanup": {
+      "mockServerClosed": true,
+      "childExited": true,
+      "temporaryRootRemoved": true
+    }
+  },
+  "labelledFileButIgnoredData": {
+    "originalReportSha256": "2763695367ade39b47f7e899cf5771891ec339ac5e60f5481f528563a4f75dcf",
+    "functionalPassed": false,
+    "applicationExitCode": 0,
+    "sourceLabel": "file",
+    "semanticFirstValueRejected": true,
+    "cleanup": {
+      "mockServerClosed": true,
+      "childExited": true,
+      "temporaryRootRemoved": true
+    }
+  },
+  "scope": "Full earlier failures and code variants retained locally; no edited report treated as a real run"
+}

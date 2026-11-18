@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import * as Memory from './memory-provider.mjs';
 import * as File from './file-provider.mjs';
 import { mount, state } from './composition.mjs';
+import { checkMountedService } from './service-checks.mjs';
 
 export const name = 'book-lifecycle-composition';
 export const inject = ['tools'];
@@ -15,4 +16,5 @@ export async function apply(ctx) {
   const replacement = ctx.plugin(File, { path: fileURLToPath(new URL('./tickets.json', import.meta.url)) });
   await replacement.await(); await consumer.await();
   assert.deepEqual(state(ctx, consumer, 'replacement-ready'), { phase: 'replacement-ready', state: 'ACTIVE', service: true, tool: true });
+  await checkMountedService(ctx);
 }

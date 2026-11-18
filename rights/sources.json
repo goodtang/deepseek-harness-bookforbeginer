@@ -1674,6 +1674,78 @@
       "source_id": "SRC-BOOK",
       "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/contract-regression.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/prepare-variation.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/service-checks.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/verify-contract-failures.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/verify-variation.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/contract-failures.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/diagnostics.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/variation.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18-revision/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent mounted-service semantic assertions, owned fictional-data variation, direct durable/wire checks or selected real exercise evidence. Upstream references retain their existing MIT attribution; full prompts omitted.",
+      "status": "cleared"
     }
   ],
   "pending": [

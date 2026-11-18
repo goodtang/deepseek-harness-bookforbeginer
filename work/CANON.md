@@ -47,3 +47,5 @@ M1 隔离状态（2026-11-12 用户确认）：当前没有可用隔离环境，
 第七章补强约定：practice启动适配器只管理实际profile进程与安全清理，取JSON流sessionId/落盘读回/决定续接ID由读者模块实现；流字段sessionId与持久header.id分别核对。projectTurns为教学两字段演算，上游turnBoundary仍为权威实现；事件seq与turn分开。旧证据保留，新证据2026-11-18-revision；首次启动超时未定位，不用后续成功关闭可靠性问题。
 
 第八章约定（2026-11-18）：CH-PLUGIN在书稿新增bookTickets/TicketSource业务服务，原工单与工具名不变；消费者只依赖服务，内存/JSON/学生提供者保持结果语义。缺依赖PENDING不等于FAILED，fiber.await稳定不等于ACTIVE。空闲替换验证原工具与旧监听撤销，不能推出在途远程调用自动排空。typed声明不创建运行时服务，JSON文件仍解析验证；vendored Cordis另保留Shigma MIT。错误entry可警告并在本轮headless退出0，业务验收必须另查。
+
+第八章修订约定：正常固定工单不足以验收服务可替换性，需通过声明bookTickets依赖的真实检查消费者验证未知ID/null、可独立修改副本、已取消拒绝及给定原因。直接服务检查与主模型工具执行用显式区段分开。JSON变更采用owned同路径原/变/恢复，新实例读入；旧S1的变更阶段固定预期失败由独立日志/请求检查补核，不改旧报告。
