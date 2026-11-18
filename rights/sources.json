@@ -1339,6 +1339,78 @@
       "source_id": "SRC-BOOK",
       "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
       "status": "cleared"
+    },
+    {
+      "path": "chapters/第07章-程序关掉以后，任务记录还在吗.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-STORE-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-STORE-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "work/CH-STORE-task.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/inspect.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/inspect.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/summarize.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18/checker-tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
+      "status": "cleared"
     }
   ],
   "pending": [

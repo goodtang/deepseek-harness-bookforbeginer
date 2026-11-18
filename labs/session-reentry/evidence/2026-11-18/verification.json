@@ -1,0 +1,462 @@
+{
+  "capturedAt": "2026-11-18T03:02:41.342Z",
+  "scope": "Selected fields from real keyless Windows headless runs; not a reader acceptance",
+  "runs": [
+    {
+      "mode": "resume",
+      "capturedAt": "2026-11-18T02:49:06.393Z",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "node": "v24.12.0",
+      "originalReportSha256": "c197c3195e1f653ae41194dea31eccf1f74e9a3a00eb14251eb54d3a6fdd44a9",
+      "files": {
+        "run.mjs": "94edbb22944c9123ba116dde2a96600fa710ed55e0d0e9c462631fdd262af4ae",
+        "inspect.mjs": "6a64cf675737b33a53c9601f23fe32e87a234bf7545072d263bdbcf5c8ce7143",
+        "../m1/startup-probe.mjs": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+        "../tool-cases/support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+        "../tool-cases/stages/plugin.mjs": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+        "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+      },
+      "verification": {
+        "passed": true,
+        "mode": "resume",
+        "differentProcesses": true,
+        "oldPrefixUnchanged": true,
+        "historyInNewRequest": true,
+        "newToolExecutionCount": 0,
+        "firstEventCount": 25,
+        "secondEventCount": 36,
+        "refusalChecks": 2
+      },
+      "followup": "Without calling a tool, state the ticket id and status from our previous conversation.",
+      "phases": [
+        {
+          "name": "first",
+          "pid": 45052,
+          "sessionId": "session-672132d6-5027-4978-aaf5-8392f5a39184",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 2,
+          "executionCount": 1,
+          "eventCount": 25,
+          "sessionFormatVersion": 4,
+          "durableSha256": "fa57359067ef2b4bb2fcca69dc402560cfc00a7f02848c58967bc103025d0f9a",
+          "turnEnds": [
+            {
+              "seq": 24,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            [],
+            [
+              {
+                "type": "tool_use",
+                "id": "mock-call-1",
+                "name": "book_ticket_lookup",
+                "input": {
+                  "id": "TK-1042"
+                }
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "mock-call-1",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+                  }
+                ],
+                "is_error": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "second",
+          "pid": 42952,
+          "sessionId": "session-672132d6-5027-4978-aaf5-8392f5a39184",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 1,
+          "executionCount": 0,
+          "eventCount": 36,
+          "sessionFormatVersion": 4,
+          "durableSha256": "fafcfa25f6b3207ff8b36a8bdd9678e6bac09b96cbdf2264f6a91c20cee8f34b",
+          "oldPrefixSha256": "fa57359067ef2b4bb2fcca69dc402560cfc00a7f02848c58967bc103025d0f9a",
+          "turnEnds": [
+            {
+              "seq": 24,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            {
+              "seq": 35,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            [
+              {
+                "type": "tool_use",
+                "id": "mock-call-1",
+                "name": "book_ticket_lookup",
+                "input": {
+                  "id": "TK-1042"
+                }
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "mock-call-1",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+                  }
+                ],
+                "is_error": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "wrong-cwd",
+          "pid": 19336,
+          "sessionId": "session-672132d6-5027-4978-aaf5-8392f5a39184",
+          "exitCode": 1,
+          "watchdogExpired": false,
+          "requestCount": 0,
+          "executionCount": 0,
+          "requestToolBlocks": [],
+          "durableUnchanged": true
+        },
+        {
+          "name": "missing-id",
+          "pid": 27220,
+          "sessionId": "session-672132d6-5027-4978-aaf5-8392f5a39184-missing",
+          "exitCode": 1,
+          "watchdogExpired": false,
+          "requestCount": 0,
+          "executionCount": 0,
+          "requestToolBlocks": [],
+          "durableUnchanged": true
+        }
+      ],
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      },
+      "requests": [
+        {
+          "behavior": "tool_call_success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        }
+      ],
+      "networkIsolation": {
+        "verified": false,
+        "scope": "Loopback provider configuration; no external-network blocking"
+      }
+    },
+    {
+      "mode": "fresh",
+      "capturedAt": "2026-11-18T02:49:32.481Z",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "node": "v24.12.0",
+      "originalReportSha256": "63d64ca29e9b3ed1eb1f368a08f1e50d822463a55cf33074a87a35d906fd0e9c",
+      "files": {
+        "run.mjs": "94edbb22944c9123ba116dde2a96600fa710ed55e0d0e9c462631fdd262af4ae",
+        "inspect.mjs": "6a64cf675737b33a53c9601f23fe32e87a234bf7545072d263bdbcf5c8ce7143",
+        "../m1/startup-probe.mjs": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+        "../tool-cases/support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+        "../tool-cases/stages/plugin.mjs": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+        "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+      },
+      "verification": {
+        "passed": true,
+        "mode": "fresh",
+        "differentProcesses": true,
+        "oldPrefixUnchanged": true,
+        "historyInNewRequest": false,
+        "newToolExecutionCount": 0,
+        "firstEventCount": 25,
+        "secondEventCount": 19,
+        "refusalChecks": 0
+      },
+      "followup": "Without calling a tool, state the ticket id and status from our previous conversation.",
+      "phases": [
+        {
+          "name": "first",
+          "pid": 20064,
+          "sessionId": "session-9de7cd0d-51e2-4553-b3b0-2326b9ed495c",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 2,
+          "executionCount": 1,
+          "eventCount": 25,
+          "sessionFormatVersion": 4,
+          "durableSha256": "8948c0b3483a31ac2f47228fd8382afdc90ea440cd000114d70ea6348355af77",
+          "turnEnds": [
+            {
+              "seq": 24,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            [],
+            [
+              {
+                "type": "tool_use",
+                "id": "mock-call-1",
+                "name": "book_ticket_lookup",
+                "input": {
+                  "id": "TK-1042"
+                }
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "mock-call-1",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+                  }
+                ],
+                "is_error": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "second",
+          "pid": 42656,
+          "sessionId": "session-7dad8b70-c994-429a-bbe3-db66201b6ad3",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 1,
+          "executionCount": 0,
+          "eventCount": 19,
+          "sessionFormatVersion": 4,
+          "durableSha256": "30fc299a429c6d285aca5af087223a9c3bb6d1812b1e49f1f68dcd93dba6eb12",
+          "oldPrefixSha256": "8948c0b3483a31ac2f47228fd8382afdc90ea440cd000114d70ea6348355af77",
+          "turnEnds": [
+            {
+              "seq": 18,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            []
+          ]
+        }
+      ],
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      },
+      "requests": [
+        {
+          "behavior": "tool_call_success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        }
+      ],
+      "networkIsolation": {
+        "verified": false,
+        "scope": "Loopback provider configuration; no external-network blocking"
+      }
+    },
+    {
+      "mode": "resume",
+      "capturedAt": "2026-11-18T02:51:42.371Z",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "node": "v24.12.0",
+      "originalReportSha256": "19b402d9e455396a8a7d49496d3c4d187929575d5ae276c43c820b1c3ec32cc4",
+      "files": {
+        "run.mjs": "94edbb22944c9123ba116dde2a96600fa710ed55e0d0e9c462631fdd262af4ae",
+        "inspect.mjs": "6a64cf675737b33a53c9601f23fe32e87a234bf7545072d263bdbcf5c8ce7143",
+        "../m1/startup-probe.mjs": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+        "../tool-cases/support.mjs": "3b5b987906b5b600993ee885f8b6860a53aaa5baeddfdcea6bb5764dc960bff7",
+        "../tool-cases/stages/plugin.mjs": "407f85a2bd4ee13f61b6375ce0cf7c00220acea5684619982f96d1ece206b8bc",
+        "../first-tool/tickets.mjs": "a3d9e322f79809192ed80b23b8322a93e1bda95a652d649c8b70085695f94390"
+      },
+      "verification": {
+        "passed": true,
+        "mode": "resume",
+        "differentProcesses": true,
+        "oldPrefixUnchanged": true,
+        "historyInNewRequest": true,
+        "newToolExecutionCount": 0,
+        "firstEventCount": 25,
+        "secondEventCount": 36,
+        "refusalChecks": 2
+      },
+      "followup": "Without calling a tool, recall the title from our previous ticket lookup.",
+      "phases": [
+        {
+          "name": "first",
+          "pid": 25836,
+          "sessionId": "session-5f97aca5-0e1f-4730-838f-1eb34d08d8a7",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 2,
+          "executionCount": 1,
+          "eventCount": 25,
+          "sessionFormatVersion": 4,
+          "durableSha256": "339b99084d3c768d2db5a6ff9ee820d250654696ddc38a18c7333d6ff5b247d6",
+          "turnEnds": [
+            {
+              "seq": 24,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            [],
+            [
+              {
+                "type": "tool_use",
+                "id": "mock-call-1",
+                "name": "book_ticket_lookup",
+                "input": {
+                  "id": "TK-1042"
+                }
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "mock-call-1",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+                  }
+                ],
+                "is_error": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "second",
+          "pid": 35652,
+          "sessionId": "session-5f97aca5-0e1f-4730-838f-1eb34d08d8a7",
+          "exitCode": 0,
+          "watchdogExpired": false,
+          "requestCount": 1,
+          "executionCount": 0,
+          "eventCount": 36,
+          "sessionFormatVersion": 4,
+          "durableSha256": "66f1944b8559ceb3f94b17260050ae616bbd917806c97b52b01ac8e88470ad98",
+          "oldPrefixSha256": "339b99084d3c768d2db5a6ff9ee820d250654696ddc38a18c7333d6ff5b247d6",
+          "turnEnds": [
+            {
+              "seq": 24,
+              "reason": {
+                "kind": "completed"
+              }
+            },
+            {
+              "seq": 35,
+              "reason": {
+                "kind": "completed"
+              }
+            }
+          ],
+          "requestToolBlocks": [
+            [
+              {
+                "type": "tool_use",
+                "id": "mock-call-1",
+                "name": "book_ticket_lookup",
+                "input": {
+                  "id": "TK-1042"
+                }
+              },
+              {
+                "type": "tool_result",
+                "tool_use_id": "mock-call-1",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "{\"id\":\"TK-1042\",\"status\":\"open\",\"title\":\"Invoice export failed\"}"
+                  }
+                ],
+                "is_error": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "wrong-cwd",
+          "pid": 35012,
+          "sessionId": "session-5f97aca5-0e1f-4730-838f-1eb34d08d8a7",
+          "exitCode": 1,
+          "watchdogExpired": false,
+          "requestCount": 0,
+          "executionCount": 0,
+          "requestToolBlocks": [],
+          "durableUnchanged": true
+        },
+        {
+          "name": "missing-id",
+          "pid": 47868,
+          "sessionId": "session-5f97aca5-0e1f-4730-838f-1eb34d08d8a7-missing",
+          "exitCode": 1,
+          "watchdogExpired": false,
+          "requestCount": 0,
+          "executionCount": 0,
+          "requestToolBlocks": [],
+          "durableUnchanged": true
+        }
+      ],
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      },
+      "requests": [
+        {
+          "behavior": "tool_call_success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        },
+        {
+          "behavior": "success",
+          "outcome": "completed"
+        }
+      ],
+      "networkIsolation": {
+        "verified": false,
+        "scope": "Loopback provider configuration; no external-network blocking"
+      }
+    }
+  ]
+}

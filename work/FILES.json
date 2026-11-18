@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "3b3187802e304024d1337c27b47f609c586a2ab6767d42911619bd14c0cb6519"
+      "sha256": "d15a2b46925547aac051d82c32ae76b48c82a58e76af67aba3450bce7095a832"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -38,6 +38,10 @@
       "sha256": "c3f5d3434e738e104578edf4e51c03e8c73d9f41ea46a1fb98c45dc43b6bb5b4"
     },
     {
+      "path": "chapters/第07章-程序关掉以后，任务记录还在吗.md",
+      "sha256": "72f1a718e1e66f6ae945fb03377820d9326d55f2d0dbeadbc8867152d42c8a38"
+    },
+    {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
       "sha256": "b001ac193a5c5b724f0a7e69815369f66de75869a91697c741e86aebe2dc9950"
     },
@@ -47,7 +51,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "c93697ccb51fc8240f7c68ecbe0e4cf18c62260192403a128f2195004f293ead"
+      "sha256": "fc072267a030434098e1d185d0dab49862154f97226e29541ad063e959835e68"
     },
     {
       "path": "COPYRIGHT.md",
@@ -94,6 +98,14 @@
       "sha256": "74e830492c9d690d0e6c1a284b1527216b99b24eec5ab93b2cef313c6fa04b23"
     },
     {
+      "path": "diagrams/CH-STORE-01.mmd",
+      "sha256": "2a12f8048b7962fe84ff96d12749c12026d6c4cebb236c20cfb75e25fcd00a71"
+    },
+    {
+      "path": "diagrams/CH-STORE-01.png",
+      "sha256": "2d9544f85714733b571b93f70d3fa289ec043b0f2ee5de0c26f62c4318110cd9"
+    },
+    {
       "path": "diagrams/CH-TOOL-01.mmd",
       "sha256": "a5dcf242c55063402c75de71899ec168aabd10ee2c8425813762eb51c919a715"
     },
@@ -123,7 +135,7 @@
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "66f47024c015994242f33462a4766e0b83b855caa7dc7008a149f431bfad8fdd"
+      "sha256": "4ed617ee539f5f1fd595fbb486ae1409c21a5a9e738081cc005db06313bf68bd"
     },
     {
       "path": "EDITORIAL.md",
@@ -678,6 +690,38 @@
       "sha256": "4c0ab63d5c2eeeeb994299c475a5d9b7836f101ad9e7e71ab1901ab9fb564d05"
     },
     {
+      "path": "labs/session-reentry/evidence/2026-11-18/checker-tests.txt",
+      "sha256": "b48120c093189c9462ea0302df83c2c7e75f917d911855c43a0c69afb2368a81"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18/README.md",
+      "sha256": "e13558a0ee9dd0de2785b90b96b4da304319da2df2a9ab09a9d4134745ffec8c"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18/verification.json",
+      "sha256": "62ad361762b5d6df66f3381c9d32af5f934f3d079ee8e301dd75e34303996e68"
+    },
+    {
+      "path": "labs/session-reentry/inspect.mjs",
+      "sha256": "6a64cf675737b33a53c9601f23fe32e87a234bf7545072d263bdbcf5c8ce7143"
+    },
+    {
+      "path": "labs/session-reentry/inspect.test.mjs",
+      "sha256": "9c77fa4d6f061ab79874b5361955e2af08f00d4d68b7f484bff08ca3d7b0424f"
+    },
+    {
+      "path": "labs/session-reentry/README.md",
+      "sha256": "1cad7fa0668ae04d286522e506c1f12ba884f4bfbefafd1e0c76d6cbeb5aa951"
+    },
+    {
+      "path": "labs/session-reentry/run.mjs",
+      "sha256": "94edbb22944c9123ba116dde2a96600fa710ed55e0d0e9c462631fdd262af4ae"
+    },
+    {
+      "path": "labs/session-reentry/summarize.mjs",
+      "sha256": "ca132433a33278fb03f5fb7fdf4e98dd19be336110a662503244792c5ac6e442"
+    },
+    {
       "path": "labs/tool-cases/check-inventory.mjs",
       "sha256": "883b9279e2d85be0fadaed837c3afde2b2974ea58b411a5f7a91eb996deec880"
     },
@@ -1003,7 +1047,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "f62bf456e40f966c0137ce600a7139d1f86b98b9abf73e49844e508ae041e411"
+      "sha256": "722228252e15e90989fd32c7cd3f52819a7be69a580dd410af563aba28cd7fcd"
     },
     {
       "path": "rights/prior-publication.json",
@@ -1015,7 +1059,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "8c9417b36b671d9b5c1973906bd719db4ad76041bb06872de8847d61688f8886"
+      "sha256": "c7406b19e05fb748003cff6c616ac75c6f7c82aaf79ecf1ab0f9b9eb07087989"
     },
     {
       "path": "templates/chapter-task.md",
@@ -1059,7 +1103,7 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "a6e31335c615926a7bc3e25990ec5b2c512f02e276a92dff2da505778459597f"
+      "sha256": "a8b963bded7b41b7aba875758e2b5572bc56f5669e1d74923932c5f72fcb7ca9"
     },
     {
       "path": "work/CH-FUNC-task.md",
@@ -1078,6 +1122,10 @@
       "sha256": "2925a953de48b5896e38b5f01c01b6a761d02bdced2c2f2d9d1773a83c664472"
     },
     {
+      "path": "work/CH-STORE-task.md",
+      "sha256": "9b4d146f80962a24d22939bd72bbd0e26a885507aac7d30321d7e56434299ae3"
+    },
+    {
       "path": "work/CH-TOOL-task.md",
       "sha256": "9cac46ae5e6df4d624617e09033f302d4875b899fdd10e7afbce5c5021c66273"
     },
@@ -1087,11 +1135,11 @@
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "04abf3fe60295645e085eeb83a2f53ad9bf9a6abf7c3c5fbf3c8314a4ae8bd6d"
+      "sha256": "28dc677f42b1e4661c7f6f9280a98a9738f78c413d7694bfaee4f9df78223349"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "a02498d8008f9115e4ec301436a53a71acfa6d89d40f8d2e8e90d9d50f483a7c"
+      "sha256": "ec19414701c876185f3c1199512dbcbc72615fedb2cfde9a81f234974123863a"
     },
     {
       "path": "work/START-HERE.md",
@@ -1099,7 +1147,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "8123bf091018780a1085e4e5933d53c06fbdacbad3a1144c5d5811025222a807"
+      "sha256": "10a3bd69c2c6b68a3aa92b33ec0cb55a9e76cc240317e32b1ff0a65e4789052a"
     }
   ]
 }

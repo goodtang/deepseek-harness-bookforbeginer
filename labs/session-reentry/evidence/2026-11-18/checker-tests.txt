@@ -1,0 +1,16 @@
+▶ a real run and altered evidence distinguish restoration from apparent success
+  ✔ same process (2.3942ms)
+  ✔ missing request (1.3386ms)
+  ✔ noncontiguous events (1.0221ms)
+  ✔ changed old prefix (1.1301ms)
+  ✔ reexecuted old tool (0.9621ms)
+  ✔ missing cleanup (2.3949ms)
+✔ a real run and altered evidence distinguish restoration from apparent success (16.963ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.3747

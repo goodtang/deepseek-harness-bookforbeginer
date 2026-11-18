@@ -90,6 +90,19 @@
       "local_visual_review": "Final PNG inspected after shortening cancellation label; Chinese, branch labels, arrows and margins readable with no clipping.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-STORE-01",
+      "captured_at": "2026-11-18T03:04:44.222372+00:00",
+      "source": "CH-STORE-01.mmd",
+      "source_sha256": "2a12f8048b7962fe84ff96d12749c12026d6c4cebb236c20cfb75e25fcd00a71",
+      "image": "CH-STORE-01.png",
+      "image_sha256": "2d9544f85714733b571b93f70d3fa289ec043b0f2ee5de0c26f62c4318110cd9",
+      "width": 1302,
+      "height": 1926,
+      "local_visual_review": "Final PNG inspected: Chinese labels, separate process groups, disk persistence, exit branch and append return readable without clipping. Normal resume only.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }
