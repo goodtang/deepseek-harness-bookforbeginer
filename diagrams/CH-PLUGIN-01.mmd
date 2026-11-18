@@ -1,0 +1,8 @@
+flowchart TD
+  D["服务定义 TicketSource\nlookup 返回 Ticket 或 null"]
+  C["同一工具消费者\nbook_ticket_lookup"] -->|"通过 ctx 调用"| S["ctx.bookTickets\n当前服务实例"]
+  M["内存提供者\n原 lookupTicket 函数"] -->|"第一种组合"| S
+  F["JSON 提供者\n已验证的文件快照"] -->|"另一种组合"| S
+  D -. "共同遵守" .-> C
+  D -. "共同遵守" .-> M
+  D -. "共同遵守" .-> F

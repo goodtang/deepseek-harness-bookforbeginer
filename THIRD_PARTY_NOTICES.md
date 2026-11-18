@@ -13,6 +13,12 @@ Copyright (c) 2026 DeepSeek
 
 以后摘录源码、文档或重绘原图，在章节旁提供原作者、具体文件和提交、使用范围、修改或翻译说明及许可。根许可不代替 vendor 等独立材料的许可审查。
 
+## Vendored Cordis
+
+第八章研究目标仓库固定基线中的 `vendor/cordis`，来源、具体提交及本地修改清单见该基线的 [vendor/README.md](https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/vendor/README.md)。独立许可声明为 `Copyright (c) 2021-present Shigma`，完整原文保留在 [MIT-Cordis](LICENSES/MIT-Cordis.txt)，仅统一换行为LF。
+
+本书独立解释Service/Context/fiber、依赖与效果，链接实际源码，使用少量注明来源的代码名称与语句；未把vendor许可改成书稿许可。新工单示例和图由本书自行组织。此项不声称涵盖vendor目录的其他库、素材或所有后续引用。
+
 ## 教学方法参考
 
 王爽：《汇编语言（第4版）》，清华大学出版社，ISBN 9787302539414。[出版社信息](https://www.tup.tsinghua.edu.cn/bookscenter/book_07970801.html)。

@@ -1,0 +1,23 @@
+✔ JSON data admits the same fictional ticket fields (1.2437ms)
+✔ file data rejects invalid JSON (0.2134ms)
+✔ file data rejects non-array root (0.0813ms)
+✔ file data rejects missing field (0.1101ms)
+✔ file data rejects wrong field type (0.1227ms)
+✔ file data rejects duplicate identity (0.0865ms)
+✔ file data rejects unrecognized field (0.0883ms)
+▶ lifecycle evidence accepts the real run and rejects misleading copies
+  ✔ provider was not replaced (4.1023ms)
+  ✔ old tool remains registered (1.1519ms)
+  ✔ dependent was not suspended (1.1206ms)
+  ✔ stale listener still observes (1.0586ms)
+  ✔ provider closed too early (6.2132ms)
+  ✔ cleanup is incomplete (1.0392ms)
+✔ lifecycle evidence accepts the real run and rejects misleading copies (21.9988ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 125.1518

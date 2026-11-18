@@ -1,0 +1,17 @@
+{
+  "scope": "Earlier ESM loading failure retained, not final acceptance; no original startup-root-cause fix claimed",
+  "initialAttempt": {
+    "functionalPassed": false,
+    "applicationExitCode": 0,
+    "requests": 2,
+    "executionCount": 0,
+    "importFailed": true,
+    "originalReportSha256": "0f7160d2f5946c372387edbae6adadd02f3dbe3dc80b408c6e00c7d3de5ccb7d",
+    "cleanup": {
+      "mockServerClosed": true,
+      "childExited": true,
+      "temporaryRootRemoved": true
+    }
+  },
+  "typecheckScope": "Initial source-wide standalone program failed, including owned enum-object use and vendored program-option differences. Owned enum access corrected. Final check is strict consumer plane against pre-existing built vendor declarations, with rejecting TS2416 fixture; no upstream rebuild or source-wide typecheck pass claimed."
+}

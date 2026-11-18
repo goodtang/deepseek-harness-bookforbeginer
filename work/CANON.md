@@ -45,3 +45,5 @@ M1 隔离状态（2026-11-12 用户确认）：当前没有可用隔离环境，
 第七章约定（2026-11-18）：用户明确开始，CH-STORE沿同一工单，以真实headless --session-id跨进程续接。共享home/workspace/日志保留至全部检查结束后清理；复制证据不等于现存可续接会话。区分PID/Session ID、已提交历史/业务当前状态/进程控制状态、读文件/恢复Session/提交新问题；正常续接不重跑旧查询。固定模拟答复相同不验语义问答；读者及其他待验状态不变。
 
 第七章补强约定：practice启动适配器只管理实际profile进程与安全清理，取JSON流sessionId/落盘读回/决定续接ID由读者模块实现；流字段sessionId与持久header.id分别核对。projectTurns为教学两字段演算，上游turnBoundary仍为权威实现；事件seq与turn分开。旧证据保留，新证据2026-11-18-revision；首次启动超时未定位，不用后续成功关闭可靠性问题。
+
+第八章约定（2026-11-18）：CH-PLUGIN在书稿新增bookTickets/TicketSource业务服务，原工单与工具名不变；消费者只依赖服务，内存/JSON/学生提供者保持结果语义。缺依赖PENDING不等于FAILED，fiber.await稳定不等于ACTIVE。空闲替换验证原工具与旧监听撤销，不能推出在途远程调用自动排空。typed声明不创建运行时服务，JSON文件仍解析验证；vendored Cordis另保留Shigma MIT。错误entry可警告并在本轮headless退出0，业务验收必须另查。

@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "scope": "Final source-profile runs plus strict consumer-plane typecheck against existing built vendor declarations; no upstream rebuild claimed",
+  "files": {
+    "audit.mjs": "e6f340b6e7c0a6fd287d44cf178f0bd61a0facf568e855ba8c00d9e537771d38",
+    "composition.mjs": "cec08dc8e29a4d26565b50ffbe789e20faa68d7eb019f39fe7159ceec0b8e998",
+    "consumer.mjs": "f7b2ac6d80a3dac2be29000314e0e0eb21da93a4b2b3527f27624f80303dfa82",
+    "data.test.mjs": "f56a2ed414aa8e442ca70ee044a0aba26f046b136f472a1f20214af32b9f0827",
+    "definition.ts": "fe0b44652df0ac1bfc5c42228b1dbb5aa099bb170f3624cb80eb107da1222203",
+    "file-data.mjs": "063fb83b0a6fc952b0d4a78cb7436255429343669b0f0fd499487f5a82c7f4ad",
+    "file-entry.mjs": "ba8e5a06fb2f8b4148985113c69e851fad032cb0be37c1a3f5e7e405f0ee34d9",
+    "file-provider.mjs": "8a75d45533267879da6d0c1c49f8e0576cdf3cac25f9db2b4f420b7848468ee7",
+    "lifecycle-entry.mjs": "d2a2bd4f18700da9f14725be2c79748d2b9dc1bbaccd7556efb1f3cc49daf007",
+    "memory-entry.mjs": "edf0caa72f35a2644e9af3e2c496cf5fb1d58823769fe873d35ca896f55672b6",
+    "memory-provider.mjs": "953e3c81c1a4a607f5c4ef52a201d601d271c2f4790b4267796c8ad1cff0b71c",
+    "package.json": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+    "prepare-reader.mjs": "4bc7a70095fcba968232988200f569e03f3bf92de5352f38a91e3dd38278bb8b",
+    "reader-start.mjs": "088cb9aac334d8ea0ea6eb4a4296f23ac14289d238d751f3f6e252473a46e235",
+    "runtime.ts": "7cf1555ee99b30ad1eedc147dcee245a113704d6c19cf9314e8638bcd98e2a8d",
+    "tickets.json": "d46291d9fdd3c2b5b7a40b701f0da4e8af117e666bbcfb64a8544512bd856ee3",
+    "verify.mjs": "5d2ed8ea9aec6bd75b589537fdc93f5c70f7b9988c68399b0ea97cd516864795",
+    "verify.test.mjs": "adf78c49cf5b3389bdb273ba5072cca3d42cf366152af0e7c520403cd5cdbeee"
+  },
+  "typecheck": {
+    "positiveExit": 0,
+    "incompatibleProviderExit": 2,
+    "rejectionCode": "TS2416",
+    "fullLocalOutputSha256": "954e928e6b2381bf6660538840d72d29e0e07acda37cef543f9712d20b4e5bb5",
+    "declarationFiles": {
+      "D:/projects/deepseek-harness-local/vendor/cordis/lib/types/index.d.ts": "51237bf92ef225c92c897c5fb0aa8e4482267a5ae6ff1cf768726a40c9a7db86",
+      "D:/projects/deepseek-harness-local/vendor/schemastery/lib/types/index.d.ts": "fca846c1420a192b7ae749da96afa0c9b5c57b2e7dff418153674f90200f4e27"
+    }
+  },
+  "reader": {
+    "providerSha256": "950ea42ca8545e1a9e6f6e6f980863dc0150b2d46dbbc39e4b487d5155a2bc46",
+    "entrySha256": "e3edb6b3641bc8483575c932a54eeee5c2b3659f64d4d2a52365e07dea6da294"
+  }
+}

@@ -103,6 +103,32 @@
       "local_visual_review": "Final PNG inspected: Chinese labels, separate process groups, disk persistence, exit branch and append return readable without clipping. Normal resume only.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-PLUGIN-01",
+      "captured_at": "2026-11-18T06:54:12.347646+00:00",
+      "source": "CH-PLUGIN-01.mmd",
+      "source_sha256": "59f1520c55c9c7f2336d0ea2aa26c74841e375c7741e4a80309c8c09c1d4180f",
+      "image": "CH-PLUGIN-01.png",
+      "image_sha256": "5bf52aba547f10022aca3f6f7c21d217731598f4c7825d381538c63ef8c0c356",
+      "width": 1554,
+      "height": 896,
+      "local_visual_review": "PNG inspected: Chinese glyphs, arrows, provider alternatives and stable lifecycle stages readable, no clipping; idle replacement only.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
+    },
+    {
+      "id": "CH-PLUGIN-02",
+      "captured_at": "2026-11-18T06:54:12.347999+00:00",
+      "source": "CH-PLUGIN-02.mmd",
+      "source_sha256": "6dd17a8283a0d8dbe0056837b1d71b9a1e47ef657030d8fe58da26ba11306c0d",
+      "image": "CH-PLUGIN-02.png",
+      "image_sha256": "b03dc4cb261868e7d22f9c162aa4688bda9af2bca978357a1e6e3fcd70205955",
+      "width": 648,
+      "height": 2236,
+      "local_visual_review": "PNG inspected: Chinese glyphs, arrows, provider alternatives and stable lifecycle stages readable, no clipping; idle replacement only.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }

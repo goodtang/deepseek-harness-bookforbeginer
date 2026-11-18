@@ -26,6 +26,12 @@
       "path": "LICENSES/CC-BY-NC-SA-4.0.txt",
       "sha256": "600ca4e25fe11762b75a97e714707fab48bb778374e92d24c6ca068791661c11",
       "source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-NC-SA-4.0.txt"
+    },
+    {
+      "id": "MIT-Cordis",
+      "path": "LICENSES/MIT-Cordis.txt",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7",
+      "source": "https://github.com/goodtang/deepseek-harness-local/blob/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/vendor/cordis/LICENSE"
     }
   ],
   "sources": [
@@ -95,6 +101,17 @@
       "version": "Official documentation consulted 2026-11-11",
       "license": "Third-party documentation rights retained; linked and paraphrased, no license grant or reproduction permission claimed by this book",
       "use": "Linked official download location; independently phrased beginner setup. No vendor screenshots or installer redistribution."
+    },
+    {
+      "id": "SRC-CORDIS",
+      "title": "Vendored Cordis at the studied Harness baseline",
+      "creator": "Shigma and contributors under the retained vendored license",
+      "url": "https://github.com/goodtang/deepseek-harness-local/tree/fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159/vendor/cordis",
+      "version": "Harness fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159; upstream pin and local changes in vendor/README.md",
+      "license": "MIT, Copyright (c) 2021-present Shigma",
+      "license_file": "LICENSES/MIT-Cordis.txt",
+      "use": "Chapter eight source-linked explanation of Context/Service/effects/dependent teardown; original teaching examples/diagrams, no full vendor runtime copied",
+      "attribution": "THIRD_PARTY_NOTICES.md"
     }
   ],
   "materials": [
@@ -1470,6 +1487,192 @@
       "path": "labs/session-reentry/evidence/2026-11-18-revision/verification.json",
       "source_id": "SRC-BOOK",
       "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/第08章-换一个数据来源，为什么工具不用重写.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "work/CH-PLUGIN-task.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "LICENSES/MIT-Cordis.txt",
+      "source_id": "SRC-CORDIS",
+      "basis": "Retained vendor MIT text",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-PLUGIN-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-PLUGIN-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-PLUGIN-02.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-PLUGIN-02.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/audit.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/composition.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/consumer.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/data.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/definition.ts",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/file-data.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/file-entry.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/file-provider.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/lifecycle-entry.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/memory-entry.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/memory-provider.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/package.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/prepare-reader.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/reader-start.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/runtime.ts",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/tickets.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/verify.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/verify.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18/diagnostics.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/plugin-services/evidence/2026-11-18/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent book prose, service examples, synthetic ticket data, measurements or self-drawn figure. Attributed Harness/Cordis references retain SRC-DSH/SRC-CORDIS MIT separately; full prompts omitted.",
       "status": "cleared"
     }
   ],
