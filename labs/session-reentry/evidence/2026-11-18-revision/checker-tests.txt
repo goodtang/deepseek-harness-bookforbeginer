@@ -1,0 +1,23 @@
+▶ a real run and altered evidence distinguish restoration from apparent success
+  ✔ same process (2.5198ms)
+  ✔ missing request (1.5181ms)
+  ✔ noncontiguous events (1.9497ms)
+  ✔ changed old prefix (2.5209ms)
+  ✔ reexecuted old tool (2.2425ms)
+  ✔ missing cleanup (3.2493ms)
+✔ a real run and altered evidence distinguish restoration from apparent success (22.8691ms)
+▶ direct durable-record checks accept a real resume and reject changed fields
+  ✔ wrong result call id (3.3274ms)
+  ✔ wrong business state (2.225ms)
+  ✔ error disguised as query result (1.9547ms)
+  ✔ wrong restored last turn (1.8596ms)
+  ✔ changed old bytes (1.4633ms)
+✔ direct durable-record checks accept a real resume and reject changed fields (20.0247ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.3603

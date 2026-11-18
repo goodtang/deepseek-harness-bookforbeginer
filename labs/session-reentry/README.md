@@ -35,6 +35,42 @@ $FreshResult.verification
 
 两组首进程均执行一次查询、请求两次，次进程请求一次但不执行工具。`resume` 次请求含旧 tool_use/tool_result、同 ID、原字节前缀不变、累计两个 completed 回合；`fresh` 新 ID、次请求无旧工具块、旧文件仍原样、第二份日志只有本会话的一个回合。固定模拟答复相同，不能拿答复文字替代这些断言。
 
+## 自己组织续接入口
+
+先复制 `practice-start.mjs` 到自己的 `.lab-runtime` 子目录，填写 `practice({ launch, identityFile, firstTask, followup })`。完整讲解与逐步撤提示见[第七章](../../chapters/第07章-程序关掉以后，任务记录还在吗.md)7.3。
+
+设施提供每次都启动真实 headless 的 `launch(task, { json, sessionId })`：`json: true` 添加 `--json`，提供 `sessionId` 才添加 `--session-id`。它不替读者提取、选择或保存 ID。`firstTask` 和 `followup` 是本次两次输入；`identityFile` 是设施拥有的临时根中的选择记录路径。home/工作目录/日志根在两次间保持相同，模拟服务、原件采集和清理由设施负责。
+
+读者代码负责：第一次JSON模式启动 → 解析真实opening session事件中的sessionId → writeFile保存 → readFile读回 → 把读回ID交给第二次启动。完成版[practice-completed.mjs](practice-completed.mjs)供做完后对照；输出的sessionId与持久header.id字段不同，不猜文件名或硬编码ID。
+
+```powershell
+$PracticeDirectory = Join-Path $BookRoot ('labs/session-reentry/.lab-runtime/my-practice-' + [guid]::NewGuid())
+New-Item -ItemType Directory -Path $PracticeDirectory | Out-Null
+$PracticeFile = Join-Path $PracticeDirectory 'practice.mjs'
+Copy-Item -LiteralPath (Join-Path $BookRoot 'labs/session-reentry/practice-start.mjs') -Destination $PracticeFile
+# 编辑 PracticeFile，完成两个 TODO 后运行；起点会主动报错，不能当成完成版。
+$PracticeEvidence = Join-Path $BookRoot ('labs/session-reentry/.lab-runtime/practice-' + [guid]::NewGuid())
+node --import tsx/esm (Join-Path $BookRoot 'labs/session-reentry/run.mjs') $HarnessRoot practice $PracticeEvidence $PracticeFile
+if ($LASTEXITCODE -ne 0) { throw "练习未通过：$PracticeEvidence" }
+node (Join-Path $BookRoot 'labs/session-reentry/check-records.mjs') `
+  (Join-Path $PracticeEvidence 'first-durable.jsonl') (Join-Path $PracticeEvidence 'second-durable.jsonl')
+if ($LASTEXITCODE -ne 0) { throw '原始记录未满足断言' }
+```
+
+设施在两次读者启动后还执行原wrong-cwd/missing-id检查。成功要求读者保存的ID、实际输出ID、持久header.id及第二次指定ID一致，并通过原真实请求/前缀/回合/清理检查。第二次省略ID时两个进程可能均退出0，练习仍必须拒绝；错误ID则由真实工程拒绝。不要把这些边界都改成自动创建新会话。
+
+`check-records.mjs` 自己读取两份JSONL，不读取report.json的通过结论。`projectTurns` 是只处理lastTurn/openTurnStartSeq的教学演算，不是新插件或框架替代实现。正文表格中的seq4/24/27/35来自原样本；按实际类型定位。下面检查真实文件与五种错误副本，未提供路径时测试会跳过，跳过不计通过：
+
+```powershell
+$env:BOOK_RECORDS_DIR = $PracticeEvidence
+try {
+  node --test (Join-Path $BookRoot 'labs/session-reentry/records.test.mjs')
+  if ($LASTEXITCODE -ne 0) { throw '记录检查器反例未通过' }
+} finally { Remove-Item Env:BOOK_RECORDS_DIR }
+```
+
+维护者的 `verify-practice.mjs <source> <正确目录> <省略ID目录> <错误ID目录> <恢复目录>` 要在目标源码目录以 `node --import tsx/esm` 启动，比较普通模式正确/真实错误/恢复及上游投影的两字段结果；不能把有导入追踪的成功充当普通模式通过。当前修订证据见[2026-11-18-revision](evidence/2026-11-18-revision/README.md)。旧证据仍对应旧运行器哈希，不改套新版本。
+
 ## 独立改动与检查器反例
 
 运行参数改变的是实际传给第二个 headless 的任务，不是事后修改报告。换一个问题，仍验证提交的新文本和旧工具历史；模拟模型不会据提问生成语义回答：

@@ -1411,6 +1411,66 @@
       "source_id": "SRC-BOOK",
       "basis": "Independently organized teaching prose, code, fictional ticket data, cross-process measurements or self-drawn diagram. Short attributed upstream source excerpts retain SRC-DSH MIT separately; no full prompts, private conversation or external artwork copied.",
       "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/check-records.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/practice-completed.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/practice-start.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/records.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/verify-practice.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18-revision/checker-tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18-revision/diagnostics.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18-revision/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18-revision/regression.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/session-reentry/evidence/2026-11-18-revision/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent reader exercise, direct durable-record assertions, two-field teaching fold or selected synthetic exercise evidence. Attributed upstream excerpts retain SRC-DSH MIT; full prompts and personal context omitted.",
+      "status": "cleared"
     }
   ],
   "pending": [

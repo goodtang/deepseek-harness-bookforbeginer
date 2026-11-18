@@ -1,0 +1,274 @@
+{
+  "capturedAt": "2026-11-18T04:41:57.607Z",
+  "files": {
+    "run.mjs": "e278b58cff19024024de85cadf8d951482b0bf1e5398c9f19bd252edcd8ca420",
+    "inspect.mjs": "6a64cf675737b33a53c9601f23fe32e87a234bf7545072d263bdbcf5c8ce7143",
+    "practice-start.mjs": "19c46f81adca1ab2bec15ed3da983ee7131fcf2369770ab234b372c4ba8b9385",
+    "practice-completed.mjs": "0f071dcf3e81763448bb8d8708da1b56eb3048ce3edc8c9dcf8fb47a3e7b9a68",
+    "check-records.mjs": "dad42ea1a204add104b90afda4270856b8e232af65aa2b16836bdaffa982a638",
+    "records.test.mjs": "54452617bd9cc79ffd64fe46f511d60a48bf4c9da118ffa017c978ac48d9643d",
+    "verify-practice.mjs": "b7f29c868c431507ed727a9b7aa60a0a8c7f9ce6f304d72f20545f5199edb9e5"
+  },
+  "runs": [
+    {
+      "scenario": "reader-completed",
+      "originalReportSha256": "f01a53b618bcdcbf157ac24fb0c286148db0edad9e6162ea16da938d589844f2",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "passed": true,
+      "practice": {
+        "moduleSha256": "0f071dcf3e81763448bb8d8708da1b56eb3048ce3edc8c9dcf8fb47a3e7b9a68",
+        "savedSessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e",
+        "identityFileSha256": "fddf7ce415ac104ce503d40c7efb431df152f9109bbd7436c77071d1ec345e43"
+      },
+      "phases": [
+        {
+          "name": "first",
+          "pid": 26896,
+          "sessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e",
+          "exitCode": 0,
+          "requestCount": 2,
+          "executionCount": 1,
+          "watchdogExpired": false
+        },
+        {
+          "name": "second",
+          "pid": 42000,
+          "sessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e",
+          "exitCode": 0,
+          "requestCount": 1,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "wrong-cwd",
+          "pid": 38988,
+          "sessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "missing-id",
+          "pid": 48924,
+          "sessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e-missing",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        }
+      ],
+      "records": {
+        "sessionId": "session-4a5c3aa5-501b-4a77-b62d-552a5180ad2e",
+        "callId": "mock-call-1",
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "firstTurn": {
+          "lastTurn": 1,
+          "openTurnStartSeq": null
+        },
+        "secondTurn": {
+          "lastTurn": 2,
+          "openTurnStartSeq": null
+        },
+        "firstEventCount": 25,
+        "secondEventCount": 36
+      },
+      "verification": {
+        "passed": true,
+        "mode": "resume",
+        "differentProcesses": true,
+        "oldPrefixUnchanged": true,
+        "historyInNewRequest": true,
+        "newToolExecutionCount": 0,
+        "firstEventCount": 25,
+        "secondEventCount": 36,
+        "refusalChecks": 2
+      },
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "reader-omitted-id",
+      "originalReportSha256": "800dbaa820937b135a524001f582111890b0408f45d208b2ce63a258918482e0",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "passed": false,
+      "practice": {
+        "moduleSha256": "a003b829938aad33b4a96085dc82547b9b93e3c89d86e9333e9b1f3b85737834",
+        "savedSessionId": "session-2ac5b5f5-1d53-453d-877c-c6d802e61ffa",
+        "identityFileSha256": "a6630372fd4b79908eb0068eb335295e8678c0cd1b247e00c7812baa3d1beda3"
+      },
+      "phases": [
+        {
+          "name": "first",
+          "pid": 18744,
+          "sessionId": "session-2ac5b5f5-1d53-453d-877c-c6d802e61ffa",
+          "exitCode": 0,
+          "requestCount": 2,
+          "executionCount": 1,
+          "watchdogExpired": false
+        },
+        {
+          "name": "second",
+          "pid": 18464,
+          "sessionId": "session-cd472572-35c4-4c7a-98ae-6195185ea9a4",
+          "exitCode": 0,
+          "requestCount": 1,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "wrong-cwd",
+          "pid": 48432,
+          "sessionId": "session-2ac5b5f5-1d53-453d-877c-c6d802e61ffa",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "missing-id",
+          "pid": 6688,
+          "sessionId": "session-2ac5b5f5-1d53-453d-877c-c6d802e61ffa-missing",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        }
+      ],
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "reader-unknown-id",
+      "originalReportSha256": "9efb58628e25c9eac500825fe006ebf25dd0f961b8aa6a0be0d8b7ca35301fba",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "passed": false,
+      "practice": {
+        "moduleSha256": "c8dd6be543b0fd431613c19c5f6521909b66d74d4b59ed78808fd18c9b84a6e7"
+      },
+      "phases": [
+        {
+          "name": "first",
+          "pid": 45644,
+          "sessionId": "session-3d9d5396-b1cc-4d2a-b099-bfb41b123ddb",
+          "exitCode": 0,
+          "requestCount": 2,
+          "executionCount": 1,
+          "watchdogExpired": false
+        },
+        {
+          "name": "second",
+          "pid": 5528,
+          "sessionId": "session-book-does-not-exist",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        }
+      ],
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "reader-restored",
+      "originalReportSha256": "8afd9f8a870043f065cfe79fcb7fd8c651b47a33436c325159fd0be4b987b232",
+      "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+      "passed": true,
+      "practice": {
+        "moduleSha256": "0f071dcf3e81763448bb8d8708da1b56eb3048ce3edc8c9dcf8fb47a3e7b9a68",
+        "savedSessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4",
+        "identityFileSha256": "0500a15abf3ba7bc2ceec9a0e5153860d4448cf50e887866f8b3d0e2443a9ca4"
+      },
+      "phases": [
+        {
+          "name": "first",
+          "pid": 37964,
+          "sessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4",
+          "exitCode": 0,
+          "requestCount": 2,
+          "executionCount": 1,
+          "watchdogExpired": false
+        },
+        {
+          "name": "second",
+          "pid": 38896,
+          "sessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4",
+          "exitCode": 0,
+          "requestCount": 1,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "wrong-cwd",
+          "pid": 9488,
+          "sessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        },
+        {
+          "name": "missing-id",
+          "pid": 41960,
+          "sessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4-missing",
+          "exitCode": 1,
+          "requestCount": 0,
+          "executionCount": 0,
+          "watchdogExpired": false
+        }
+      ],
+      "records": {
+        "sessionId": "session-325ff63d-274f-4a72-8ef3-b6eb593a16a4",
+        "callId": "mock-call-1",
+        "ticket": {
+          "id": "TK-1042",
+          "status": "open",
+          "title": "Invoice export failed"
+        },
+        "firstTurn": {
+          "lastTurn": 1,
+          "openTurnStartSeq": null
+        },
+        "secondTurn": {
+          "lastTurn": 2,
+          "openTurnStartSeq": null
+        },
+        "firstEventCount": 25,
+        "secondEventCount": 36
+      },
+      "verification": {
+        "passed": true,
+        "mode": "resume",
+        "differentProcesses": true,
+        "oldPrefixUnchanged": true,
+        "historyInNewRequest": true,
+        "newToolExecutionCount": 0,
+        "firstEventCount": 25,
+        "secondEventCount": 36,
+        "refusalChecks": 2
+      },
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ],
+  "upstreamProjectionSourceSha256": "608fa622679b815efc97e6826f5e274e3306b46b494c1b6e7a036a7f4505773e",
+  "upstreamTwoFieldProjectionMatches": true,
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

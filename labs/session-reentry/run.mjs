@@ -11,12 +11,13 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { inspect, sha } from './inspect.mjs';
 
 assert.ok(process.argv[2] && process.argv[3] && process.argv[4],
-  'Usage: run.mjs <source-root> <resume|fresh> <new-output-directory> [followup-text]');
+  'Usage: run.mjs <source-root> <resume|fresh|practice> <new-output-directory> [followup-text|practice-module]');
 const source = resolve(process.argv[2]); const mode = process.argv[3];
-assert.ok(['resume', 'fresh'].includes(mode));
+assert.ok(['resume', 'fresh', 'practice'].includes(mode));
 const output = resolve(process.argv[4]); const here = dirname(fileURLToPath(import.meta.url));
-const followup = process.argv[5] ?? 'Without calling a tool, state the ticket id and status from our previous conversation.';
-const report = { capturedAt: new Date().toISOString(), mode, followup, node: process.version,
+const practicePath = mode === 'practice' ? resolve(process.argv[5] ?? join(here, 'practice-start.mjs')) : undefined;
+const followup = (practicePath === undefined ? process.argv[5] : undefined) ?? 'Without calling a tool, state the ticket id and status from our previous conversation.';
+const report = { capturedAt: new Date().toISOString(), mode: mode === 'fresh' ? 'fresh' : 'resume', followup, node: process.version,
   sourceCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: source, encoding: 'utf8' }).trim(),
   sourceTrackedChanges: execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { cwd: source, encoding: 'utf8' }).trim(),
   networkIsolation: { verified: false, scope: 'Loopback provider configuration; no external-network blocking' },
@@ -25,6 +26,7 @@ assert.equal(report.sourceCommit, 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159');
 assert.equal(report.sourceTrackedChanges, '');
 for (const file of ['run.mjs', 'inspect.mjs', '../m1/startup-probe.mjs', '../tool-cases/support.mjs',
   '../tool-cases/stages/plugin.mjs', '../first-tool/tickets.mjs']) report.files[file] = sha(await readFile(join(here, file)));
+if (practicePath !== undefined) report.practice = { moduleSha256: sha(await readFile(practicePath)) };
 await mkdir(dirname(output), { recursive: true }); await mkdir(output);
 const root = await mkdtemp(join(tmpdir(), 'book-reentry-'));
 const home = join(root, 'home'); const workspace = join(root, 'workspace'); const sessions = join(root, 'sessions');
@@ -45,13 +47,13 @@ const logs = async (directory = sessions) => {
   }
   return result;
 };
-const run = async (name, cwd, sessionId, task) => {
+const run = async (name, cwd, sessionId, task, json = false) => {
   const start = server.requests.length; const before = await readAudit();
-  const phase = { name, cwd, requestedSessionId: sessionId ?? null, watchdogExpired: false };
+  const phase = { name, cwd, requestedSessionId: sessionId ?? null, json, watchdogExpired: false };
   report.phases.push(phase);
   const args = ['--import', pathToFileURL(join(here, '../m1/startup-probe.mjs')).href,
     '--import', loader, join(source, 'apps/cli/src/bin.ts'), '--profile', 'headless', '--patch', patch,
-    ...sessionId === undefined ? [] : ['--session-id', sessionId], task];
+    ...json ? ['--json'] : [], ...sessionId === undefined ? [] : ['--session-id', sessionId], task];
   const child = spawn(process.execPath, args, { cwd, windowsHide: true,
     env: { ...process.env, DSH_HOME: home, BOOK_DSH_SOURCE: source, BOOK_EXECUTION_LOG: audit,
       BOOK_STARTUP_LOG: join(output, `${name}-startup.jsonl`), TSX_TSCONFIG_PATH: join(source, 'tsconfig.json'),
@@ -80,23 +82,46 @@ try {
   server = await startMockLlmServer({ host: '127.0.0.1', port: 0, apiKey: 'book-mock-key', randomSeed: 1042,
     sequence: ['tool_call_success', 'success', 'success'], repeatLast: false,
     toolName: 'book_ticket_lookup', toolArguments: '{"id":"TK-1042"}', successText: 'Book reentry mock response.' });
-  const first = await run('first', workspace, undefined, 'Look up TK-1042 with book_ticket_lookup.');
-  assert.equal(first.exitCode, 0, first.stderr);
-  const initial = await logs(); assert.equal(initial.length, 1);
-  const saved = initial[0]; const rows = saved.bytes.toString('utf8').trim().split('\n').map(JSON.parse);
-  first.sessionId = rows[0].id; first.events = rows.slice(1); first.durableSha256 = sha(saved.bytes);
-  first.durableBytes = saved.bytes.length; first.header = rows[0];
-  await writeFile(join(output, 'first-durable.jsonl'), saved.bytes);
-  const second = await run('second', workspace, mode === 'resume' ? first.sessionId : undefined, followup);
-  assert.equal(second.exitCode, 0, second.stderr);
-  const after = await logs(); assert.equal(after.length, mode === 'resume' ? 1 : 2);
-  const selected = mode === 'resume' ? after[0] : after.find(entry => entry.path !== saved.path);
-  const finalRows = selected.bytes.toString('utf8').trim().split('\n').map(JSON.parse);
-  second.sessionId = finalRows[0].id; second.events = finalRows.slice(1); second.header = finalRows[0];
-  second.oldPrefixSha256 = sha(mode === 'resume' ? selected.bytes.subarray(0, saved.bytes.length) : await readFile(saved.path));
-  second.durableSha256 = sha(selected.bytes); second.durableBytes = selected.bytes.length;
-  await writeFile(join(output, 'second-durable.jsonl'), selected.bytes);
-  if (mode === 'resume') {
+  let saved; let launches = 0;
+  // The reader chooses both launches. This adapter owns only process/configuration and evidence collection.
+  const launch = async (task, { sessionId, json = false } = {}) => {
+    assert.ok(launches < 2, 'This exercise owns exactly two sequential launches');
+    const name = launches++ === 0 ? 'first' : 'second';
+    const phase = await run(name, workspace, sessionId, task, json);
+    assert.equal(phase.exitCode, 0, phase.stderr);
+    const current = await logs();
+    const selected = name === 'first' || sessionId !== undefined ? current.find(entry => saved === undefined || entry.path === saved.path)
+      : current.find(entry => entry.path !== saved.path);
+    assert.ok(selected, 'Expected the actual invocation to materialize a Session');
+    const rows = selected.bytes.toString('utf8').trim().split('\n').map(JSON.parse);
+    phase.sessionId = rows[0].id; phase.events = rows.slice(1); phase.header = rows[0];
+    phase.durableSha256 = sha(selected.bytes); phase.durableBytes = selected.bytes.length;
+    if (name === 'first') { assert.equal(current.length, 1); saved = selected; }
+    else phase.oldPrefixSha256 = sha(selected.path === saved.path ? selected.bytes.subarray(0, saved.bytes.length) : await readFile(saved.path));
+    await writeFile(join(output, `${name}-durable.jsonl`), selected.bytes);
+    return { stdout: phase.stdout, exitCode: phase.exitCode };
+  };
+  const firstTask = 'Look up TK-1042 with book_ticket_lookup.';
+  if (practicePath === undefined) {
+    await launch(firstTask);
+    await launch(followup, { sessionId: mode === 'resume' ? report.phases[0].sessionId : undefined });
+  } else {
+    const identityFile = join(root, 'selected-session.json');
+    const { practice } = await import(pathToFileURL(practicePath).href);
+    await practice({ launch, identityFile, firstTask, followup });
+    assert.equal(launches, 2);
+    const storedIdentity = await readFile(identityFile);
+    report.practice.savedSessionId = JSON.parse(storedIdentity).sessionId;
+    report.practice.identityFileSha256 = sha(storedIdentity);
+    assert.equal(report.practice.savedSessionId, report.phases[0].sessionId);
+    await writeFile(join(output, 'selected-session.json'), storedIdentity);
+    for (const phase of report.phases) {
+      const opening = phase.stdout.trim().split('\n').map(JSON.parse).find(row => row.type === 'session');
+      assert.equal(opening.sessionId, phase.sessionId);
+    }
+  }
+  const first = report.phases[0]; const second = report.phases[1];
+  if (report.mode === 'resume') {
     const wrong = join(root, 'different-workspace'); await mkdir(wrong);
     for (const [name, cwd, id] of [['wrong-cwd', wrong, first.sessionId], ['missing-id', workspace, `${first.sessionId}-missing`]]) {
       const phase = await run(name, cwd, id, followup);

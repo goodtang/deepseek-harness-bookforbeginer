@@ -1,0 +1,68 @@
+{
+  "scope": "Diagnosis and earlier attempts retained separately; original startup root cause remains unlocated",
+  "attempts": [
+    {
+      "scenario": "practice-20261118-completed",
+      "scope": "Initial ordinary-mode startup watchdog; not an acceptance pass",
+      "originalReportSha256": "a47bb614782cc67fc6fca656fb42f6de25664da11c0ecf157ccb13cb0bfcb757",
+      "passed": false,
+      "requestCount": 0,
+      "watchdogExpired": [
+        true
+      ],
+      "preloadObserved": true,
+      "heartbeatCount": 1,
+      "importTraceCount": 0,
+      "practiceModuleSha256": "0f071dcf3e81763448bb8d8708da1b56eb3048ce3edc8c9dcf8fb47a3e7b9a68",
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "practice-20261118-trace",
+      "scope": "Explicit import-trace diagnostic; timing changed, not ordinary-mode acceptance",
+      "originalReportSha256": "0ab72a47552a82daf3d5d36ba22bd11e0e9e8f066f62d4e57259fff96e506de6",
+      "passed": true,
+      "requestCount": 3,
+      "watchdogExpired": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "preloadObserved": true,
+      "heartbeatCount": 1,
+      "importTraceCount": 11114,
+      "practiceModuleSha256": "0f071dcf3e81763448bb8d8708da1b56eb3048ce3edc8c9dcf8fb47a3e7b9a68",
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    },
+    {
+      "scenario": "practice-20261118-restored",
+      "scope": "Earlier functionally passing restore; byte hash differed because generated source line endings changed",
+      "originalReportSha256": "8d349eaab43db99be68e1440c1a2fc8a240dcfdef6a9c04cf5864cb75eb46916",
+      "passed": true,
+      "requestCount": 3,
+      "watchdogExpired": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "preloadObserved": true,
+      "heartbeatCount": 1,
+      "importTraceCount": 0,
+      "practiceModuleSha256": "ed440a7abbd593722481260d1bfe8338d030e819413e77c5c20313be87838b6c",
+      "cleanup": {
+        "childrenExited": true,
+        "mockServerClosed": true,
+        "temporaryRootRemoved": true
+      }
+    }
+  ]
+}
