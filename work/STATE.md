@@ -1,10 +1,12 @@
 # 当前执行状态
 
-更新日期：2026-11-13。正式书稿维护于 goodtang/deepseek-harness-bookforbeginer；本机 D:/projects/deepseek-harness-bookforbeginer。各章状态唯一索引见 [CHAPTERS](CHAPTERS.md)，版本以 Git 和 FILES.json 为准。
+更新日期：2026-11-18。正式书稿维护于 goodtang/deepseek-harness-bookforbeginer；本机 D:/projects/deepseek-harness-bookforbeginer。各章状态唯一索引见 [CHAPTERS](CHAPTERS.md)，版本以 Git 和 FILES.json 为准。
 
 用户明确“读者验收可以最后进行，开始第五章编写”。已正式编写 CH-LOOP 第五章，5.1–5.3 初稿完成，配真实正常复跑、字段转换图和证据核对。读者仍未检查，不代签、不阻塞本次起稿；外网隔离与完整 M1 未通过。
 
 第六章 CH-WAIT 已按用户明确要求完成6.1–6.3初稿，含可控制等待、合作/不合作取消、恢复与查询后模型等待。当前证据 labs/wait-cancel/evidence/2026-11-13，五组实测、六项错误副本检查通过；共享运行器原场景另回归，详情见CH-WAIT工作包。
+
+18日按第六章复核完成两处教学补强，新增可选导入追踪与不延长生命周期的心跳。五组与原三组普通模式实测通过，另有六项检查器反例、三项诊断测试。此前两次预加载后超时保留，根因未定位，不记全部修复；当前第六章技术部分通过，最新证据 labs/wait-cancel/evidence/2026-11-18。
 
 ## 当前交付
 

@@ -108,6 +108,34 @@ run.mjs 现在记录 progress：模拟服务监听、子进程创建、预加载
 
 新增 fixtures/startup-stall.mjs 有意让模块加载不完成，仅用于诊断反例。作者实测在零模型请求下触发看门狗，保存预加载与模块进入标记，缺少会话事件文件，并完成清理。这是一个已知人为原因的反例，不说明此前那次超时也是相同原因。普通 S1/S2/S2-exhaust/S3 均在修订后重跑通过，摘录见上述修订核对。
 
+## 2026-11-18 启动复核
+
+本次启动复核：两次无请求超时都只到预加载；临时导入追踪、随后无追踪的原命令、显式设置 TSX_DISABLE_CACHE=1 的对照均完成了启动。追踪会改变加载时序，这些成功不能用来断言旧超时的原因，也不证明缓存开关已经修复问题。当前诊断与无追踪回归见[本轮记录](../wait-cancel/evidence/2026-11-18/diagnostics.json)。
+
+startup-probe.mjs 现在每两秒追加一条 startup-heartbeat，记录进程存活时间和活动资源类型，不记录环境变量；定时器使用 unref，不延长应用生命周期。有心跳仅说明该采样时定时器仍获得执行，不代表应用就绪。旧探针只记录一次预加载，不能根据旧文件没有心跳推断主线程已阻塞。判断时先核对报告中的探针哈希和生成版本。
+
+需要进一步检查导入时，可在单次实验前启用 BOOK_TRACE_IMPORTS=1。下面在 PowerShell 的 finally 中恢复原变量；证据目录仍须是新的。
+
+```powershell
+$OldTraceSetting = Get-Item Env:BOOK_TRACE_IMPORTS -ErrorAction SilentlyContinue
+$TraceEvidence = Join-Path $BookRoot 'labs/wait-cancel/.lab-runtime/import-trace-01'
+try {
+  $env:BOOK_TRACE_IMPORTS = '1'
+  Set-Location -LiteralPath $HarnessRoot
+  node --import tsx/esm (Join-Path $BookRoot 'labs/m1/run.mjs') $HarnessRoot gate-cancel $TraceEvidence
+  $LASTEXITCODE
+} finally {
+  if ($null -eq $OldTraceSetting) {
+    Remove-Item Env:BOOK_TRACE_IMPORTS -ErrorAction SilentlyContinue
+  } else { $env:BOOK_TRACE_IMPORTS = $OldTraceSetting.Value }
+  Set-Location -LiteralPath $BookRoot
+}
+```
+
+解析/加载追踪写到 startup.jsonl，供识别最后到达的文件和成对的 start/end；它不直接证明模块求值或初始化中的 await 已完成。追踪包含本机模块地址且会增加同步写入，完整文件保留本机，书稿只发布摘要。不要用一次有追踪成功代替普通模式的验收；45 秒看门狗和失败清理规则保持不变。
+
+探针的三个独立进程测试用 `node --test labs/m1/startup-probe.test.mjs` 执行，分别检查应用自然退出不被定时器阻止、存活进程可产生心跳、导入追踪只在显式启用时出现。失败原件和旧证据保留，不回填成新版本通过结果。
+
 ## 第五章的可选展示对照
 
 S1 支持额外两个参数 `<plugin-file> <full|summary>`；不传时仍加载原第四章插件并检查完整工单。summary 预期 render 的文字只有 id/title，业务 output.schema 保持不变。它不是产品 CLI 选项，完整操作与真实三次对照见[第五章实验](../next-request/README.md)。

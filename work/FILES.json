@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "eeb4ff75bd0c1b47f6e5f74e542a90b1b3efbf145bdae9c6b5a8536c98ccc148"
+      "sha256": "3b3187802e304024d1337c27b47f609c586a2ab6767d42911619bd14c0cb6519"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -35,7 +35,7 @@
     },
     {
       "path": "chapters/第06章-查询还在等待，怎样正确取消.md",
-      "sha256": "1537afbac86d7afbe29f45e4aebbf5fa4b6948b2fcad05770aab86a02b00fdbc"
+      "sha256": "c3f5d3434e738e104578edf4e51c03e8c73d9f41ea46a1fb98c45dc43b6bb5b4"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -475,7 +475,7 @@
     },
     {
       "path": "labs/m1/README.md",
-      "sha256": "9ddc16de2da894239328e62a8ae360a90d62ec6741f15824e2019815c50689db"
+      "sha256": "1bc031227254ea1c6b515bdabb20481d30687b175258b6c03ebfaffd3b31be20"
     },
     {
       "path": "labs/m1/run.mjs",
@@ -483,7 +483,11 @@
     },
     {
       "path": "labs/m1/startup-probe.mjs",
-      "sha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1"
+      "sha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f"
+    },
+    {
+      "path": "labs/m1/startup-probe.test.mjs",
+      "sha256": "51b93617fc30a19ec6cf540bc6de9768981f749f9f3506dea39df93a87b13767"
     },
     {
       "path": "labs/next-request/check.mjs",
@@ -930,6 +934,22 @@
       "sha256": "14d5f5f76c36e75d981e8bac8b60683926e367c9865ecc5aa96ee1f8902fdc38"
     },
     {
+      "path": "labs/wait-cancel/evidence/2026-11-18/diagnostics.json",
+      "sha256": "9580d746c02cdcd38422bdb0249a588f19a90a62c95883216bbac4b1e39f37f8"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/README.md",
+      "sha256": "9eca0b18eceb48739c618edf089f957f42e77e8efbcb63f3f0c5fcb16e19b951"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/startup-probe-tests.txt",
+      "sha256": "d07a151f59d0d4a093aa9bae0fd151a27d06bbe70757f5f22a4fd8fddcefd057"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/verification.json",
+      "sha256": "4f3c45db01450e7b069a90ae3d2076a433d003b00cc789d3fa9115ed674a9221"
+    },
+    {
       "path": "labs/wait-cancel/gate.mjs",
       "sha256": "0a58c214c95cac8b38fcfe868d5d5ad58eb70728596dd1ad302f9619a145eea1"
     },
@@ -939,7 +959,7 @@
     },
     {
       "path": "labs/wait-cancel/README.md",
-      "sha256": "6ee2018edc12b1a4fbb02b9fb1472614bbf965c2e80548fe860dc6b27b2d5f3a"
+      "sha256": "2e0f95e3837b421cc33869feab67c678805ea9b63369a811e21b77c063735818"
     },
     {
       "path": "labs/wait-cancel/start/plugin.mjs",
@@ -995,7 +1015,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "5a4690cc43158afb9fea00dca8e00b3a56e206c80eeab14c061afd8bd7340c95"
+      "sha256": "8c9417b36b671d9b5c1973906bd719db4ad76041bb06872de8847d61688f8886"
     },
     {
       "path": "templates/chapter-task.md",
@@ -1063,15 +1083,15 @@
     },
     {
       "path": "work/CH-WAIT-task.md",
-      "sha256": "5bb771b61417514a4e407527d4c06121e464a5bf1a56712e0f366daa7905fcf9"
+      "sha256": "d22b012879e8ebe387debbead2d22e6941f1e706866c6ef96ca391734875e088"
     },
     {
       "path": "work/CHAPTERS.md",
-      "sha256": "fc331c50ab04f3a22117ba87e2b7636f9caae59f4de4327fd0fe88aa5a5975e2"
+      "sha256": "04abf3fe60295645e085eeb83a2f53ad9bf9a6abf7c3c5fbf3c8314a4ae8bd6d"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "2f7800a2d6f0047f297abdbb67f9ad3ada63e3f3a56cff78640ec0bde7d06453"
+      "sha256": "a02498d8008f9115e4ec301436a53a71acfa6d89d40f8d2e8e90d9d50f483a7c"
     },
     {
       "path": "work/START-HERE.md",
@@ -1079,7 +1099,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "ff18175b54531a50afb0d96c1597dce176e74fa57d848d7ae99a5614da5bd8f7"
+      "sha256": "8123bf091018780a1085e4e5933d53c06fbdacbad3a1144c5d5811025222a807"
     }
   ]
 }

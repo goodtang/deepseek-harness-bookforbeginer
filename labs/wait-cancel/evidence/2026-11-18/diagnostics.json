@@ -1,0 +1,830 @@
+{
+  "reviewedOn": "2026-11-18",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "verdict": "Two earlier preload-stage failures retained; subsequent ordinary runs pass, original root cause remains unlocated. No timeout relaxation or automatic retry.",
+  "earlierFailures": [
+    {
+      "name": "review-20261118-cancel",
+      "kind": "earlier untraced failure; old probe had no heartbeat feature",
+      "functionalPassed": false,
+      "applicationExitCode": null,
+      "watchdogExpired": true,
+      "requestCount": 0,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 123
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 2634
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 2964
+        },
+        {
+          "phase": "watchdog-expired",
+          "observedAtMs": 47641
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 47752
+        }
+      ],
+      "heartbeatCount": 0,
+      "importTraceEventCount": 0,
+      "preloadSha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "d81589ae408f1a84af4d1b0411ff47c88899e0b05bf9d3ab22477a7d97bfc265",
+      "startupLogSha256": "415dd1dd33ec8bfcefaafd6704f7156a39c4b455faafbcfc1326435c43c846f6"
+    },
+    {
+      "name": "review-20261118-cancel-repeat",
+      "kind": "earlier untraced failure; old probe had no heartbeat feature",
+      "functionalPassed": false,
+      "applicationExitCode": null,
+      "watchdogExpired": true,
+      "requestCount": 0,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 14
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 21
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 126
+        },
+        {
+          "phase": "watchdog-expired",
+          "observedAtMs": 45023
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 45051
+        }
+      ],
+      "heartbeatCount": 0,
+      "importTraceEventCount": 0,
+      "preloadSha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "3c6d1026f4aa8e756b868334229d2d5169a78d3845d46237c97ac4aa4db487ec",
+      "startupLogSha256": "8036ab72eeda46be2bc91671fff556ace08aed45c697d323827cb715e89d5011"
+    }
+  ],
+  "diagnosticComparisons": [
+    {
+      "name": "diagnose-20261118-imports",
+      "kind": "temporary diagnostic wrapper; tracing changes timing",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 18
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 26
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 9651
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 20840
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 20944
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 21352
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 21384
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 21506
+        }
+      ],
+      "heartbeatCount": 0,
+      "importTraceEventCount": 11122,
+      "preloadSha256": "90bb520e56ea7feed355519c92d90aa0fd507e6aa15510b1f802c00b87b7e362",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "4b181148839d7508d0dacc3738a2f09505430b5fe9dcb0bdf5468474279ea626",
+      "startupLogSha256": "a5b3065d2b6c938fb8d7b6429f54f402b2bb4ac48f1871b9bb9a51b1ec229d54"
+    },
+    {
+      "name": "revise-20261118-baseline-01",
+      "kind": "ordinary command after diagnostic tracing",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3500
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4012
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4012
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4216
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4254
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4369
+        }
+      ],
+      "heartbeatCount": 0,
+      "importTraceEventCount": 0,
+      "preloadSha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "efb790f5d2d81f0bfb7e86a3408b9360631d1af897d7a7684086a3c5fdc1139c",
+      "startupLogSha256": "bf9d039df754c6237f2babe28c675db0dc6415866220d07cecddb6b1df6621cb"
+    },
+    {
+      "name": "revise-20261118-nocache",
+      "kind": "parent explicitly configured TSX_DISABLE_CACHE=1; not a root-cause conclusion",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 130
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 5254
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 5881
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 5881
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 6088
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 6135
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 6284
+        }
+      ],
+      "heartbeatCount": 0,
+      "importTraceEventCount": 0,
+      "preloadSha256": "1930941ffea7f513a3389bca2b1a66302842701eb96075e01fbf42497a0be7d1",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "dbde2b79e196fd5503ac6c78262b3e6156badc25e87eef04ec858e5528e8b1d4",
+      "startupLogSha256": "d76703dc170f0e0d89db3adaf9e66076218e73049f77b8a205fd1b6036c8e49c"
+    },
+    {
+      "name": "revision-20261118-probe-01",
+      "kind": "new heartbeat probe, import tracing disabled",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 125
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3809
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4522
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4522
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4726
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4741
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4846
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "8ecfc9fccf6713b1a8aa030a361e120309d9e5f03d3a8603e8fcffe9d911f41d",
+      "startupLogSha256": "8ad5eaae49c2cf0467ab2c8fde3c6fe23ab191fd7dc5c0c370f8a1298d097bff"
+    },
+    {
+      "name": "revision-20261118-trace",
+      "kind": "current probe, optional import tracing enabled",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 6887
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 7908
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 7908
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 8112
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 8119
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 8224
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 11122,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "12be3ee898b6f99fc549efee5d52262e7326a2c939044eeac087715f536d2825",
+      "startupLogSha256": "8944f8f30b6bef8bf3974c8fbdbce7ea6d37e8a3b954c5929f66da862f8a9273"
+    }
+  ],
+  "currentOrdinaryRuns": [
+    {
+      "name": "revision-20261118-final-S1",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 14
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3493
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4002
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4002
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4206
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4221
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4324
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "017d06d13291759b32c7b72faaa90a10ed2aab509d10ca00aee7a759ea6d3c90",
+      "startupLogSha256": "cabe6eb3edbb43360e364fcbab6946ca55d4446bfd8acb49c2ea58c2761f1d31"
+    },
+    {
+      "name": "revision-20261118-final-S2",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 3,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3504
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4115
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4115
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4217
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4523
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4637
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "453f130a267e99d46c97a2d8125a4c81e4fa9129ece766caabbbb99b20321862",
+      "startupLogSha256": "9be85d35a0e065514c958ab6317355f0c233dcb706ff757a9fef31846eddc4eb"
+    },
+    {
+      "name": "revision-20261118-final-S2-exhaust",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 125
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3593
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4112
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4112
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4317
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4643
+        },
+        {
+          "phase": "first-stderr",
+          "observedAtMs": 4643
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4734
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "7233df4e6a91b9d0963d109feb7848c438e6a795b3887afaafa8bec8a4f90647",
+      "startupLogSha256": "26771c642680edc52c79f787f92193c31fa5c999ba07ecb1056efa369e379df2"
+    },
+    {
+      "name": "revision-20261118-final-S3",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 125
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3594
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4115
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4220
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4319
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4407
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4504
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "f1af146aaf07e96d90eef1d4325690475da1f75e914d0f793e7abe7d250f21ea",
+      "startupLogSha256": "b412bcfb2c13b760b8398f7941d7ce5153dcb5d0950945305667c2ddb91230f2"
+    },
+    {
+      "name": "revision-20261118-final-gate-release",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 0,
+      "watchdogExpired": false,
+      "requestCount": 2,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 16
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 24
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 128
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3597
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4212
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4213
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4420
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4456
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4567
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "2dee1dfec5e033683703546500711a1650cbb021c579feb87469bfad07433823",
+      "startupLogSha256": "d3f7a20a1fe364dbc513dc853e69846980d28b5c3c9aafb32db052afbcdfbaf1"
+    },
+    {
+      "name": "revision-20261118-final-gate-cancel",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 23
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 126
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3589
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4202
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4202
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4392
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4407
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4494
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "de673b22651d3edab15dcb77fab614587a3db73cf220cabb6776439566f33349",
+      "startupLogSha256": "b314ab35bd263e76429cab44ae77ed7d0bae0b7d93f78930a89cbcaea3db5c03"
+    },
+    {
+      "name": "revision-20261118-final-uncooperative",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 14
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 131
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3792
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4422
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4526
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4730
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4796
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4915
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "58f626bcd9dbb5d83f0dc07b4e4665bdad7209ae1dc6ce8e19525112d4946b06",
+      "startupLogSha256": "b443abfba4815983cd2130a71e1434d0c5a868d0388faa0f9923345beac03e32"
+    },
+    {
+      "name": "revision-20261118-final-restored",
+      "kind": "ordinary-mode current regression",
+      "functionalPassed": true,
+      "applicationExitCode": 1,
+      "watchdogExpired": false,
+      "requestCount": 1,
+      "progress": [
+        {
+          "phase": "mock-listening",
+          "observedAtMs": 15
+        },
+        {
+          "phase": "child-spawned",
+          "observedAtMs": 22
+        },
+        {
+          "phase": "node-preload-file",
+          "observedAtMs": 131
+        },
+        {
+          "phase": "execution-audit-file",
+          "observedAtMs": 3716
+        },
+        {
+          "phase": "observer-listening-file",
+          "observedAtMs": 4334
+        },
+        {
+          "phase": "session-event-file",
+          "observedAtMs": 4334
+        },
+        {
+          "phase": "model-request-observed",
+          "observedAtMs": 4543
+        },
+        {
+          "phase": "first-stdout",
+          "observedAtMs": 4595
+        },
+        {
+          "phase": "child-closed",
+          "observedAtMs": 4725
+        }
+      ],
+      "heartbeatCount": 1,
+      "importTraceEventCount": 0,
+      "preloadSha256": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+      "cleanup": {
+        "mockServerClosed": true,
+        "childExited": true,
+        "temporaryRootRemoved": true
+      },
+      "reportSha256": "63c48ac47daddf373f7ed95f83afe51ee9bf8a0d24daaf226d8f1e34594b4e7f",
+      "startupLogSha256": "fc61b573df84e820f8125311a9587871acb1339c800ce15189b433b1628f17e4"
+    }
+  ],
+  "codeSha256": {
+    "labs/m1/run.mjs": "7b71fce0e0f15bff51bc1d914e408193704c748dae04ce062c42813ab55b6408",
+    "labs/m1/startup-probe.mjs": "39b5928daaeaaa0a088106edea35a6e3148041787f4f9ade21cb6a27115ca90f",
+    "labs/m1/startup-probe.test.mjs": "51b93617fc30a19ec6cf540bc6de9768981f749f9f3506dea39df93a87b13767"
+  },
+  "readerAccepted": false,
+  "externalNetworkIsolationVerified": false
+}

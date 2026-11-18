@@ -1,0 +1,11 @@
+✔ preload allows a completed child to exit without waiting for its timer (94.364ms)
+✔ an active child produces a heartbeat without exposing environment values (2113.3381ms)
+✔ import tracing is emitted only when explicitly requested (167.0456ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2464.7524

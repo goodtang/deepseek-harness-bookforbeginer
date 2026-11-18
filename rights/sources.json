@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-13",
+  "review_date": "2026-11-18",
   "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
   "licenses": [
     {
@@ -1308,6 +1308,36 @@
       "path": "labs/wait-cancel/evidence/2026-11-13/verification.json",
       "source_id": "SRC-BOOK",
       "basis": "Independent book prose, code, controlled fictional query/cancellation data, measurement or self-drawn figure; no full upstream prompts or external artwork copied. Attributed upstream snippets retain SRC-DSH MIT rights separately from original prose and code.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/m1/startup-probe.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/diagnostics.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/startup-probe-tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/wait-cancel/evidence/2026-11-18/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Independent diagnostics contract test, fictional query/cancellation verification or selected metadata. Full import traces, environment values and prompts are not included; attributed upstream excerpts retain SRC-DSH MIT separately.",
       "status": "cleared"
     }
   ],
