@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant T as 业务调用与核查方
+    participant B as 业务服务
+    participant S as 工单与操作账本
+    T->>B: 关闭 TK-1042，使用原 operationId
+    B->>S: 同一次提交：工单 closed 与操作回执
+    S-->>B: 提交完成
+    B--xT: 回复丢失，或调用方已取消
+    Note over T: 不能把未收到成功当作未写入
+    T->>B: 按原 operationId 查询回执
+    B->>S: 读取该操作记录
+    S-->>B: 原提交回执
+    B-->>T: 已提交，可核对对象与版本
+    T->>B: 如重发，仍使用同一个 operationId
+    B-->>T: 返回原回执，不再次关闭

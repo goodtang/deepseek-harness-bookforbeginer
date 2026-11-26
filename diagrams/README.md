@@ -25,3 +25,5 @@ node tools/render_diagrams.mjs D:/projects/deepseek-harness-local/node_modules/.
 第六章CH-WAIT-01展示合作/不合作等待收到取消后的分支与收尾，单独追加该图ID可导出。最终PNG已目视检查；图源、版本、尺寸与哈希见render-record.json，页面/PDF验收待完成。
 
 第九章CH-CONFIG-01区分静态组合导出与真实插件装入，CH-CONFIG-02列出bundle/profile/home/命令行及运行时策略顺序。两PNG已本机检查，Mermaid源可编辑；在渲染命令后追加两个图ID可重建，页面/PDF仍待验。
+
+第十章CH-WRITE-01为权限/确认到业务复核流程，CH-WRITE-02为提交后丢回复或取消、外部查询与去重时序。两PNG实际导出并本机目视，图源可编辑，渲染记录含尺寸/hash；页面/PDF未验。图2的核查角色不表示已取消工具自动继续工作。

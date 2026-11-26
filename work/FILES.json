@@ -11,7 +11,7 @@
     },
     {
       "path": "chapters/README.md",
-      "sha256": "67e50d6e3f983a3053d36d68494f1cf981ef3796d3e7fbea89af97ccfa300901"
+      "sha256": "3bcd0610f93023b9089dbf3816b63cc9d8cacfd30f47f0683a1a979461a92b8f"
     },
     {
       "path": "chapters/第01章-一句请求发出去以后.md",
@@ -47,7 +47,11 @@
     },
     {
       "path": "chapters/第09章-插件怎样组成应用，读懂启动与配置.md",
-      "sha256": "286839a5491000d635e7deaf9f9f64d5bbf3f8f71068b28e490deb6321d4b406"
+      "sha256": "7f241afd9d4e57330f2194642e41ef6009bf572f2cb7e779c8e397c479c37cb0"
+    },
+    {
+      "path": "chapters/第10章-从查询到关闭，怎样控制一次业务修改.md",
+      "sha256": "47f726319bbdcff1515c9f5d5ee90cdbba8449d2bab3bceaebaf51b8caafe4ec"
     },
     {
       "path": "chapters/试写-第一个业务工具（章号待定）.md",
@@ -59,7 +63,7 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "sha256": "456b73174dec585ae8061ba234d4f7d1e844d44409f3284643a23c16ff8bc9e8"
+      "sha256": "b99e32d8ce0b77f0d269baaf81143a3d9611a3890da4cdd72c5e0819e5fcf8db"
     },
     {
       "path": "COPYRIGHT.md",
@@ -170,12 +174,28 @@
       "sha256": "5c4a5964bfea33dcca36d8fd1e1e9f17cb88d6374172ecbc5806efb4ef24a982"
     },
     {
+      "path": "diagrams/CH-WRITE-01.mmd",
+      "sha256": "a809f948ba85c7467e333e86327a5225d1e77a74bf4390ed7c61eda786108730"
+    },
+    {
+      "path": "diagrams/CH-WRITE-01.png",
+      "sha256": "2fc36975e591e95b2857a4a7f29659c1d8097a81e6726c5a7addca3f5ff3ee35"
+    },
+    {
+      "path": "diagrams/CH-WRITE-02.mmd",
+      "sha256": "72809169247a3089214a9bddceac1d7b6adb435a186a2ce6258688a1697d603e"
+    },
+    {
+      "path": "diagrams/CH-WRITE-02.png",
+      "sha256": "c1ba36cf4874fb38188cd21734fc0b1ef40e19a5cbbeff21556e0bf306b1f74a"
+    },
+    {
       "path": "diagrams/README.md",
-      "sha256": "ee3cca75ff414affd66f17201178155b0bc3a6914048812a6d446f4d00258648"
+      "sha256": "f62fcec5ada6c93d4025e8e59a64fb73f61c6639a9f522c9e54b81c891221384"
     },
     {
       "path": "diagrams/render-record.json",
-      "sha256": "6ea201d7e4b2a0892cfa84722cbf5cfe7639a7bd51877d54f1d508d17e412245"
+      "sha256": "07d55dd41963327b307aaff558652f6cd66caf98402fbca798eb9b64c514ce90"
     },
     {
       "path": "EDITORIAL.md",
@@ -895,7 +915,7 @@
     },
     {
       "path": "labs/README.md",
-      "sha256": "ac78d8225161c6e361f8d1be73bf8ad6a1f3b99f14b4b9b77aa3f31c13ba3ee0"
+      "sha256": "02cd7ddefe0282090600d0c16affd3b23fdf99657ba4265801b04ae524b3d8bd"
     },
     {
       "path": "labs/run-basics/check.mjs",
@@ -1334,6 +1354,74 @@
       "sha256": "faa6e8c6ced17b2b33bca61866a0b3ff945a104095976508e2731a04572e5a30"
     },
     {
+      "path": "labs/write-ticket/business.mjs",
+      "sha256": "a43a1a49c5fa8c94a54faacd2d7f0fe8c251c662df24fe7bf90c72a7b3d9a122"
+    },
+    {
+      "path": "labs/write-ticket/check-reader.mjs",
+      "sha256": "11510ea1a49071555a66cfbe5b981d7cb5e605cf5cb2abdbf15f192caac0b14f"
+    },
+    {
+      "path": "labs/write-ticket/domain.mjs",
+      "sha256": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54"
+    },
+    {
+      "path": "labs/write-ticket/domain.test.mjs",
+      "sha256": "0ad52606376686d2cd3c3bc4b5ca8b7d64ec0f290c2397dfd113fae9bcde3934"
+    },
+    {
+      "path": "labs/write-ticket/driver.mjs",
+      "sha256": "776580f2968b808f848263674c1a4aa7fd18d9fd51c494efe4acdcff1e995bcb"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/inputs.json",
+      "sha256": "2ff76cf6039d55b208366da9f766c64749e01ca0daca02f18ff2d1192cdc37fa"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/reader.json",
+      "sha256": "20f9d1b276005883cf7546fc0dc72851c65b79c1c786b8414292e8dd05ac6090"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/README.md",
+      "sha256": "e5450641b05b142c23b1966cf29628fe45628433fa278e010031c8da3e7dd476"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/tests.txt",
+      "sha256": "d297765ea10aef46a49eb855fc049d0adaa1affcaf367141efa854aae6016ee9"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/verification.json",
+      "sha256": "47f3d9c4f773e58ececb4822dba08a2f3b65ac5a617b2d5e6f7c9fdda08bd57e"
+    },
+    {
+      "path": "labs/write-ticket/package.json",
+      "sha256": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8"
+    },
+    {
+      "path": "labs/write-ticket/plugin.mjs",
+      "sha256": "bcdcd874fab2a3022994899374434d9c29bd64b7d5f2e475d5dcb76335a7c8f5"
+    },
+    {
+      "path": "labs/write-ticket/reader-start.mjs",
+      "sha256": "9761902e61e9e43cb6f05902e65264ecaa1cf82ac6a5956f36719820e9115c19"
+    },
+    {
+      "path": "labs/write-ticket/README.md",
+      "sha256": "75198255fb38b2f17436df549fddc5767f9b2562bef956cf2dd312ac536dee6a"
+    },
+    {
+      "path": "labs/write-ticket/run.mjs",
+      "sha256": "99734a0b9b53b0e85e50265af555b1ffe5c2231d7f9f0c2e77818256da1e66d6"
+    },
+    {
+      "path": "labs/write-ticket/verify.mjs",
+      "sha256": "6faed8f5f1cb6d6d9520e6133b67f23ab9c57f40b5046c9cb911a1acf0962488"
+    },
+    {
+      "path": "labs/write-ticket/verify.test.mjs",
+      "sha256": "75367235164bec97836e9a900b6f775ef4f6624d69a4daf7712541b5e248b331"
+    },
+    {
       "path": "LICENSE",
       "sha256": "b5b37eb499c1c0ca05941f2dbbe91e252afe5628acb5e830976d34a906dd38c1"
     },
@@ -1371,7 +1459,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "0733d3d927ed5e7b56528fb9391935112f08d1a88613c796ba17a72bbb41b9c9"
+      "sha256": "2ebf6a4a68487e6abd4800109a9942074c9d865e7029df3d5205645c73d99a91"
     },
     {
       "path": "rights/prior-publication.json",
@@ -1383,7 +1471,7 @@
     },
     {
       "path": "rights/sources.json",
-      "sha256": "ca0e6fec6abb4b36d60994a3f1a32f9bf9d250ad23f27c18aad616eb6238d137"
+      "sha256": "d48db34935700fa49de88d0b97087cde1e5c8aace2aaf12c6075ebe827c94e61"
     },
     {
       "path": "templates/chapter-task.md",
@@ -1427,7 +1515,7 @@
     },
     {
       "path": "work/CANON.md",
-      "sha256": "49181b9d3d70c19290aeb9e07e4ba57cd786932d890df24f005e301afbbd1c10"
+      "sha256": "b695e498639faa1b4b211a4f9dd7ee60b93afc60c4b790d2c4c60f879d9d8ae4"
     },
     {
       "path": "work/CH-CONFIG-task.md",
@@ -1466,12 +1554,16 @@
       "sha256": "d22b012879e8ebe387debbead2d22e6941f1e706866c6ef96ca391734875e088"
     },
     {
+      "path": "work/CH-WRITE-task.md",
+      "sha256": "d6cc8acf5c334b060f44f56d550db5f7397f58dbf315df24bb64bd8844435d10"
+    },
+    {
       "path": "work/CHAPTERS.md",
-      "sha256": "2d6326c368b8205ff5387343eabcd4a00120f874b244711e0bea32d3480e9466"
+      "sha256": "81fa3dcc436ae138c6fcca0a1dea120bed3245d3c10aaa7639596b924dcdb3a1"
     },
     {
       "path": "work/HANDOFF.md",
-      "sha256": "b0f4ef2fd1dd9db881937cff8b96b22a4c80fe169b343b12e35f81cf0aa7d7c5"
+      "sha256": "1eaf9456809eba60c9e0be2aa3fb45e5570d293cca444ddd340f18aef968f221"
     },
     {
       "path": "work/START-HERE.md",
@@ -1479,7 +1571,7 @@
     },
     {
       "path": "work/STATE.md",
-      "sha256": "afb0cc808bc353f2a8cfb41a6bfe92315e1c83a81fcc9ff466fc5a56b16d2e13"
+      "sha256": "18b0503c1c358c094edae39baed7da6345ad156c9670567bc1ff796e8b095ee2"
     }
   ]
 }

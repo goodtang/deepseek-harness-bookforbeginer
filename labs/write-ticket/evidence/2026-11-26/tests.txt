@@ -1,0 +1,26 @@
+✔ a confirmed command binds actor, tenant, target, version and operation (1.3982ms)
+✔ read-only identity cannot close and does not create a receipt (0.9362ms)
+✔ one operation commits once and the exact retry returns its receipt (0.2632ms)
+✔ same operation ID with another payload is refused, not silently reused (0.1841ms)
+✔ another ticket version is not covered by the old command (0.2798ms)
+✔ identity and tenant are checked at the business service (0.1793ms)
+✔ an absent receipt cannot be relabeled as a definite failed write (0.2366ms)
+✔ a receipt claiming success for a different ticket must remain unknown (0.1959ms)
+▶ actual cancelled-after-commit evidence and misleading copies
+  ✔ pretend cancel rolled back (4.0807ms)
+  ✔ wrong confirmed call (1.1782ms)
+  ✔ wrong approval pair (1.3611ms)
+  ✔ different confirmed command (1.0326ms)
+  ✔ cancel relabeled completion (0.8381ms)
+  ✔ commit not observed before cancel (1.4341ms)
+  ✔ receipt never checked (0.8406ms)
+  ✔ cleanup incomplete (0.7243ms)
+✔ actual cancelled-after-commit evidence and misleading copies (19.2586ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 118.6495

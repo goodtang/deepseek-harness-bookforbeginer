@@ -53,3 +53,5 @@ M1 隔离状态（2026-11-12 用户确认）：当前没有可用隔离环境，
 第九章约定（2026-11-18）：用户明确开始。CH-CONFIG沿原查询/同消费者，以配置选择已有memory/file提供者。id为条目补丁目标，name为模块，book_ticket_lookup为工具名。顺序为bundle→profile→home→CLI，runtime另可能加telemetry；config字段整体替换，非深层合并。dump不执行!!js/插件，default不接受patch，未知id运行本次可无stderr；必须核对实际提供者/工具行为。三层退出码与读者后置/其他待验独立。
 
 第九章修订约定：错误配置验收必须绑定实际收到的配置、提供者开始、真实错误码/路径与顺序，不把无关ENOENT或缺日志视为成功反例。共享m1保存真正用于spawn的launch参数和失败请求；清理后不是可重放环境。reader严格起点拒绝→完成通过→备份后恢复拒绝，并从原报告自取source/基础结果，不以作者summary替代自验。
+
+第十章约定（2026-11-26）：用户明确继续CH-WRITE。同工单新增book_ticket_close和业务version=1，身份不来自模型；真实pre-execute→approval，callId/具体命令绑定。操作id由可信业务意图固定，跨新Session重发仍沿用；幂等在业务服务，非Harness自动。unknown不等同未写，not-found保持未知；取消不回滚既有提交，须独立核查外部回执与文件。模拟后台每组初始化、无生产重启恢复承诺，读者/隔离等待验不推进。

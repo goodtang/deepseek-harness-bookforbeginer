@@ -155,6 +155,32 @@
       "local_visual_review": "Final PNG inspected: Chinese text, branches/layer order, arrows and margins readable; no clipping. Conceptual configuration flow, not full boot trace.",
       "github_page_review": "pending",
       "pdf_review": "pending"
+    },
+    {
+      "id": "CH-WRITE-01",
+      "captured_at": "2026-11-26T11:33:38.397352+00:00",
+      "source": "CH-WRITE-01.mmd",
+      "source_sha256": "a809f948ba85c7467e333e86327a5225d1e77a74bf4390ed7c61eda786108730",
+      "image": "CH-WRITE-01.png",
+      "image_sha256": "2fc36975e591e95b2857a4a7f29659c1d8097a81e6726c5a7addca3f5ff3ee35",
+      "width": 1116,
+      "height": 2156,
+      "local_visual_review": "Final PNG inspected for Chinese text, labels, branches/arrows, role distinctions and margins; no clipping. Diagram 2 query is an external reconciliation role, not cancelled-tool continuation.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
+    },
+    {
+      "id": "CH-WRITE-02",
+      "captured_at": "2026-11-26T11:33:38.397729+00:00",
+      "source": "CH-WRITE-02.mmd",
+      "source_sha256": "72809169247a3089214a9bddceac1d7b6adb435a186a2ce6258688a1697d603e",
+      "image": "CH-WRITE-02.png",
+      "image_sha256": "c1ba36cf4874fb38188cd21734fc0b1ef40e19a5cbbeff21556e0bf306b1f74a",
+      "width": 2010,
+      "height": 1580,
+      "local_visual_review": "Final PNG inspected for Chinese text, labels, branches/arrows, role distinctions and margins; no clipping. Diagram 2 query is an external reconciliation role, not cancelled-tool continuation.",
+      "github_page_review": "pending",
+      "pdf_review": "pending"
     }
   ]
 }

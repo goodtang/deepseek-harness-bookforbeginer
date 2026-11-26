@@ -1,0 +1,8 @@
+{
+  "startExit": 1,
+  "completedExit": 0,
+  "wrongTargetExit": 1,
+  "receiptChecks": 6,
+  "completedModuleSha256": "19ff11bd50e8c457855a72864668f950cd36090386eab42385b5b90681c2e5e9",
+  "scope": "Reference completed module extracted from chapter code; two real HTTP receipts and four deliberately changed receipt copies. Not reader acceptance."
+}

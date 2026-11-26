@@ -1,0 +1,15 @@
+{
+  "files": {
+    "business.mjs": "a43a1a49c5fa8c94a54faacd2d7f0fe8c251c662df24fe7bf90c72a7b3d9a122",
+    "check-reader.mjs": "11510ea1a49071555a66cfbe5b981d7cb5e605cf5cb2abdbf15f192caac0b14f",
+    "domain.mjs": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54",
+    "domain.test.mjs": "0ad52606376686d2cd3c3bc4b5ca8b7d64ec0f290c2397dfd113fae9bcde3934",
+    "driver.mjs": "776580f2968b808f848263674c1a4aa7fd18d9fd51c494efe4acdcff1e995bcb",
+    "plugin.mjs": "bcdcd874fab2a3022994899374434d9c29bd64b7d5f2e475d5dcb76335a7c8f5",
+    "reader-start.mjs": "9761902e61e9e43cb6f05902e65264ecaa1cf82ac6a5956f36719820e9115c19",
+    "run.mjs": "99734a0b9b53b0e85e50265af555b1ffe5c2231d7f9f0c2e77818256da1e66d6",
+    "verify.mjs": "6faed8f5f1cb6d6d9520e6133b67f23ab9c57f40b5046c9cb911a1acf0962488",
+    "verify.test.mjs": "75367235164bec97836e9a900b6f775ef4f6624d69a4daf7712541b5e248b331"
+  },
+  "scope": "Current book code; raw reports retain runtime-file hashes and actual CLI launch snapshots. No upstream or shared m1 changes."
+}

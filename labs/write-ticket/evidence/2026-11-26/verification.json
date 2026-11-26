@@ -1,0 +1,878 @@
+{
+  "capturedAt": "2026-11-26T11:32:10.125Z",
+  "sourceCommit": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
+  "runs": [
+    {
+      "scenario": "allow",
+      "originalReportSha256": "929e68e1ed6bcb24c5c0a698a47f701fe519567ab3936cfb9f6fa470c3f4be4a",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-216c1e85-f649-41fd-9481-cc45a337d439",
+          "eventCount": 27,
+          "sessionFileSha256": "28933171c8e21610f6884c308b15f272c4c21f45ce6a3f5e99a6916536c7a14a",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "closeWriteCount": 1,
+      "operationCount": 1,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "read-only",
+      "originalReportSha256": "c9b750d61355603cd6268930821ff54e413ed3f70e3c7520549ba26fc8951bbf",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-88264384-f4c8-45d4-b363-0f4b06fa4bb8",
+          "eventCount": 25,
+          "sessionFileSha256": "db1a3eb1a0fb2df38ed60b35f3e25e549e8dcc44155625bed5e643e824a305d1",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [],
+          "toolBodyCalls": 0,
+          "requests": 2,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "reject",
+      "originalReportSha256": "f7a2507bb6f6e26bea915999f486327a2ef1d62c082430e0381662dbc2eb58fa",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-37062cd9-75f1-4db9-854d-15728cae4e8b",
+          "eventCount": 27,
+          "sessionFileSha256": "0022cad0e12b9493e17fcefa7470455141f0b9ef7e846254233a3893b751a21a",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "rejected"
+          ],
+          "toolBodyCalls": 0,
+          "requests": 2,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "unavailable",
+      "originalReportSha256": "9de58981d52634b6eb389655230451eebe92bf5362c071e95470d47b1f17206a",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-e555a190-ad89-438c-96cd-b6d046a22378",
+          "eventCount": 27,
+          "sessionFileSha256": "2eedd23e2239e936156c573212abcd0ce8cc11c2de174e029244950b53346d5c",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "unavailable"
+          ],
+          "toolBodyCalls": 0,
+          "requests": 2,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "never",
+      "originalReportSha256": "ad85293eea9b4930a06cfe36f85ab7068b069d90a2421db212c8ab6249ca39b0",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-38a24a4b-46fe-4e24-979a-f4822790f50a",
+          "eventCount": 28,
+          "sessionFileSha256": "4a34e30220ac8b28afaafd0e7eff5aeb173bde4d73ed5421f7e9ac739b2d8a4d",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "rejected"
+          ],
+          "toolBodyCalls": 0,
+          "requests": 2,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "server-denied",
+      "originalReportSha256": "3b75dc55aa0dbfc0ff76a6520bf2664e5e10bbaedd61d3ea86e771e64c721a51",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-884100c8-b3d3-4741-80e2-eaa1b99c3cec",
+          "eventCount": 27,
+          "sessionFileSha256": "6276daf27a4dfdcfbccafeaf2b42d3fb8ce5d36d2eb80c5f4372e3cf82ee153b",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "not-written",
+            "code": "PERMISSION_DENIED",
+            "operationId": "close-1042-01"
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "stale",
+      "originalReportSha256": "1de61563d17c2a62aa50475180dea5ad469517fe56cd72fa4b9b1d82d42df7ba",
+      "businessFileSha256": "29da1f8c99af07713976700de213378c966c9e1b5c52451b8bd4ec36baf923fe",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-7db20679-b179-4cd5-a71c-8f692a41f2db",
+          "eventCount": 27,
+          "sessionFileSha256": "a15e2f4e635a22f5195fe2ae375be4671d0570461f542b2cfc4a59d49a0283cc",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "not-written",
+            "code": "VERSION_CONFLICT",
+            "operationId": "close-1042-01"
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "wrong-call",
+      "originalReportSha256": "4be2aed2a8a6be9bb8a42a15c2861ceee6e5d3aab0398883542195f38445aa9c",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-ebc71b99-91ea-4a1e-befb-6daa9b0cb108",
+          "eventCount": 27,
+          "sessionFileSha256": "8c1309faf8bbca3495521d23b57fbd248eb76824d31a67f45ccac0fe0ba4f006",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "rejected"
+          ],
+          "toolBodyCalls": 0,
+          "requests": 2,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": true,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "duplicate",
+      "originalReportSha256": "60e7364200d5ac369a105c16bace84ac7127627be7f254af8ee9da326b6ca462",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-2d7c96df-2fe9-4180-b449-b715cc407549",
+          "eventCount": 27,
+          "sessionFileSha256": "edeae1eb7640c73b4f079afa86a3b77e4cb5011aee0eebe7d5d76d1ca17b417d",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        },
+        {
+          "index": 1,
+          "sessionId": "session-7b50d28d-85c5-4041-b2e9-84a8c7e70390",
+          "eventCount": 27,
+          "sessionFileSha256": "56d181aa51696831e16e4e890b51db97616bbc5368e3edd583f71b52009a7a02",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": true
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "closeWriteCount": 1,
+      "operationCount": 1,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "lost-after",
+      "originalReportSha256": "9eb0a80c71c375234d57e213b420a1306af79c9795a2b58876870f830b93903a",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-c63415f7-3498-4bb9-95ba-610ecabcf3f6",
+          "eventCount": 27,
+          "sessionFileSha256": "261198a1cb41ea48b1ec9449e2f3c17767d0e5615810d5746c280c6e827e83ea",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "unknown",
+            "operationId": "close-1042-01",
+            "code": "CHECK_OPERATION_STATUS"
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        },
+        {
+          "index": 1,
+          "sessionId": "session-dda0a7ae-3a62-4687-82aa-98f674738b56",
+          "eventCount": 27,
+          "sessionFileSha256": "6513522fef386deb753365615f6bb21bacea89ea806414db19d6aade21f8bd0d",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": true
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "closeWriteCount": 1,
+      "operationCount": 1,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "lost-before",
+      "originalReportSha256": "e4cac66d2b6488116412673701a3e410d515c1e8e1b0b016997e9cd9c213be87",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-268b3de4-e6eb-4fb3-bcbd-e94a986eb1e6",
+          "eventCount": 27,
+          "sessionFileSha256": "367dd8bd419a1103185922f45300834f9d51d849822c9807512cc87676509900",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 2,
+          "toolIsError": false,
+          "toolValue": {
+            "state": "unknown",
+            "operationId": "close-1042-01",
+            "code": "CHECK_OPERATION_STATUS"
+          },
+          "taskEnd": {
+            "kind": "completed"
+          },
+          "applicationExitCode": 0,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "cancel-before",
+      "originalReportSha256": "1f34a6bb83fcdfbe9f79843f700c8b28b0d378d8cc1cddc4f5e4e61bc45d61fa",
+      "businessFileSha256": "598e7717aeebeb1845164f7ce065eb634d799b8bbff3c3aece3dbacc9f2acc4a",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-7bbcb256-09f6-432a-8b74-40930c0c62aa",
+          "eventCount": 23,
+          "sessionFileSha256": "14b09747457424a717adf5ef40d1e81ae00c4c761a928292541b683f492a3d33",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "cancelled"
+          ],
+          "toolBodyCalls": 0,
+          "requests": 1,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "aborted",
+            "reason": {
+              "kind": "user"
+            }
+          },
+          "applicationExitCode": 1,
+          "receiptHTTPStatus": 404,
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": false,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "Invoice export failed",
+        "version": 1
+      },
+      "closeWriteCount": 0,
+      "operationCount": 0,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "cancel-after",
+      "originalReportSha256": "8d4b522c63388ca250dc6e50a32de22b5b25697a469368b36331525cfdb9ec2e",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "accepted": true,
+      "phases": [
+        {
+          "index": 0,
+          "sessionId": "session-15153fa8-bdd3-4aa4-a440-6cc894a2ea52",
+          "eventCount": 23,
+          "sessionFileSha256": "608b67f6e69112f00260de035b06711abcdfa89735301db9c45d0335c8196e60",
+          "observedMatchesPersisted": true,
+          "approvalOutcomes": [
+            "allowed-once"
+          ],
+          "toolBodyCalls": 1,
+          "requests": 1,
+          "toolIsError": true,
+          "toolValue": null,
+          "taskEnd": {
+            "kind": "aborted",
+            "reason": {
+              "kind": "user"
+            }
+          },
+          "applicationExitCode": 1,
+          "receiptHTTPStatus": 200,
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "wrongCallRejected": false,
+          "commitObservedBeforeCancel": true,
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ],
+      "finalTicket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "closeWriteCount": 1,
+      "operationCount": 1,
+      "distinctSessions": true,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    }
+  ],
+  "readerAccepted": false,
+  "networkIsolationVerified": false
+}

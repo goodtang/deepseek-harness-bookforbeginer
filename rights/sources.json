@@ -43,7 +43,7 @@
       "version": "fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159",
       "license": "MIT at repository root; separate vendor and asset licenses require individual review",
       "license_file": "LICENSES/MIT-DeepSeek.txt",
-      "use": "Architecture explanations, terminology and pinned source references in planning and templates; no full runtime source copied",
+      "use": "Architecture explanations, terminology and pinned source references in planning and templates; no full runtime source copied; chapter ten source-linked approval request/decision auditing and tool pre-execute/cancellation explanation",
       "modification": "Independently organized explanations; not an official translation or endorsement",
       "attribution": "THIRD_PARTY_NOTICES.md"
     },
@@ -1930,6 +1930,138 @@
       "path": "labs/profile-config/evidence/2026-11-18-revision/verification.json",
       "source_id": "SRC-BOOK",
       "basis": "Independent failure-stage/path assertions, deliberately unrelated settings-file control, or selected actual configuration/launch/reader evidence. No full prompts or third-party implementation copied; existing source references retain their licenses.",
+      "status": "cleared"
+    },
+    {
+      "path": "chapters/第10章-从查询到关闭，怎样控制一次业务修改.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WRITE-01.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WRITE-01.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WRITE-02.mmd",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "diagrams/CH-WRITE-02.png",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/business.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/check-reader.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/domain.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/domain.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/driver.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/package.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/plugin.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/reader-start.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/run.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/verify.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/verify.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/reader.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-26/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
       "status": "cleared"
     }
   ],
