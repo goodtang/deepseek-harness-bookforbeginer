@@ -1,0 +1,32 @@
+✔ the actual HTTP service runs the selected business rule before committing (58.5336ms)
+✔ a confirmed command binds actor, tenant, target, version and operation (1.6159ms)
+✔ read-only identity cannot close and does not create a receipt (0.9269ms)
+✔ one operation commits once and the exact retry returns its receipt (0.2743ms)
+✔ same operation ID with another payload is refused, not silently reused (0.1874ms)
+✔ another ticket version is not covered by the old command (0.1434ms)
+✔ identity and tenant are checked at the business service (0.1332ms)
+✔ an absent receipt cannot be relabeled as a definite failed write (0.2211ms)
+✔ a receipt claiming success for a different ticket must remain unknown (0.1497ms)
+▶ actual cancelled-after-commit evidence and misleading copies
+  ✔ pretend cancel rolled back (3.5586ms)
+  ✔ wrong confirmed call (1.8725ms)
+  ✔ wrong approval pair (1.6524ms)
+  ✔ different confirmed command (1.1932ms)
+  ✔ cancel relabeled completion (0.9195ms)
+  ✔ commit not observed before cancel (1.3273ms)
+  ✔ receipt never checked (0.8584ms)
+  ✔ cleanup incomplete (0.8571ms)
+✔ actual cancelled-after-commit evidence and misleading copies (22.5157ms)
+▶ a selected reader rule refuses the blank-title write through the actual tool
+  ✔ missing reader module identity (5.4411ms)
+  ✔ fixture was not actually blank (1.4116ms)
+  ✔ wrong refusal reason in tool output (1.6102ms)
+✔ a selected reader rule refuses the blank-title write through the actual tool (14.4304ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.0548

@@ -9,7 +9,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 assert.ok(process.argv[2] && process.argv[3] && process.argv[4], 'Usage: run.mjs <Harness-root> <case> <new-evidence-directory>');
 const source = resolve(process.argv[2]);
 const loader = pathToFileURL(createRequire(join(source, 'package.json')).resolve('tsx/esm')).href;
-const invocation = [source, process.argv[3], resolve(process.argv[4])];
+const invocation = [source, process.argv[3], resolve(process.argv[4]),
+  ...process.argv[5] ? [resolve(process.argv[5])] : []];
 const child = spawn(process.execPath, ['--import', loader, fileURLToPath(new URL('./driver.mjs', import.meta.url)), ...invocation],
   { cwd: source, windowsHide: true, stdio: 'inherit' });
 const [code] = await once(child, 'close'); process.exitCode = code ?? 1;

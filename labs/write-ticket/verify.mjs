@@ -43,12 +43,16 @@ export function inspect(report) {
     if(scenario==='wrong-call')assert.equal(phase.wrongCallRejected,true);
     if(!denied&&!cancelled){
       const value=JSON.parse(message.content.filter(x=>x.type==='text').map(x=>x.text).join(''));
-      const expected=['lost-before'].includes(scenario)||(scenario==='lost-after'&&phase.index===0)?'unknown':['stale','server-denied'].includes(scenario)?'not-written':'committed';
+      const expected=['lost-before'].includes(scenario)||(scenario==='lost-after'&&phase.index===0)?'unknown':['stale','server-denied','empty-title'].includes(scenario)?'not-written':'committed';
       assert.equal(value.state,expected);assert.equal(value.operationId,expectedCommand.operationId);
       if(value.state==='committed')assert.deepEqual(value.ticket,phase.business.ticket);
       const blocks=phase.requests[1].body.messages.flatMap(m=>Array.isArray(m.content)?m.content:[]);const wire=blocks.find(b=>b.type==='tool_result');
       assert.equal(wire.tool_use_id,calls[0].data.callId);assert.deepEqual(JSON.parse(wire.content.filter(b=>b.type==='text').map(b=>b.text).join('')),value);
       if(scenario==='stale')assert.equal(value.code,'VERSION_CONFLICT');if(scenario==='server-denied')assert.equal(value.code,'PERMISSION_DENIED');
+      if(scenario==='empty-title') {
+        assert.ok(report.ruleModule?.sha256); assert.equal(value.code,'TITLE_REQUIRED');
+        assert.equal(phase.business.ticket.title,'   '); assert.equal(phase.business.ticket.version,1);
+      }
       if(phase.index===1)assert.equal(value.deduplicated,true);
     }
     assert.equal(phase.audit.filter(e=>e.type==='write-plugin-closed').length,1);

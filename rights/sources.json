@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-18",
+  "review_date": "2026-11-27",
   "scope": "Current tracked book documents and scripts; references are not blanket permissions to reproduce source works.",
   "licenses": [
     {
@@ -2062,6 +2062,54 @@
       "path": "labs/write-ticket/evidence/2026-11-26/verification.json",
       "source_id": "SRC-BOOK",
       "basis": "Original fictional ticket-write rules, controlled HTTP/approval integration examples, independent receipt checking, selected actual evidence or self-drawn diagram. Source-linked Harness approval/pipeline references retain SRC-DSH MIT; no full prompts or third-party implementation copied.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/business.test.mjs",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/commands.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/inputs.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/practice.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/README.md",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/tests.txt",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/trace.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
+      "status": "cleared"
+    },
+    {
+      "path": "labs/write-ticket/evidence/2026-11-27-revision/verification.json",
+      "source_id": "SRC-BOOK",
+      "basis": "Original fictional business-rule exercise, owned HTTP/profile integration, exact-record learning instructions and selected execution evidence; no full prompts or third-party implementation copied. Pinned Harness source links retain SRC-DSH attribution.",
       "status": "cleared"
     }
   ],

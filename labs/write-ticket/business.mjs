@@ -4,8 +4,9 @@ import { createServer } from 'node:http';
 import { randomUUID } from 'node:crypto';
 import { writeFileSync, renameSync } from 'node:fs';
 import { initialState, validateCommand, transition, receiptOf } from './domain.mjs';
-export async function startBusiness({ file, principal, fault = 'none' }) {
+export async function startBusiness({ file, principal, fault = 'none', transition: applyTransition = transition, ticketTitle }) {
   let state = initialState(); let usedFault = false; let held = false; let attempts = 0;
+  if (ticketTitle !== undefined) state.ticket.title = ticketTitle;
   const token = randomUUID(); const sockets = new Set();
   const save = next => {
     const temporary = `${file}.${randomUUID()}.tmp`;
@@ -24,7 +25,7 @@ export async function startBusiness({ file, principal, fault = 'none' }) {
       let body = ''; for await (const chunk of request) { body += chunk; if (body.length > 8192) throw new TypeError('Request too large'); }
       const command = validateCommand(JSON.parse(body)); attempts++;
       if (fault === 'drop-before' && !usedFault) { usedFault = true; request.socket.destroy(); return; }
-      const next = structuredClone(state); const receipt = transition(next, command, principal);
+      const next = structuredClone(state); const receipt = applyTransition(next, command, principal);
       if (receipt.state === 'committed' && !receipt.deduplicated) save(next);
       if (receipt.state === 'committed' && !usedFault && ['drop-after', 'hold-after'].includes(fault)) {
         usedFault = true;

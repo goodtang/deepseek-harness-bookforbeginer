@@ -1,0 +1,324 @@
+{
+  "stages": [
+    {
+      "label": "rule-start",
+      "scenario": "empty-title",
+      "accepted": false,
+      "ruleModuleSha256": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54",
+      "originalReportSha256": "b1387b7dfa7000940b685d910ebfedfcda8e5bce2f40fa9753e5baac3b502311",
+      "businessFileSha256": "f66840e5c324b6308888e00d84163aed3e7381ecc9724e1eaff1205152183bac",
+      "closeWriteCount": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "   ",
+        "version": 2
+      },
+      "operationCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      },
+      "phases": [
+        {
+          "sessionId": "session-58ed622d-55d1-4381-b55c-d1490e2a2492",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "   ",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "   ",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "rule-allow",
+      "scenario": "allow",
+      "accepted": true,
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "originalReportSha256": "5cb2153bef45e1a9214deed0cfe265b817e1659abde7faaa1dc37c7f28f63d3d",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "closeWriteCount": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "operationCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      },
+      "phases": [
+        {
+          "sessionId": "session-9bf882c2-4686-425c-bb20-a269bfae78e3",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "rule-empty-title",
+      "scenario": "empty-title",
+      "accepted": true,
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "originalReportSha256": "6bb166ca9bf7f5ed5de565e0f1bd90bc767f8eb31496aebeace560eab769d2dc",
+      "businessFileSha256": "3810935a5ddea1fd1935eb23c488a16ea1a6c29fdb263124b76d2ac522988d58",
+      "closeWriteCount": 0,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "open",
+        "title": "   ",
+        "version": 1
+      },
+      "operationCount": 0,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      },
+      "phases": [
+        {
+          "sessionId": "session-8184e55c-1219-498d-b9a7-5c1e163dfd1e",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "not-written",
+            "code": "TITLE_REQUIRED",
+            "operationId": "close-1042-01"
+          },
+          "receipt": {
+            "state": "not-found",
+            "operationId": "close-1042-01"
+          },
+          "reconciled": {
+            "state": "unknown",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "rule-duplicate",
+      "scenario": "duplicate",
+      "accepted": true,
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "originalReportSha256": "234042fc4ce7d60de39a35f154482ab50a6fcc2e4dfe62aeff3bbe0899146505",
+      "businessFileSha256": "b943370f8ff59d31cc65e0464f8db722feef35a5ce630ce3cda2e605b085ae36",
+      "closeWriteCount": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "Invoice export failed",
+        "version": 2
+      },
+      "operationCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      },
+      "phases": [
+        {
+          "sessionId": "session-77509ce9-56fe-4a8b-bad6-b622566742c3",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        },
+        {
+          "sessionId": "session-dd9e4dee-2362-4bcb-9a75-3aaedc5f679d",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": true
+          },
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "Invoice export failed",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ]
+    },
+    {
+      "label": "rule-restored",
+      "scenario": "empty-title",
+      "accepted": false,
+      "ruleModuleSha256": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54",
+      "originalReportSha256": "b4af04071b02a087b9eade510105c1352f17b985972d3da96799baf9d1b5ba4d",
+      "businessFileSha256": "f66840e5c324b6308888e00d84163aed3e7381ecc9724e1eaff1205152183bac",
+      "closeWriteCount": 1,
+      "ticket": {
+        "id": "TK-1042",
+        "status": "closed",
+        "title": "   ",
+        "version": 2
+      },
+      "operationCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      },
+      "phases": [
+        {
+          "sessionId": "session-fc57fb1a-c9e4-43e7-936a-0da32802ca96",
+          "exitCode": 0,
+          "approval": [
+            "allowed-once"
+          ],
+          "toolValue": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "   ",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "receipt": {
+            "state": "committed",
+            "operationId": "close-1042-01",
+            "ticket": {
+              "id": "TK-1042",
+              "status": "closed",
+              "title": "   ",
+              "version": 2
+            },
+            "deduplicated": false
+          },
+          "reconciled": {
+            "state": "committed",
+            "operationId": "close-1042-01"
+          },
+          "cleanup": {
+            "childExited": true,
+            "modelClosed": true
+          }
+        }
+      ]
+    }
+  ],
+  "readerAccepted": false
+}

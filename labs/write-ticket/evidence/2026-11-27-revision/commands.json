@@ -1,0 +1,177 @@
+{
+  "capturedOn": "2026-11-27",
+  "powershellBlocks": [
+    {
+      "index": 0,
+      "sha256": "17bb0ca349c7bdba278684c70d9f5fbcf31783e55173a596fe94a352f4181add",
+      "executed": true
+    },
+    {
+      "index": 1,
+      "sha256": "278644ac38aefb471f1d7679f2709d007015c6475af9d5f46240ae3a67d0c827",
+      "executed": true
+    },
+    {
+      "index": 2,
+      "sha256": "c5b2d0d225eaabdb0753504ac6ffda76d37e693feae9d9f942920b54eccdef31",
+      "executed": true
+    },
+    {
+      "index": 3,
+      "sha256": "bff561077bab30880effdfd5a2d6e27836f3b177a7b89a860318ce7314ea11dc",
+      "executed": true
+    },
+    {
+      "index": 4,
+      "sha256": "ef24fd875e2dea098a26ff9e3b54c8be140230ad7de4f022eeb4e97ad0bf38de",
+      "executed": true
+    },
+    {
+      "index": 5,
+      "sha256": "4e9eb5e6b411e5dbb91e5f20636f6563bd343f63365c3e7237f8378b5244dde4",
+      "executed": true
+    },
+    {
+      "index": 6,
+      "sha256": "4bd7fb90f3cd5397f4f5b28885f5d8080a3db1af5a2bfb0a02bd8fa2ddc3c02b",
+      "executed": true
+    },
+    {
+      "index": 7,
+      "sha256": "473ee88c3f2268c896077566341d858a66c7d47cadce22679c77d350c0e37d08",
+      "executed": true
+    },
+    {
+      "index": 8,
+      "sha256": "3dc30426c67e0ed6e79a350dcbfca81a81a6cfcb0fc22b2c3cab77758c66ec60",
+      "executed": true
+    },
+    {
+      "index": 9,
+      "sha256": "8dd5d162c00d804c796f08ec684e0d86a09a141c6ae8907287808bde92eb5a4a",
+      "executed": true
+    }
+  ],
+  "readmeTestBlockSha256": "049844ff0b8b4c259bc3e83919c0ec80feab6fde1a8e74fdf9e1f253c5cf4ac1",
+  "initialScriptSha256": "116137ddc02cb39ee0d9e4c8388610d3975a54161d5f90c2150d6c0ca61c8b49",
+  "finalFieldsScriptSha256": "27f01186daba4fe6a430e0de97206363507452eba0419f5496b853e52df2abe7",
+  "nativeInvocations": [
+    {
+      "scenario": "allow",
+      "accepted": true,
+      "reportSha256": "630c1166fb5e7b9d80f757e645840c2f368c3125c5fe532871fbd7c03ea2f307",
+      "ruleModuleSha256": null,
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "empty-title",
+      "accepted": false,
+      "reportSha256": "7cd81a287139ae001aa970a2ef0f363b421336cde915cb62653942bbaabedc4a",
+      "ruleModuleSha256": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54",
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "allow",
+      "accepted": true,
+      "reportSha256": "b8a09618271e8505abdd71d3e905d6ef16f4c99795e0f26cb5672ba46c8a9d31",
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "empty-title",
+      "accepted": true,
+      "reportSha256": "a681fb944d6e50676b41415646e8b70c170cfc45fe11dcea76549e2f62ded9d9",
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "closeWriteCount": 0,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "duplicate",
+      "accepted": true,
+      "reportSha256": "174acb1c4125a9a952860860d35ebc80056874ee7582c5d84c2331ccfcaa8307",
+      "ruleModuleSha256": "7a5418a1d9ba8330ba19705029662a91116c8cad312c5af43b25290775b3c889",
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "empty-title",
+      "accepted": false,
+      "reportSha256": "7e6e6ba23052a5af268cc90a9691c4fcf41a4d7bb37cfe3c6be3fbd373e304af",
+      "ruleModuleSha256": "62688435179af33e37207ad5f8ec38be94c5a9606047d87dcfe52680d04a8c54",
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "lost-after",
+      "accepted": true,
+      "reportSha256": "33132f0231976fd029013e5c32cb4592cc4bcb063088eb8db93350af5fe848e2",
+      "ruleModuleSha256": null,
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "lost-before",
+      "accepted": true,
+      "reportSha256": "0856516fac16aded14c911f5a9e0d0c17e37fce6704555b837e1f5d52b9d9ac8",
+      "ruleModuleSha256": null,
+      "closeWriteCount": 0,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "cancel-after",
+      "accepted": true,
+      "reportSha256": "ddf0e5dde08835de6663493ba8abf5be3ad15b4b19f066c5c4535ff986f115a6",
+      "ruleModuleSha256": null,
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    },
+    {
+      "scenario": "cancel-after",
+      "accepted": true,
+      "reportSha256": "68cab441492cb81bec47041fe9fd2ac0880923809d7ed8bfd04e4a9e8794bb46",
+      "ruleModuleSha256": null,
+      "closeWriteCount": 1,
+      "cleanup": {
+        "businessClosed": true,
+        "rootRemoved": true
+      }
+    }
+  ],
+  "finalCancelReportSha256": "5e2b8bb854ea5a17751547022398d4eea33093f52195501d0abdbe69802f260d",
+  "receiptStarterRejected": true,
+  "receiptReferenceChecks": 6,
+  "tests": 22,
+  "skipped": 0,
+  "readerAccepted": false,
+  "scope": "Literal chapter commands; local roots and reference edits supplied. Final field assertions re-executed after readability/field refinements; no live student acceptance."
+}

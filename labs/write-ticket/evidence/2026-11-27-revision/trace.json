@@ -1,0 +1,104 @@
+{
+  "sessionId": "session-8d1ab1fc-78fd-4c44-b66a-86b3a02da6ae",
+  "events": [
+    {
+      "type": "tool/call",
+      "seq": 17,
+      "time": 1795776394327,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "callId": "mock-call-1",
+        "name": "book_ticket_close",
+        "arguments": "{\"id\":\"TK-1042\",\"expectedVersion\":1,\"operationId\":\"close-1042-01\"}"
+      }
+    },
+    {
+      "type": "approval/asked",
+      "seq": 18,
+      "time": 1795776394328,
+      "data": {
+        "id": "a4be8e6d-b285-452c-909f-10ac65344713",
+        "toolName": "book_ticket_close",
+        "callId": "mock-call-1",
+        "reason": "Close TK-1042 from version 1; actor=student-01; tenant=classroom-A; operation=close-1042-01; digest=4c954d4f3f7609426132f98d0ddad77237afd643c3f8d866ebc18168d8e087d2"
+      }
+    },
+    {
+      "type": "approval/decided",
+      "seq": 19,
+      "time": 1795776394371,
+      "data": {
+        "id": "a4be8e6d-b285-452c-909f-10ac65344713",
+        "outcome": "allowed-once"
+      }
+    },
+    {
+      "type": "tool/result",
+      "seq": 20,
+      "time": 1795776394402,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "tool",
+          "source": {
+            "kind": "tool",
+            "callId": "mock-call-1"
+          },
+          "toolCallId": "mock-call-1",
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"state\":\"committed\",\"operationId\":\"close-1042-01\",\"ticket\":{\"id\":\"TK-1042\",\"status\":\"closed\",\"title\":\"Invoice export failed\",\"version\":2},\"deduplicated\":false}"
+            }
+          ],
+          "isError": false,
+          "id": "a4785ea6-57b3-4df5-be10-43bf07d59463"
+        }
+      },
+      "sourceEventSeqs": [
+        17
+      ],
+      "surfaceOp": "append"
+    }
+  ],
+  "receiptHTTPStatus": 200,
+  "receipt": {
+    "state": "committed",
+    "operationId": "close-1042-01",
+    "ticket": {
+      "id": "TK-1042",
+      "status": "closed",
+      "title": "Invoice export failed",
+      "version": 2
+    },
+    "deduplicated": false
+  },
+  "business": {
+    "ticket": {
+      "id": "TK-1042",
+      "status": "closed",
+      "title": "Invoice export failed",
+      "version": 2
+    },
+    "writeCount": 1,
+    "operations": {
+      "[\"classroom-A\",\"close-1042-01\"]": {
+        "digest": "4c954d4f3f7609426132f98d0ddad77237afd643c3f8d866ebc18168d8e087d2",
+        "actorId": "student-01",
+        "receipt": {
+          "state": "committed",
+          "operationId": "close-1042-01",
+          "ticket": {
+            "id": "TK-1042",
+            "status": "closed",
+            "title": "Invoice export failed",
+            "version": 2
+          },
+          "deduplicated": false
+        }
+      }
+    }
+  }
+}

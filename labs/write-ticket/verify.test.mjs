@@ -18,3 +18,16 @@ test('actual cancelled-after-commit evidence and misleading copies', { skip: !pa
     ['cleanup incomplete', r => { r.cleanup.rootRemoved = false; }],
   ]) await t.test(name, () => { const r = structuredClone(report); mutate(r); assert.throws(() => inspect(r)); });
 });
+
+test('a selected reader rule refuses the blank-title write through the actual tool', { skip: !process.env.BOOK_RULE_REPORT }, async t => {
+  const report = JSON.parse(await readFile(process.env.BOOK_RULE_REPORT, 'utf8'));
+  assert.equal(report.scenario, 'empty-title'); inspect(report);
+  for (const [name, mutate] of [
+    ['missing reader module identity', r => { delete r.ruleModule; }],
+    ['fixture was not actually blank', r => { r.phases[0].business.ticket.title = 'Invoice export failed'; }],
+    ['wrong refusal reason in tool output', r => {
+      const result = r.phases[0].events.find(e => e.type === 'tool/result').data.message;
+      result.content[0].text = result.content[0].text.replace('TITLE_REQUIRED', 'SOMETHING_ELSE');
+    }],
+  ]) await t.test(name, () => { const copy = structuredClone(report); mutate(copy); assert.throws(() => inspect(copy)); });
+});

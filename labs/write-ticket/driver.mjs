@@ -13,9 +13,10 @@ import { setTimeout as delay } from 'node:timers/promises';
 import { startBusiness } from './business.mjs';
 import { reconcile, commandOf } from './domain.mjs';
 import { inspect } from './verify.mjs';
-const [sourceArg, scenario, outputArg] = process.argv.slice(2);
-const cases = ['allow','read-only','reject','unavailable','never','server-denied','stale','wrong-call','duplicate','lost-after','lost-before','cancel-before','cancel-after'];
+const [sourceArg, scenario, outputArg, ruleModuleArg] = process.argv.slice(2);
+const cases = ['allow','read-only','reject','unavailable','never','server-denied','stale','wrong-call','duplicate','lost-after','lost-before','cancel-before','cancel-after','empty-title'];
 assert.ok(cases.includes(scenario)); const source = resolve(sourceArg); const output = resolve(outputArg);
+assert.ok(scenario !== 'empty-title' || ruleModuleArg, 'empty-title requires your domain module as the last argument');
 assert.equal(execFileSync('git', ['rev-parse','HEAD'], { cwd: source, encoding: 'utf8' }).trim(), 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b0159');
 assert.equal(execFileSync('git', ['status','--porcelain','--untracked-files=no'], { cwd: source, encoding: 'utf8' }).trim(), '');
 await mkdir(dirname(output), { recursive: true }); await mkdir(output);
@@ -27,7 +28,16 @@ const report = { scenario, sourceCommit: 'fcc0ad462172522aaf5c93a7b2e01f6b9f0b01
 report.files={};for(const name of ['run.mjs','driver.mjs','plugin.mjs','business.mjs','domain.mjs','verify.mjs'])report.files[name]=sha(await readFile(join(here,name)));
 let business; let failure;
 try {
+  let selectedTransition;
+  if (ruleModuleArg) {
+    const modulePath = resolve(ruleModuleArg); const bytes = await readFile(modulePath);
+    selectedTransition = (await import(pathToFileURL(modulePath).href)).transition;
+    assert.equal(typeof selectedTransition, 'function', 'Your domain module must export transition');
+    report.ruleModule = { path: modulePath, sha256: sha(bytes) };
+    await writeFile(join(output, 'reader-domain.mjs'), bytes);
+  }
   business = await startBusiness({ file: join(root,'business.json'), principal: { id:'student-01', tenantId:'classroom-A', canClose: !['read-only','server-denied'].includes(scenario) },
+    transition: selectedTransition, ticketTitle: scenario === 'empty-title' ? '   ' : undefined,
     fault: scenario === 'lost-after' ? 'drop-after' : scenario === 'lost-before' ? 'drop-before' : scenario === 'cancel-after' ? 'hold-after' : 'none' });
   const phaseCount = ['duplicate','lost-after'].includes(scenario) ? 2 : 1;
   for (let index = 0; index < phaseCount; index++) {
